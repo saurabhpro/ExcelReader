@@ -21,6 +21,14 @@ public class WriteExcel {
     private WritableCellFormat times;
     private String inputFile;
 
+    public static void main(String[] args) throws WriteException, IOException {
+        WriteExcel test = new WriteExcel();
+        test.setOutputFile("C:\\Users\\kumars\\Downloads\\lars.xls");
+        test.write();
+        System.out
+                .println("Please check the result file under c:/temp/lars.xls ");
+    }
+
     public void setOutputFile(String inputFile) {
         this.inputFile = inputFile;
     }
@@ -116,13 +124,5 @@ public class WriteExcel {
         Label label;
         label = new Label(column, row, s, times);
         sheet.addCell(label);
-    }
-
-    public static void main(String[] args) throws WriteException, IOException {
-        WriteExcel test = new WriteExcel();
-        test.setOutputFile("C:\\Users\\kumars\\Downloads\\lars.xls");
-        test.write();
-        System.out
-                .println("Please check the result file under c:/temp/lars.xls ");
     }
 }
