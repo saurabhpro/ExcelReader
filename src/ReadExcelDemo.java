@@ -18,7 +18,7 @@ public class ReadExcelDemo
     {
         try
         {
-            FileInputStream file = new FileInputStream(new File("MyExcelPOI.xlsx"));
+            FileInputStream file = new FileInputStream(new File("Biometric.xlsx"));
 
             //Create Workbook instance holding reference to .xlsx file
             XSSFWorkbook workbook = new XSSFWorkbook(file);
