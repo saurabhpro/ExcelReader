@@ -1,5 +1,9 @@
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -21,10 +25,10 @@ public class ReadExcelDemo
             FileInputStream file = new FileInputStream(new File("Biometric.xlsx"));
 
             //Create Workbook instance holding reference to .xlsx file
-            XSSFWorkbook workbook = new XSSFWorkbook(file);
+            Workbook workbook = new HSSFWorkbook(file);
 
             //Get first/desired sheet from the workbook
-            XSSFSheet sheet = workbook.getSheetAt(0);
+            Sheet sheet = workbook.getSheetAt(0);
 
             //Iterate through each rows one by one
             for (Row row : sheet) {

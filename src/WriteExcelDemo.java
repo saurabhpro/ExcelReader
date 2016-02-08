@@ -32,7 +32,7 @@ public class WriteExcelDemo
         data.put("2", new Object[] {1, "Amrita", "Arora"});
         data.put("3", new Object[] {2, "Saurabh", "Kumar"});
         data.put("4", new Object[] {3, "Harshit", "Bhatia"});
-        data.put("5", new Object[] {4, "Sam", "Knight"});
+        data.put("5", new Object[] {4, "Surabhi", "Kulkarni"});
 
         //Iterate over data and write to sheet
         Set<String> keyset = data.keySet();
