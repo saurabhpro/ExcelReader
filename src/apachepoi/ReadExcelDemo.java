@@ -1,11 +1,10 @@
-import org.apache.poi.hssf.usermodel.HSSFSheet;
+package apachepoi;
+
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -23,7 +22,7 @@ public class ReadExcelDemo
     {
         try
         {
-            FileInputStream file = new FileInputStream(new File("Biometric.xlsx"));
+            FileInputStream file = new FileInputStream(new File("C:\\Users\\kumars\\IdeaProjects\\ExcelReader\\ExcelFiles\\Biometric.xlsx"));
 
             //Create Workbook instance holding reference to .xlsx file
             Workbook workbook = new HSSFWorkbook(file);

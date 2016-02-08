@@ -1,4 +1,4 @@
-
+package apachepoi;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -54,7 +54,7 @@ public class WriteExcelDemo
         try
         {
             //Write the workbook in file system
-            FileOutputStream out = new FileOutputStream(new File("MyExcelPOI.xlsx"));
+            FileOutputStream out = new FileOutputStream(new File("C:\\Users\\kumars\\IdeaProjects\\ExcelReader\\ExcelFiles\\MyExcelPOI.xlsx"));
             workbook.write(out);
             out.close();
             System.out.println("MyExcelPOI.xlsx written successfully on disk.");
