@@ -1,0 +1,7 @@
+Check Out time- next day or forgets
+ID- Biometric and hr different
+salesforce start date in a month and end in another month
+
+for us:
+soft code number of employee
+(cell numbers-13)/18
