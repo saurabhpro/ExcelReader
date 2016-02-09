@@ -11,12 +11,13 @@ public class HrnetDetails {
     String name;
     String hrID;
     String requestID;
-    LeaveType leaveType;
+    // LeaveType leaveType;
+    String leaveType;
     String startDate;
     String endDate;
-    double absenceTime;
+    String absenceTime;
 
-    HrnetDetails(String name, String hrID, String requestID, LeaveType leaveType, String startDate, String endDate, double absenceTime) {
+    HrnetDetails(String name, String hrID, String requestID, String leaveType, String startDate, String endDate, String absenceTime) {
         this.name = name;
         this.hrID = hrID;
         this.requestID = requestID;

@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
+import java.util.Objects;
 import java.util.StringTokenizer;
 
 /**
@@ -51,15 +52,37 @@ public class ReadExcel {
         org.apache.poi.ss.usermodel.Sheet sheet = workbook.getSheetAt(0);
 
         Cell cell = null;
-        HrnetDetails hrnetDetails;
+
         int numberOfRowsInHr = sheet.getPhysicalNumberOfRows();
-        String[] details = new String[6];
-        for (int i = 0; i < numberOfRowsInHr; i++) {
+        HrnetDetails[] hrnetDetails = new HrnetDetails[numberOfRowsInHr];
+
+        String[] details = new String[7];
+        for (int i = 1; i < numberOfRowsInHr; i++) {
             for (int j = 0; j < 7; j++) {
                 //Update the value of cell
                 cell = sheet.getRow(i).getCell(j);
-                details[j] = cell.getStringCellValue();
+                switch (cell.getCellType()) {
+                    case Cell.CELL_TYPE_NUMERIC:
+                        details[j] = Objects.toString(cell.getNumericCellValue());
+                        break;
+                    case Cell.CELL_TYPE_STRING:
+                        details[j] = cell.getStringCellValue();
+                        break;
+                }
+                //  System.out.println(details[j]);
+
             }
+            hrnetDetails[i - 1] = new HrnetDetails(details[1], details[0], details[2], details[3], details[4], details[5], details[6]);
+        }
+
+        for (int i = 0; i < numberOfRowsInHr - 1; i++) {
+            System.out.print(hrnetDetails[i].hrID);
+            System.out.print(" " + hrnetDetails[i].name);
+            System.out.print(" " + hrnetDetails[i].requestID);
+            System.out.print(" " + hrnetDetails[i].leaveType);
+            System.out.print(" " + hrnetDetails[i].startDate + " " + hrnetDetails[i].endDate);
+            System.out.println(" " + hrnetDetails[i].absenceTime);
+
         }
         file.close();
     }
