@@ -1,16 +1,12 @@
 package jxcel;
 
 import jxl.read.biff.BiffException;
-
-
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-
 import java.util.Objects;
 import java.util.StringTokenizer;
 
@@ -26,10 +22,11 @@ public class ReadExcel {
     public static void main(String[] args) throws IOException {
         ReadExcel test = new ReadExcel();
 
-        test.setBiometricFile("C:\\Users\\AroraA\\IdeaProjects\\ExcelReader\\src\\Biometric.xls");
+        test.setBiometricFile(".\\ExcelFiles\\Biometric.xls");
         test.readBiometricFile();
 
-        test.setHrNetFile("C:\\Users\\AroraA\\IdeaProjects\\ExcelReader\\ExcelFiles\\HRNet.xlsx");
+
+        test.setHrNetFile(".\\ExcelFiles\\HRNet.xlsx");
         test.readHRNetFile();
 
     }
@@ -63,7 +60,15 @@ public class ReadExcel {
                 cell = sheet.getRow(i).getCell(j);
                 switch (cell.getCellType()) {
                     case Cell.CELL_TYPE_NUMERIC:
+                        int temp = (int) cell.getNumericCellValue();
+                        /*Date dt = new Date(temp);
+
+                        if(temp >40000){
+                            //details[j] = getJavaDate();
+                        }
+                        */
                         details[j] = Objects.toString(cell.getNumericCellValue());
+
                         break;
                     case Cell.CELL_TYPE_STRING:
                         details[j] = cell.getStringCellValue();
@@ -77,11 +82,11 @@ public class ReadExcel {
 
         for (int i = 0; i < numberOfRowsInHr - 1; i++) {
             System.out.print(hrnetDetails[i].hrID);
-            System.out.print(" " + hrnetDetails[i].name);
-            System.out.print(" " + hrnetDetails[i].requestID);
-            System.out.print(" " + hrnetDetails[i].leaveType);
-            System.out.print(" " + hrnetDetails[i].startDate + " " + hrnetDetails[i].endDate);
-            System.out.println(" " + hrnetDetails[i].absenceTime);
+            System.out.print("\t" + hrnetDetails[i].name);
+            System.out.print("\t" + hrnetDetails[i].requestID);
+            System.out.print("\t" + hrnetDetails[i].leaveType);
+            System.out.print("\t" + hrnetDetails[i].startDate + "\t" + hrnetDetails[i].endDate);
+            System.out.println("\t" + hrnetDetails[i].absenceTime);
 
         }
         file.close();

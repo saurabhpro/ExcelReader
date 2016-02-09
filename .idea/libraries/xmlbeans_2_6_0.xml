@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="jxl1">
+  <library name="xmlbeans-2.6.0">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Downloads/jexcelapi/jxl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Jar/xmlbeans-2.6.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

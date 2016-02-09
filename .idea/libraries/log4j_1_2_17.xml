@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="jxl">
+  <library name="log4j-1.2.17">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/Jar/jxl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Jar/log4j-1.2.17.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

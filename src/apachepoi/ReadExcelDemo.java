@@ -22,7 +22,7 @@ public class ReadExcelDemo
     {
         try
         {
-            FileInputStream file = new FileInputStream(new File("C:\\Users\\AroraA\\IdeaProjects\\ExcelReader\\ExcelFiles\\test report.xls"));
+            FileInputStream file = new FileInputStream(new File(".\\ExcelFiles\\test report.xls"));
 
             //Create Workbook instance holding reference to .xlsx file
             Workbook workbook = new HSSFWorkbook(file);

@@ -17,7 +17,7 @@ public class EmpDetails {
         empID = eID;
         checkIn = chkIn;
         checkOut = chkOut;
-        overTime=ovrTime;
+        overTime = ovrTime;
         status = estatus;
     }
 
