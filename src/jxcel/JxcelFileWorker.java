@@ -15,7 +15,7 @@ import java.util.StringTokenizer;
 /**
  * Created by Saurabh on 2/10/2016.
  */
-public class JxcelFileWorker implements JxcelFile {
+public class JxcelFileWorker implements IJxcelFile {
 
     List<EmpDetails> empList = null;
     Iterator<EmpDetails> iterator = null;
