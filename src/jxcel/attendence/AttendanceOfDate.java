@@ -1,5 +1,7 @@
 package jxcel.attendence;
 
+import jxcel.model.BiometricAttendanceStatusTypes;
+
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -9,12 +11,11 @@ import java.util.Date;
  * Created by kumars on 2/12/2016.
  */
 public class AttendanceOfDate {
-
     private Date currentDate = null;
     private String checkIn = null;
     private String checkOut = null;
     private String overTime = null;
-    private BiometricAttendanceStatus biometricAttendanceStatus = null;
+    private BiometricAttendanceStatusTypes biometricAttendanceStatusTypes = null;
 
     public String getCheckIn() {
         return checkIn;
@@ -40,12 +41,12 @@ public class AttendanceOfDate {
         this.overTime = overTime;
     }
 
-    public BiometricAttendanceStatus getBiometricAttendanceStatus() {
-        return biometricAttendanceStatus;
+    public BiometricAttendanceStatusTypes getBiometricAttendanceStatusTypes() {
+        return biometricAttendanceStatusTypes;
     }
 
-    public void setBiometricAttendanceStatus(BiometricAttendanceStatus biometricAttendanceStatus) {
-        this.biometricAttendanceStatus = biometricAttendanceStatus;
+    public void setBiometricAttendanceStatusTypes(BiometricAttendanceStatusTypes biometricAttendanceStatusTypes) {
+        this.biometricAttendanceStatusTypes = biometricAttendanceStatusTypes;
     }
 
     public Date getCurrentDate() {

@@ -1,7 +1,9 @@
 package jxcel;
 
 import jxcel.attendence.AttendanceOfDate;
-import jxcel.attendence.BiometricAttendanceStatus;
+import jxcel.model.BiometricAttendanceStatusTypes;
+import jxcel.model.EmpDetails;
+import jxcel.model.IBiometricFile;
 import jxl.Cell;
 import jxl.Sheet;
 import jxl.Workbook;
@@ -20,7 +22,7 @@ import java.util.StringTokenizer;
 /**
  * Created by Saurabh on 2/10/2016.
  */
-public class JxcelFileWorker implements IJxcelFile {
+public class BiometricFileWorker implements IBiometricFile {
 
     List<EmpDetails> empList = null;
     Iterator<EmpDetails> iterator = null;
@@ -48,12 +50,13 @@ public class JxcelFileWorker implements IJxcelFile {
             String tempDate = null;
             String tempString = null;
 
+
             AttendanceOfDate[] attendanceOfDate = null;
 
             Month month = Month.valueOf(st.nextElement().toString().toUpperCase());
             Year year = Year.parse((String) st.nextElement());
 
-            BiometricAttendanceStatus attendanceStatus = null;
+            BiometricAttendanceStatusTypes attendanceStatus = null;
 
             for (int i = 0; i < 91; i++) {
                 details[0] = details[1] = null;
@@ -65,8 +68,6 @@ public class JxcelFileWorker implements IJxcelFile {
                 details[1] = cell.getContents();
 
                 attendanceOfDate = new AttendanceOfDate[31];
-
-                attendanceOfDate[0] = new AttendanceOfDate();
 
                 for (int k = 0; k < 31; k++) {
                     attendanceStatus = null;
@@ -89,16 +90,16 @@ public class JxcelFileWorker implements IJxcelFile {
                             //11:00 12:00 00;00 P
                             switch (tempString) {
                                 case "A":
-                                    attendanceStatus = BiometricAttendanceStatus.ABSENT;
+                                    attendanceStatus = BiometricAttendanceStatusTypes.ABSENT;
                                     break lb;
                                 case "P/A":
-                                    attendanceStatus = BiometricAttendanceStatus.ABSENT;
+                                    attendanceStatus = BiometricAttendanceStatusTypes.ABSENT;
                                     break lb;
                                 case "W":
-                                    attendanceStatus = BiometricAttendanceStatus.WEEKEND_HOLIDAY;
+                                    attendanceStatus = BiometricAttendanceStatusTypes.WEEKEND_HOLIDAY;
                                     break lb;
                                 case "P":
-                                    attendanceStatus = BiometricAttendanceStatus.PRESENT;
+                                    attendanceStatus = BiometricAttendanceStatusTypes.PRESENT;
                                     break lb;
                                 default:
                                     if (j == 2)
@@ -108,7 +109,7 @@ public class JxcelFileWorker implements IJxcelFile {
                             }
                         }
                     }
-                    attendanceOfDate[k].setBiometricAttendanceStatus(attendanceStatus);
+                    attendanceOfDate[k].setBiometricAttendanceStatusTypes(attendanceStatus);
                 }
 
                 empList.add(new EmpDetails(details[0], details[1], attendanceOfDate));
@@ -135,7 +136,7 @@ public class JxcelFileWorker implements IJxcelFile {
                 System.out.print(emp.attendanceOfDate[j].getCurrentDate());
                 System.out.print("\tIn Time: " + emp.attendanceOfDate[j].getCheckIn());
                 System.out.print("\tOut Time: " + emp.attendanceOfDate[j].getCheckOut());
-                System.out.print("\tStatus: " + emp.attendanceOfDate[j].getBiometricAttendanceStatus() + "\n");
+                System.out.print("\tStatus: " + emp.attendanceOfDate[j].getBiometricAttendanceStatusTypes() + "\n");
 
                 TimeManager.calculateTimeDifference(emp.attendanceOfDate[j].getCheckIn(), emp.attendanceOfDate[j].getCheckOut(), j + 1);
             }

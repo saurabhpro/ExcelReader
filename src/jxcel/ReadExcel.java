@@ -14,16 +14,16 @@ public class ReadExcel {
         ReadExcel test = new ReadExcel();
 
         test.setBiometricFile(".\\ExcelFiles\\Biometric.xls");
-        JxcelFileWorker jxcelFileWorker = new JxcelFileWorker();
+        BiometricFileWorker jxcelFileWorker = new BiometricFileWorker();
         jxcelFileWorker.readBiometricFile(biometricFile);
         jxcelFileWorker.displayBiometricFile();
 
 
         System.out.println("check 1");
         test.setHrNetFile(".\\ExcelFiles\\HRNet.xlsx");
-        ApacheFileWorker apacheFileWorker = new ApacheFileWorker();
-        apacheFileWorker.readHRNetFile(hrNetFile);
-        apacheFileWorker.displayApachePOIFile(apacheFileWorker.hrnetDetails);
+        HrnetFileWorker hrnetFileWorker = new HrnetFileWorker();
+        hrnetFileWorker.readHRNetFile(hrNetFile);
+        hrnetFileWorker.displayApachePOIFile();
 
     }
 
