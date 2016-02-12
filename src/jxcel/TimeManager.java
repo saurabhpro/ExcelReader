@@ -21,11 +21,12 @@ public class TimeManager {
                 StringTokenizer st = new StringTokenizer(s, ":");
                 int hr1 = Integer.parseInt((String) st.nextElement());
                 int min1 = Integer.parseInt((String) st.nextElement());
+
                 st = new StringTokenizer(s1, ":");
                 int hr2 = Integer.parseInt((String) st.nextElement());
                 int min2 = Integer.parseInt((String) st.nextElement());
-                LocalDateTime fromDateTime = LocalDateTime.of(2016, 1, date, hr1, min1, 0);
 
+                LocalDateTime fromDateTime = LocalDateTime.of(2016, 1, date, hr1, min1, 0);
                 LocalDateTime toDateTime = LocalDateTime.of(2016, 1, date, hr2, min2, 0);
 
                 long time[] = getTime(fromDateTime, toDateTime);

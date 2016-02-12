@@ -1,18 +1,21 @@
 /**
- * Created by AroraA on 08-02-2016.
+ * Created by Saurabhk on 08-02-2016.
  */
 
 package jxcel;
 
+import jxcel.attendence.AttendanceOfDate;
+
 public class EmpDetails {
     String name;
     String empId;
-    AttendanceDate[] attendanceDate;
+    AttendanceOfDate[] attendanceOfDate;
 
-    EmpDetails(String eName, String eID, AttendanceDate[] attendanceDate) {
+    public EmpDetails(String eName, String eID, AttendanceOfDate[] attendanceOfDate) {
         name = eName;
         empId = eID;
-        this.attendanceDate = attendanceDate;
+        this.attendanceOfDate = attendanceOfDate;
     }
+
 
 }

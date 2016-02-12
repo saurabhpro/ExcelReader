@@ -1,5 +1,7 @@
 package jxcel;
 
+import jxcel.attendence.AttendanceOfDate;
+import jxcel.attendence.BiometricAttendanceStatus;
 import jxl.Cell;
 import jxl.Sheet;
 import jxl.Workbook;
@@ -38,14 +40,16 @@ public class JxcelFileWorker implements IJxcelFile {
             Cell cell;
             String[] details = new String[2];
 
-            String empTime;
 
             cell = sheet.getCell(13, 7);
             String monthYear = cell.getContents();
             StringTokenizer st = new StringTokenizer(monthYear, "   ");
-            String tempString = null;
+
             String tempDate = null;
-            AttendanceDate[] attendanceDate = null;
+            String tempString = null;
+
+            AttendanceOfDate[] attendanceOfDate = null;
+
             Month month = Month.valueOf(st.nextElement().toString().toUpperCase());
             Year year = Year.parse((String) st.nextElement());
 
@@ -60,25 +64,24 @@ public class JxcelFileWorker implements IJxcelFile {
                 cell = sheet.getCell(3, 15 + (18 * ADDROWSTEPS));
                 details[1] = cell.getContents();
 
-                attendanceDate = new AttendanceDate[31];
+                attendanceOfDate = new AttendanceOfDate[31];
 
-                attendanceDate[0] = new AttendanceDate();
+                attendanceOfDate[0] = new AttendanceOfDate();
 
                 for (int k = 0; k < 31; k++) {
                     attendanceStatus = null;
-                    attendanceDate[k] = new AttendanceDate();
+                    attendanceOfDate[k] = new AttendanceOfDate();
 
-                     tempDate = ""+(k+1) + "/" + month.getValue()+ "/" + year;
+                    tempDate = "" + (k + 1) + "/" + month.getValue() + "/" + year;
 
-                    attendanceDate[k].setCurrentDate(tempDate);
+                    attendanceOfDate[k].setCurrentDate(tempDate);
 
                     cell = sheet.getCell(k, 20 + (18 * ADDROWSTEPS));
-                    empTime = cell.getContents();
 
-                    st = new StringTokenizer(empTime, "   ");
+                    st = new StringTokenizer(cell.getContents(), "   ");
 
 
-                   // lb:
+                    lb:
                     for (int j = 2; j < 6; j++) {
                         if (st.hasMoreElements()) {
                             tempString = (String) st.nextElement();
@@ -87,28 +90,28 @@ public class JxcelFileWorker implements IJxcelFile {
                             switch (tempString) {
                                 case "A":
                                     attendanceStatus = BiometricAttendanceStatus.ABSENT;
-                                    break ;
+                                    break lb;
                                 case "P/A":
                                     attendanceStatus = BiometricAttendanceStatus.ABSENT;
-                                    break ;
+                                    break lb;
                                 case "W":
                                     attendanceStatus = BiometricAttendanceStatus.WEEKEND_HOLIDAY;
-                                    break;
+                                    break lb;
                                 case "P":
                                     attendanceStatus = BiometricAttendanceStatus.PRESENT;
-                                    break ;
+                                    break lb;
                                 default:
                                     if (j == 2)
-                                        attendanceDate[k].setCheckIn(tempString);
+                                        attendanceOfDate[k].setCheckIn(tempString);
                                     else if (j == 3)
-                                        attendanceDate[k].setCheckOut(tempString);
+                                        attendanceOfDate[k].setCheckOut(tempString);
                             }
                         }
                     }
-                    attendanceDate[k].setBiometricAttendanceStatus(attendanceStatus);
+                    attendanceOfDate[k].setBiometricAttendanceStatus(attendanceStatus);
                 }
 
-                empList.add(new EmpDetails(details[0], details[1], attendanceDate));
+                empList.add(new EmpDetails(details[0], details[1], attendanceOfDate));
 
 
                 ADDROWSTEPS++;
@@ -129,11 +132,12 @@ public class JxcelFileWorker implements IJxcelFile {
             System.out.println("Employee ID: " + emp.empId);
 
             for (int j = 0; j < 31; j++) {
-                System.out.print(emp.attendanceDate[j].getCurrentDate() + " In Time: " + emp.attendanceDate[j].getCheckIn());
-                System.out.print("\tOut Time: " + emp.attendanceDate[j].getCheckOut());
-                System.out.print("\tStatus: " + emp.attendanceDate[j].getBiometricAttendanceStatus() + "\n");
+                System.out.print(emp.attendanceOfDate[j].getCurrentDate());
+                System.out.print("\tIn Time: " + emp.attendanceOfDate[j].getCheckIn());
+                System.out.print("\tOut Time: " + emp.attendanceOfDate[j].getCheckOut());
+                System.out.print("\tStatus: " + emp.attendanceOfDate[j].getBiometricAttendanceStatus() + "\n");
 
-                TimeManager.calculateTimeDifference(emp.attendanceDate[j].getCheckIn(), emp.attendanceDate[j].getCheckOut(), j + 1);
+                TimeManager.calculateTimeDifference(emp.attendanceOfDate[j].getCheckIn(), emp.attendanceOfDate[j].getCheckOut(), j + 1);
             }
             System.out.println();
         }

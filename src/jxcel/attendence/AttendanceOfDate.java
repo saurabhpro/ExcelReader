@@ -1,4 +1,4 @@
-package jxcel;
+package jxcel.attendence;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -8,7 +8,7 @@ import java.util.Date;
 /**
  * Created by kumars on 2/12/2016.
  */
-public class AttendanceDate {
+public class AttendanceOfDate {
 
     private Date currentDate = null;
     private String checkIn = null;

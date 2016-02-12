@@ -1,4 +1,4 @@
-package jxcel;
+package jxcel.attendence;
 
 /**
  * Created by kumars on 2/12/2016.
