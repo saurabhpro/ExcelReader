@@ -1,5 +1,7 @@
 package jxcel;
 
+import jxcel.model.HrnetDetails;
+
 import java.io.IOException;
 
 /**

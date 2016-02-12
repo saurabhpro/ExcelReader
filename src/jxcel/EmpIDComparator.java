@@ -1,5 +1,7 @@
 package jxcel;
 
+import jxcel.model.EmpDetails;
+
 import java.util.Comparator;
 
 /**

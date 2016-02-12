@@ -2,6 +2,7 @@ package jxcel;
 
 import jxcel.attendence.AttendanceOfDate;
 import jxcel.attendence.BiometricAttendanceStatus;
+import jxcel.model.EmpDetails;
 import jxl.Cell;
 import jxl.Sheet;
 import jxl.Workbook;
@@ -47,6 +48,7 @@ public class JxcelFileWorker implements IJxcelFile {
 
             String tempDate = null;
             String tempString = null;
+
 
             AttendanceOfDate[] attendanceOfDate = null;
 

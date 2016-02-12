@@ -1,5 +1,7 @@
 package jxcel;
 
+import jxcel.attendence.SalesforceLeave;
+import jxcel.model.HrnetDetails;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -32,6 +34,7 @@ public class ApacheFileWorker implements IApachePOIFile {
 
         numberOfRowsInHr = sheet.getPhysicalNumberOfRows();
         hrnetDetails = new HrnetDetails[numberOfRowsInHr];
+        SalesforceLeave salesforceLeave = new SalesforceLeave();
 
         String[] details = new String[7];
         for (int i = 1; i < numberOfRowsInHr; i++) {
@@ -58,10 +61,8 @@ public class ApacheFileWorker implements IApachePOIFile {
                         details[j] = cell.getStringCellValue();
                         break;
                 }
-                //  System.out.println(details[j]);
-
             }
-            hrnetDetails[i - 1] = new HrnetDetails(details[1], details[0], details[2], details[3], details[4], details[5], details[6]);
+            hrnetDetails[i - 1] = new HrnetDetails(details[1], details[0], details[2], salesforceLeave);
         }
 
 
@@ -75,8 +76,8 @@ public class ApacheFileWorker implements IApachePOIFile {
             System.out.print("\t" + hrnetDetails[i].name);
             System.out.print("\t" + hrnetDetails[i].requestID);
             System.out.print("\t" + hrnetDetails[i].leaveType);
-            System.out.print("\t" + hrnetDetails[i].startDate + "\t" + hrnetDetails[i].endDate);
-            System.out.println("\t" + hrnetDetails[i].absenceTime);
+            System.out.print("\t" + hrnetDetails[i].leaveType.getStartDate() + "\t" + hrnetDetails[i].leaveType.getEndDate());
+            System.out.println("\t" + hrnetDetails[i].leaveType.getAbsenceTime());
         }
     }
 }
