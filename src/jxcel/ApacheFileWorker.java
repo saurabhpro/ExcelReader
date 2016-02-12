@@ -15,7 +15,7 @@ import java.util.Objects;
 /**
  * Created by Saurabh on 2/10/2016.
  */
-public class ApacheFileWorker implements ApachePOIFile {
+public class ApacheFileWorker implements IApachePOIFile {
     int numberOfRowsInHr;
     HrnetDetails[] hrnetDetails;
 

@@ -6,19 +6,13 @@ package jxcel;
 
 public class EmpDetails {
     String name;
-    String empID;
-    String[] checkIn;
-    String[] checkOut;
-    String[] overTime;
-    String[] status;
+    String empId;
+    AttendanceDate[] attendanceDate;
 
-    EmpDetails(String ename, String eID, String[] chkIn, String[] chkOut, String[] ovrTime, String[] estatus) {
-        name = ename;
-        empID = eID;
-        checkIn = chkIn;
-        checkOut = chkOut;
-        overTime = ovrTime;
-        status = estatus;
+    EmpDetails(String eName, String eID, AttendanceDate[] attendanceDate) {
+        name = eName;
+        empId = eID;
+        this.attendanceDate = attendanceDate;
     }
 
 }

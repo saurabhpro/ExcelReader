@@ -1,6 +1,7 @@
 package jxcel;
 
 import java.io.IOException;
+import java.text.ParseException;
 
 /**
  * Created by kumars on 2/8/2016.
@@ -9,7 +10,7 @@ public class ReadExcel {
     private static String biometricFile;
     private static String hrNetFile;
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, ParseException {
         ReadExcel test = new ReadExcel();
 
         test.setBiometricFile(".\\ExcelFiles\\Biometric.xls");

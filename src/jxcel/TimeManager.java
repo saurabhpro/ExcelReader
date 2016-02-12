@@ -59,5 +59,23 @@ public class TimeManager {
         return new long[]{hours, minutes, secs};
     }
 
+    /*
+    public static int getMonth(String st){
+        switch(st){
+            case "JANUARY" : return 1; break;
+            case "FEBRUARY" : return 2; break;
+            case "MARCH" : return 1; break;
+            case "APRIL" : return 1; break;
+            case "MAY" : return 1; break;
+            case "JUNE" : return 1; break;
+            case "JULY" : return 1; break;
+            case "AUGUST" : return 1; break;
+            case "SEPTEMBER" : return 1; break;
+            case "OCTOBER" : return 1; break;
+            case "NOVEMBER" : return 1; break;
+            case "DECEMBER" : return 1; break;
+
+        }
+    }*/
 
 }
