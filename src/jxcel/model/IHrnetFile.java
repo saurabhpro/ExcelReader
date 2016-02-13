@@ -2,6 +2,8 @@ package jxcel.model;
 
 import jxcel.model.HrnetDetails;
 
+import jxcel.model.HrnetDetails;
+
 import java.io.IOException;
 
 /**
