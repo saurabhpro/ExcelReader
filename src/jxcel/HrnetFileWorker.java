@@ -34,12 +34,7 @@ public class HrnetFileWorker implements IHrnetFile {
 
         //Get first/desired sheet from the workbook
         Sheet sheet = workbook.getSheetAt(0);
-
         Cell cell = null;
-
-        numberOfRowsInHr = sheet.getPhysicalNumberOfRows();
-        hrnetDetails = new ArrayList<>();
-        //  hrnetDetails = new HrnetDetails[numberOfRowsInHr];
 
         AttendanceOfLeave attendanceOfLeave = null;
 
@@ -49,7 +44,11 @@ public class HrnetFileWorker implements IHrnetFile {
         Date d = null;
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
         String tempDate = null;
-        HrnetColumns hr = null;
+        HrnetColumns hre = null;
+
+        numberOfRowsInHr = sheet.getPhysicalNumberOfRows();
+        hrnetDetails = new ArrayList<>();
+        //  hrnetDetails = new HrnetDetails[numberOfRowsInHr];
 
         for (int i = 1; i < numberOfRowsInHr; i++) {
 
@@ -60,50 +59,55 @@ public class HrnetFileWorker implements IHrnetFile {
 
                 d = null;
                 tempDate = null;
-                hr = null;
+                hre = null;
                 // System.out.print(cell.getColumnIndex()+" ");
 
 
                 switch (j) {
                     case 0:
-                        hr = HrnetColumns.EMP_ID;
-                        // tempID = cell.getStringCellValue();
-                        tempID = Objects.toString(cell.getNumericCellValue());
+                        hre = HrnetColumns.EMP_ID;
+                        tempID = cell.getStringCellValue();
+                        //tempID = Objects.toString(cell.getNumericCellValue());
                         break;
                     case 1:
-                        hr = HrnetColumns.NAME;
+                        hre = HrnetColumns.NAME;
                         tempName = cell.getStringCellValue();
                         break;
                     case 2:
-                        hr = HrnetColumns.REQUEST_ID;
+                        hre = HrnetColumns.REQUEST_ID;
                         tempRequest = cell.getStringCellValue();
                         break;
                     case 3:
-                        hr = HrnetColumns.ABSENT_REQUEST_TYPE;
+                        hre = HrnetColumns.ABSENT_REQUEST_TYPE;
                         String tmp = cell.getStringCellValue().replace(" ", "_").toUpperCase();
                         attendanceOfLeave.setLeaveTypes(LeaveTypes.valueOf(tmp));
                         break;
-                  /*  case 4:
-                        System.out.println(j);
-                        hr = HrnetColumns.START_DATE;
-                        d =  cell.getDateCellValue();
-                        tempDate = df.format(d);
+                    case 4:
+                        if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
+                            hre = HrnetColumns.START_DATE;
+                            d = cell.getDateCellValue();
+                            tempDate = df.format(d);
+                        } else
+                            tempDate = cell.getStringCellValue();
 
                         attendanceOfLeave.setStartDate(tempDate);
                         break;
                     case 5:
-                        hr = HrnetColumns.END_DATE;
-                        d = cell.getDateCellValue();
-                        tempDate = df.format(d);
+                        if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
+                            hre = HrnetColumns.START_DATE;
+                            d = cell.getDateCellValue();
+                            tempDate = df.format(d);
+                        } else
+                            tempDate = cell.getStringCellValue();
                         attendanceOfLeave.setEndDate(tempDate);
-                        break;*/
+                        break;
                     case 6:
-                        hr = HrnetColumns.ABSENT_TIME_REQUESTED;
+                        hre = HrnetColumns.ABSENT_TIME_REQUESTED;
                         attendanceOfLeave.setAbsenceTime(cell.getNumericCellValue());
                         break;
 
                     case 7:
-                        hr = HrnetColumns.ABSENT_REQEST_BY;
+                        hre = HrnetColumns.ABSENT_REQUEST_BY;
                         break;
                 }
             }
@@ -122,7 +126,7 @@ public class HrnetFileWorker implements IHrnetFile {
             System.out.print("\t" + hr.name);
             System.out.print("\t" + hr.requestID);
             System.out.print("\t" + hr.leaveDetails.getLeaveTypes());
-            //System.out.print("\t" + hr.leaveDetails.getStartDate() + "\t" + hr.leaveDetails.getEndDate());
+            System.out.print("\t" + hr.leaveDetails.getStartDate() + "\t" + hr.leaveDetails.getEndDate());
             System.out.println("\t" + hr.leaveDetails.getAbsenceTime());
         }
     }

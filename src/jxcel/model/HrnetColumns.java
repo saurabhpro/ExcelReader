@@ -11,5 +11,5 @@ public enum HrnetColumns {
     START_DATE,
     END_DATE,
     ABSENT_TIME_REQUESTED,
-    ABSENT_REQEST_BY
+    ABSENT_REQUEST_BY
 }

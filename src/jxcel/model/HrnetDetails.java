@@ -7,10 +7,10 @@ import jxcel.attendence.AttendanceOfLeave;
  */
 public class HrnetDetails {
 
-    public String hrID;
-    public String name;
-    public String requestID;
-    public AttendanceOfLeave leaveDetails;
+    public final String hrID;
+    public final String name;
+    public final String requestID;
+    public final AttendanceOfLeave leaveDetails;
 
 
     public HrnetDetails(String hrID, String name, String requestID, AttendanceOfLeave leaveDetails) {
