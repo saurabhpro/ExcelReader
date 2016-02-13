@@ -21,12 +21,13 @@ import java.util.StringTokenizer;
 
 /**
  * Created by Saurabh on 2/10/2016.
+ * updated on 2/13/2016
  */
 public class BiometricFileWorker implements IBiometricFile {
 
-    List<EmpDetails> empList = null;
-    Iterator<EmpDetails> iterator = null;
-    private int ADDROWSTEPS = 0;
+    private List<EmpDetails> empList = null;
+    private Iterator<EmpDetails> iterator = null;
+    private int ADD_ROW_STEPS = 0;
 
     @Override
     public void readBiometricFile(String biometricFile) throws IOException, ParseException {
@@ -38,6 +39,8 @@ public class BiometricFileWorker implements IBiometricFile {
 
             Sheet sheet = w.getSheet(0);
 
+            int numberOfRowsInBio = (sheet.getRows() - 11) / 18;
+
             empList = new ArrayList<>();
             Cell cell;
             String[] details = new String[2];
@@ -47,38 +50,33 @@ public class BiometricFileWorker implements IBiometricFile {
             String monthYear = cell.getContents();
             StringTokenizer st = new StringTokenizer(monthYear, "   ");
 
-            String tempDate = null;
-            String tempString = null;
+            String tempDate;
+            String tempString;
+            BiometricAttendanceStatusTypes attendanceStatus = null;
 
-
-            AttendanceOfDate[] attendanceOfDate = null;
+            AttendanceOfDate[] attendanceOfDate;
 
             Month month = Month.valueOf(st.nextElement().toString().toUpperCase());
             Year year = Year.parse((String) st.nextElement());
 
-            BiometricAttendanceStatusTypes attendanceStatus = null;
 
-            for (int i = 0; i < 91; i++) {
+            for (int i = 0; i < numberOfRowsInBio; i++) {
                 details[0] = details[1] = null;
 
-                cell = sheet.getCell(3, 13 + (18 * ADDROWSTEPS));
+                cell = sheet.getCell(3, 13 + (18 * ADD_ROW_STEPS));
                 details[0] = cell.getContents();
 
-                cell = sheet.getCell(3, 15 + (18 * ADDROWSTEPS));
+                cell = sheet.getCell(3, 15 + (18 * ADD_ROW_STEPS));
                 details[1] = cell.getContents();
 
                 attendanceOfDate = new AttendanceOfDate[31];
 
                 for (int k = 0; k < 31; k++) {
-                    attendanceStatus = null;
-                    attendanceOfDate[k] = new AttendanceOfDate();
-
                     tempDate = "" + (k + 1) + "/" + month.getValue() + "/" + year;
-
+                    attendanceOfDate[k] = new AttendanceOfDate();
                     attendanceOfDate[k].setCurrentDate(tempDate);
 
-                    cell = sheet.getCell(k, 20 + (18 * ADDROWSTEPS));
-
+                    cell = sheet.getCell(k, 20 + (18 * ADD_ROW_STEPS));
                     st = new StringTokenizer(cell.getContents(), "   ");
 
 
@@ -115,7 +113,7 @@ public class BiometricFileWorker implements IBiometricFile {
                 empList.add(new EmpDetails(details[0], details[1], attendanceOfDate));
 
 
-                ADDROWSTEPS++;
+                ADD_ROW_STEPS++;
             }
         } catch (BiffException e) {
             e.printStackTrace();
