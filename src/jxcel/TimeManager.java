@@ -1,6 +1,12 @@
 package jxcel;
 
-import java.time.*;
+import org.jetbrains.annotations.NotNull;
+
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.StringTokenizer;
 
 /**
  * Created by SaurabhK on 09-02-2016.
@@ -40,6 +46,23 @@ public class TimeManager {
 
         return convertToTime(hours, minutes);
 
+    }
+
+    @NotNull
+    public static LocalDate convertToLocalDate(String date) {
+        int year;
+        int month;
+        int day;
+
+
+        StringTokenizer st = new StringTokenizer(date, "/");
+
+        month = Integer.parseInt((String) st.nextElement());
+        day = Integer.parseInt((String) st.nextElement());
+        year = Integer.parseInt((String) st.nextElement());
+
+
+        return LocalDate.of(year, month, day);
     }
 
     private static LocalTime convertToTime(long hr, long min) {

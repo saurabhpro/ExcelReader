@@ -13,8 +13,9 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 /**
@@ -42,8 +43,8 @@ public class HrnetFileWorker implements IHrnetFile {
         String tempID = null;
         String tempRequest = null;
         Date d = null;
-        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-        String tempDate = null;
+        DateTimeFormatter df = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate tempDate = null;
         HrnetColumns hre = null;
 
         numberOfRowsInHr = sheet.getPhysicalNumberOfRows();
@@ -66,8 +67,10 @@ public class HrnetFileWorker implements IHrnetFile {
                 switch (j) {
                     case 0:
                         hre = HrnetColumns.EMP_ID;
-                        tempID = cell.getStringCellValue();
-                        //tempID = Objects.toString(cell.getNumericCellValue());
+                        if (cell.getCellType() == Cell.CELL_TYPE_STRING)
+                            tempID = cell.getStringCellValue();
+                        else if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC)
+                            tempID = Objects.toString(cell.getNumericCellValue());
                         break;
                     case 1:
                         hre = HrnetColumns.NAME;
@@ -85,22 +88,24 @@ public class HrnetFileWorker implements IHrnetFile {
                     case 4:
                         if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
                             hre = HrnetColumns.START_DATE;
-                            d = cell.getDateCellValue();
-                            tempDate = df.format(d);
+                            tempDate = TimeManager.convertToLocalDate(new SimpleDateFormat("dd/MM/yyyy").format(cell.getDateCellValue()));
+
                         } else
-                            tempDate = cell.getStringCellValue();
+                            tempDate = TimeManager.convertToLocalDate(cell.getStringCellValue());
 
                         attendanceOfLeave.setStartDate(tempDate);
                         break;
                     case 5:
                         if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
-                            hre = HrnetColumns.START_DATE;
-                            d = cell.getDateCellValue();
-                            tempDate = df.format(d);
+                            hre = HrnetColumns.END_DATE;
+                            tempDate = TimeManager.convertToLocalDate(new SimpleDateFormat("dd/MM/yyyy").format(cell.getDateCellValue()));
+
                         } else
-                            tempDate = cell.getStringCellValue();
+                            tempDate = TimeManager.convertToLocalDate(cell.getStringCellValue());
+
                         attendanceOfLeave.setEndDate(tempDate);
                         break;
+
                     case 6:
                         hre = HrnetColumns.ABSENT_TIME_REQUESTED;
                         attendanceOfLeave.setAbsenceTime(cell.getNumericCellValue());
@@ -130,4 +135,7 @@ public class HrnetFileWorker implements IHrnetFile {
             System.out.println("\t" + hr.leaveDetails.getAbsenceTime());
         }
     }
+
+
 }
+
