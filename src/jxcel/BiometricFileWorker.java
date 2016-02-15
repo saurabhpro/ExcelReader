@@ -2,7 +2,7 @@ package jxcel;
 
 import jxcel.attendence.AttendanceOfDate;
 import jxcel.model.BiometricAttendanceStatusTypes;
-import jxcel.model.EmpDetails;
+import jxcel.model.BiometricDetails;
 import jxcel.model.IBiometricFile;
 import jxl.Cell;
 import jxl.Sheet;
@@ -16,7 +16,10 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.Month;
 import java.time.Year;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.StringTokenizer;
 
 /**
  * Created by Saurabh on 2/10/2016.
@@ -24,8 +27,8 @@ import java.util.*;
  */
 public class BiometricFileWorker implements IBiometricFile {
 
-    static public List<EmpDetails> empList = null;
-    private Iterator<EmpDetails> iterator = null;
+    static public List<BiometricDetails> empList = null;
+    private Iterator<BiometricDetails> iterator = null;
     private int ADD_ROW_STEPS = 0;
 
     @Override
@@ -112,7 +115,7 @@ public class BiometricFileWorker implements IBiometricFile {
                     attendanceOfDate[k].setBiometricAttendanceStatusTypes(attendanceStatus);
                 }
 
-                empList.add(new EmpDetails(details[0], details[1], attendanceOfDate));
+                empList.add(new BiometricDetails(details[0], details[1], attendanceOfDate));
 
 
                 ADD_ROW_STEPS++;
@@ -128,7 +131,7 @@ public class BiometricFileWorker implements IBiometricFile {
         iterator = empList.iterator();
         LocalTime workTime;
         while (iterator.hasNext()) {
-            EmpDetails emp = iterator.next();
+            BiometricDetails emp = iterator.next();
             System.out.println("Name: " + emp.name);
             System.out.println("Employee ID: " + emp.empId);
 

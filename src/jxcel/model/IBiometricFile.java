@@ -8,5 +8,6 @@ import java.text.ParseException;
  */
 public interface IBiometricFile {
     void readBiometricFile(String x) throws IOException, ParseException;
+
     void displayBiometricFile();
 }

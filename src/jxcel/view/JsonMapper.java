@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jxcel.BiometricFileWorker;
-import jxcel.model.EmpDetails;
+import jxcel.model.BiometricDetails;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -19,7 +19,7 @@ import java.util.Map;
 public class JsonMapper {
     ObjectMapper mapper = new ObjectMapper();
     //For testing
-    List<EmpDetails> user;
+    List<BiometricDetails> user;
 
     public JsonMapper toJsonFile(String fileName) {
 

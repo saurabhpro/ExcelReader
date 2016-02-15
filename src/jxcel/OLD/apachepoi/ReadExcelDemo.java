@@ -14,14 +14,11 @@ import java.util.Iterator;
  * Created by kumars on 2/3/2016.
  */
 //import statements
-public class ReadExcelDemo
-{
+public class ReadExcelDemo {
     //comment sample
     //
-    public static void main(String... args)
-    {
-        try
-        {
+    public static void main(String... args) {
+        try {
             FileInputStream file = new FileInputStream(new File(".\\ExcelFiles\\test report.xls"));
 
             //Create Workbook instance holding reference to .xlsx file
@@ -51,9 +48,7 @@ public class ReadExcelDemo
                 System.out.println("");
             }
             file.close();
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
