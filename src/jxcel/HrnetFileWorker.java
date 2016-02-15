@@ -22,8 +22,8 @@ import java.util.*;
  * Created by Saurabh on 2/10/2016.
  */
 public class HrnetFileWorker implements IHrnetFile {
+    public static List<HrnetDetails> hrnetDetails = null;
     int numberOfRowsInHr;
-    List<HrnetDetails> hrnetDetails = null;
     Iterator<HrnetDetails> iterator = null;
 
     //hi

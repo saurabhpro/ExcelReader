@@ -26,6 +26,9 @@ public class AttendanceOfDate {
         return workTimeForDay;
     }
 
+    public void setWorkTimeForDay(LocalTime workTimeForDay) {
+        this.workTimeForDay = workTimeForDay;
+    }
 
     public LocalTime getCheckIn() {
         return checkIn;
