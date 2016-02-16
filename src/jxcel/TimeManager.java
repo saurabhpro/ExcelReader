@@ -54,7 +54,6 @@ public class TimeManager {
         int month;
         int day;
 
-
         StringTokenizer st = new StringTokenizer(date, "/");
 
         month = Integer.parseInt((String) st.nextElement());
