@@ -22,15 +22,14 @@ public class TimeManager {
         froDate = toDate = date;
         LocalTime time = null;
 
-        if (checkInTime != null && checkOutTime != null) {
-            if (checkOutTime.compareTo(checkInTime) < 0)
-                toDate = froDate.plusDays(1);
+        if (checkOutTime.compareTo(checkInTime) < 0)
+            toDate = froDate.plusDays(1);
 
-            LocalDateTime fromDateTime = LocalDateTime.of(froDate, checkInTime);
-            LocalDateTime toDateTime = LocalDateTime.of(toDate, checkOutTime);
+        LocalDateTime fromDateTime = LocalDateTime.of(froDate, checkInTime);
+        LocalDateTime toDateTime = LocalDateTime.of(toDate, checkOutTime);
 
-            time = getTime(fromDateTime, toDateTime);
-        }
+        time = getTime(fromDateTime, toDateTime);
+
 
         return time;
     }

@@ -8884,13 +8884,8 @@
     "checkIn" : null,
     "checkOut" : null,
     "overTime" : null,
-    "workTimeForDay" : {
-      "hour" : 8,
-      "minute" : 0,
-      "second" : 0,
-      "nano" : 0
-    },
-    "biometricAttendanceStatusTypes" : "PRESENT"
+    "workTimeForDay" : null,
+    "biometricAttendanceStatusTypes" : "ABSENT"
   }, {
     "currentDate" : {
       "year" : 2016,
@@ -8909,13 +8904,8 @@
     "checkIn" : null,
     "checkOut" : null,
     "overTime" : null,
-    "workTimeForDay" : {
-      "hour" : 8,
-      "minute" : 0,
-      "second" : 0,
-      "nano" : 0
-    },
-    "biometricAttendanceStatusTypes" : "PRESENT"
+    "workTimeForDay" : null,
+    "biometricAttendanceStatusTypes" : "ABSENT"
   }, {
     "currentDate" : {
       "year" : 2016,
@@ -8934,12 +8924,7 @@
     "checkIn" : null,
     "checkOut" : null,
     "overTime" : null,
-    "workTimeForDay" : {
-      "hour" : 0,
-      "minute" : 0,
-      "second" : 0,
-      "nano" : 0
-    },
+    "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "HALF_DAY"
   }, {
     "currentDate" : {
@@ -21779,13 +21764,8 @@
     "checkIn" : null,
     "checkOut" : null,
     "overTime" : null,
-    "workTimeForDay" : {
-      "hour" : 16,
-      "minute" : 0,
-      "second" : 0,
-      "nano" : 0
-    },
-    "biometricAttendanceStatusTypes" : "PRESENT"
+    "workTimeForDay" : null,
+    "biometricAttendanceStatusTypes" : "ABSENT"
   }, {
     "currentDate" : {
       "year" : 2016,
@@ -21804,13 +21784,8 @@
     "checkIn" : null,
     "checkOut" : null,
     "overTime" : null,
-    "workTimeForDay" : {
-      "hour" : 8,
-      "minute" : 0,
-      "second" : 0,
-      "nano" : 0
-    },
-    "biometricAttendanceStatusTypes" : "PRESENT"
+    "workTimeForDay" : null,
+    "biometricAttendanceStatusTypes" : "ABSENT"
   }, {
     "currentDate" : {
       "year" : 2016,
@@ -33809,13 +33784,8 @@
     "checkIn" : null,
     "checkOut" : null,
     "overTime" : null,
-    "workTimeForDay" : {
-      "hour" : 8,
-      "minute" : 0,
-      "second" : 0,
-      "nano" : 0
-    },
-    "biometricAttendanceStatusTypes" : "PRESENT"
+    "workTimeForDay" : null,
+    "biometricAttendanceStatusTypes" : "ABSENT"
   }, {
     "currentDate" : {
       "year" : 2016,
@@ -38635,7 +38605,7 @@
       "second" : 0,
       "nano" : 0
     },
-    "biometricAttendanceStatusTypes" : "PRESENT"
+    "biometricAttendanceStatusTypes" : "ABSENT"
   }, {
     "currentDate" : {
       "year" : 2016,
@@ -39554,13 +39524,8 @@
     "checkIn" : null,
     "checkOut" : null,
     "overTime" : null,
-    "workTimeForDay" : {
-      "hour" : 8,
-      "minute" : 0,
-      "second" : 0,
-      "nano" : 0
-    },
-    "biometricAttendanceStatusTypes" : "PRESENT"
+    "workTimeForDay" : null,
+    "biometricAttendanceStatusTypes" : "ABSENT"
   }, {
     "currentDate" : {
       "year" : 2016,
@@ -66767,319 +66732,4 @@
       "leapYear" : true,
       "monthValue" : 1,
       "chronology" : {
-        "id" : "ISO",
-        "calendarType" : "iso8601"
-      }
-    },
-    "checkIn" : null,
-    "checkOut" : null,
-    "overTime" : null,
-    "workTimeForDay" : null,
-    "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
-  }, {
-    "currentDate" : {
-      "year" : 2016,
-      "month" : "JANUARY",
-      "era" : "CE",
-      "dayOfMonth" : 17,
-      "dayOfWeek" : "SUNDAY",
-      "dayOfYear" : 17,
-      "leapYear" : true,
-      "monthValue" : 1,
-      "chronology" : {
-        "id" : "ISO",
-        "calendarType" : "iso8601"
-      }
-    },
-    "checkIn" : null,
-    "checkOut" : null,
-    "overTime" : null,
-    "workTimeForDay" : null,
-    "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
-  }, {
-    "currentDate" : {
-      "year" : 2016,
-      "month" : "JANUARY",
-      "era" : "CE",
-      "dayOfMonth" : 18,
-      "dayOfWeek" : "MONDAY",
-      "dayOfYear" : 18,
-      "leapYear" : true,
-      "monthValue" : 1,
-      "chronology" : {
-        "id" : "ISO",
-        "calendarType" : "iso8601"
-      }
-    },
-    "checkIn" : {
-      "hour" : 11,
-      "minute" : 13,
-      "second" : 0,
-      "nano" : 0
-    },
-    "checkOut" : {
-      "hour" : 0,
-      "minute" : 0,
-      "second" : 0,
-      "nano" : 0
-    },
-    "overTime" : null,
-    "workTimeForDay" : {
-      "hour" : 12,
-      "minute" : 47,
-      "second" : 0,
-      "nano" : 0
-    },
-    "biometricAttendanceStatusTypes" : "ABSENT"
-  }, {
-    "currentDate" : {
-      "year" : 2016,
-      "month" : "JANUARY",
-      "era" : "CE",
-      "dayOfMonth" : 19,
-      "dayOfWeek" : "TUESDAY",
-      "dayOfYear" : 19,
-      "leapYear" : true,
-      "monthValue" : 1,
-      "chronology" : {
-        "id" : "ISO",
-        "calendarType" : "iso8601"
-      }
-    },
-    "checkIn" : null,
-    "checkOut" : null,
-    "overTime" : null,
-    "workTimeForDay" : null,
-    "biometricAttendanceStatusTypes" : "ABSENT"
-  }, {
-    "currentDate" : {
-      "year" : 2016,
-      "month" : "JANUARY",
-      "era" : "CE",
-      "dayOfMonth" : 20,
-      "dayOfWeek" : "WEDNESDAY",
-      "dayOfYear" : 20,
-      "leapYear" : true,
-      "monthValue" : 1,
-      "chronology" : {
-        "id" : "ISO",
-        "calendarType" : "iso8601"
-      }
-    },
-    "checkIn" : null,
-    "checkOut" : null,
-    "overTime" : null,
-    "workTimeForDay" : null,
-    "biometricAttendanceStatusTypes" : "ABSENT"
-  }, {
-    "currentDate" : {
-      "year" : 2016,
-      "month" : "JANUARY",
-      "era" : "CE",
-      "dayOfMonth" : 21,
-      "dayOfWeek" : "THURSDAY",
-      "dayOfYear" : 21,
-      "leapYear" : true,
-      "monthValue" : 1,
-      "chronology" : {
-        "id" : "ISO",
-        "calendarType" : "iso8601"
-      }
-    },
-    "checkIn" : null,
-    "checkOut" : null,
-    "overTime" : null,
-    "workTimeForDay" : null,
-    "biometricAttendanceStatusTypes" : "ABSENT"
-  }, {
-    "currentDate" : {
-      "year" : 2016,
-      "month" : "JANUARY",
-      "era" : "CE",
-      "dayOfMonth" : 22,
-      "dayOfWeek" : "FRIDAY",
-      "dayOfYear" : 22,
-      "leapYear" : true,
-      "monthValue" : 1,
-      "chronology" : {
-        "id" : "ISO",
-        "calendarType" : "iso8601"
-      }
-    },
-    "checkIn" : null,
-    "checkOut" : null,
-    "overTime" : null,
-    "workTimeForDay" : null,
-    "biometricAttendanceStatusTypes" : "ABSENT"
-  }, {
-    "currentDate" : {
-      "year" : 2016,
-      "month" : "JANUARY",
-      "era" : "CE",
-      "dayOfMonth" : 23,
-      "dayOfWeek" : "SATURDAY",
-      "dayOfYear" : 23,
-      "leapYear" : true,
-      "monthValue" : 1,
-      "chronology" : {
-        "id" : "ISO",
-        "calendarType" : "iso8601"
-      }
-    },
-    "checkIn" : null,
-    "checkOut" : null,
-    "overTime" : null,
-    "workTimeForDay" : null,
-    "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
-  }, {
-    "currentDate" : {
-      "year" : 2016,
-      "month" : "JANUARY",
-      "era" : "CE",
-      "dayOfMonth" : 24,
-      "dayOfWeek" : "SUNDAY",
-      "dayOfYear" : 24,
-      "leapYear" : true,
-      "monthValue" : 1,
-      "chronology" : {
-        "id" : "ISO",
-        "calendarType" : "iso8601"
-      }
-    },
-    "checkIn" : null,
-    "checkOut" : null,
-    "overTime" : null,
-    "workTimeForDay" : null,
-    "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
-  }, {
-    "currentDate" : {
-      "year" : 2016,
-      "month" : "JANUARY",
-      "era" : "CE",
-      "dayOfMonth" : 25,
-      "dayOfWeek" : "MONDAY",
-      "dayOfYear" : 25,
-      "leapYear" : true,
-      "monthValue" : 1,
-      "chronology" : {
-        "id" : "ISO",
-        "calendarType" : "iso8601"
-      }
-    },
-    "checkIn" : null,
-    "checkOut" : null,
-    "overTime" : null,
-    "workTimeForDay" : null,
-    "biometricAttendanceStatusTypes" : "ABSENT"
-  }, {
-    "currentDate" : {
-      "year" : 2016,
-      "month" : "JANUARY",
-      "era" : "CE",
-      "dayOfMonth" : 26,
-      "dayOfWeek" : "TUESDAY",
-      "dayOfYear" : 26,
-      "leapYear" : true,
-      "monthValue" : 1,
-      "chronology" : {
-        "id" : "ISO",
-        "calendarType" : "iso8601"
-      }
-    },
-    "checkIn" : null,
-    "checkOut" : null,
-    "overTime" : null,
-    "workTimeForDay" : null,
-    "biometricAttendanceStatusTypes" : "PUBLIC_HOLIDAY"
-  }, {
-    "currentDate" : {
-      "year" : 2016,
-      "month" : "JANUARY",
-      "era" : "CE",
-      "dayOfMonth" : 27,
-      "dayOfWeek" : "WEDNESDAY",
-      "dayOfYear" : 27,
-      "leapYear" : true,
-      "monthValue" : 1,
-      "chronology" : {
-        "id" : "ISO",
-        "calendarType" : "iso8601"
-      }
-    },
-    "checkIn" : null,
-    "checkOut" : null,
-    "overTime" : null,
-    "workTimeForDay" : null,
-    "biometricAttendanceStatusTypes" : "ABSENT"
-  }, {
-    "currentDate" : {
-      "year" : 2016,
-      "month" : "JANUARY",
-      "era" : "CE",
-      "dayOfMonth" : 28,
-      "dayOfWeek" : "THURSDAY",
-      "dayOfYear" : 28,
-      "leapYear" : true,
-      "monthValue" : 1,
-      "chronology" : {
-        "id" : "ISO",
-        "calendarType" : "iso8601"
-      }
-    },
-    "checkIn" : null,
-    "checkOut" : null,
-    "overTime" : null,
-    "workTimeForDay" : null,
-    "biometricAttendanceStatusTypes" : "ABSENT"
-  }, {
-    "currentDate" : {
-      "year" : 2016,
-      "month" : "JANUARY",
-      "era" : "CE",
-      "dayOfMonth" : 29,
-      "dayOfWeek" : "FRIDAY",
-      "dayOfYear" : 29,
-      "leapYear" : true,
-      "monthValue" : 1,
-      "chronology" : {
-        "id" : "ISO",
-        "calendarType" : "iso8601"
-      }
-    },
-    "checkIn" : null,
-    "checkOut" : null,
-    "overTime" : null,
-    "workTimeForDay" : null,
-    "biometricAttendanceStatusTypes" : "ABSENT"
-  }, {
-    "currentDate" : {
-      "year" : 2016,
-      "month" : "JANUARY",
-      "era" : "CE",
-      "dayOfMonth" : 30,
-      "dayOfWeek" : "SATURDAY",
-      "dayOfYear" : 30,
-      "leapYear" : true,
-      "monthValue" : 1,
-      "chronology" : {
-        "id" : "ISO",
-        "calendarType" : "iso8601"
-      }
-    },
-    "checkIn" : null,
-    "checkOut" : null,
-    "overTime" : null,
-    "workTimeForDay" : null,
-    "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
-  }, {
-    "currentDate" : {
-      "year" : 2016,
-      "month" : "JANUARY",
-      "era" : "CE",
-      "dayOfMonth" : 31,
-      "dayOfWeek" : "SUNDAY",
-      "dayOfYear" : 31,
-      "leapYear" : true,
-      "monthValue" : 1,
-      "chronology" : {
-        "id" : "ISO"
+        "id" :

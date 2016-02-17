@@ -53,7 +53,9 @@ public class HrnetFileWorker implements IHrnetFile {
         String tempName = null;
         String tempID = null;
         String tempRequest = null;
+
         DateTimeFormatter df = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
         LocalDate tempDate;
         HrnetColumns hre = null;
 
@@ -132,17 +134,18 @@ public class HrnetFileWorker implements IHrnetFile {
     }
 
     @Override
-    public void displayApachePOIFile() {
+    public void displayHRNetFile() {
         iterator = hrnetDetails.iterator();
         while (iterator.hasNext()) {
             HrnetDetails hr = iterator.next();
 
-            System.out.print(hr.hrID);
+            System.out.print(hr.employeeID);
             System.out.print("\t" + hr.name);
             System.out.print("\t" + hr.requestID);
-            System.out.print("\t" + hr.leaveDetails.getLeaveTypes());
-            System.out.print("\t" + hr.leaveDetails.getStartDate() + "\t" + hr.leaveDetails.getEndDate());
-            System.out.println("\t" + hr.leaveDetails.getAbsenceTime());
+            System.out.print("\t" + hr.attendanceOfLeave.getLeaveTypes());
+            System.out.print("\t" + hr.attendanceOfLeave.getStartDate() + "\t" + hr.attendanceOfLeave.getEndDate());
+            System.out.println("\t" + hr.attendanceOfLeave.getAbsenceTime());
+
         }
 /*
         int numberOfLeaveDays = hr.leaveDetails.getEndDate().minusDays( hr.leaveDetails.getStartDate().getDayOfMonth()).getDayOfMonth();
