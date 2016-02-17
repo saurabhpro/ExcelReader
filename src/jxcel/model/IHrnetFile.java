@@ -8,5 +8,5 @@ import java.io.IOException;
 public interface IHrnetFile {
     void readHRNetFile() throws IOException;
 
-    void displayApachePOIFile();
+    void displayHRNetFile();
 }

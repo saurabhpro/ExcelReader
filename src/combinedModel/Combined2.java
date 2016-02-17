@@ -30,8 +30,7 @@ public class Combined2 {
             for (HolidaysList h : HolidaysList.values()) {
                 if (h.getDate().getMonth() == BiometricFileWorker.month) {
 
-                    bd.attendanceOfDate[h.getDate().getDayOfMonth() - 1].
-                            setBiometricAttendanceStatusTypes(BiometricAttendanceStatusTypes.PUBLIC_HOLIDAY);
+                    bd.attendanceOfDate[h.getDate().getDayOfMonth() - 1].setBiometricAttendanceStatusTypes(BiometricAttendanceStatusTypes.PUBLIC_HOLIDAY);
                 }
             }
 
@@ -39,35 +38,30 @@ public class Combined2 {
                 switch (bd.attendanceOfDate[i].getBiometricAttendanceStatusTypes()) {
                     case ABSENT:
 
+                        //check for Work from home and half day
                         for (HrnetDetails hr : hrnetDetails) {
-                            LocalDate startDate = hr.leaveDetails.getStartDate();
-                            // LocalDate endDate = hr.leaveDetails.getEndDate();
 
-                            if (hr.hrID.equals(bd.empId)) {
-                                double leaveTime = hr.leaveDetails.getAbsenceTime();
+                            if (hr.employeeID.equals(bd.empId)) {
+                                LocalDate startDate = hr.attendanceOfLeave.getStartDate();
+                                // LocalDate endDate = hr.leaveDetails.getEndDate();
+                                double leaveTime = hr.attendanceOfLeave.getAbsenceTime();
 
                                 int changeDatesRange = startDate.getDayOfMonth() - 1;
 
-                                if (hr.leaveDetails.getLeaveTypes() == LeaveTypes.WORK_FROM_HOME ||
-                                        hr.leaveDetails.getLeaveTypes() == LeaveTypes.CASUAL_IND ||
-                                        hr.leaveDetails.getLeaveTypes() == LeaveTypes.VACATION_IND) {
-                                    while (leaveTime > 0) {
+                                while (leaveTime > 0) {
 
+                                    if (leaveTime == 0.5)
+                                        bd.attendanceOfDate[changeDatesRange].setBiometricAttendanceStatusTypes(BiometricAttendanceStatusTypes.HALF_DAY);
+                                    else if (hr.attendanceOfLeave.getLeaveTypes() == LeaveTypes.WORK_FROM_HOME) {
                                         bd.attendanceOfDate[changeDatesRange].setWorkTimeForDay(LocalTime.of((int) leaveTime * 8, 0));
-
-                                        if (leaveTime >= 1) {
-                                            bd.attendanceOfDate[changeDatesRange].setBiometricAttendanceStatusTypes(BiometricAttendanceStatusTypes.PRESENT);
-                                        } else {
-                                            bd.attendanceOfDate[changeDatesRange].setBiometricAttendanceStatusTypes(BiometricAttendanceStatusTypes.HALF_DAY);
-                                        }
-
-                                        changeDatesRange++;
-                                        leaveTime--;
+                                        bd.attendanceOfDate[changeDatesRange].setBiometricAttendanceStatusTypes(BiometricAttendanceStatusTypes.PRESENT);
                                     }
+                                    changeDatesRange++;
+                                    leaveTime--;
                                 }
-
                             }
                         }
+
                 }
             }
         }

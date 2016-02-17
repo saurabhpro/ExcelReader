@@ -16,20 +16,21 @@ public class ReadExcel {
     public static void main(String[] args) throws IOException, ParseException {
         ReadExcel test = new ReadExcel();
 
+        //read Biometric Excel File
         test.setBiometricFile(".\\ExcelFiles\\Biometric.xls");
         BiometricFileWorker jxcelFileWorker = new BiometricFileWorker(biometricFile);
         jxcelFileWorker.readBiometricFile();
 
-
-        System.out.println("check 1");
+        //read HRNet Excel File
         test.setHrNetFile(".\\ExcelFiles\\HRNet.xlsx");
         HrnetFileWorker hrnetFileWorker = new HrnetFileWorker(hrNetFile);
         hrnetFileWorker.readHRNetFile();
-        hrnetFileWorker.displayApachePOIFile();
-
 
         new Combined2().combineFiles();
         new JsonMapper().toJsonFile(null).fromJsonToFormattedJson(null);
+
+        //display Biometric and HRNet Excel Files
+        hrnetFileWorker.displayHRNetFile();
         jxcelFileWorker.displayBiometricFile();
 
 

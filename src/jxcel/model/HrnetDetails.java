@@ -7,16 +7,16 @@ import jxcel.attendence.AttendanceOfLeave;
  */
 public class HrnetDetails {
 
-    public final String hrID;
+    public final String employeeID;
     public final String name;
     public final String requestID;
-    public final AttendanceOfLeave leaveDetails;
+    public final AttendanceOfLeave attendanceOfLeave;
 
 
-    public HrnetDetails(String hrID, String name, String requestID, AttendanceOfLeave leaveDetails) {
-        this.hrID = hrID;
+    public HrnetDetails(String employeeID, String name, String requestID, AttendanceOfLeave attendanceOfLeave) {
+        this.employeeID = employeeID;
         this.name = name;
         this.requestID = requestID;
-        this.leaveDetails = leaveDetails;
+        this.attendanceOfLeave = attendanceOfLeave;
     }
 }
