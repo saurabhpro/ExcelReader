@@ -28,109 +28,115 @@ import java.util.StringTokenizer;
 public class BiometricFileWorker implements IBiometricFile {
 
     static public List<BiometricDetails> empList = null;
-    public Year year = Year.parse("2016");
-    public Month month;
-    private Iterator<BiometricDetails> iterator = null;
+    static public Month month;
+    static public Year year;
+
+    File inputWorkbook = null;
+    Workbook w = null;
+    Sheet sheet = null;
     private int ADD_ROW_STEPS = 0;
 
-    @Override
-    public void readBiometricFile(String biometricFile) throws IOException, ParseException {
-        File inputWorkbook = new File(biometricFile);
-        Workbook w;
+    public BiometricFileWorker(String biometricFile) {
+        inputWorkbook = new File(biometricFile);
         try {
             w = Workbook.getWorkbook(inputWorkbook);
             // Get the first sheet
 
-            Sheet sheet = w.getSheet(0);
+            sheet = w.getSheet(0);
+        } catch (BiffException | IOException e) {
+            e.printStackTrace();
+        }
+    }
 
-            int numberOfRowsInBio = (sheet.getRows() - 11) / 18;
+    @Override
+    public void readBiometricFile() throws IOException, ParseException {
 
-            empList = new ArrayList<>();
-            Cell cell;
-            String[] details = new String[2];
+        int numberOfRowsInBio = (sheet.getRows() - 11) / 18;
 
-
-            cell = sheet.getCell(13, 7);
-            String monthYear = cell.getContents();
-            StringTokenizer st = new StringTokenizer(monthYear, "   ");
-
-            LocalDate tempDate;
-            String tempString;
-            BiometricAttendanceStatusTypes attendanceStatus = null;
-
-            AttendanceOfDate[] attendanceOfDate;
-
-            this.month = Month.valueOf(st.nextElement().toString().toUpperCase());
-            this.year = Year.parse((String) st.nextElement());
+        empList = new ArrayList<>();
+        Cell cell;
+        String[] details = new String[2];
 
 
-            for (int i = 0; i < numberOfRowsInBio; i++) {
-                details[0] = details[1] = null;
+        cell = sheet.getCell(13, 7);
+        String monthYear = cell.getContents();
+        StringTokenizer st = new StringTokenizer(monthYear, "   ");
 
-                cell = sheet.getCell(3, 13 + (18 * ADD_ROW_STEPS));
-                details[0] = cell.getContents();
+        LocalDate tempDate;
+        String tempString;
+        BiometricAttendanceStatusTypes attendanceStatus = null;
 
-                cell = sheet.getCell(3, 15 + (18 * ADD_ROW_STEPS));
-                details[1] = cell.getContents();
+        AttendanceOfDate[] attendanceOfDate;
 
-                attendanceOfDate = new AttendanceOfDate[31];
-
-                for (int k = 0; k < 31; k++) {
-                    attendanceOfDate[k] = new AttendanceOfDate();
-
-                    tempDate = LocalDate.of(year.getValue(), month, (k + 1));
-                    attendanceOfDate[k].setCurrentDate(tempDate);
-
-                    cell = sheet.getCell(k, 20 + (18 * ADD_ROW_STEPS));
-                    st = new StringTokenizer(cell.getContents(), "   ");
+        month = Month.valueOf(st.nextElement().toString().toUpperCase());
+        year = Year.parse((String) st.nextElement());
 
 
-                    lb:
-                    for (int j = 2; j < 6; j++) {
-                        if (st.hasMoreElements()) {
-                            tempString = (String) st.nextElement();
-                            //A
-                            //11:00 12:00 00;00 P
-                            switch (tempString) {
-                                case "A":
-                                    attendanceStatus = BiometricAttendanceStatusTypes.ABSENT;
-                                    break lb;
-                                case "P/A":
-                                    attendanceStatus = BiometricAttendanceStatusTypes.ABSENT;
-                                    break lb;
-                                case "W":
+        for (int i = 0; i < numberOfRowsInBio; i++) {
+            details[0] = details[1] = null;
 
-                                    //case when employee checks in on weekend or public holiday
-                                    attendanceStatus = BiometricAttendanceStatusTypes.WEEKEND_HOLIDAY;
-                                    break lb;
-                                case "P":
-                                    attendanceStatus = BiometricAttendanceStatusTypes.PRESENT;
-                                    break lb;
-                                default:
-                                    if (j == 2)
-                                        attendanceOfDate[k].setCheckIn(LocalTime.parse(tempString));
-                                    else if (j == 3)
-                                        attendanceOfDate[k].setCheckOut(LocalTime.parse(tempString));
-                            }
+            cell = sheet.getCell(3, 13 + (18 * ADD_ROW_STEPS));
+            details[0] = cell.getContents();
+
+            cell = sheet.getCell(3, 15 + (18 * ADD_ROW_STEPS));
+            details[1] = cell.getContents();
+
+            attendanceOfDate = new AttendanceOfDate[31];
+
+            for (int k = 0; k < 31; k++) {
+                attendanceOfDate[k] = new AttendanceOfDate();
+
+                tempDate = LocalDate.of(year.getValue(), month, (k + 1));
+                attendanceOfDate[k].setCurrentDate(tempDate);
+
+                cell = sheet.getCell(k, 20 + (18 * ADD_ROW_STEPS));
+                st = new StringTokenizer(cell.getContents(), "   ");
+
+
+                lb:
+                for (int j = 2; j < 6; j++) {
+                    if (st.hasMoreElements()) {
+                        tempString = (String) st.nextElement();
+                        //A
+                        //11:00 12:00 00;00 P
+                        switch (tempString) {
+                            case "A":
+                                attendanceStatus = BiometricAttendanceStatusTypes.ABSENT;
+                                break lb;
+                            case "P/A":
+                                attendanceStatus = BiometricAttendanceStatusTypes.ABSENT;
+                                break lb;
+                            case "W":
+
+                                //case when employee checks in on weekend or public holiday
+                                attendanceStatus = BiometricAttendanceStatusTypes.WEEKEND_HOLIDAY;
+                                break lb;
+                            case "P":
+                                attendanceStatus = BiometricAttendanceStatusTypes.PRESENT;
+                                break lb;
+                            default:
+                                if (j == 2)
+                                    attendanceOfDate[k].setCheckIn(LocalTime.parse(tempString));
+                                else if (j == 3)
+                                    attendanceOfDate[k].setCheckOut(LocalTime.parse(tempString));
                         }
                     }
-                    attendanceOfDate[k].setBiometricAttendanceStatusTypes(attendanceStatus);
                 }
-
-                empList.add(new BiometricDetails(details[0], details[1], attendanceOfDate));
-
-
-                ADD_ROW_STEPS++;
+                attendanceOfDate[k].setBiometricAttendanceStatusTypes(attendanceStatus);
             }
-        } catch (BiffException e) {
-            e.printStackTrace();
+
+            empList.add(new BiometricDetails(details[0], details[1], attendanceOfDate));
+
+
+            ADD_ROW_STEPS++;
         }
     }
 
     @Override
     public void displayBiometricFile() {
 
-        iterator = empList.iterator();
+        System.out.println(month);
+        Iterator<BiometricDetails> iterator = empList.iterator();
         LocalTime workTime;
         while (iterator.hasNext()) {
             BiometricDetails emp = iterator.next();

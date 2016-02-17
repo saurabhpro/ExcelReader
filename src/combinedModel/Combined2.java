@@ -7,7 +7,6 @@ import jxcel.model.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -27,24 +26,20 @@ public class Combined2 {
 
         for (BiometricDetails bd : biometricDetails) {
 
-            //  for (int i = 0; i < 31; i++) {
+
             for (HolidaysList h : HolidaysList.values()) {
-                System.out.println(h.getDate().getMonth() + " " + new BiometricFileWorker().month);
-                if (h.getDate().getMonth() == new BiometricFileWorker().month) {
-                    System.out.println(h.name());
+                if (h.getDate().getMonth() == BiometricFileWorker.month) {
+
                     bd.attendanceOfDate[h.getDate().getDayOfMonth() - 1].
                             setBiometricAttendanceStatusTypes(BiometricAttendanceStatusTypes.PUBLIC_HOLIDAY);
                 }
-                //    }
+            }
 
-                /*
+            for (int i = 0; i < 31; i++) {
                 switch (bd.attendanceOfDate[i].getBiometricAttendanceStatusTypes()) {
                     case ABSENT:
-                        Iterator<HrnetDetails> hrnetDetailsIterator = hrnetDetails.iterator();
 
-                        while (hrnetDetailsIterator.hasNext()) {
-                            HrnetDetails hr = hrnetDetailsIterator.next();
-
+                        for (HrnetDetails hr : hrnetDetails) {
                             LocalDate startDate = hr.leaveDetails.getStartDate();
                             // LocalDate endDate = hr.leaveDetails.getEndDate();
 
@@ -73,7 +68,7 @@ public class Combined2 {
 
                             }
                         }
-                }*/
+                }
             }
         }
         BiometricFileWorker.empList = biometricDetails;

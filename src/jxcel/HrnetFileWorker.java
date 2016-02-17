@@ -22,29 +22,39 @@ import java.util.*;
  * Created by Saurabh on 2/10/2016.
  */
 public class HrnetFileWorker implements IHrnetFile {
-    public static List<HrnetDetails> hrnetDetails = null;
+    public static List<HrnetDetails> hrnetDetails;
     int numberOfRowsInHr;
     Iterator<HrnetDetails> iterator = null;
+    FileInputStream file;
+    Workbook workbook;
+    Sheet sheet;
+
+    public HrnetFileWorker(String hrNetFile) {
+        try {
+            file = new FileInputStream(new File(hrNetFile));
+            //Create Workbook instance holding reference to .xlsx file
+            workbook = new XSSFWorkbook(file);
+            //Get first/desired sheet from the workbook
+            sheet = workbook.getSheetAt(0);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     //hi
-    public void readHRNetFile(String hrNetFile) throws IOException {
-        FileInputStream file = new FileInputStream(new File(hrNetFile));
-        //Create Workbook instance holding reference to .xlsx file
+    public void readHRNetFile() throws IOException {
 
-        Workbook workbook = new XSSFWorkbook(file);
+        Cell cell;
 
-        //Get first/desired sheet from the workbook
-        Sheet sheet = workbook.getSheetAt(0);
-        Cell cell = null;
-
-        AttendanceOfLeave attendanceOfLeave = null;
+        AttendanceOfLeave attendanceOfLeave;
 
         String tempName = null;
         String tempID = null;
         String tempRequest = null;
-        Date d = null;
         DateTimeFormatter df = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        LocalDate tempDate = null;
+        LocalDate tempDate;
         HrnetColumns hre = null;
 
         numberOfRowsInHr = sheet.getPhysicalNumberOfRows();
@@ -58,7 +68,7 @@ public class HrnetFileWorker implements IHrnetFile {
                 //Update the value of cell
                 cell = sheet.getRow(i).getCell(j);
 
-                d = null;
+
                 tempDate = null;
                 hre = null;
                 // System.out.print(cell.getColumnIndex()+" ");

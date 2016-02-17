@@ -6,8 +6,6 @@ package jxcel.model;
 
 import jxcel.attendence.AttendanceOfDate;
 
-import java.time.Year;
-
 public class BiometricDetails {
     public final String name;
     public final String empId;

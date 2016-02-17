@@ -6,7 +6,6 @@ import jxl.WorkbookSettings;
 import jxl.format.UnderlineStyle;
 import jxl.write.*;
 import jxl.write.Number;
-import jxl.write.biff.RowsExceededException;
 
 import java.io.File;
 import java.io.IOException;
