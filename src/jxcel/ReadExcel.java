@@ -1,5 +1,6 @@
 package jxcel;
 
+import combinedModel.Combined2;
 import jxcel.view.JsonMapper;
 
 import java.io.IOException;
@@ -18,6 +19,8 @@ public class ReadExcel {
         test.setBiometricFile(".\\ExcelFiles\\Biometric.xls");
         BiometricFileWorker jxcelFileWorker = new BiometricFileWorker();
         jxcelFileWorker.readBiometricFile(biometricFile);
+
+        new Combined2().combineFiles();
         jxcelFileWorker.displayBiometricFile();
 
 

@@ -77,8 +77,7 @@ public class WriteExcel {
 
     }
 
-    private void createContent(WritableSheet sheet) throws WriteException,
-            RowsExceededException {
+    private void createContent(WritableSheet sheet) throws WriteException {
         // Write a few number
         for (int i = 1; i < 10; i++) {
             // First column
@@ -106,21 +105,21 @@ public class WriteExcel {
     }
 
     private void addCaption(WritableSheet sheet, int column, int row, String s)
-            throws RowsExceededException, WriteException {
+            throws WriteException {
         Label label;
         label = new Label(column, row, s, timesBoldUnderline);
         sheet.addCell(label);
     }
 
     private void addNumber(WritableSheet sheet, int column, int row,
-                           Integer integer) throws WriteException, RowsExceededException {
+                           Integer integer) throws WriteException {
         Number number;
         number = new Number(column, row, integer, times);
         sheet.addCell(number);
     }
 
     private void addLabel(WritableSheet sheet, int column, int row, String s)
-            throws WriteException, RowsExceededException {
+            throws WriteException {
         Label label;
         label = new Label(column, row, s, times);
         sheet.addCell(label);

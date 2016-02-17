@@ -2,10 +2,7 @@ package combinedModel;
 
 import jxcel.BiometricFileWorker;
 import jxcel.HrnetFileWorker;
-import jxcel.model.BiometricAttendanceStatusTypes;
-import jxcel.model.BiometricDetails;
-import jxcel.model.HrnetDetails;
-import jxcel.model.LeaveTypes;
+import jxcel.model.*;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -23,19 +20,28 @@ public class Combined2 {
     List<HrnetDetails> hrnetDetails = HrnetFileWorker.hrnetDetails;
     List<BiometricDetails> biometricDetails = BiometricFileWorker.empList;
 
-    Iterator<HrnetDetails> hrnetDetailsIterator = hrnetDetails.iterator();
-    Iterator<BiometricDetails> biometricDetailsIterator = biometricDetails.iterator();
 
     BiometricDetails newBiometricDetail;
 
-    void combineFiles() {
+    public void combineFiles() {
 
-        while (biometricDetailsIterator.hasNext()) {
-            BiometricDetails bd = biometricDetailsIterator.next();
+        for (BiometricDetails bd : biometricDetails) {
 
-            for (int i = 0; i < 31; i++) {
+            //  for (int i = 0; i < 31; i++) {
+            for (HolidaysList h : HolidaysList.values()) {
+                System.out.println(h.getDate().getMonth() + " " + new BiometricFileWorker().month);
+                if (h.getDate().getMonth() == new BiometricFileWorker().month) {
+                    System.out.println(h.name());
+                    bd.attendanceOfDate[h.getDate().getDayOfMonth() - 1].
+                            setBiometricAttendanceStatusTypes(BiometricAttendanceStatusTypes.PUBLIC_HOLIDAY);
+                }
+                //    }
+
+                /*
                 switch (bd.attendanceOfDate[i].getBiometricAttendanceStatusTypes()) {
                     case ABSENT:
+                        Iterator<HrnetDetails> hrnetDetailsIterator = hrnetDetails.iterator();
+
                         while (hrnetDetailsIterator.hasNext()) {
                             HrnetDetails hr = hrnetDetailsIterator.next();
 
@@ -43,10 +49,9 @@ public class Combined2 {
                             // LocalDate endDate = hr.leaveDetails.getEndDate();
 
                             if (hr.hrID.equals(bd.empId)) {
-
                                 double leaveTime = hr.leaveDetails.getAbsenceTime();
 
-                                int changeDatesRange = startDate.getDayOfMonth();
+                                int changeDatesRange = startDate.getDayOfMonth() - 1;
 
                                 if (hr.leaveDetails.getLeaveTypes() == LeaveTypes.WORK_FROM_HOME ||
                                         hr.leaveDetails.getLeaveTypes() == LeaveTypes.CASUAL_IND ||
@@ -67,19 +72,10 @@ public class Combined2 {
                                 }
 
                             }
-
-
                         }
-                }
-
-
+                }*/
             }
         }
-
-
-        LocalDate startTime = null;
-        LocalDate endTime = null;
-
-
+        BiometricFileWorker.empList = biometricDetails;
     }
 }

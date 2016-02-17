@@ -8,5 +8,5 @@ public enum BiometricAttendanceStatusTypes {
     PRESENT,
     PUBLIC_HOLIDAY,
     WEEKEND_HOLIDAY,
-    HALF_DAY;
+    HALF_DAY
 }

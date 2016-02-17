@@ -28,6 +28,8 @@ import java.util.StringTokenizer;
 public class BiometricFileWorker implements IBiometricFile {
 
     static public List<BiometricDetails> empList = null;
+    public Year year = Year.parse("2016");
+    public Month month;
     private Iterator<BiometricDetails> iterator = null;
     private int ADD_ROW_STEPS = 0;
 
@@ -58,8 +60,8 @@ public class BiometricFileWorker implements IBiometricFile {
 
             AttendanceOfDate[] attendanceOfDate;
 
-            Month month = Month.valueOf(st.nextElement().toString().toUpperCase());
-            Year year = Year.parse((String) st.nextElement());
+            this.month = Month.valueOf(st.nextElement().toString().toUpperCase());
+            this.year = Year.parse((String) st.nextElement());
 
 
             for (int i = 0; i < numberOfRowsInBio; i++) {
