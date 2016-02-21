@@ -10,6 +10,8 @@ public class BiometricDetails {
     public final String name;
     public final String empId;
     public final AttendanceOfDate[] attendanceOfDate;
+
+    public int numberOfLeaves = 0; //To check how many leaves have been applied
     public boolean needClarificationFromEmployee = false;
 
     public BiometricDetails(String eName, String eID, AttendanceOfDate[] attendanceOfDate) {
@@ -25,4 +27,14 @@ public class BiometricDetails {
     public void setIfClarificationFromEmployee(boolean needClarificationFromEmployee) {
         this.needClarificationFromEmployee = needClarificationFromEmployee;
     }
+
+    public void setNumberOfLeaves() {
+        numberOfLeaves = numberOfLeaves + 1;
+    } //Value is set in Combined2.java file
+
+    public int getNumberOfLeaves() {
+        return numberOfLeaves;
+    }
+
+
 }

@@ -26,12 +26,18 @@ public class ReadExcel {
         HrnetFileWorker hrnetFileWorker = new HrnetFileWorker(hrNetFile);
         hrnetFileWorker.readHRNetFile();
 
-        new Combined2().combineFiles();
+        Combined2 combined2 = new Combined2();
+        combined2.combineFiles();
         new JsonMapper().toJsonFile(null).fromJsonToFormattedJson(null);
 
+        //display Combined Files
+        combined2.displayCombineFiles();
+
+        /*
         //display Biometric and HRNet Excel Files
         hrnetFileWorker.displayHRNetFile();
         jxcelFileWorker.displayBiometricFile();
+        */
 
 
     }

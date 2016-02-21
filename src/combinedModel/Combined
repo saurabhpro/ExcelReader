@@ -2,7 +2,7 @@ package combinedModel;
 
 import jxcel.BiometricFileWorker;
 import jxcel.HrnetFileWorker;
-import jxcel.model.BiometricAttendanceStatusTypes;
+import jxcel.model.AttendanceStatusType;
 import jxcel.model.BiometricDetails;
 import jxcel.model.HrnetDetails;
 

@@ -1,7 +1,7 @@
 package jxcel;
 
 import jxcel.attendence.AttendanceOfDate;
-import jxcel.model.BiometricAttendanceStatusTypes;
+import jxcel.model.AttendanceStatusType;
 import jxcel.model.BiometricDetails;
 import jxcel.model.IBiometricFile;
 import jxl.Cell;
@@ -64,7 +64,7 @@ public class BiometricFileWorker implements IBiometricFile {
 
         LocalDate tempDate;
         String tempString;
-        BiometricAttendanceStatusTypes attendanceStatus = null;
+        AttendanceStatusType attendanceStatus = null;
 
         AttendanceOfDate[] attendanceOfDate;
 
@@ -84,6 +84,7 @@ public class BiometricFileWorker implements IBiometricFile {
             attendanceOfDate = new AttendanceOfDate[31];
 
             for (int k = 0; k < 31; k++) {
+                attendanceStatus = AttendanceStatusType.NOT_YET_AN_EMPLOYEE;
                 attendanceOfDate[k] = new AttendanceOfDate();
 
                 tempDate = LocalDate.of(year.getValue(), month, (k + 1));
@@ -101,18 +102,18 @@ public class BiometricFileWorker implements IBiometricFile {
                         //11:00 12:00 00;00 P
                         switch (tempString) {
                             case "A":
-                                attendanceStatus = BiometricAttendanceStatusTypes.ABSENT;
+                                attendanceStatus = AttendanceStatusType.ABSENT;
                                 break lb;
                             case "P/A":
-                                attendanceStatus = BiometricAttendanceStatusTypes.ABSENT;
+                                attendanceStatus = AttendanceStatusType.ABSENT;
                                 break lb;
                             case "W":
 
                                 //case when employee checks in on weekend or public holiday
-                                attendanceStatus = BiometricAttendanceStatusTypes.WEEKEND_HOLIDAY;
+                                attendanceStatus = AttendanceStatusType.WEEKEND_HOLIDAY;
                                 break lb;
                             case "P":
-                                attendanceStatus = BiometricAttendanceStatusTypes.PRESENT;
+                                attendanceStatus = AttendanceStatusType.PRESENT;
                                 break lb;
                             default:
                                 if (j == 2)
@@ -122,7 +123,7 @@ public class BiometricFileWorker implements IBiometricFile {
                         }
                     }
                 }
-                attendanceOfDate[k].setBiometricAttendanceStatusTypes(attendanceStatus);
+                attendanceOfDate[k].setAttendanceStatusType(attendanceStatus);
             }
 
             empList.add(new BiometricDetails(details[0], details[1], attendanceOfDate));
@@ -147,7 +148,7 @@ public class BiometricFileWorker implements IBiometricFile {
                 System.out.print(emp.attendanceOfDate[j].getCurrentDate());
                 System.out.print("\tIn Time: " + emp.attendanceOfDate[j].getCheckIn());
                 System.out.print("\tOut Time: " + emp.attendanceOfDate[j].getCheckOut());
-                System.out.print("\tStatus: " + emp.attendanceOfDate[j].getBiometricAttendanceStatusTypes() + "\n");
+                System.out.print("\tStatus: " + emp.attendanceOfDate[j].getAttendanceStatusType() + "\n");
 
                 workTime = emp.attendanceOfDate[j].getWorkTimeForDay();
                 if (workTime != null)

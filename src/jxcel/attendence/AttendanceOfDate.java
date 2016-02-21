@@ -1,6 +1,6 @@
 package jxcel.attendence;
 
-import jxcel.model.BiometricAttendanceStatusTypes;
+import jxcel.model.AttendanceStatusType;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
@@ -17,7 +17,18 @@ public class AttendanceOfDate {
     private LocalTime checkOut = null;
     private LocalTime overTime = null;
     private LocalTime workTimeForDay = null;
-    private BiometricAttendanceStatusTypes biometricAttendanceStatusTypes = null;
+    private AttendanceStatusType attendanceStatusType = null;
+
+    //new field added to account for combining both models later
+    private AttendanceOfLeave attendanceOfLeave = null;
+
+    public AttendanceOfLeave getAttendanceOfLeave() {
+        return attendanceOfLeave;
+    }
+
+    public void setAttendanceOfLeave(AttendanceOfLeave attendanceOfLeave) {
+        this.attendanceOfLeave = attendanceOfLeave;
+    }
 
     public LocalTime getWorkTimeForDay() {
         if (getCheckIn() != null && getCheckOut() != null && getCurrentDate() != null)
@@ -54,24 +65,30 @@ public class AttendanceOfDate {
         this.overTime = overTime;
     }
 
-    public BiometricAttendanceStatusTypes getBiometricAttendanceStatusTypes() {
-        return biometricAttendanceStatusTypes;
+    public AttendanceStatusType getAttendanceStatusType() {
+        return attendanceStatusType;
     }
 
-    public void setBiometricAttendanceStatusTypes(BiometricAttendanceStatusTypes biometricAttendanceStatusTypes) {
-        if (biometricAttendanceStatusTypes.compareTo(BiometricAttendanceStatusTypes.PRESENT) == 0) {
+    public void setAttendanceStatusType(AttendanceStatusType statusType) {
+        if (statusType.compareTo(AttendanceStatusType.PRESENT) == 0) {
             if (getWorkTimeForDay().compareTo(LocalTime.of(4, 0)) < 0)
-                biometricAttendanceStatusTypes = BiometricAttendanceStatusTypes.ABSENT;
+                statusType = AttendanceStatusType.ABSENT;
             else if (getWorkTimeForDay().compareTo(LocalTime.of(6, 0)) < 0)
-                biometricAttendanceStatusTypes = BiometricAttendanceStatusTypes.HALF_DAY;
+                statusType = AttendanceStatusType.HALF_DAY;
             else
-                biometricAttendanceStatusTypes = BiometricAttendanceStatusTypes.PRESENT;
+                statusType = AttendanceStatusType.PRESENT;
         }
-        if (biometricAttendanceStatusTypes.compareTo(BiometricAttendanceStatusTypes.ABSENT) == 0) {
-            if (getCurrentDate().getDayOfWeek() == DayOfWeek.SATURDAY || getCurrentDate().getDayOfWeek() == DayOfWeek.SUNDAY)
-                biometricAttendanceStatusTypes = BiometricAttendanceStatusTypes.WEEKEND_HOLIDAY;
+
+
+        if (statusType.compareTo(AttendanceStatusType.ABSENT) == 0) {
+            if (getCurrentDate().getDayOfWeek() == DayOfWeek.SATURDAY ||
+                    getCurrentDate().getDayOfWeek() == DayOfWeek.SUNDAY)
+
+                statusType = AttendanceStatusType.WEEKEND_HOLIDAY;
         }
-        this.biometricAttendanceStatusTypes = biometricAttendanceStatusTypes;
+
+
+        this.attendanceStatusType = statusType;
     }
 
     public LocalDate getCurrentDate() {

@@ -1,6 +1,6 @@
 package jxcel.attendence;
 
-import jxcel.model.LeaveTypes;
+import jxcel.model.LeaveType;
 
 import java.time.LocalDate;
 
@@ -8,17 +8,26 @@ import java.time.LocalDate;
  * Created by kumars on 2/12/2016.
  */
 public class AttendanceOfLeave {
-    private LeaveTypes leaveTypes = null;
+    private String RequestId;
+    private LeaveType leaveType = null;
     private LocalDate startDate = null;
     private LocalDate endDate = null;
     private double absenceTime;
 
-    public LeaveTypes getLeaveTypes() {
-        return leaveTypes;
+    public String getRequestId() {
+        return RequestId;
     }
 
-    public void setLeaveTypes(LeaveTypes leaveTypes) {
-        this.leaveTypes = leaveTypes;
+    public void setRequestId(String requestId) {
+        RequestId = requestId;
+    }
+
+    public LeaveType getLeaveType() {
+        return leaveType;
+    }
+
+    public void setLeaveType(LeaveType leaveType) {
+        this.leaveType = leaveType;
     }
 
     public LocalDate getStartDate() {
