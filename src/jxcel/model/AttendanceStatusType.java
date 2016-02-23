@@ -3,10 +3,11 @@ package jxcel.model;
 /**
  * Created by kumars on 2/12/2016.
  */
-public enum BiometricAttendanceStatusTypes {
+public enum AttendanceStatusType {
     ABSENT,
     PRESENT,
     PUBLIC_HOLIDAY,
     WEEKEND_HOLIDAY,
-    HALF_DAY
+    HALF_DAY,
+    NOT_AN_EMPLOYEE
 }

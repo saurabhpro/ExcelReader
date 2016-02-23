@@ -9,6 +9,8 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -22,7 +24,7 @@ import java.util.*;
  * Created by Saurabh on 2/10/2016.
  */
 public class HrnetFileWorker implements IHrnetFile {
-    public static List<HrnetDetails> hrnetDetails;
+    public static Map<String, HrnetDetails> hrnetDetails;
     int numberOfRowsInHr;
     Iterator<HrnetDetails> iterator = null;
     FileInputStream file;
@@ -42,10 +44,27 @@ public class HrnetFileWorker implements IHrnetFile {
         }
     }
 
+    @NotNull
+    private String getID(Cell cell) {
+        if (cell.getCellType() == Cell.CELL_TYPE_STRING)
+            return cell.getStringCellValue();
+        else
+            return Objects.toString(cell.getNumericCellValue());
+    }
+
+
+    @NotNull
+    private LocalDate getLocalDate(Cell cell) {
+        if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
+
+            return TimeManager.convertToLocalDate(new SimpleDateFormat("dd/MM/yyyy").format(cell.getDateCellValue()));
+
+        } else
+            return TimeManager.convertToLocalDate(cell.getStringCellValue());
+    }
 
     //hi
     public void readHRNetFile() throws IOException {
-
         Cell cell;
 
         AttendanceOfLeave attendanceOfLeave;
@@ -60,7 +79,7 @@ public class HrnetFileWorker implements IHrnetFile {
         HrnetColumns hre = null;
 
         numberOfRowsInHr = sheet.getPhysicalNumberOfRows();
-        hrnetDetails = new ArrayList<>();
+        hrnetDetails = new TreeMap<>();
         //  hrnetDetails = new HrnetDetails[numberOfRowsInHr];
 
         for (int i = 1; i < numberOfRowsInHr; i++) {
@@ -70,20 +89,15 @@ public class HrnetFileWorker implements IHrnetFile {
                 //Update the value of cell
                 cell = sheet.getRow(i).getCell(j);
 
-
                 tempDate = null;
                 hre = null;
-                // System.out.print(cell.getColumnIndex()+" ");
-
 
                 switch (j) {
                     case 0:
                         hre = HrnetColumns.EMP_ID;
-                        if (cell.getCellType() == Cell.CELL_TYPE_STRING)
-                            tempID = cell.getStringCellValue();
-                        else if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC)
-                            tempID = Objects.toString(cell.getNumericCellValue());
+                        tempID = getID(cell);
                         break;
+
                     case 1:
                         hre = HrnetColumns.NAME;
                         tempName = cell.getStringCellValue();
@@ -98,23 +112,13 @@ public class HrnetFileWorker implements IHrnetFile {
                         attendanceOfLeave.setLeaveTypes(LeaveTypes.valueOf(tmp));
                         break;
                     case 4:
-                        if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
-                            hre = HrnetColumns.START_DATE;
-                            tempDate = TimeManager.convertToLocalDate(new SimpleDateFormat("dd/MM/yyyy").format(cell.getDateCellValue()));
-
-                        } else
-                            tempDate = TimeManager.convertToLocalDate(cell.getStringCellValue());
-
+                        hre = HrnetColumns.START_DATE;
+                        tempDate = getLocalDate(cell);
                         attendanceOfLeave.setStartDate(tempDate);
                         break;
                     case 5:
-                        if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
-                            hre = HrnetColumns.END_DATE;
-                            tempDate = TimeManager.convertToLocalDate(new SimpleDateFormat("dd/MM/yyyy").format(cell.getDateCellValue()));
-
-                        } else
-                            tempDate = TimeManager.convertToLocalDate(cell.getStringCellValue());
-
+                        hre = HrnetColumns.END_DATE;
+                        tempDate = getLocalDate(cell);
                         attendanceOfLeave.setEndDate(tempDate);
                         break;
 
@@ -128,14 +132,14 @@ public class HrnetFileWorker implements IHrnetFile {
                         break;
                 }
             }
-            hrnetDetails.add(new HrnetDetails(tempID, tempName, tempRequest, attendanceOfLeave));
+            hrnetDetails.put(tempID, new HrnetDetails(tempID, tempName, tempRequest, attendanceOfLeave));
         }
         file.close();
     }
 
     @Override
     public void displayHRNetFile() {
-        iterator = hrnetDetails.iterator();
+        iterator = hrnetDetails.values().iterator();
         while (iterator.hasNext()) {
             HrnetDetails hr = iterator.next();
 
@@ -147,10 +151,6 @@ public class HrnetFileWorker implements IHrnetFile {
             System.out.println("\t" + hr.attendanceOfLeave.getAbsenceTime());
 
         }
-/*
-        int numberOfLeaveDays = hr.leaveDetails.getEndDate().minusDays( hr.leaveDetails.getStartDate().getDayOfMonth()).getDayOfMonth();
-        System.out.println(numberOfLeaveDays+" Leave");
-  */
     }
 
 

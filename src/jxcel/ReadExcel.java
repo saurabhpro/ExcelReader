@@ -1,6 +1,7 @@
 package jxcel;
 
 import combinedModel.Combined2;
+import jxcel.view.Discrepancy;
 import jxcel.view.JsonMapper;
 
 import java.io.IOException;
@@ -39,6 +40,10 @@ public class ReadExcel {
         jxcelFileWorker.displayBiometricFile();
         */
 
+        // remove discrepancies
+       /* Discrepancy discrepancy = new Discrepancy();
+        discrepancy.findDiscrepancy();
+*/
 
     }
 
