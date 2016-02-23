@@ -3,7 +3,7 @@ package combinedModel;
 import jxcel.BiometricFileWorker;
 import jxcel.HrnetFileWorker;
 import jxcel.model.AttendanceStatusType;
-import jxcel.model.BiometricDetails;
+import jxcel.model.EmpBiometricDetails;
 import jxcel.model.HrnetDetails;
 
 import java.time.LocalDate;

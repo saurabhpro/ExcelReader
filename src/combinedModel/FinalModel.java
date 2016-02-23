@@ -16,15 +16,29 @@ public class FinalModel {
     public AttendanceOfDate[] attendanceOfDate;
     public boolean needClarificationFromEmployee;
     public int numberOfLeaves;
-    List<HrnetDetails> empList1 = new ArrayList<>();
 
-    public FinalModel(String employeeID, String name, int numberOfLeaves, AttendanceOfDate[] attendanceOfDate, boolean needClarificationFromEmployee, List<HrnetDetails> empList1) {
+    //AMRITA
+    public int[] count = new int[5];//Absent, Present, Public_Holiday, Weekend_Holiday, Half_Day
+    public List<HrnetDetails> empList1 = new ArrayList<>();
+
+    public FinalModel(String employeeID, String name, int numberOfLeaves, AttendanceOfDate[] attendanceOfDate, List<HrnetDetails> empList1) {
         this.employeeID = employeeID;
         this.name = name;
         this.attendanceOfDate = attendanceOfDate;
         this.empList1 = empList1;
         this.numberOfLeaves = numberOfLeaves;
-        this.needClarificationFromEmployee = needClarificationFromEmployee;
+        //this.needClarificationFromEmployee = needClarificationFromEmployee;
+        for (int i = 0; i < 5; i++) {
+            count[i] = 0;
+        }
+    }
+
+    public int getCount(int i) {
+        return count[i];
+    }
+
+    public void setCount(int i) {
+        count[i] = count[i] + 1;
     }
 
     public void displayArrayList() {
@@ -41,13 +55,7 @@ public class FinalModel {
 
         }
     }
-    /*public FinalModel(List<BiometricDetails> biometricDetails, List<HrnetDetails> hrnetDetails) {
-        this.employeeID = biometricDetails.g;
-        this.name = name;
-        this.requestID = requestID;
-        this.attendanceOfLeave = attendanceOfLeave;
-        this.attendanceOfDate = attendanceOfDate;
-    }*/
+
 
     public boolean isNeedClarificationFromEmployee() {
         return needClarificationFromEmployee;

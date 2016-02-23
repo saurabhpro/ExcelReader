@@ -9,5 +9,5 @@ public enum AttendanceStatusType {
     PUBLIC_HOLIDAY,
     WEEKEND_HOLIDAY,
     HALF_DAY,
-    NOT_YET_AN_EMPLOYEE
+    NOT_AN_EMPLOYEE
 }

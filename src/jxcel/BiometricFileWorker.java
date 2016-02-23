@@ -2,7 +2,7 @@ package jxcel;
 
 import jxcel.attendence.AttendanceOfDate;
 import jxcel.model.AttendanceStatusType;
-import jxcel.model.BiometricDetails;
+import jxcel.model.EmpBiometricDetails;
 import jxcel.model.IBiometricFile;
 import jxl.Cell;
 import jxl.Sheet;
@@ -16,10 +16,10 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.Month;
 import java.time.Year;
-import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
+import java.util.Map;
 import java.util.StringTokenizer;
+import java.util.TreeMap;
 
 /**
  * Created by Saurabh on 2/10/2016.
@@ -27,108 +27,115 @@ import java.util.StringTokenizer;
  */
 public class BiometricFileWorker implements IBiometricFile {
 
-    static public List<BiometricDetails> empList = null;
+    static public Map<String, EmpBiometricDetails> empList = null;
     static public Month month;
     static public Year year;
 
+    int numberOfRowsInBio;
     File inputWorkbook = null;
     Workbook w = null;
     Sheet sheet = null;
+    Cell cell = null;
     private int ADD_ROW_STEPS = 0;
 
     public BiometricFileWorker(String biometricFile) {
         inputWorkbook = new File(biometricFile);
         try {
             w = Workbook.getWorkbook(inputWorkbook);
-            // Get the first sheet
-
-            sheet = w.getSheet(0);
+            sheet = w.getSheet(0);          // Get the first sheet
+            numberOfRowsInBio = (sheet.getRows() - 11) / 18;
         } catch (BiffException | IOException e) {
             e.printStackTrace();
         }
     }
 
+    /**
+     * method to return the contents of a given row, col
+     */
+    private String getCustomCellContent(int column, int row) {
+        return sheet.getCell(column, row).getContents();
+    }
+
+    /**
+     * method to return the attendance for an employee for that month
+     *
+     * @param st
+     * @param attendanceOfDate
+     */
+    private void getMonthlyAttendanceOfEmployee(StringTokenizer st, AttendanceOfDate[] attendanceOfDate) {
+
+        // AttendanceOfDate[] attendanceOfDate;
+        AttendanceStatusType attendanceStatus;
+
+        int noOfDaysInThatMonth = month.maxLength();
+
+        for (int k = 0; k < noOfDaysInThatMonth; k++) {
+            LocalDate tempDate = LocalDate.of(year.getValue(), month, (k + 1));
+            attendanceOfDate[k] = new AttendanceOfDate();
+            attendanceOfDate[k].setCurrentDate(tempDate);
+            attendanceStatus = AttendanceStatusType.NOT_AN_EMPLOYEE;      //default status for an employee
+
+            st = new StringTokenizer(getCustomCellContent(k, 20 + (18 * ADD_ROW_STEPS)), "   ");
+
+            lb:
+            for (int j = 2; j < 6; j++) {
+                String tempString;
+                if (st.hasMoreElements()) {
+                    tempString = (String) st.nextElement();
+                    //A
+                    //11:00 12:00 00;00 P
+                    switch (tempString) {
+                        case "A":
+                        case "A/A":
+                        case "P/A":
+                            attendanceStatus = AttendanceStatusType.ABSENT;
+                            break lb;
+
+                        case "W":
+                            //case when employee checks in on weekend or public holiday
+                            attendanceStatus = AttendanceStatusType.WEEKEND_HOLIDAY;
+                            break lb;
+
+                        case "A/P":
+                        case "P":
+                            attendanceStatus = AttendanceStatusType.PRESENT;
+                            break lb;
+
+                        default:
+                            if (j == 2)
+                                attendanceOfDate[k].setCheckIn(LocalTime.parse(tempString));
+                            else if (j == 3)
+                                attendanceOfDate[k].setCheckOut(LocalTime.parse(tempString));
+                    }
+                }
+            }
+            attendanceOfDate[k].setAttendanceStatusType(attendanceStatus);
+        }
+    }
+
+
     @Override
     public void readBiometricFile() throws IOException, ParseException {
-
-        int numberOfRowsInBio = (sheet.getRows() - 11) / 18;
-
-        empList = new ArrayList<>();
-        Cell cell;
-        String[] details = new String[2];
-
-
-        cell = sheet.getCell(13, 7);
-        String monthYear = cell.getContents();
-        StringTokenizer st = new StringTokenizer(monthYear, "   ");
-
-        LocalDate tempDate;
-        String tempString;
-        AttendanceStatusType attendanceStatus = null;
-
+        //local data
+        String empId, empName;
         AttendanceOfDate[] attendanceOfDate;
+        empList = new TreeMap<>();
+
+        String monthYear = getCustomCellContent(13, 7);
+        StringTokenizer st = new StringTokenizer(monthYear, "   ");
 
         month = Month.valueOf(st.nextElement().toString().toUpperCase());
         year = Year.parse((String) st.nextElement());
 
 
         for (int i = 0; i < numberOfRowsInBio; i++) {
-            details[0] = details[1] = null;
-
-            cell = sheet.getCell(3, 13 + (18 * ADD_ROW_STEPS));
-            details[0] = cell.getContents();
-
-            cell = sheet.getCell(3, 15 + (18 * ADD_ROW_STEPS));
-            details[1] = cell.getContents();
-
             attendanceOfDate = new AttendanceOfDate[31];
+            getMonthlyAttendanceOfEmployee(st, attendanceOfDate);       //referenced
 
-            for (int k = 0; k < 31; k++) {
-                attendanceStatus = AttendanceStatusType.NOT_YET_AN_EMPLOYEE;
-                attendanceOfDate[k] = new AttendanceOfDate();
-                //
+            empId = getCustomCellContent(3, 13 + (18 * ADD_ROW_STEPS));
+            empName = getCustomCellContent(3, 15 + (18 * ADD_ROW_STEPS));
 
-                tempDate = LocalDate.of(year.getValue(), month, (k + 1));
-                attendanceOfDate[k].setCurrentDate(tempDate);
-
-                cell = sheet.getCell(k, 20 + (18 * ADD_ROW_STEPS));
-                st = new StringTokenizer(cell.getContents(), "   ");
-
-
-                lb:
-                for (int j = 2; j < 6; j++) {
-                    if (st.hasMoreElements()) {
-                        tempString = (String) st.nextElement();
-                        //A
-                        //11:00 12:00 00;00 P
-                        switch (tempString) {
-                            case "A":
-                                attendanceStatus = AttendanceStatusType.ABSENT;
-                                break lb;
-                            case "P/A":
-                                attendanceStatus = AttendanceStatusType.ABSENT;
-                                break lb;
-                            case "W":
-
-                                //case when employee checks in on weekend or public holiday
-                                attendanceStatus = AttendanceStatusType.WEEKEND_HOLIDAY;
-                                break lb;
-                            case "P":
-                                attendanceStatus = AttendanceStatusType.PRESENT;
-                                break lb;
-                            default:
-                                if (j == 2)
-                                    attendanceOfDate[k].setCheckIn(LocalTime.parse(tempString));
-                                else if (j == 3)
-                                    attendanceOfDate[k].setCheckOut(LocalTime.parse(tempString));
-                        }
-                    }
-                }
-                attendanceOfDate[k].setAttendanceStatusType(attendanceStatus);
-            }
-
-            empList.add(new BiometricDetails(details[0], details[1], attendanceOfDate));
-
+            empList.put(empId, new EmpBiometricDetails(empId, empName, attendanceOfDate));
 
             ADD_ROW_STEPS++;
         }
@@ -138,10 +145,10 @@ public class BiometricFileWorker implements IBiometricFile {
     public void displayBiometricFile() {
 
         System.out.println(month);
-        Iterator<BiometricDetails> iterator = empList.iterator();
+        Iterator<EmpBiometricDetails> iterator = empList.values().iterator();
         LocalTime workTime;
         while (iterator.hasNext()) {
-            BiometricDetails emp = iterator.next();
+            EmpBiometricDetails emp = iterator.next();
             System.out.println("Name: " + emp.name);
             System.out.println("Employee ID: " + emp.empId);
 

@@ -1,0 +1,4 @@
+absent in biometric and absent in hrnet
+present in biometric and present in hrnet
+half day but number of hours less than 4
+
