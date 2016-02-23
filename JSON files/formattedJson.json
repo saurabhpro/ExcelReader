@@ -772,7 +772,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Abhishek Maiti",
   "empId" : "R14",
@@ -1397,7 +1397,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Abhishek Vijh",
   "empId" : "R62",
@@ -2172,7 +2172,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Akhilesh Keshap",
   "empId" : "R55",
@@ -2932,7 +2932,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Amandeep Singh",
   "empId" : "R86",
@@ -3722,7 +3722,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Amanpreet Kaur",
   "empId" : "R105",
@@ -4482,7 +4482,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Amarjeet Singh Dahiya",
   "empId" : "R98",
@@ -5257,7 +5257,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Amey Kulkarni",
   "empId" : "R95",
@@ -6032,7 +6032,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Amrita Arora",
   "empId" : "R136",
@@ -6657,7 +6657,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Anamika Das",
   "empId" : "R131",
@@ -7432,7 +7432,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Anand Pratap Singh",
   "empId" : "R107",
@@ -8222,7 +8222,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Anindita Dhar",
   "empId" : "R100",
@@ -8967,7 +8967,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 3
 }, {
   "name" : "Anjali Kohli",
   "empId" : "R61",
@@ -9682,7 +9682,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Ankit Pande",
   "empId" : "R56",
@@ -10442,7 +10442,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Ankita Chand",
   "empId" : "R135",
@@ -11067,7 +11067,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Ankur Bhattacharya",
   "empId" : "R141",
@@ -11692,7 +11692,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Ankur Parwal",
   "empId" : "R35",
@@ -12482,7 +12482,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Ankush Garg",
   "empId" : "R97",
@@ -13107,7 +13107,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Ankush Jindal",
   "empId" : "R51",
@@ -13897,7 +13897,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Anushree Kher",
   "empId" : "R24",
@@ -14657,7 +14657,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Ashish Bansal",
   "empId" : "R104",
@@ -15407,7 +15407,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 1
 }, {
   "name" : "Ashish Kataria",
   "empId" : "R69",
@@ -16182,7 +16182,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Ashwini Lakshminarayan",
   "empId" : "R96",
@@ -16957,7 +16957,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Bhanu Rampal",
   "empId" : "R134",
@@ -17582,7 +17582,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Bhupinder Tomar",
   "empId" : "R111",
@@ -18357,7 +18357,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Christopher Whitby",
   "empId" : "R80",
@@ -19072,7 +19072,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Deepti Achanta",
   "empId" : "R39",
@@ -19832,7 +19832,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Deepti Kapoor",
   "empId" : "R122",
@@ -20607,7 +20607,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Devanshu Bhatt",
   "empId" : "R81",
@@ -21397,7 +21397,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Devashish Sharma",
   "empId" : "R125",
@@ -22142,7 +22142,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 1
 }, {
   "name" : "Devesh Aggarwal",
   "empId" : "R123",
@@ -22932,7 +22932,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Dheeraj Sharma",
   "empId" : "R26",
@@ -23677,7 +23677,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Gagan Shah",
   "empId" : "R108",
@@ -24467,7 +24467,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Gaurav Chopra",
   "empId" : "R52",
@@ -25092,7 +25092,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Gaurav Gupta",
   "empId" : "R112",
@@ -25882,7 +25882,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Gaurav Kumar",
   "empId" : "R130",
@@ -26672,7 +26672,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Gitika Khurana",
   "empId" : "R124",
@@ -27417,7 +27417,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Gurpreet Kaur",
   "empId" : "R93",
@@ -28147,7 +28147,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Harneet Kaur",
   "empId" : "R116",
@@ -28832,7 +28832,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Harshit Bhatia",
   "empId" : "R138",
@@ -29457,7 +29457,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Himanshu Pal",
   "empId" : "R113",
@@ -30232,7 +30232,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Himanshu Yadav",
   "empId" : "R47",
@@ -31007,7 +31007,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Inderjeet Kumar",
   "empId" : "R143",
@@ -31632,7 +31632,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Jaspreet Sawhney",
   "empId" : "R34",
@@ -32377,7 +32377,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Jatin Suri",
   "empId" : "R133",
@@ -33077,7 +33077,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Jyotnain Kaur",
   "empId" : "R144",
@@ -33702,7 +33702,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Kamal Bhardwaj",
   "empId" : "R5",
@@ -34462,7 +34462,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 3
 }, {
   "name" : "Karan Kapoor",
   "empId" : "R94",
@@ -35207,7 +35207,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Karishma Rastogi",
   "empId" : "R128",
@@ -35997,7 +35997,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Khushboo Sood",
   "empId" : "R145",
@@ -36622,7 +36622,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Kunal Motwani",
   "empId" : "R103",
@@ -37397,7 +37397,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Meeta Malhotra",
   "empId" : "R117",
@@ -38187,7 +38187,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Megha Maggo",
   "empId" : "R40",
@@ -38977,7 +38977,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 1
 }, {
   "name" : "Megha Sindhwani",
   "empId" : "R102",
@@ -39767,7 +39767,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 1
 }, {
   "name" : "Milan Verma",
   "empId" : "R84",
@@ -40537,7 +40537,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 3
 }, {
   "name" : "Mohit Manocha",
   "empId" : "R85",
@@ -41327,7 +41327,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Naisergic Sharma",
   "empId" : "R132",
@@ -42102,7 +42102,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Namrata Oberoi",
   "empId" : "R57",
@@ -42727,7 +42727,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Narender Jangra",
   "empId" : "R127",
@@ -43517,7 +43517,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Neha Baweja",
   "empId" : "R53",
@@ -44262,7 +44262,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Neha Gupta",
   "empId" : "R92",
@@ -44992,7 +44992,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Neha Malik",
   "empId" : "R33",
@@ -45737,7 +45737,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Nidhi Juyal",
   "empId" : "R4",
@@ -46452,7 +46452,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Nikhil Sharma",
   "empId" : "R118",
@@ -47227,7 +47227,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Nikhil Verma",
   "empId" : "R109",
@@ -48002,7 +48002,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Projnabrata Seth",
   "empId" : "R75",
@@ -48777,7 +48777,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Purwaaj Ahuja",
   "empId" : "R120",
@@ -49552,7 +49552,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Rakesh Kumar Singh",
   "empId" : "R59",
@@ -50267,7 +50267,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Rohit Danwani",
   "empId" : "R2",
@@ -50892,7 +50892,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Sahil Wadhwa",
   "empId" : "R142",
@@ -51517,7 +51517,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Sakshi Kapila",
   "empId" : "R106",
@@ -52307,7 +52307,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 1
 }, {
   "name" : "Saurabh Kumar",
   "empId" : "R139",
@@ -52932,7 +52932,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Saurabh Singhal",
   "empId" : "R48",
@@ -53692,7 +53692,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Shivam Batra",
   "empId" : "R126",
@@ -54452,7 +54452,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Shruti Gupta",
   "empId" : "R91",
@@ -55242,7 +55242,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Shruti Mishra",
   "empId" : "R41",
@@ -56017,7 +56017,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Shubhangi Paliwal",
   "empId" : "R78",
@@ -56792,7 +56792,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Shubhangi Singhal",
   "empId" : "R67",
@@ -57582,7 +57582,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Siddharth Thakkar",
   "empId" : "R129",
@@ -58372,7 +58372,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Subrata Ghosh",
   "empId" : "R1",
@@ -59162,7 +59162,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Sudhang Shankar",
   "empId" : "R70",
@@ -59787,7 +59787,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Sukrit Kapil",
   "empId" : "R110",
@@ -60577,7 +60577,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Sumit Jain",
   "empId" : "R72",
@@ -61322,7 +61322,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Sumit Tongya",
   "empId" : "R115",
@@ -61947,7 +61947,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Surabhi Kulkarni",
   "empId" : "R137",
@@ -62572,7 +62572,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Surendra Kumar Sharma",
   "empId" : "R119",
@@ -63362,7 +63362,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Taranjeet Singh",
   "empId" : "R22",
@@ -64152,7 +64152,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Trijyot Singh",
   "empId" : "R140",
@@ -64777,7 +64777,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Varun Yadav",
   "empId" : "R54",
@@ -65552,7 +65552,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Vineeta Nanda",
   "empId" : "R89",
@@ -66297,7 +66297,7 @@
     "workTimeForDay" : null,
     "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
   } ],
-  "needClarificationFromEmployee" : false
+  "numberOfLeaves" : 0
 }, {
   "name" : "Yogesh Pant",
   "empId" : "R79",
@@ -66732,4 +66732,78 @@
       "leapYear" : true,
       "monthValue" : 1,
       "chronology" : {
-        "id" :
+        "id" : "ISO",
+        "calendarType" : "iso8601"
+      }
+    },
+    "checkIn" : null,
+    "checkOut" : null,
+    "overTime" : null,
+    "workTimeForDay" : null,
+    "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
+  }, {
+    "currentDate" : {
+      "year" : 2016,
+      "month" : "JANUARY",
+      "era" : "CE",
+      "dayOfMonth" : 17,
+      "dayOfWeek" : "SUNDAY",
+      "dayOfYear" : 17,
+      "leapYear" : true,
+      "monthValue" : 1,
+      "chronology" : {
+        "id" : "ISO",
+        "calendarType" : "iso8601"
+      }
+    },
+    "checkIn" : null,
+    "checkOut" : null,
+    "overTime" : null,
+    "workTimeForDay" : null,
+    "biometricAttendanceStatusTypes" : "WEEKEND_HOLIDAY"
+  }, {
+    "currentDate" : {
+      "year" : 2016,
+      "month" : "JANUARY",
+      "era" : "CE",
+      "dayOfMonth" : 18,
+      "dayOfWeek" : "MONDAY",
+      "dayOfYear" : 18,
+      "leapYear" : true,
+      "monthValue" : 1,
+      "chronology" : {
+        "id" : "ISO",
+        "calendarType" : "iso8601"
+      }
+    },
+    "checkIn" : {
+      "hour" : 11,
+      "minute" : 13,
+      "second" : 0,
+      "nano" : 0
+    },
+    "checkOut" : {
+      "hour" : 0,
+      "minute" : 0,
+      "second" : 0,
+      "nano" : 0
+    },
+    "overTime" : null,
+    "workTimeForDay" : {
+      "hour" : 12,
+      "minute" : 47,
+      "second" : 0,
+      "nano" : 0
+    },
+    "biometricAttendanceStatusTypes" : "ABSENT"
+  }, {
+    "currentDate" : {
+      "year" : 2016,
+      "month" : "JANUARY",
+      "era" : "CE",
+      "dayOfMonth" : 19,
+      "dayOfWeek" : "TUESDAY",
+      "dayOfYear" : 19,
+      "leapYear" : true,
+      "monthValue" : 1,
+      "chronology" : 

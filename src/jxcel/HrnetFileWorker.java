@@ -147,10 +147,6 @@ public class HrnetFileWorker implements IHrnetFile {
             System.out.println("\t" + hr.attendanceOfLeave.getAbsenceTime());
 
         }
-/*
-        int numberOfLeaveDays = hr.leaveDetails.getEndDate().minusDays( hr.leaveDetails.getStartDate().getDayOfMonth()).getDayOfMonth();
-        System.out.println(numberOfLeaveDays+" Leave");
-  */
     }
 
 

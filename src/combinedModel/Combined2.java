@@ -1,6 +1,5 @@
 package combinedModel;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
 import jxcel.BiometricFileWorker;
 import jxcel.HrnetFileWorker;
 import jxcel.model.*;
@@ -16,7 +15,7 @@ import java.util.List;
  */
 public class Combined2 {
 
-    List<FinalModel> newEmpList = new ArrayList<>();
+    public static List<FinalModel> newEmpList = new ArrayList<>();
     List<HrnetDetails> newHrnetDetails;
 
     List<HrnetDetails> hrnetDetails = HrnetFileWorker.hrnetDetails;
@@ -80,7 +79,7 @@ public class Combined2 {
         while (biometricDetailsIterator.hasNext()) {
             BiometricDetails bd = biometricDetailsIterator.next();
             if (bd.getNumberOfLeaves() == 0) {
-                newEmpList.add(new FinalModel(bd.empId, bd.name, bd.numberOfLeaves, bd.attendanceOfDate, bd.needClarificationFromEmployee, null));
+                newEmpList.add(new FinalModel(bd.empId, bd.name, bd.numberOfLeaves, bd.attendanceOfDate, null));
             } else {
                 hrnetDetailsIterator = hrnetDetails.iterator();
                 newHrnetDetails = new ArrayList<>();
@@ -91,8 +90,28 @@ public class Combined2 {
                         newHrnetDetails.add(new HrnetDetails(hr.employeeID, hr.name, hr.requestID, hr.attendanceOfLeave));
                     }
                 }
-                newEmpList.add(new FinalModel(bd.empId, bd.name, bd.numberOfLeaves, bd.attendanceOfDate, bd.needClarificationFromEmployee, newHrnetDetails));
+                newEmpList.add(new FinalModel(bd.empId, bd.name, bd.numberOfLeaves, bd.attendanceOfDate, newHrnetDetails));
             }
+        }
+
+        Iterator<FinalModel> iterator = newEmpList.iterator();
+        while (iterator.hasNext()) {
+            FinalModel emp = iterator.next();
+            for (int j = 0; j < 31; j++) {
+
+                //AMRITA
+                if (emp.attendanceOfDate[j].getBiometricAttendanceStatusTypes().equals(BiometricAttendanceStatusTypes.ABSENT))
+                    emp.setCount(0);
+                else if (emp.attendanceOfDate[j].getBiometricAttendanceStatusTypes().equals(BiometricAttendanceStatusTypes.PRESENT))
+                    emp.setCount(1);
+                else if (emp.attendanceOfDate[j].getBiometricAttendanceStatusTypes().equals(BiometricAttendanceStatusTypes.PUBLIC_HOLIDAY))
+                    emp.setCount(2);
+                else if (emp.attendanceOfDate[j].getBiometricAttendanceStatusTypes().equals(BiometricAttendanceStatusTypes.WEEKEND_HOLIDAY))
+                    emp.setCount(3);
+                else if (emp.attendanceOfDate[j].getBiometricAttendanceStatusTypes().equals(BiometricAttendanceStatusTypes.HALF_DAY))
+                    emp.setCount(4);
+            }
+
         }
     }
 
@@ -112,12 +131,21 @@ public class Combined2 {
                 emp.displayArrayList();
             }
 
+
+            //AMRITA
+            System.out.println("\nNumber of Absent Days " + emp.getCount(0));
+            System.out.println("Number of Present Days " + emp.getCount(1));
+            System.out.println("Number of Public Holidays " + emp.getCount(2));
+            System.out.println("Number of Weekend Holidays " + emp.getCount(3));
+            System.out.println("Number of Half Days " + emp.getCount(4));
+
             System.out.println("\nBiometric Data for Each Day: ");
             for (int j = 0; j < 31; j++) {
                 System.out.print(emp.attendanceOfDate[j].getCurrentDate());
                 System.out.print("\tIn Time: " + emp.attendanceOfDate[j].getCheckIn());
                 System.out.print("\tOut Time: " + emp.attendanceOfDate[j].getCheckOut());
                 System.out.print("\tStatus: " + emp.attendanceOfDate[j].getBiometricAttendanceStatusTypes() + "\n");
+
             }
 
             System.out.println();

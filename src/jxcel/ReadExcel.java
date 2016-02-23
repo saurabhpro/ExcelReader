@@ -1,6 +1,7 @@
 package jxcel;
 
 import combinedModel.Combined2;
+import jxcel.view.Discrepancy;
 import jxcel.view.JsonMapper;
 
 import java.io.IOException;
@@ -31,13 +32,17 @@ public class ReadExcel {
         new JsonMapper().toJsonFile(null).fromJsonToFormattedJson(null);
 
         //display Combined Files
-        combined2.displayCombineFiles();
+        //combined2.displayCombineFiles();
 
         /*
         //display Biometric and HRNet Excel Files
         hrnetFileWorker.displayHRNetFile();
         jxcelFileWorker.displayBiometricFile();
         */
+
+        // remove discrepancies
+        Discrepancy discrepancy = new Discrepancy();
+        discrepancy.findDiscrepancy();
 
 
     }
