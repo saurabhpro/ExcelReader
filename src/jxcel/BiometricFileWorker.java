@@ -86,6 +86,7 @@ public class BiometricFileWorker implements IBiometricFile {
             for (int k = 0; k < 31; k++) {
                 attendanceStatus = AttendanceStatusType.NOT_YET_AN_EMPLOYEE;
                 attendanceOfDate[k] = new AttendanceOfDate();
+                //
 
                 tempDate = LocalDate.of(year.getValue(), month, (k + 1));
                 attendanceOfDate[k].setCurrentDate(tempDate);
