@@ -2,10 +2,11 @@ package jxcel.view;
 
 import combinedModel.Combined2;
 import combinedModel.FinalModel;
-import jxcel.model.AttendanceStatusType;
+import jxcel.model.BiometricAttendanceStatusTypes;
 import jxcel.model.HrnetDetails;
 import jxcel.model.LeaveTypes;
 
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.Iterator;
 import java.util.List;
@@ -27,7 +28,7 @@ public class Discrepancy {
             FinalModel finalModel = iterator.next();
             if (finalModel.empList1 == null) {
                 for (int j = 0; j < 31; j++) {
-                    if (finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(AttendanceStatusType.ABSENT)) {
+                    if (finalModel.attendanceOfDate[j].getBiometricAttendanceStatusTypes().equals(BiometricAttendanceStatusTypes.ABSENT)) {
                         finalModel.setIfClarificationFromEmployee(true);
                     }
 
@@ -36,7 +37,7 @@ public class Discrepancy {
             } else {
                 for (int j = 0; j < 31; j++) {
 
-                    if (finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(AttendanceStatusType.ABSENT)) {
+                    if (finalModel.attendanceOfDate[j].getBiometricAttendanceStatusTypes().equals(BiometricAttendanceStatusTypes.ABSENT)) {
 
                         Iterator<HrnetDetails> iterator1 = finalModel.empList1.iterator();
                         HrnetDetails hrnetDetails;
@@ -71,7 +72,7 @@ public class Discrepancy {
                         }
                     }
                     /*
-                    else if (finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(AttendanceStatusType.PRESENT)) {
+                    else if (finalModel.attendanceOfDate[j].getBiometricAttendanceStatusTypes().equals(BiometricAttendanceStatusTypes.PRESENT)) {
                         Iterator<HrnetDetails> iterator2 = finalModel.empList1.iterator();
                         HrnetDetails hrnetDetails;
                         while (iterator2.hasNext()) {
@@ -91,7 +92,7 @@ public class Discrepancy {
                             }
                         }
 
-                        if (finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(AttendanceStatusType.HALF_DAY)) {
+                        if (finalModel.attendanceOfDate[j].getBiometricAttendanceStatusTypes().equals(BiometricAttendanceStatusTypes.HALF_DAY)) {
                             if ((finalModel.attendanceOfDate[j].getWorkTimeForDay().getHour()) < 4)
                                 finalModel.setIfClarificationFromEmployee(true);
                         }

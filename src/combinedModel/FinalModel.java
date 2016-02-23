@@ -43,7 +43,10 @@ public class FinalModel {
     }
 
     public void displayArrayList() {
-        for (HrnetDetails hr : empList1) {
+        Iterator<HrnetDetails> iterator = empList1.iterator();
+        while (iterator.hasNext()) {
+            HrnetDetails hr = iterator.next();
+
             System.out.print(hr.employeeID);
             System.out.print("\t" + hr.name);
             System.out.print("\t" + hr.requestID);
