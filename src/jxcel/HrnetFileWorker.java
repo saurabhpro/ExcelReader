@@ -10,7 +10,6 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -18,10 +17,10 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
+import java.util.Map;
 import java.util.Objects;
+import java.util.TreeMap;
 
 /**
  * Created by Saurabh on 2/10/2016.
@@ -58,11 +57,9 @@ public class HrnetFileWorker implements IHrnetFile {
 
     @NotNull
     private LocalDate getLocalDate(Cell cell) {
-        if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
-
+        if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC)
             return TimeManager.convertToLocalDate(new SimpleDateFormat("dd/MM/yyyy").format(cell.getDateCellValue()));
-
-        } else
+        else
             return TimeManager.convertToLocalDate(cell.getStringCellValue());
     }
 
@@ -108,7 +105,6 @@ public class HrnetFileWorker implements IHrnetFile {
                     case 2:
                         hre = HrnetColumns.REQUEST_ID;
                         tempRequest = cell.getStringCellValue();
-                        attendanceOfLeave.setRequestId(tempRequest);
                         break;
                     case 3:
                         hre = HrnetColumns.ABSENT_REQUEST_TYPE;
@@ -149,7 +145,7 @@ public class HrnetFileWorker implements IHrnetFile {
 
             System.out.print(hr.employeeID);
             System.out.print("\t" + hr.name);
-            System.out.print("\t" + hr.attendanceOfLeave.getRequestId());
+            System.out.print("\t" + hr.requestID);
             System.out.print("\t" + hr.attendanceOfLeave.getLeaveType());
             System.out.print("\t" + hr.attendanceOfLeave.getStartDate() + "\t" + hr.attendanceOfLeave.getEndDate());
             System.out.println("\t" + hr.attendanceOfLeave.getAbsenceTime());

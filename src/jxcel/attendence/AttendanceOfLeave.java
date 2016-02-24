@@ -7,20 +7,12 @@ import java.time.LocalDate;
 /**
  * Created by kumars on 2/12/2016.
  */
+//
 public class AttendanceOfLeave {
-    private String RequestId;
     private LeaveType leaveType = null;
     private LocalDate startDate = null;
     private LocalDate endDate = null;
     private double absenceTime;
-
-    public String getRequestId() {
-        return RequestId;
-    }
-
-    public void setRequestId(String requestId) {
-        RequestId = requestId;
-    }
 
     public LeaveType getLeaveType() {
         return leaveType;

@@ -7,5 +7,7 @@ public enum LeaveType {
     VACATION_IND,
     WORK_FROM_HOME,
     CASUAL_IND,
-    SICK_LEAVE
+    SICK_LEAVE,
+    BEREAVEMENT_IND,
+    COMPENSATION_TIME_IND
 }

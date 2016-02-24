@@ -4,7 +4,6 @@ import jxcel.attendence.AttendanceOfDate;
 import jxcel.model.HrnetDetails;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -42,13 +41,10 @@ public class FinalModel {
     }
 
     public void displayArrayList() {
-        Iterator<HrnetDetails> iterator = empList1.iterator();
-        while (iterator.hasNext()) {
-            HrnetDetails hr = iterator.next();
-
+        for (HrnetDetails hr : empList1) {
             System.out.print(hr.employeeID);
             System.out.print("\t" + hr.name);
-            //System.out.print("\t" + hr.requestID);
+            System.out.print("\t" + hr.requestID);
             System.out.print("\t" + hr.attendanceOfLeave.getLeaveType());
             System.out.print("\t" + hr.attendanceOfLeave.getStartDate() + "\t" + hr.attendanceOfLeave.getEndDate());
             System.out.println("\t" + hr.attendanceOfLeave.getAbsenceTime());
