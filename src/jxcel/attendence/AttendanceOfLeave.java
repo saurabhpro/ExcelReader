@@ -7,6 +7,7 @@ import java.time.LocalDate;
 /**
  * Created by kumars on 2/12/2016.
  */
+//
 public class AttendanceOfLeave {
     private LeaveType leaveType = null;
     private LocalDate startDate = null;
