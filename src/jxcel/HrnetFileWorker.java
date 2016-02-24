@@ -4,13 +4,12 @@ import jxcel.attendence.AttendanceOfLeave;
 import jxcel.model.HrnetColumns;
 import jxcel.model.HrnetDetails;
 import jxcel.model.IHrnetFile;
-import jxcel.model.LeaveTypes;
+import jxcel.model.LeaveType;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -18,7 +17,10 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.*;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Objects;
+import java.util.TreeMap;
 
 /**
  * Created by Saurabh on 2/10/2016.
@@ -55,11 +57,9 @@ public class HrnetFileWorker implements IHrnetFile {
 
     @NotNull
     private LocalDate getLocalDate(Cell cell) {
-        if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
-
+        if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC)
             return TimeManager.convertToLocalDate(new SimpleDateFormat("dd/MM/yyyy").format(cell.getDateCellValue()));
-
-        } else
+        else
             return TimeManager.convertToLocalDate(cell.getStringCellValue());
     }
 
@@ -109,7 +109,7 @@ public class HrnetFileWorker implements IHrnetFile {
                     case 3:
                         hre = HrnetColumns.ABSENT_REQUEST_TYPE;
                         String tmp = cell.getStringCellValue().replace(" ", "_").toUpperCase();
-                        attendanceOfLeave.setLeaveTypes(LeaveTypes.valueOf(tmp));
+                        attendanceOfLeave.setLeaveType(LeaveType.valueOf(tmp));
                         break;
                     case 4:
                         hre = HrnetColumns.START_DATE;
@@ -146,7 +146,7 @@ public class HrnetFileWorker implements IHrnetFile {
             System.out.print(hr.employeeID);
             System.out.print("\t" + hr.name);
             System.out.print("\t" + hr.requestID);
-            System.out.print("\t" + hr.attendanceOfLeave.getLeaveTypes());
+            System.out.print("\t" + hr.attendanceOfLeave.getLeaveType());
             System.out.print("\t" + hr.attendanceOfLeave.getStartDate() + "\t" + hr.attendanceOfLeave.getEndDate());
             System.out.println("\t" + hr.attendanceOfLeave.getAbsenceTime());
 

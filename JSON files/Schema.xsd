@@ -6,7 +6,7 @@
     <xs:group name="YearMonth">
             <xs:sequence>
                 <xs:element name="Year" type='xs:integer'/>
-                <xs:element name="Month" type="xs:integer"/>
+                <xs:element name="Month" type="xs:string"/>
             </xs:sequence>
     </xs:group>
 
@@ -16,13 +16,13 @@
                 <xs:element name="EmployeeDetails">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="nameOfEmployee" type="xs:string"/>
                             <xs:element name="IdOfEmployee" type="xs:string"/>
+                            <xs:element name="nameOfEmployee" type="xs:string"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
 
-                <xs:element name="DayOfMonth">
+                <xs:element name="DaysOfMonth">
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="Date" type="xs:date" minOccurs='28' maxOccurs='31'>

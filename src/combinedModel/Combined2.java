@@ -2,7 +2,10 @@ package combinedModel;
 
 import jxcel.BiometricFileWorker;
 import jxcel.HrnetFileWorker;
-import jxcel.model.*;
+import jxcel.model.EmpBiometricDetails;
+import jxcel.model.HolidaysList;
+import jxcel.model.HrnetDetails;
+import jxcel.model.LeaveType;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -10,6 +13,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+
+import static jxcel.model.AttendanceStatusType.*;
 
 /**
  * Created by kumars on 2/16/2016.
@@ -36,7 +41,7 @@ public class Combined2 {
         for (EmpBiometricDetails bd : empBiometricDetails.values()) {
             for (HolidaysList h : HolidaysList.values()) {
                 if (h.getDate().getMonth() == BiometricFileWorker.month) {
-                    bd.attendanceOfDate[h.getDate().getDayOfMonth() - 1].setAttendanceStatusType(AttendanceStatusType.PUBLIC_HOLIDAY);
+                    bd.attendanceOfDate[h.getDate().getDayOfMonth() - 1].setAttendanceStatusType(PUBLIC_HOLIDAY);
                 }
             }
 
@@ -55,10 +60,10 @@ public class Combined2 {
 
                                 while (leaveTime > 0) {
                                     if (leaveTime == 0.5)
-                                        bd.attendanceOfDate[changeDatesRange].setAttendanceStatusType(AttendanceStatusType.HALF_DAY);
-                                    else if (hr.attendanceOfLeave.getLeaveTypes() == LeaveTypes.WORK_FROM_HOME) {
+                                        bd.attendanceOfDate[changeDatesRange].setAttendanceStatusType(HALF_DAY);
+                                    else if (hr.attendanceOfLeave.getLeaveType() == LeaveType.WORK_FROM_HOME) {
                                         bd.attendanceOfDate[changeDatesRange].setWorkTimeForDay(LocalTime.of((int) leaveTime * 8, 0));
-                                        bd.attendanceOfDate[changeDatesRange].setAttendanceStatusType(AttendanceStatusType.PRESENT);
+                                        bd.attendanceOfDate[changeDatesRange].setAttendanceStatusType(PRESENT);
                                     }
                                     changeDatesRange++;
                                     leaveTime--;
@@ -101,15 +106,15 @@ public class Combined2 {
             for (int j = 0; j < 31; j++) {
 
                 //AMRITA
-                if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(AttendanceStatusType.ABSENT))
+                if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(ABSENT))
                     emp.setCount(0);
-                else if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(AttendanceStatusType.PRESENT))
+                else if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(PRESENT))
                     emp.setCount(1);
-                else if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(AttendanceStatusType.PUBLIC_HOLIDAY))
+                else if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(PUBLIC_HOLIDAY))
                     emp.setCount(2);
-                else if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(AttendanceStatusType.WEEKEND_HOLIDAY))
+                else if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(WEEKEND_HOLIDAY))
                     emp.setCount(3);
-                else if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(AttendanceStatusType.HALF_DAY))
+                else if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(HALF_DAY))
                     emp.setCount(4);
             }
 
