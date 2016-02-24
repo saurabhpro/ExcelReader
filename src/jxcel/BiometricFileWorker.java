@@ -59,11 +59,10 @@ public class BiometricFileWorker implements IBiometricFile {
     /**
      * method to return the attendance for an employee for that month
      *
-     * @param st
      * @param attendanceOfDate
      */
-    private void getMonthlyAttendanceOfEmployee(StringTokenizer st, AttendanceOfDate[] attendanceOfDate) {
-
+    private void getMonthlyAttendanceOfEmployee(AttendanceOfDate[] attendanceOfDate) {
+        StringTokenizer st;
         // AttendanceOfDate[] attendanceOfDate;
         AttendanceStatusType attendanceStatus;
 
@@ -130,10 +129,11 @@ public class BiometricFileWorker implements IBiometricFile {
 
         for (int i = 0; i < numberOfRowsInBio; i++) {
             attendanceOfDate = new AttendanceOfDate[31];
-            getMonthlyAttendanceOfEmployee(st, attendanceOfDate);       //referenced
+            getMonthlyAttendanceOfEmployee(attendanceOfDate);       //referenced
 
-            empId = getCustomCellContent(3, 13 + (18 * ADD_ROW_STEPS));
-            empName = getCustomCellContent(3, 15 + (18 * ADD_ROW_STEPS));
+            empName = getCustomCellContent(3, 13 + (18 * ADD_ROW_STEPS));
+            empId = getCustomCellContent(3, 15 + (18 * ADD_ROW_STEPS));
+
 
             empList.put(empId, new EmpBiometricDetails(empId, empName, attendanceOfDate));
 
