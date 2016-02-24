@@ -5,6 +5,7 @@ import jxcel.model.HrnetDetails;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by kumars on 2/19/2016.
@@ -18,9 +19,9 @@ public class FinalModel {
 
     //AMRITA
     public int[] count = new int[5];//Absent, Present, Public_Holiday, Weekend_Holiday, Half_Day
-    public List<HrnetDetails> empList1 = new ArrayList<>();
+    public Map<String, HrnetDetails> empList1;
 
-    public FinalModel(String employeeID, String name, int numberOfLeaves, AttendanceOfDate[] attendanceOfDate, List<HrnetDetails> empList1) {
+    public FinalModel(String employeeID, String name, int numberOfLeaves, AttendanceOfDate[] attendanceOfDate, Map<String, HrnetDetails> empList1) {
         this.employeeID = employeeID;
         this.name = name;
         this.attendanceOfDate = attendanceOfDate;
@@ -41,7 +42,7 @@ public class FinalModel {
     }
 
     public void displayArrayList() {
-        for (HrnetDetails hr : empList1) {
+        for (HrnetDetails hr : empList1.values()) {
             System.out.print(hr.employeeID);
             System.out.print("\t" + hr.name);
             System.out.print("\t" + hr.requestID);

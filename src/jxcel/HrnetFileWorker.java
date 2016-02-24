@@ -69,11 +69,11 @@ public class HrnetFileWorker implements IHrnetFile {
 
         AttendanceOfLeave attendanceOfLeave;
 
-        String tempName = null;
-        String tempID = null;
-        String tempRequest = null;
+        String empName = null;
+        String empID = null;
+        String empRequest = null;
 
-        DateTimeFormatter df = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        // DateTimeFormatter df = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         LocalDate tempDate;
         HrnetColumns hre = null;
@@ -95,16 +95,16 @@ public class HrnetFileWorker implements IHrnetFile {
                 switch (j) {
                     case 0:
                         hre = HrnetColumns.EMP_ID;
-                        tempID = getID(cell);
+                        empID = getID(cell);
                         break;
 
                     case 1:
                         hre = HrnetColumns.NAME;
-                        tempName = cell.getStringCellValue();
+                        empName = cell.getStringCellValue();
                         break;
                     case 2:
                         hre = HrnetColumns.REQUEST_ID;
-                        tempRequest = cell.getStringCellValue();
+                        empRequest = cell.getStringCellValue();
                         break;
                     case 3:
                         hre = HrnetColumns.ABSENT_REQUEST_TYPE;
@@ -132,13 +132,20 @@ public class HrnetFileWorker implements IHrnetFile {
                         break;
                 }
             }
-            hrnetDetails.put(tempID, new HrnetDetails(tempID, tempName, tempRequest, attendanceOfLeave));
+            hrnetDetails.put(empID, new HrnetDetails(empID, empName, empRequest, attendanceOfLeave));
         }
         file.close();
     }
 
     @Override
     public void displayHRNetFile() {
+
+        System.out.println(("hi " + hrnetDetails.size()));
+        Map<String, String> map =...
+        for (Map.Entry<String, String> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + "/" + entry.getValue());
+        }
+
         iterator = hrnetDetails.values().iterator();
         while (iterator.hasNext()) {
             HrnetDetails hr = iterator.next();
