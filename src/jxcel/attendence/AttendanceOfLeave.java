@@ -45,4 +45,6 @@ public class AttendanceOfLeave {
     public void setAbsenceTime(double absenceTime) {
         this.absenceTime = absenceTime;
     }
+
+
 }

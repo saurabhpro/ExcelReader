@@ -10,30 +10,24 @@ public class EmpBiometricDetails {
     public final String name;
     public final String empId;
     public final AttendanceOfDate[] attendanceOfDate;
-
     public int numberOfLeaves = 0; //To check how many leaves have been applied
-    //public boolean needClarificationFromEmployee = false;
-    public EmpBiometricDetails(String eName, String eID, AttendanceOfDate[] attendanceOfDate) {
+
+    public EmpBiometricDetails(String eID, String eName, AttendanceOfDate[] attendanceOfDate) {
         name = eName;
         empId = eID;
         this.attendanceOfDate = attendanceOfDate;
     }
 
-    /*
-        public boolean isNeedClarificationFromEmployee() {
-            return needClarificationFromEmployee;
-        }
-
-        public void setIfClarificationFromEmployee(boolean needClarificationFromEmployee) {
-            this.needClarificationFromEmployee = needClarificationFromEmployee;
-        }
-    */
-    public void setNumberOfLeaves() {
-        numberOfLeaves = numberOfLeaves + 1;
-    } //Value is set in Combined2.java file
-
+    /* public void setNumberOfLeaves() {
+         numberOfLeaves = numberOfLeaves + 1;
+     } //Value is set in Combined2.java file
+ */
     public int getNumberOfLeaves() {
         return numberOfLeaves;
+    }
+
+    public void setNumberOfLeaves(int numberOfLeaves) {
+        this.numberOfLeaves = numberOfLeaves;
     }
 
 

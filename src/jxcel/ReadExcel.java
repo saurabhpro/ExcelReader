@@ -41,7 +41,7 @@ public class ReadExcel {
 
         //display Biometric and HRNet Excel Files
         hrnetFileWorker.displayHRNetFile();
-        // jxcelFileWorker.displayBiometricFile();
+        jxcelFileWorker.displayBiometricFile();
 
     }
 

@@ -16,17 +16,14 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Objects;
-import java.util.TreeMap;
+import java.util.*;
 
 /**
  * Created by Saurabh on 2/10/2016.
  */
 public class HrnetFileWorker implements IHrnetFile {
-    public static Map<String, HrnetDetails> hrnetDetails;
+
+    public static Map<String, ArrayList<HrnetDetails>> hrnetDetails;
     int numberOfRowsInHr;
     Iterator<HrnetDetails> iterator = null;
     FileInputStream file;
@@ -72,19 +69,16 @@ public class HrnetFileWorker implements IHrnetFile {
         String empName = null;
         String empID = null;
         String empRequest = null;
-
-        // DateTimeFormatter df = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-
         LocalDate tempDate;
         HrnetColumns hre = null;
 
         numberOfRowsInHr = sheet.getPhysicalNumberOfRows();
         hrnetDetails = new TreeMap<>();
-        //  hrnetDetails = new HrnetDetails[numberOfRowsInHr];
 
         for (int i = 1; i < numberOfRowsInHr; i++) {
-
+            ArrayList<HrnetDetails> tempArrLst = null;
             attendanceOfLeave = new AttendanceOfLeave();
+
             for (int j = 0; j < 7; j++) {
                 //Update the value of cell
                 cell = sheet.getRow(i).getCell(j);
@@ -132,34 +126,37 @@ public class HrnetFileWorker implements IHrnetFile {
                         break;
                 }
             }
-            hrnetDetails.put(empID, new HrnetDetails(empID, empName, empRequest, attendanceOfLeave));
+
+            if (hrnetDetails.containsKey(empID)) {
+                tempArrLst = hrnetDetails.get(empID);
+                tempArrLst.add(new HrnetDetails(empID, empName, empRequest, attendanceOfLeave));
+                hrnetDetails.put(empID, tempArrLst);
+
+            } else {
+                tempArrLst = new ArrayList<>();
+                tempArrLst.add(new HrnetDetails(empID, empName, empRequest, attendanceOfLeave));
+                hrnetDetails.put(empID, tempArrLst);
+            }
         }
         file.close();
     }
 
     @Override
     public void displayHRNetFile() {
+        Set<Map.Entry<String, ArrayList<HrnetDetails>>> s = hrnetDetails.entrySet();
 
-        System.out.println(("hi " + hrnetDetails.size()));
-        Map<String, String> map =...
-        for (Map.Entry<String, String> entry : map.entrySet()) {
-            System.out.println(entry.getKey() + "/" + entry.getValue());
-        }
+        for (Map.Entry<String, ArrayList<HrnetDetails>> entry : s) {
+            ArrayList<HrnetDetails> ar = entry.getValue();
 
-        iterator = hrnetDetails.values().iterator();
-        while (iterator.hasNext()) {
-            HrnetDetails hr = iterator.next();
-
-            System.out.print(hr.employeeID);
-            System.out.print("\t" + hr.name);
-            System.out.print("\t" + hr.requestID);
-            System.out.print("\t" + hr.attendanceOfLeave.getLeaveType());
-            System.out.print("\t" + hr.attendanceOfLeave.getStartDate() + "\t" + hr.attendanceOfLeave.getEndDate());
-            System.out.println("\t" + hr.attendanceOfLeave.getAbsenceTime());
-
+            for (HrnetDetails hr : ar) {
+                System.out.print(hr.employeeID);
+                System.out.print("\t" + hr.name);
+                System.out.print("\t" + hr.requestID);
+                System.out.print("\t" + hr.attendanceOfLeave.getLeaveType());
+                System.out.print("\t" + hr.attendanceOfLeave.getStartDate() + "\t" + hr.attendanceOfLeave.getEndDate());
+                System.out.println("\t" + hr.attendanceOfLeave.getAbsenceTime());
+            }
         }
     }
-
-
 }
 

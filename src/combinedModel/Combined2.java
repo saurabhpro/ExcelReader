@@ -19,24 +19,36 @@ import static jxcel.model.AttendanceStatusType.*;
 public class Combined2 {
 
     public static Map<String, FinalModel> newEmpMap = new TreeMap<>();
+    private final Map<String, ArrayList<HrnetDetails>> hrnetDetails = HrnetFileWorker.hrnetDetails;
+    private final Map<String, EmpBiometricDetails> empBiometricDetails = BiometricFileWorker.empList;
     Map<String, HrnetDetails> newHrnetDetails;
-
     HrnetDetails tempHrnet;
-    Map<String, HrnetDetails> hrnetDetails = HrnetFileWorker.hrnetDetails;
-    Map<String, EmpBiometricDetails> empBiometricDetails = BiometricFileWorker.empList;
 
     public void combineFiles() {
 
         //Set the number of leaves applied
         for (String bd : empBiometricDetails.keySet()) {
-            for (String hr : hrnetDetails.keySet()) {
-                if (hr.equals(bd)) {
-                    System.out.println(hrnetDetails.size());
+            //setting the number of leaves after counting the list
+            hrnetDetails.keySet().stream().filter(hr -> hr.equals(bd)).forEach
+                    (hr -> empBiometricDetails.get(bd).setNumberOfLeaves(hrnetDetails.get(hr).size()));
+
+            /*
+        //Set the number of leaves applied
+            for (String bd : empBiometricDetails.keySet()) {
+                for (String hr : hrnetDetails.keySet()) {
+                    if (hr.equals(bd)) {
+                        System.out.println(hrnetDetails.get(hr).size() + " Size of ArrayList For " + empBiometricDetails.get(bd).name);
+
+                         // setting the number of leaves after counting the list
+
+                empBiometricDetails.get(bd).setNumberOfLeaves(hrnetDetails.get(hr).size());
+                    }
                 }
-                //System.out.println(bd.name+""+bd.getNumberOfLeaves());
             }
+             */
         }
 
+        //this worked just fine for January
         for (EmpBiometricDetails bd : empBiometricDetails.values()) {
             for (HolidaysList h : HolidaysList.values()) {
                 if (h.getDate().getMonth() == BiometricFileWorker.month) {
@@ -48,57 +60,62 @@ public class Combined2 {
                 switch (bd.attendanceOfDate[i].getAttendanceStatusType()) {
                     case ABSENT:
                         //check for Work from home and half day
-                        for (HrnetDetails hr : hrnetDetails.values()) {
+                        Set<Map.Entry<String, ArrayList<HrnetDetails>>> s = hrnetDetails.entrySet();
+                        for (Map.Entry<String, ArrayList<HrnetDetails>> entry : s) {
 
-                            if (hr.employeeID.equals(bd.empId)) {
-                                LocalDate startDate = hr.attendanceOfLeave.getStartDate();
-                                // LocalDate endDate = hr.leaveDetails.getEndDate();
-                                double leaveTime = hr.attendanceOfLeave.getAbsenceTime();
+                            if (bd.empId.equals(entry.getKey())) {
 
-                                int changeDatesRange = startDate.getDayOfMonth() - 1;
+                                ArrayList<HrnetDetails> ar = entry.getValue();
 
-                                while (leaveTime > 0) {
-                                    if (leaveTime == 0.5)
-                                        bd.attendanceOfDate[changeDatesRange].setAttendanceStatusType(HALF_DAY);
-                                    else if (hr.attendanceOfLeave.getLeaveType() == LeaveType.WORK_FROM_HOME) {
-                                        bd.attendanceOfDate[changeDatesRange].setWorkTimeForDay(LocalTime.of((int) leaveTime * 8, 0));
-                                        bd.attendanceOfDate[changeDatesRange].setAttendanceStatusType(PRESENT);
+                                for (HrnetDetails hr : ar) {
+                                    LocalDate startDate = hr.attendanceOfLeave.getStartDate();
+                                    // LocalDate endDate = hr.leaveDetails.getEndDate();
+                                    double leaveTime = hr.attendanceOfLeave.getAbsenceTime();
+
+                                    int changeDatesRange = startDate.getDayOfMonth() - 1;
+
+                                    while (leaveTime > 0) {
+                                        if (leaveTime == 0.5)
+                                            bd.attendanceOfDate[changeDatesRange].setAttendanceStatusType(HALF_DAY);
+                                        else if (hr.attendanceOfLeave.getLeaveType() == LeaveType.WORK_FROM_HOME) {
+                                            bd.attendanceOfDate[changeDatesRange].setWorkTimeForDay(LocalTime.of((int) leaveTime * 8, 0));
+                                            bd.attendanceOfDate[changeDatesRange].setAttendanceStatusType(PRESENT);
+                                        }
+                                        changeDatesRange++;
+                                        leaveTime--;
                                     }
-                                    changeDatesRange++;
-                                    leaveTime--;
                                 }
-                            }
 
+                            }
                         }
                 }
             }
-
-
         }
+    }
+/*
+            //Combine Hrnet and Biometric Files
+            BiometricFileWorker.empList = empBiometricDetails;
+            Iterator<EmpBiometricDetails> biometricDetailsIterator = empBiometricDetails.values().iterator();
+            Iterator<ArrayList<HrnetDetails>> hrnetDetailsIterator;
 
-        //Combine Hrnet and Biometric Files
-        BiometricFileWorker.empList = empBiometricDetails;
-        Iterator<EmpBiometricDetails> biometricDetailsIterator = empBiometricDetails.values().iterator();
-        Iterator<HrnetDetails> hrnetDetailsIterator;
+            while (biometricDetailsIterator.hasNext()) {
+                EmpBiometricDetails bd = biometricDetailsIterator.next();
+                if (bd.getNumberOfLeaves() == 0) {
+                    newEmpMap.put(bd.empId, new FinalModel(bd.empId, bd.name, bd.numberOfLeaves, bd.attendanceOfDate, null));
+                } else {
+                    hrnetDetailsIterator = hrnetDetails.values().iterator();
+                    newHrnetDetails = new TreeMap<>();
+                    while (hrnetDetailsIterator.hasNext()) {
+                        ArrayList<HrnetDetails> hr = hrnetDetailsIterator.next();
 
-        while (biometricDetailsIterator.hasNext()) {
-            EmpBiometricDetails bd = biometricDetailsIterator.next();
-            if (bd.getNumberOfLeaves() == 0) {
-                newEmpMap.put(bd.empId, new FinalModel(bd.empId, bd.name, bd.numberOfLeaves, bd.attendanceOfDate, null));
-            } else {
-                hrnetDetailsIterator = hrnetDetails.values().iterator();
-                newHrnetDetails = new TreeMap<>();
-                while (hrnetDetailsIterator.hasNext()) {
-                    HrnetDetails hr = hrnetDetailsIterator.next();
-
-                    if (hr.employeeID.equals(bd.empId)) {
-                        newHrnetDetails.put(hr.employeeID, new HrnetDetails(hr.employeeID, hr.name, hr.requestID, hr.attendanceOfLeave));
+                        //if (hr.employeeID.equals(bd.empId)) {
+                        //newHrnetDetails.put(hr.employeeID, new HrnetDetails(hr.employeeID, hr.name, hr.requestID, hr.attendanceOfLeave));
                     }
                 }
                 newEmpMap.put(bd.empId, new FinalModel(bd.empId, bd.name, bd.numberOfLeaves, bd.attendanceOfDate, newHrnetDetails));
             }
         }
-
+/*
         Iterator<FinalModel> iterator = newEmpMap.values().iterator();
         while (iterator.hasNext()) {
             FinalModel emp = iterator.next();
@@ -118,15 +135,15 @@ public class Combined2 {
             }
 
         }
-    }
+
+    }*/
 
     //Display the two combined files
+    //this function has not been properly modified by saurabh,
+
     public void displayCombineFiles() {
 
-        Iterator<FinalModel> iterator = newEmpMap.values().iterator();
-        while (iterator.hasNext()) {
-            FinalModel emp = iterator.next();
-
+        for (FinalModel emp : newEmpMap.values()) {
             System.out.println("Name: " + emp.name);
             System.out.println("Employee ID: " + emp.employeeID);
             System.out.println();
