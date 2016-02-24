@@ -13,7 +13,6 @@ public class EmpBiometricDetails {
 
     public int numberOfLeaves = 0; //To check how many leaves have been applied
     //public boolean needClarificationFromEmployee = false;
-
     public EmpBiometricDetails(String eName, String eID, AttendanceOfDate[] attendanceOfDate) {
         name = eName;
         empId = eID;

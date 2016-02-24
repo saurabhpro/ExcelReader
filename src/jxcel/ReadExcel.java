@@ -34,16 +34,15 @@ public class ReadExcel {
         //display Combined Files
         combined2.displayCombineFiles();
 
+        // remove discrepancies
+        Discrepancy discrepancy = new Discrepancy();
+        discrepancy.findDiscrepancy();
+
         /*
         //display Biometric and HRNet Excel Files
         hrnetFileWorker.displayHRNetFile();
         jxcelFileWorker.displayBiometricFile();
         */
-
-        // remove discrepancies
-       /* Discrepancy discrepancy = new Discrepancy();
-        discrepancy.findDiscrepancy();
-*/
 
     }
 
