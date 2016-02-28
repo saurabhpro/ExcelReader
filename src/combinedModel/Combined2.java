@@ -21,8 +21,6 @@ public class Combined2 {
     public static Map<String, FinalModel> newEmpMap = new TreeMap<>();
     private final Map<String, ArrayList<HrnetDetails>> hrnetDetails = HrnetFileWorker.hrnetDetails;
     private final Map<String, EmpBiometricDetails> empBiometricDetails = BiometricFileWorker.empList;
-    Map<String, HrnetDetails> newHrnetDetails;
-    HrnetDetails tempHrnet;
 
     public void combineFiles() {
 
@@ -91,31 +89,26 @@ public class Combined2 {
                 }
             }
         }
-    }
-/*
-            //Combine Hrnet and Biometric Files
-            BiometricFileWorker.empList = empBiometricDetails;
-            Iterator<EmpBiometricDetails> biometricDetailsIterator = empBiometricDetails.values().iterator();
-            Iterator<ArrayList<HrnetDetails>> hrnetDetailsIterator;
+        //Combine Hrnet and Biometric Files
+        BiometricFileWorker.empList = empBiometricDetails;
+        Iterator<EmpBiometricDetails> biometricDetailsIterator = empBiometricDetails.values().iterator();
 
-            while (biometricDetailsIterator.hasNext()) {
-                EmpBiometricDetails bd = biometricDetailsIterator.next();
-                if (bd.getNumberOfLeaves() == 0) {
-                    newEmpMap.put(bd.empId, new FinalModel(bd.empId, bd.name, bd.numberOfLeaves, bd.attendanceOfDate, null));
-                } else {
-                    hrnetDetailsIterator = hrnetDetails.values().iterator();
-                    newHrnetDetails = new TreeMap<>();
-                    while (hrnetDetailsIterator.hasNext()) {
-                        ArrayList<HrnetDetails> hr = hrnetDetailsIterator.next();
-
-                        //if (hr.employeeID.equals(bd.empId)) {
-                        //newHrnetDetails.put(hr.employeeID, new HrnetDetails(hr.employeeID, hr.name, hr.requestID, hr.attendanceOfLeave));
+        while (biometricDetailsIterator.hasNext()) {
+            EmpBiometricDetails bd = biometricDetailsIterator.next();
+            if (bd.getNumberOfLeaves() == 0) {
+                newEmpMap.put(bd.empId, new FinalModel(bd.empId, bd.name, bd.numberOfLeaves, bd.attendanceOfDate, null));
+            } else {
+                Set<String> keySet = hrnetDetails.keySet();
+                for (String s : keySet) {
+                    if (s.equals(bd.empId)) {
+                        ArrayList<HrnetDetails> hrnet;
+                        hrnet = hrnetDetails.get(s);
+                        newEmpMap.put(bd.empId, new FinalModel(bd.empId, bd.name, bd.numberOfLeaves, bd.attendanceOfDate, hrnet));
                     }
                 }
-                newEmpMap.put(bd.empId, new FinalModel(bd.empId, bd.name, bd.numberOfLeaves, bd.attendanceOfDate, newHrnetDetails));
             }
         }
-/*
+
         Iterator<FinalModel> iterator = newEmpMap.values().iterator();
         while (iterator.hasNext()) {
             FinalModel emp = iterator.next();
@@ -136,10 +129,7 @@ public class Combined2 {
 
         }
 
-    }*/
-
-    //Display the two combined files
-    //this function has not been properly modified by saurabh,
+    }
 
     public void displayCombineFiles() {
 
@@ -149,7 +139,7 @@ public class Combined2 {
             System.out.println();
 
             System.out.println("Number Of Leaves Applied: " + emp.numberOfLeaves);
-            if (emp.empList1 != null) {
+            if (emp.hrnetDetails != null) {
                 emp.displayArrayList();
             }
 

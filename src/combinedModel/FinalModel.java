@@ -4,6 +4,7 @@ import jxcel.attendence.AttendanceOfDate;
 import jxcel.model.HrnetDetails;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -19,18 +20,18 @@ public class FinalModel {
 
     //AMRITA
     public int[] count = new int[5];//Absent, Present, Public_Holiday, Weekend_Holiday, Half_Day
-    public Map<String, HrnetDetails> empList1;
+    public ArrayList<HrnetDetails> hrnetDetails;
 
-    public FinalModel(String employeeID, String name, int numberOfLeaves, AttendanceOfDate[] attendanceOfDate, Map<String, HrnetDetails> empList1) {
+    public FinalModel(String employeeID, String name, int numberOfLeaves, AttendanceOfDate[] attendanceOfDate, ArrayList<HrnetDetails> hrnetDetails) {
         this.employeeID = employeeID;
         this.name = name;
         this.attendanceOfDate = attendanceOfDate;
-        this.empList1 = empList1;
         this.numberOfLeaves = numberOfLeaves;
         //this.needClarificationFromEmployee = needClarificationFromEmployee;
         for (int i = 0; i < 5; i++) {
             count[i] = 0;
         }
+        this.hrnetDetails = hrnetDetails;
     }
 
     public int getCount(int i) {
@@ -42,7 +43,9 @@ public class FinalModel {
     }
 
     public void displayArrayList() {
-        for (HrnetDetails hr : empList1.values()) {
+        Iterator<HrnetDetails> iterator = hrnetDetails.iterator();
+        while (iterator.hasNext()) {
+            HrnetDetails hr = iterator.next();
             System.out.print(hr.employeeID);
             System.out.print("\t" + hr.name);
             System.out.print("\t" + hr.requestID);

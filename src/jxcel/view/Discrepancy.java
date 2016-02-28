@@ -31,7 +31,7 @@ public class Discrepancy {
             finalModel = finalModelIterator.next();
 
             //Discrepancy if an employee is absent and there is no entry in Hrnet file.
-            if (finalModel.empList1 == null) {
+            if (finalModel.hrnetDetails == null) {
                 for (int j = 0; j < 31; j++) {
                     if (finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(AttendanceStatusType.ABSENT)) {
                         System.out.println("Null List- Discrepancy Set for " + finalModel.name + " Date: " + (j + 1));
@@ -45,9 +45,9 @@ public class Discrepancy {
                 for (int j = 0; j < 31; j++) {
 
                     Iterator<HrnetDetails> hrnetDetailsIterator;
-                    hrnetDetailsIterator = finalModel.empList1.values().iterator();
+                    hrnetDetailsIterator = finalModel.hrnetDetails.iterator();
 
-                    System.out.println(hrnetDetailsIterator.next().attendanceOfLeave.getStartDate());
+                    //System.out.println(hrnetDetailsIterator.next().attendanceOfLeave.getStartDate());
                     if (finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(AttendanceStatusType.ABSENT)) {
 
                         int dayOfMonth;
@@ -57,23 +57,25 @@ public class Discrepancy {
 
                             startDate = hrnetDetails.attendanceOfLeave.getStartDate();
                             endDate = hrnetDetails.attendanceOfLeave.getEndDate();
+
                             dayOfMonth = startDate.getDayOfMonth();
-                            System.out.println(dayOfMonth);
+
 
                             if ((dayOfMonth) == (j + 1)) {
                                 flag = 1;
                                 while (startDate.compareTo(endDate) <= 0) {
 
                                     if (!hrnetDetails.attendanceOfLeave.getLeaveType().equals(LeaveType.WORK_FROM_HOME)) {
-
+                                        j = j + 1;
                                         startDate = startDate.plusDays(1);
                                         continue;
                                     } else {
                                         System.out.println("Discrepancy Set for " + hrnetDetails.name + " Date: " + (dayOfMonth));
                                         finalModel.setIfClarificationFromEmployee(true);
-
                                     }
+                                    j = j + 1;
                                     startDate = startDate.plusDays(1);
+
                                 }
 
                             }
@@ -88,7 +90,7 @@ public class Discrepancy {
                     //Discrepancy if there is an entry for an employee in both Biometric and Hrnet file.
                     else if (finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(AttendanceStatusType.PRESENT)) {
 
-                        iterator2 = finalModel.empList1.values().iterator();
+                        iterator2 = finalModel.hrnetDetails.iterator();
                         HrnetDetails hrnetDetails;
 
                         while (iterator2.hasNext()) {
@@ -121,4 +123,5 @@ public class Discrepancy {
             System.out.println();
         }
     }
+
 }

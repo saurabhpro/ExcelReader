@@ -32,16 +32,16 @@ public class ReadExcel {
         new JsonMapper().toJsonFile(null).fromJsonToFormattedJson(null);
 
         //display Combined Files
-        //combined2.displayCombineFiles();
+        combined2.displayCombineFiles();
 
         // remove discrepancies
         Discrepancy discrepancy = new Discrepancy();
-        //discrepancy.findDiscrepancy();
+        discrepancy.findDiscrepancy();
 
 
         //display Biometric and HRNet Excel Files
-        hrnetFileWorker.displayHRNetFile();
-        jxcelFileWorker.displayBiometricFile();
+        //hrnetFileWorker.displayHRNetFile();
+        //jxcelFileWorker.displayBiometricFile();
 
     }
 
