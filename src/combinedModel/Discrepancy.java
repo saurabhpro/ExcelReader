@@ -1,14 +1,13 @@
-package jxcel.view;
+package combinedModel;
 
-import combinedModel.Combined2;
-import combinedModel.FinalModel;
-import jxcel.model.AttendanceStatusType;
 import jxcel.model.HrnetDetails;
-import jxcel.model.LeaveType;
 
 import java.time.LocalDate;
 import java.util.Iterator;
 import java.util.Map;
+
+import static jxcel.model.AttendanceStatusType.*;
+import static jxcel.model.LeaveType.WORK_FROM_HOME;
 
 /**
  * Created by AroraA on 17-02-2016.
@@ -33,7 +32,7 @@ public class Discrepancy {
             //Discrepancy if an employee is absent and there is no entry in Hrnet file.
             if (finalModel.hrnetDetails == null) {
                 for (int j = 0; j < 31; j++) {
-                    if (finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(AttendanceStatusType.ABSENT)) {
+                    if (finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(ABSENT)) {
                         System.out.println("Null List- Discrepancy Set for " + finalModel.name + " Date: " + (j + 1));
                         finalModel.setIfClarificationFromEmployee(true);
                     }
@@ -48,7 +47,7 @@ public class Discrepancy {
                     hrnetDetailsIterator = finalModel.hrnetDetails.iterator();
 
                     //System.out.println(hrnetDetailsIterator.next().attendanceOfLeave.getStartDate());
-                    if (finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(AttendanceStatusType.ABSENT)) {
+                    if (finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(ABSENT)) {
 
                         int dayOfMonth;
                         HrnetDetails hrnetDetails;
@@ -65,12 +64,12 @@ public class Discrepancy {
                                 flag = 1;
                                 while (startDate.compareTo(endDate) <= 0) {
 
-                                    if (!hrnetDetails.attendanceOfLeave.getLeaveType().equals(LeaveType.WORK_FROM_HOME)) {
+                                    if (!hrnetDetails.attendanceOfLeave.getLeaveType().equals(WORK_FROM_HOME)) {
                                         j = j + 1;
                                         startDate = startDate.plusDays(1);
                                         continue;
                                     } else {
-                                        System.out.println("Discrepancy Set for " + hrnetDetails.name + " Date: " + (dayOfMonth));
+                                        System.out.println("Discrepancy Set for " + hrnetDetails.getName() + " Date: " + (dayOfMonth));
                                         finalModel.setIfClarificationFromEmployee(true);
                                     }
                                     j = j + 1;
@@ -88,7 +87,7 @@ public class Discrepancy {
                         flag = 0;
                     }
                     //Discrepancy if there is an entry for an employee in both Biometric and Hrnet file.
-                    else if (finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(AttendanceStatusType.PRESENT)) {
+                    else if (finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(PRESENT)) {
 
                         iterator2 = finalModel.hrnetDetails.iterator();
                         HrnetDetails hrnetDetails;
@@ -101,7 +100,7 @@ public class Discrepancy {
                             int dayOfMonth = startDate.getDayOfMonth();
                             if (dayOfMonth == (j + 1)) {
                                 while (startDate.compareTo(endDate) <= 0) {
-                                    if (hrnetDetails.attendanceOfLeave.getLeaveType().equals(LeaveType.CASUAL_IND) || hrnetDetails.attendanceOfLeave.getLeaveType().equals(LeaveType.SICK_LEAVE) || hrnetDetails.attendanceOfLeave.getLeaveType().equals(LeaveType.VACATION_IND)) {
+                                    if (!hrnetDetails.attendanceOfLeave.getLeaveType().equals(WORK_FROM_HOME)) {
                                         System.out.println("Discrepancy set for present: " + finalModel.name + " Date:" + (j + 1));
                                         finalModel.setIfClarificationFromEmployee(true);
                                     }
@@ -111,7 +110,7 @@ public class Discrepancy {
                         }
                     }
                     //Discrepancy if an employee applies for half day but works for less than four hours.
-                    else if (finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(AttendanceStatusType.HALF_DAY)) {
+                    else if (finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(HALF_DAY)) {
 
                         if ((finalModel.attendanceOfDate[j].getWorkTimeForDay() == null) || (finalModel.attendanceOfDate[j].getWorkTimeForDay().getHour() < 4)) {
                             System.out.println("Discrepancy set for half day: " + finalModel.name + " Date: " + (j + 1));

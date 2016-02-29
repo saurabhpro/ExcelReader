@@ -16,7 +16,6 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.Month;
 import java.time.Year;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.TreeMap;
@@ -121,10 +120,10 @@ public class BiometricFileWorker implements IBiometricFile {
         empList = new TreeMap<>();
 
         String monthYear = getCustomCellContent(13, 7);
-        StringTokenizer st = new StringTokenizer(monthYear, "   ");
+        String[] st = monthYear.split("   ");
 
-        month = Month.valueOf(st.nextElement().toString().toUpperCase());
-        year = Year.parse((String) st.nextElement());
+        month = Month.valueOf(st[0].toUpperCase());
+        year = Year.parse(st[1]);
 
 
         for (int i = 0; i < numberOfRowsInBio; i++) {
@@ -143,27 +142,7 @@ public class BiometricFileWorker implements IBiometricFile {
 
     @Override
     public void displayBiometricFile() {
-
         System.out.println(month);
-        Iterator<EmpBiometricDetails> iterator = empList.values().iterator();
-        LocalTime workTime;
-        while (iterator.hasNext()) {
-            EmpBiometricDetails emp = iterator.next();
-            System.out.println("Name: " + emp.name);
-            System.out.println("Employee ID: " + emp.empId);
-
-            for (int j = 0; j < 31; j++) {
-                System.out.print(emp.attendanceOfDate[j].getCurrentDate());
-                System.out.print("\tIn Time: " + emp.attendanceOfDate[j].getCheckIn());
-                System.out.print("\tOut Time: " + emp.attendanceOfDate[j].getCheckOut());
-                System.out.print("\tStatus: " + emp.attendanceOfDate[j].getAttendanceStatusType() + "\n");
-
-                workTime = emp.attendanceOfDate[j].getWorkTimeForDay();
-                if (workTime != null)
-                    System.out.println(workTime);
-
-            }
-            System.out.println();
-        }
+        empList.values().forEach(EmpBiometricDetails::printEmpBiometricDetails);
     }
 }

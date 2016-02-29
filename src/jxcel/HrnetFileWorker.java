@@ -149,12 +149,7 @@ public class HrnetFileWorker implements IHrnetFile {
             ArrayList<HrnetDetails> ar = entry.getValue();
 
             for (HrnetDetails hr : ar) {
-                System.out.print(hr.employeeID);
-                System.out.print("\t" + hr.name);
-                System.out.print("\t" + hr.requestID);
-                System.out.print("\t" + hr.attendanceOfLeave.getLeaveType());
-                System.out.print("\t" + hr.attendanceOfLeave.getStartDate() + "\t" + hr.attendanceOfLeave.getEndDate());
-                System.out.println("\t" + hr.attendanceOfLeave.getAbsenceTime());
+                hr.printHrNetDetail();
             }
         }
     }

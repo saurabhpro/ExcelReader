@@ -9,7 +9,10 @@ import jxcel.model.LeaveType;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
 
 import static jxcel.model.AttendanceStatusType.*;
 
@@ -18,10 +21,12 @@ import static jxcel.model.AttendanceStatusType.*;
  */
 public class Combined2 {
 
-    public static Map<String, FinalModel> newEmpMap = new TreeMap<>();
+    //Comparator needs string as Type
+    public static Map<String, FinalModel> newEmpMap = new TreeMap<>(String::compareTo);
     private final Map<String, ArrayList<HrnetDetails>> hrnetDetails = HrnetFileWorker.hrnetDetails;
     private final Map<String, EmpBiometricDetails> empBiometricDetails = BiometricFileWorker.empList;
 
+    //  public static Map<BasicEmployeeDetails, String > map = new TreeMap<>(new EmpIdComparator());
     public void combineFiles() {
 
         //Set the number of leaves applied
@@ -30,20 +35,18 @@ public class Combined2 {
             hrnetDetails.keySet().stream().filter(hr -> hr.equals(bd)).forEach
                     (hr -> empBiometricDetails.get(bd).setNumberOfLeaves(hrnetDetails.get(hr).size()));
 
-            /*
-        //Set the number of leaves applied
-            for (String bd : empBiometricDetails.keySet()) {
-                for (String hr : hrnetDetails.keySet()) {
-                    if (hr.equals(bd)) {
-                        System.out.println(hrnetDetails.get(hr).size() + " Size of ArrayList For " + empBiometricDetails.get(bd).name);
 
-                         // setting the number of leaves after counting the list
+            //Set the number of leaves applied
+            //for (String bd : empBiometricDetails.keySet()) {
+      /*      for (String hr : hrnetDetails.keySet()) {
+                if (hr.equals(bd)) {
+                    System.out.println(hrnetDetails.get(hr).size() + " Size of ArrayList For " + empBiometricDetails.get(bd).name);
 
-                empBiometricDetails.get(bd).setNumberOfLeaves(hrnetDetails.get(hr).size());
-                    }
+                    // setting the number of leaves after counting the list
+
+                    empBiometricDetails.get(bd).setNumberOfLeaves(hrnetDetails.get(hr).size());
                 }
-            }
-             */
+            }*/
         }
 
         //this worked just fine for January
@@ -61,7 +64,7 @@ public class Combined2 {
                         Set<Map.Entry<String, ArrayList<HrnetDetails>>> s = hrnetDetails.entrySet();
                         for (Map.Entry<String, ArrayList<HrnetDetails>> entry : s) {
 
-                            if (bd.empId.equals(entry.getKey())) {
+                            if (bd.getEmpId().equals(entry.getKey())) {
 
                                 ArrayList<HrnetDetails> ar = entry.getValue();
 
@@ -91,27 +94,24 @@ public class Combined2 {
         }
         //Combine Hrnet and Biometric Files
         BiometricFileWorker.empList = empBiometricDetails;
-        Iterator<EmpBiometricDetails> biometricDetailsIterator = empBiometricDetails.values().iterator();
 
-        while (biometricDetailsIterator.hasNext()) {
-            EmpBiometricDetails bd = biometricDetailsIterator.next();
+        for (EmpBiometricDetails bd : empBiometricDetails.values()) {
             if (bd.getNumberOfLeaves() == 0) {
-                newEmpMap.put(bd.empId, new FinalModel(bd.empId, bd.name, bd.numberOfLeaves, bd.attendanceOfDate, null));
+                newEmpMap.put(bd.getName(), new FinalModel(bd.getEmpId(), bd.getName(), bd.numberOfLeaves, bd.attendanceOfDate, null));
             } else {
                 Set<String> keySet = hrnetDetails.keySet();
                 for (String s : keySet) {
-                    if (s.equals(bd.empId)) {
+                    if (s.equals(bd.getEmpId())) {
                         ArrayList<HrnetDetails> hrnet;
                         hrnet = hrnetDetails.get(s);
-                        newEmpMap.put(bd.empId, new FinalModel(bd.empId, bd.name, bd.numberOfLeaves, bd.attendanceOfDate, hrnet));
+                        newEmpMap.put(bd.getName(), new FinalModel(bd.getEmpId(), bd.getName(), bd.numberOfLeaves, bd.attendanceOfDate, hrnet));
                     }
                 }
             }
         }
 
-        Iterator<FinalModel> iterator = newEmpMap.values().iterator();
-        while (iterator.hasNext()) {
-            FinalModel emp = iterator.next();
+        //to be removed  today
+        for (FinalModel emp : newEmpMap.values()) {
             for (int j = 0; j < 31; j++) {
 
                 //AMRITA
@@ -144,6 +144,7 @@ public class Combined2 {
             }
 
 
+            //to be removed  today
             //AMRITA
             System.out.println("\nNumber of Absent Days " + emp.getCount(0));
             System.out.println("Number of Present Days " + emp.getCount(1));

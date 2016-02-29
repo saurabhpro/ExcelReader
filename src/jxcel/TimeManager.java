@@ -6,7 +6,6 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.util.StringTokenizer;
 
 /**
  * Created by SaurabhK on 09-02-2016.
@@ -53,11 +52,11 @@ public class TimeManager {
         int month;
         int day;
 
-        StringTokenizer st = new StringTokenizer(date, "/");
+        String[] st = date.split("/");
 
-        month = Integer.parseInt((String) st.nextElement());
-        day = Integer.parseInt((String) st.nextElement());
-        year = Integer.parseInt((String) st.nextElement());
+        month = Integer.parseInt(st[0]);
+        day = Integer.parseInt(st[1]);
+        year = Integer.parseInt(st[2]);
 
 
         return LocalDate.of(year, month, day);

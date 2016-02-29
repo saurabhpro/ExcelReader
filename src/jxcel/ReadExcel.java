@@ -1,7 +1,7 @@
 package jxcel;
 
 import combinedModel.Combined2;
-import jxcel.view.Discrepancy;
+import combinedModel.Discrepancy;
 import jxcel.view.JsonMapper;
 
 import java.io.IOException;
@@ -23,7 +23,7 @@ public class ReadExcel {
         jxcelFileWorker.readBiometricFile();
 
         //read HRNet Excel File
-        test.setHrNetFile(".\\ExcelFiles\\HRNet.xlsx");
+        test.setHrNetFile(".\\ExcelFiles\\Salesforce.xlsx");
         HrnetFileWorker hrnetFileWorker = new HrnetFileWorker(hrNetFile);
         hrnetFileWorker.readHRNetFile();
 

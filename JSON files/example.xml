@@ -7,8 +7,7 @@ The 'EmpStatus' for each date should be calculated by considering the following 
 1. if user checks-in and checks-out, then status = P,
  2. if user checks-in, but forgets to check-out, then status=P/A
  3. if user has not checked-in or checked out, then status=A
- 4. cases where the biometric system considers the first half as absent should not be considered
- if the check-in time is on second half [According to your system that seems to be after 13:30] and if he checks out-->
+ -->
 
 <Biometric>
     <CompanyInfo>REVAL INDIA PVT LTD</CompanyInfo>
@@ -56,8 +55,9 @@ The 'EmpStatus' for each date should be calculated by considering the following 
                 <EmpStatus>P</EmpStatus>
             </Date>
             <Date date="2016-01-06">
-                <CheckInTime>10:00</CheckInTime>
-                <CheckOutTime>17:00</CheckOutTime>
+                <CheckInTime>20:00</CheckInTime>
+                <CheckOutTime>9:00</CheckOutTime>:00
+            </CheckOutTime>
                 <OverTime>00:00</OverTime>
                 <EmpStatus>P</EmpStatus>
             </Date>

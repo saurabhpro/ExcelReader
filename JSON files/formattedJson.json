@@ -55853,14 +55853,14 @@
         "nano" : 0
       },
       "checkOut" : {
-        "hour" : 3,
+        "hour": 0,
         "minute" : 0,
         "second" : 0,
         "nano" : 0
       },
       "overTime" : null,
       "workTimeForDay" : {
-        "hour" : 15,
+        "hour": 12,
         "minute" : 55,
         "second" : 0,
         "nano" : 0
