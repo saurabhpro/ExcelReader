@@ -146,11 +146,7 @@ public class HrnetFileWorker implements IHrnetFile {
         Set<Map.Entry<String, ArrayList<HrnetDetails>>> s = hrnetDetails.entrySet();
 
         for (Map.Entry<String, ArrayList<HrnetDetails>> entry : s) {
-            ArrayList<HrnetDetails> ar = entry.getValue();
-
-            for (HrnetDetails hr : ar) {
-                hr.printHrNetDetail();
-            }
+            entry.getValue().forEach(HrnetDetails::printHrNetDetail);
         }
     }
 }

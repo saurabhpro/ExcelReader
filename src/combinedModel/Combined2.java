@@ -1,7 +1,7 @@
 package combinedModel;
 
-import jxcel.BiometricFileWorker;
 import jxcel.HrnetFileWorker;
+import jxcel.JxcelBiometricFileWorker;
 import jxcel.model.EmpBiometricDetails;
 import jxcel.model.HolidaysList;
 import jxcel.model.HrnetDetails;
@@ -24,9 +24,8 @@ public class Combined2 {
     //Comparator needs string as Type
     public static Map<String, FinalModel> newEmpMap = new TreeMap<>(String::compareTo);
     private final Map<String, ArrayList<HrnetDetails>> hrnetDetails = HrnetFileWorker.hrnetDetails;
-    private final Map<String, EmpBiometricDetails> empBiometricDetails = BiometricFileWorker.empList;
+    private final Map<String, EmpBiometricDetails> empBiometricDetails = JxcelBiometricFileWorker.empList;
 
-    //  public static Map<BasicEmployeeDetails, String > map = new TreeMap<>(new EmpIdComparator());
     public void combineFiles() {
 
         //Set the number of leaves applied
@@ -34,30 +33,17 @@ public class Combined2 {
             //setting the number of leaves after counting the list
             hrnetDetails.keySet().stream().filter(hr -> hr.equals(bd)).forEach
                     (hr -> empBiometricDetails.get(bd).setNumberOfLeaves(hrnetDetails.get(hr).size()));
-
-
-            //Set the number of leaves applied
-            //for (String bd : empBiometricDetails.keySet()) {
-      /*      for (String hr : hrnetDetails.keySet()) {
-                if (hr.equals(bd)) {
-                    System.out.println(hrnetDetails.get(hr).size() + " Size of ArrayList For " + empBiometricDetails.get(bd).name);
-
-                    // setting the number of leaves after counting the list
-
-                    empBiometricDetails.get(bd).setNumberOfLeaves(hrnetDetails.get(hr).size());
-                }
-            }*/
         }
 
         //this worked just fine for January
         for (EmpBiometricDetails bd : empBiometricDetails.values()) {
             for (HolidaysList h : HolidaysList.values()) {
-                if (h.getDate().getMonth() == BiometricFileWorker.month) {
+                if (h.getDate().getMonth() == JxcelBiometricFileWorker.month) {
                     bd.attendanceOfDate[h.getDate().getDayOfMonth() - 1].setAttendanceStatusType(PUBLIC_HOLIDAY);
                 }
             }
 
-            for (int i = 0; i < 31; i++) {
+            for (int i = 0; i < JxcelBiometricFileWorker.month.maxLength(); i++) {
                 switch (bd.attendanceOfDate[i].getAttendanceStatusType()) {
                     case ABSENT:
                         //check for Work from home and half day
@@ -93,7 +79,7 @@ public class Combined2 {
             }
         }
         //Combine Hrnet and Biometric Files
-        BiometricFileWorker.empList = empBiometricDetails;
+        JxcelBiometricFileWorker.empList = empBiometricDetails;
 
         for (EmpBiometricDetails bd : empBiometricDetails.values()) {
             if (bd.getNumberOfLeaves() == 0) {
@@ -112,7 +98,7 @@ public class Combined2 {
 
         //to be removed  today
         for (FinalModel emp : newEmpMap.values()) {
-            for (int j = 0; j < 31; j++) {
+            for (int j = 0; j < JxcelBiometricFileWorker.month.maxLength(); j++) {
 
                 //AMRITA
                 if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(ABSENT))
@@ -132,10 +118,13 @@ public class Combined2 {
     }
 
     public void displayCombineFiles() {
+        System.out.println(JxcelBiometricFileWorker.month);
 
         for (FinalModel emp : newEmpMap.values()) {
-            System.out.println("Name: " + emp.name);
-            System.out.println("Employee ID: " + emp.employeeID);
+            System.out.println("Name: " + emp.getName());
+            System.out.println("Employee ID: " + emp.getEmpId());
+            System.out.println("Avg In Time " + emp.getAvgInTime());
+            System.out.println("Avg Out Time " + emp.getAvgOutTime());
             System.out.println();
 
             System.out.println("Number Of Leaves Applied: " + emp.numberOfLeaves);
@@ -153,7 +142,7 @@ public class Combined2 {
             System.out.println("Number of Half Days " + emp.getCount(4));
 
             System.out.println("\nBiometric Data for Each Day: ");
-            for (int j = 0; j < 31; j++) {
+            for (int j = 0; j < JxcelBiometricFileWorker.month.maxLength(); j++) {
                 System.out.print(emp.attendanceOfDate[j].getCurrentDate());
                 System.out.print("\tIn Time: " + emp.attendanceOfDate[j].getCheckIn());
                 System.out.print("\tOut Time: " + emp.attendanceOfDate[j].getCheckOut());

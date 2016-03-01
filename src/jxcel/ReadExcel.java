@@ -18,8 +18,8 @@ public class ReadExcel {
         ReadExcel test = new ReadExcel();
 
         //read Biometric Excel File
-        test.setBiometricFile(".\\ExcelFiles\\Biometric.xls");
-        BiometricFileWorker jxcelFileWorker = new BiometricFileWorker(biometricFile);
+        test.setBiometricFile(".\\ExcelFiles\\feb leaves.xls");
+        JxcelBiometricFileWorker jxcelFileWorker = new JxcelBiometricFileWorker(biometricFile);
         jxcelFileWorker.readBiometricFile();
 
         //read HRNet Excel File

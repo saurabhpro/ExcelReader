@@ -4,6 +4,7 @@
 
 package jxcel.model;
 
+import jxcel.JxcelBiometricFileWorker;
 import jxcel.attendence.AttendanceOfDate;
 
 import java.time.LocalTime;
@@ -12,11 +13,13 @@ public class EmpBiometricDetails extends BasicEmployeeDetails {
     public final AttendanceOfDate[] attendanceOfDate;
     public int numberOfLeaves = 0; //To check how many leaves have been applied
 
+
     public EmpBiometricDetails(String eID, String eName, AttendanceOfDate[] attendanceOfDate) {
         setName(eName);
         setEmpId(eID);
         this.attendanceOfDate = attendanceOfDate;
     }
+
 
     /* public void setNumberOfLeaves() {
          numberOfLeaves = numberOfLeaves + 1;
@@ -34,9 +37,10 @@ public class EmpBiometricDetails extends BasicEmployeeDetails {
     public void printEmpBiometricDetails() {
         System.out.println("Name: " + this.getName());
         System.out.println("Employee ID: " + this.getEmpId());
+
         LocalTime workTime;
 
-        for (int j = 0; j < 31; j++) {
+        for (int j = 0; j < JxcelBiometricFileWorker.month.maxLength(); j++) {
             System.out.print(this.attendanceOfDate[j].getCurrentDate());
             System.out.print("\tIn Time: " + this.attendanceOfDate[j].getCheckIn());
             System.out.print("\tOut Time: " + this.attendanceOfDate[j].getCheckOut());
@@ -46,7 +50,9 @@ public class EmpBiometricDetails extends BasicEmployeeDetails {
             if (workTime != null)
                 System.out.println(workTime);
 
+
         }
+
         System.out.println();
     }
 }

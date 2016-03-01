@@ -1,11 +1,15 @@
 package jxcel;
 
+import jxcel.attendence.AttendanceOfDate;
+import jxcel.model.AttendanceStatusType;
 import org.jetbrains.annotations.NotNull;
 
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by SaurabhK on 09-02-2016.
@@ -64,5 +68,41 @@ public class TimeManager {
 
     private static LocalTime convertToTime(long hr, long min) {
         return LocalTime.of((int) hr, (int) min);
+    }
+
+
+    @NotNull
+    public static LocalTime calculate(String type, AttendanceOfDate[] attendanceOfDate) {
+        List<AttendanceOfDate> ofDates = Arrays.asList(attendanceOfDate);
+        int hoursTotal = 0, minsTotal = 0, presentDays = 0;
+
+        for (AttendanceOfDate inTime : ofDates) {
+            if (inTime.getAttendanceStatusType() == AttendanceStatusType.PRESENT) {
+                switch (type) {
+                    case "AverageCheckOutTime":
+                        if (inTime.getCheckOut() != null) {
+                            minsTotal += inTime.getCheckOut().getHour() * 60;
+                            minsTotal += inTime.getCheckOut().getMinute();
+                            presentDays++;
+                        }
+                        break;
+
+                    case "AverageCheckInTime":
+                        if (inTime.getCheckIn() != null) {
+                            minsTotal += inTime.getCheckIn().getHour() * 60;
+                            minsTotal += inTime.getCheckIn().getMinute();
+                            presentDays++;
+                        }
+                        break;
+                }
+
+            }
+        }
+        int t = presentDays > 0 ? presentDays : 1;
+        minsTotal = minsTotal / t;
+
+        hoursTotal = minsTotal / 60;
+        minsTotal = minsTotal % 60;
+        return LocalTime.of(hoursTotal, minsTotal);
     }
 }

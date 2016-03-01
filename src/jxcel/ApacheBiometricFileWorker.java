@@ -4,12 +4,12 @@ import jxcel.attendence.AttendanceOfDate;
 import jxcel.model.AttendanceStatusType;
 import jxcel.model.EmpBiometricDetails;
 import jxcel.model.IBiometricFile;
-import jxl.Cell;
-import jxl.Sheet;
-import jxl.Workbook;
-import jxl.read.biff.BiffException;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.text.ParseException;
 import java.time.LocalDate;
@@ -23,27 +23,30 @@ import java.util.TreeMap;
 /**
  * Created by Saurabh on 2/10/2016.
  * updated on 2/13/2016
+ * this files is not fully upgraded as of 29/02/2016
  */
-public class BiometricFileWorker implements IBiometricFile {
+
+public class ApacheBiometricFileWorker implements IBiometricFile {
 
     static public Map<String, EmpBiometricDetails> empList = null;
     static public Month month;
     static public Year year;
 
     int numberOfRowsInBio;
-    File inputWorkbook = null;
-    Workbook w = null;
+    FileInputStream inputWorkbook = null;
+    Workbook workbook = null;
     Sheet sheet = null;
     Cell cell = null;
     private int ADD_ROW_STEPS = 0;
 
-    public BiometricFileWorker(String biometricFile) {
-        inputWorkbook = new File(biometricFile);
+    public ApacheBiometricFileWorker(String biometricFile) {
         try {
-            w = Workbook.getWorkbook(inputWorkbook);
-            sheet = w.getSheet(0);          // Get the first sheet
-            numberOfRowsInBio = (sheet.getRows() - 11) / 18;
-        } catch (BiffException | IOException e) {
+            inputWorkbook = new FileInputStream(biometricFile);
+
+            workbook = new XSSFWorkbook(inputWorkbook);
+            sheet = workbook.getSheetAt(0);          // Get the first sheet
+            numberOfRowsInBio = (sheet.getPhysicalNumberOfRows() - 11) / 18;
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -52,7 +55,11 @@ public class BiometricFileWorker implements IBiometricFile {
      * method to return the contents of a given row, col
      */
     private String getCustomCellContent(int column, int row) {
-        return sheet.getCell(column, row).getContents();
+        Cell cell = sheet.getRow(row).getCell(column);
+        if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC)
+            return cell.getStringCellValue();
+        else
+            return cell.getStringCellValue();
     }
 
     /**

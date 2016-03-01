@@ -3,7 +3,7 @@ package jxcel.view;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jxcel.BiometricFileWorker;
+import jxcel.JxcelBiometricFileWorker;
 import jxcel.model.EmpBiometricDetails;
 
 import java.io.File;
@@ -24,7 +24,7 @@ public class JsonMapper {
 
 
         //For testing
-        user = BiometricFileWorker.empList;
+        user = JxcelBiometricFileWorker.empList;
 
         try {
             File jfile = new File(".\\JSON files\\unformattedJson.json");
