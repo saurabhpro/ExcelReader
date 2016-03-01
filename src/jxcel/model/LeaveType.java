@@ -5,9 +5,10 @@ package jxcel.model;
  */
 public enum LeaveType {
     VACATION_IND,
-    WORK_FROM_HOME,
+    WORK_FROM_HOME_IND,
     CASUAL_IND,
-    SICK_LEAVE,
+    SICK_IND,
     BEREAVEMENT_IND,
-    COMPENSATION_TIME_IND
+    COMP_TIME_IND,
+    VACATION_18_USA
 }

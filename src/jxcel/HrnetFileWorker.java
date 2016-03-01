@@ -127,15 +127,18 @@ public class HrnetFileWorker implements IHrnetFile {
                 }
             }
 
-            if (hrnetDetails.containsKey(empID)) {
-                tempArrLst = hrnetDetails.get(empID);
-                tempArrLst.add(new HrnetDetails(empID, empName, empRequest, attendanceOfLeave));
-                hrnetDetails.put(empID, tempArrLst);
+            if (attendanceOfLeave.getStartDate().getMonth() == JxcelBiometricFileWorker.month
+                    && attendanceOfLeave.getEndDate().getMonth() == JxcelBiometricFileWorker.month) {
+                if (hrnetDetails.containsKey(empID)) {
+                    tempArrLst = hrnetDetails.get(empID);
+                    tempArrLst.add(new HrnetDetails(empID, empName, empRequest, attendanceOfLeave));
+                    hrnetDetails.put(empID, tempArrLst);
 
-            } else {
-                tempArrLst = new ArrayList<>();
-                tempArrLst.add(new HrnetDetails(empID, empName, empRequest, attendanceOfLeave));
-                hrnetDetails.put(empID, tempArrLst);
+                } else {
+                    tempArrLst = new ArrayList<>();
+                    tempArrLst.add(new HrnetDetails(empID, empName, empRequest, attendanceOfLeave));
+                    hrnetDetails.put(empID, tempArrLst);
+                }
             }
         }
         file.close();

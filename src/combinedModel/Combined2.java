@@ -64,7 +64,7 @@ public class Combined2 {
                                     while (leaveTime > 0) {
                                         if (leaveTime == 0.5)
                                             bd.attendanceOfDate[changeDatesRange].setAttendanceStatusType(HALF_DAY);
-                                        else if (hr.attendanceOfLeave.getLeaveType() == LeaveType.WORK_FROM_HOME) {
+                                        else if (hr.attendanceOfLeave.getLeaveType() == LeaveType.WORK_FROM_HOME_IND) {
                                             bd.attendanceOfDate[changeDatesRange].setWorkTimeForDay(LocalTime.of((int) leaveTime * 8, 0));
                                             bd.attendanceOfDate[changeDatesRange].setAttendanceStatusType(PRESENT);
                                         }
@@ -119,38 +119,6 @@ public class Combined2 {
 
     public void displayCombineFiles() {
         System.out.println(JxcelBiometricFileWorker.month);
-
-        for (FinalModel emp : newEmpMap.values()) {
-            System.out.println("Name: " + emp.getName());
-            System.out.println("Employee ID: " + emp.getEmpId());
-            System.out.println("Avg In Time " + emp.getAvgInTime());
-            System.out.println("Avg Out Time " + emp.getAvgOutTime());
-            System.out.println();
-
-            System.out.println("Number Of Leaves Applied: " + emp.numberOfLeaves);
-            if (emp.hrnetDetails != null) {
-                emp.displayArrayList();
-            }
-
-
-            //to be removed  today
-            //AMRITA
-            System.out.println("\nNumber of Absent Days " + emp.getCount(0));
-            System.out.println("Number of Present Days " + emp.getCount(1));
-            System.out.println("Number of Public Holidays " + emp.getCount(2));
-            System.out.println("Number of Weekend Holidays " + emp.getCount(3));
-            System.out.println("Number of Half Days " + emp.getCount(4));
-
-            System.out.println("\nBiometric Data for Each Day: ");
-            for (int j = 0; j < JxcelBiometricFileWorker.month.maxLength(); j++) {
-                System.out.print(emp.attendanceOfDate[j].getCurrentDate());
-                System.out.print("\tIn Time: " + emp.attendanceOfDate[j].getCheckIn());
-                System.out.print("\tOut Time: " + emp.attendanceOfDate[j].getCheckOut());
-                System.out.print("\tStatus: " + emp.attendanceOfDate[j].getAttendanceStatusType() + "\n");
-
-            }
-
-            System.out.println();
-        }
+        newEmpMap.values().forEach(FinalModel::displayFinalList);
     }
 }

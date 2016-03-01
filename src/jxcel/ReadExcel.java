@@ -1,5 +1,6 @@
 package jxcel;
 
+import DataUsage.ReadAndKeepData;
 import combinedModel.Combined2;
 import combinedModel.Discrepancy;
 import jxcel.view.JsonMapper;
@@ -13,9 +14,16 @@ import java.text.ParseException;
 public class ReadExcel {
     private static String biometricFile;
     private static String hrNetFile;
+    private static String empListID;
 
     public static void main(String[] args) throws IOException, ParseException {
         ReadExcel test = new ReadExcel();
+
+        test.setEmpListID(".\\ExcelFiles\\Emails.xlsx");
+        ReadAndKeepData readAndKeepData = new ReadAndKeepData(empListID);
+        readAndKeepData.readFile();
+        // readAndKeepData.displayFile();
+        readAndKeepData.toJsonFile();
 
         //read Biometric Excel File
         test.setBiometricFile(".\\ExcelFiles\\feb leaves.xls");
@@ -23,7 +31,7 @@ public class ReadExcel {
         jxcelFileWorker.readBiometricFile();
 
         //read HRNet Excel File
-        test.setHrNetFile(".\\ExcelFiles\\Salesforce.xlsx");
+        test.setHrNetFile(".\\ExcelFiles\\Jan-Feb FF Report.xlsx");
         HrnetFileWorker hrnetFileWorker = new HrnetFileWorker(hrNetFile);
         hrnetFileWorker.readHRNetFile();
 
@@ -43,6 +51,10 @@ public class ReadExcel {
         //hrnetFileWorker.displayHRNetFile();
         //jxcelFileWorker.displayBiometricFile();
 
+    }
+
+    public void setEmpListID(String empListID) {
+        ReadExcel.empListID = empListID;
     }
 
     public void setBiometricFile(String biometricFile) {

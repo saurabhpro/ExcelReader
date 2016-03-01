@@ -22,7 +22,6 @@ public class JsonMapper {
 
     public JsonMapper toJsonFile(String fileName) {
 
-
         //For testing
         user = JxcelBiometricFileWorker.empList;
 

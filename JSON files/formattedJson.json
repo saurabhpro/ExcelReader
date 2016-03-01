@@ -2,6 +2,8 @@
   "R1" : {
     "name" : "Subrata Ghosh",
     "empId" : "R1",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -932,6 +934,8 @@
   "R100" : {
     "name" : "Anindita Dhar",
     "empId" : "R100",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -1824,14 +1828,16 @@
         "second": 0,
         "nano": 0
       },
-      "attendanceStatusType" : "HALF_DAY",
+      "attendanceStatusType": "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves" : 3
+    "numberOfLeaves": 0
   },
   "R102" : {
     "name" : "Megha Sindhwani",
     "empId" : "R102",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -2682,11 +2688,13 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves" : 1
+    "numberOfLeaves": 0
   },
   "R103" : {
     "name" : "Kunal Motwani",
     "empId" : "R103",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -3602,6 +3610,8 @@
   "R104" : {
     "name" : "Ashish Bansal",
     "empId" : "R104",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -4022,13 +4032,8 @@
       "checkIn" : null,
       "checkOut" : null,
       "overTime" : null,
-      "workTimeForDay" : {
-        "hour" : 8,
-        "minute" : 0,
-        "second" : 0,
-        "nano" : 0
-      },
-      "attendanceStatusType" : "PRESENT",
+      "workTimeForDay": null,
+      "attendanceStatusType": "WEEKEND_HOLIDAY",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -4487,11 +4492,13 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves" : 1
+    "numberOfLeaves": 0
   },
   "R105" : {
     "name" : "Amanpreet Kaur",
     "empId" : "R105",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -5407,6 +5414,8 @@
   "R106" : {
     "name" : "Sakshi Kapila",
     "empId" : "R106",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -6257,11 +6266,13 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves" : 1
+    "numberOfLeaves": 0
   },
   "R107" : {
     "name" : "Anand Pratap Singh",
     "empId" : "R107",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -7147,6 +7158,8 @@
   "R108" : {
     "name" : "Gagan Shah",
     "empId" : "R108",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -8003,6 +8016,8 @@
   "R109" : {
     "name" : "Nikhil Verma",
     "empId" : "R109",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -8843,6 +8858,8 @@
   "R110" : {
     "name" : "Sukrit Kapil",
     "empId" : "R110",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -9743,6 +9760,8 @@
   "R111" : {
     "name" : "Bhupinder Tomar",
     "empId" : "R111",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -10643,6 +10662,8 @@
   "R112" : {
     "name" : "Gaurav Gupta",
     "empId" : "R112",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -11543,6 +11564,8 @@
   "R113" : {
     "name" : "Himanshu Pal",
     "empId" : "R113",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -12443,6 +12466,8 @@
   "R115" : {
     "name" : "Sumit Tongya",
     "empId" : "R115",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -13058,6 +13083,8 @@
   "R116" : {
     "name" : "Harneet Kaur",
     "empId" : "R116",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -13778,6 +13805,8 @@
   "R117" : {
     "name" : "Meeta Malhotra",
     "empId" : "R117",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -14693,6 +14722,8 @@
   "R118" : {
     "name" : "Nikhil Sharma",
     "empId" : "R118",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -15533,6 +15564,8 @@
   "R119" : {
     "name" : "Surendra Kumar Sharma",
     "empId" : "R119",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -16433,6 +16466,8 @@
   "R120" : {
     "name" : "Purwaaj Ahuja",
     "empId" : "R120",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -17378,6 +17413,8 @@
   "R122" : {
     "name" : "Deepti Kapoor",
     "empId" : "R122",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -18263,6 +18300,8 @@
   "R123" : {
     "name" : "Devesh Aggarwal",
     "empId" : "R123",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -19178,6 +19217,8 @@
   "R124" : {
     "name" : "Gitika Khurana",
     "empId" : "R124",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -19988,6 +20029,8 @@
   "R125" : {
     "name" : "Devashish Sharma",
     "empId" : "R125",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -20839,11 +20882,13 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves" : 1
+    "numberOfLeaves": 0
   },
   "R126" : {
     "name" : "Shivam Batra",
     "empId" : "R126",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -21459,6 +21504,8 @@
   "R127" : {
     "name" : "Narender Jangra",
     "empId" : "R127",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -22389,6 +22436,8 @@
   "R128" : {
     "name" : "Karishma Rastogi",
     "empId" : "R128",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -23304,6 +23353,8 @@
   "R129" : {
     "name" : "Siddharth Thakkar",
     "empId" : "R129",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -24219,6 +24270,8 @@
   "R130" : {
     "name" : "Gaurav Kumar",
     "empId" : "R130",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -25134,6 +25187,8 @@
   "R131" : {
     "name" : "Anamika Das",
     "empId" : "R131",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -26004,6 +26059,8 @@
   "R132" : {
     "name" : "Naisergic Sharma",
     "empId" : "R132",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -26168,7 +26225,7 @@
         "nano": 0
       },
       "attendanceStatusType" : "PRESENT",
-      "attendanceOfLeave" : null
+      "attendanceOfLeave": null
     },
       {
         "currentDate": {
@@ -26190,7 +26247,7 @@
         "overTime": null,
         "workTimeForDay": null,
         "attendanceStatusType": "WEEKEND_HOLIDAY",
-        "attendanceOfLeave": null
+      "attendanceOfLeave" : null
     }, {
       "currentDate" : {
         "year" : 2016,
@@ -26845,6 +26902,8 @@
   "R133" : {
     "name" : "Jatin Suri",
     "empId" : "R133",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -27700,6 +27759,8 @@
   "R134" : {
     "name" : "Bhanu Rampal",
     "empId" : "R134",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -28555,6 +28616,8 @@
   "R135" : {
     "name" : "Ankita Chand",
     "empId" : "R135",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -29455,6 +29518,8 @@
   "R136" : {
     "name" : "Amrita Arora",
     "empId" : "R136",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -30355,6 +30420,8 @@
   "R137" : {
     "name" : "Surabhi Kulkarni",
     "empId" : "R137",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -31255,6 +31322,8 @@
   "R138" : {
     "name" : "Harshit Bhatia",
     "empId" : "R138",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -32155,6 +32224,8 @@
   "R139" : {
     "name" : "Saurabh Kumar",
     "empId" : "R139",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -33055,6 +33126,8 @@
   "R14" : {
     "name" : "Abhishek Maiti",
     "empId" : "R14",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -33670,6 +33743,8 @@
   "R140" : {
     "name" : "Trijyot Singh",
     "empId" : "R140",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -34570,6 +34645,8 @@
   "R141" : {
     "name" : "Ankur Bhattacharya",
     "empId" : "R141",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -35470,6 +35547,8 @@
   "R142" : {
     "name" : "Sahil Wadhwa",
     "empId" : "R142",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -36370,6 +36449,8 @@
   "R143" : {
     "name" : "Inderjeet Kumar",
     "empId" : "R143",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -37300,6 +37381,8 @@
   "R144" : {
     "name" : "Jyotnain Kaur",
     "empId" : "R144",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -38215,6 +38298,8 @@
   "R145" : {
     "name" : "Khushboo Sood",
     "empId" : "R145",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -38266,19 +38351,19 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": {
           "hour": 8,
           "minute": 21,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 17,
           "minute": 23,
           "second": 0,
           "nano": 0
-        },
+      },
         "overTime": null,
         "workTimeForDay": {
           "hour": 9,
@@ -38446,20 +38531,20 @@
           "minute": 36,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 17,
           "minute": 29,
           "second": 0,
           "nano": 0
-        },
+      },
         "overTime": null,
         "workTimeForDay": {
           "hour": 8,
           "minute": 53,
           "second": 0,
           "nano": 0
-        },
+      },
         "attendanceStatusType": "PRESENT",
         "attendanceOfLeave": null
       },
@@ -38477,13 +38562,13 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": {
           "hour": 8,
           "minute": 30,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 17,
           "minute": 23,
@@ -38668,13 +38753,13 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": {
           "hour": 8,
           "minute": 32,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 17,
           "minute": 32,
@@ -38732,20 +38817,20 @@
           "minute": 38,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 17,
           "minute": 18,
           "second": 0,
           "nano": 0
-        },
+      },
         "overTime": null,
         "workTimeForDay": {
           "hour": 8,
           "minute": 40,
           "second": 0,
           "nano": 0
-        },
+      },
         "attendanceStatusType": "PRESENT",
         "attendanceOfLeave": null
       },
@@ -38906,20 +38991,20 @@
           "minute": 30,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 17,
           "minute": 25,
           "second": 0,
           "nano": 0
-        },
+      },
         "overTime": null,
         "workTimeForDay": {
           "hour": 8,
           "minute": 55,
           "second": 0,
           "nano": 0
-        },
+      },
         "attendanceStatusType": "PRESENT",
         "attendanceOfLeave": null
       },
@@ -38937,7 +39022,7 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": {
           "hour": 8,
           "minute": 32,
@@ -39119,6 +39204,8 @@
   "R146": {
     "name": "Vikas Manchanda",
     "empId": "R146",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate": [
       {
         "currentDate": {
@@ -39203,13 +39290,13 @@
           "minute": 26,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 0,
           "minute": 0,
           "second": 0,
           "nano": 0
-        },
+      },
         "overTime": null,
         "workTimeForDay": {
           "hour": 6,
@@ -39314,26 +39401,26 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": {
           "hour": 8,
           "minute": 24,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 17,
           "minute": 25,
           "second": 0,
           "nano": 0
-        },
+      },
         "overTime": null,
         "workTimeForDay": {
           "hour": 9,
           "minute": 1,
           "second": 0,
           "nano": 0
-        },
+      },
         "attendanceStatusType": "PRESENT",
         "attendanceOfLeave": null
       },
@@ -39351,7 +39438,7 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": {
           "hour": 7,
           "minute": 59,
@@ -39468,7 +39555,7 @@
           "minute": 48,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 17,
           "minute": 35,
@@ -39542,13 +39629,13 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": {
           "hour": 7,
           "minute": 51,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 17,
           "minute": 28,
@@ -39579,26 +39666,26 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": {
           "hour": 7,
           "minute": 55,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 17,
           "minute": 32,
           "second": 0,
           "nano": 0
-        },
+      },
         "overTime": null,
         "workTimeForDay": {
           "hour": 9,
           "minute": 37,
           "second": 0,
           "nano": 0
-        },
+      },
         "attendanceStatusType": "PRESENT",
         "attendanceOfLeave": null
       },
@@ -39796,20 +39883,20 @@
           "minute": 28,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 17,
           "minute": 23,
           "second": 0,
           "nano": 0
-        },
+      },
         "overTime": null,
         "workTimeForDay": {
           "hour": 8,
           "minute": 55,
           "second": 0,
           "nano": 0
-        },
+      },
         "attendanceStatusType": "PRESENT",
         "attendanceOfLeave": null
       },
@@ -39827,7 +39914,7 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": {
           "hour": 7,
           "minute": 51,
@@ -39960,7 +40047,7 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": null,
         "checkOut": null,
         "overTime": null,
@@ -39982,7 +40069,7 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": {
           "hour": 7,
           "minute": 56,
@@ -40011,6 +40098,8 @@
   "R147": {
     "name": "Lalit Sharma",
     "empId": "R147",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate": [
       {
         "currentDate": {
@@ -40259,7 +40348,7 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": null,
         "checkOut": null,
         "overTime": null,
@@ -40281,7 +40370,7 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": null,
         "checkOut": null,
         "overTime": null,
@@ -40303,7 +40392,7 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": null,
         "checkOut": null,
         "overTime": null,
@@ -40325,7 +40414,7 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": null,
         "checkOut": null,
         "overTime": null,
@@ -40347,7 +40436,7 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": null,
         "checkOut": null,
         "overTime": null,
@@ -40390,13 +40479,13 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": {
           "hour": 21,
           "minute": 23,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 0,
           "minute": 0,
@@ -40433,7 +40522,7 @@
           "minute": 40,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 21,
           "minute": 23,
@@ -40486,7 +40575,7 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": null,
         "checkOut": null,
         "overTime": null,
@@ -40508,7 +40597,7 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": {
           "hour": 11,
           "minute": 59,
@@ -40550,20 +40639,20 @@
           "minute": 6,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 21,
           "minute": 26,
           "second": 0,
           "nano": 0
-        },
+      },
         "overTime": null,
         "workTimeForDay": {
           "hour": 9,
           "minute": 20,
           "second": 0,
           "nano": 0
-        },
+      },
         "attendanceStatusType": "PRESENT",
         "attendanceOfLeave": null
       },
@@ -40581,7 +40670,7 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": {
           "hour": 11,
           "minute": 39,
@@ -40735,7 +40824,7 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": {
           "hour": 12,
           "minute": 16,
@@ -40763,6 +40852,8 @@
   "R2" : {
     "name" : "Rohit Danwani",
     "empId" : "R2",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -41543,6 +41634,8 @@
   "R22" : {
     "name" : "Taranjeet Singh",
     "empId" : "R22",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -42429,6 +42522,8 @@
   "R24" : {
     "name" : "Anushree Kher",
     "empId" : "R24",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -43359,6 +43454,8 @@
   "R26" : {
     "name" : "Dheeraj Sharma",
     "empId" : "R26",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -44274,6 +44371,8 @@
   "R33" : {
     "name" : "Neha Malik",
     "empId" : "R33",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -45190,6 +45289,8 @@
   "R34" : {
     "name" : "Jaspreet Sawhney",
     "empId" : "R34",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -46060,6 +46161,8 @@
   "R35" : {
     "name" : "Ankur Parwal",
     "empId" : "R35",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -46840,6 +46943,8 @@
   "R39" : {
     "name" : "Deepti Achanta",
     "empId" : "R39",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -47740,6 +47845,8 @@
   "R4" : {
     "name" : "Nidhi Juyal",
     "empId" : "R4",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -48656,6 +48763,8 @@
   "R40" : {
     "name" : "Megha Maggo",
     "empId" : "R40",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -49551,11 +49660,13 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves" : 1
+    "numberOfLeaves": 0
   },
   "R41" : {
     "name" : "Shruti Mishra",
     "empId" : "R41",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -50457,6 +50568,8 @@
   "R47" : {
     "name" : "Himanshu Yadav",
     "empId" : "R47",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -51313,6 +51426,8 @@
   "R48" : {
     "name" : "Saurabh Singhal",
     "empId" : "R48",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -52153,6 +52268,8 @@
   "R5" : {
     "name" : "Kamal Bhardwaj",
     "empId" : "R5",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -52352,7 +52469,7 @@
       "checkOut": null,
       "overTime" : null,
       "workTimeForDay": null,
-      "attendanceStatusType" : "HALF_DAY",
+      "attendanceStatusType": "WEEKEND_HOLIDAY",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -53003,11 +53120,13 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves" : 3
+    "numberOfLeaves": 0
   },
   "R51" : {
     "name" : "Ankush Jindal",
     "empId" : "R51",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -53894,6 +54013,8 @@
   "R52" : {
     "name" : "Gaurav Chopra",
     "empId" : "R52",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -54509,6 +54630,8 @@
   "R53" : {
     "name" : "Neha Baweja",
     "empId" : "R53",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -55380,6 +55503,8 @@
   "R54" : {
     "name" : "Varun Yadav",
     "empId" : "R54",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -56280,6 +56405,8 @@
   "R55" : {
     "name" : "Akhilesh Keshap",
     "empId" : "R55",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -57165,6 +57292,8 @@
   "R56" : {
     "name" : "Ankit Pande",
     "empId" : "R56",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -58035,6 +58164,8 @@
   "R57" : {
     "name" : "Namrata Oberoi",
     "empId" : "R57",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -58650,6 +58781,8 @@
   "R59" : {
     "name" : "Rakesh Kumar Singh",
     "empId" : "R59",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -59550,6 +59683,8 @@
   "R61" : {
     "name" : "Anjali Kohli",
     "empId" : "R61",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -60480,6 +60615,8 @@
   "R62" : {
     "name" : "Abhishek Vijh",
     "empId" : "R62",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -61365,6 +61502,8 @@
   "R67" : {
     "name" : "Shubhangi Singhal",
     "empId" : "R67",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -62265,6 +62404,8 @@
   "R69" : {
     "name" : "Ashish Kataria",
     "empId" : "R69",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -63105,6 +63246,8 @@
   "R70" : {
     "name" : "Sudhang Shankar",
     "empId" : "R70",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -63720,6 +63863,8 @@
   "R72" : {
     "name" : "Sumit Jain",
     "empId" : "R72",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -64575,6 +64720,8 @@
   "R73" : {
     "name" : "Aayushi Dhawan",
     "empId" : "R73",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -65445,6 +65592,8 @@
   "R75" : {
     "name" : "Projnabrata Seth",
     "empId" : "R75",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -66345,6 +66494,8 @@
   "R78" : {
     "name" : "Shubhangi Paliwal",
     "empId" : "R78",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -67210,11 +67361,13 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves" : 0
+    "numberOfLeaves": 3
   },
   "R79" : {
     "name" : "Yogesh Pant",
     "empId" : "R79",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -68116,6 +68269,8 @@
   "R80" : {
     "name" : "Christopher Whitby",
     "empId" : "R80",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -69046,6 +69201,8 @@
   "R81" : {
     "name" : "Devanshu Bhatt",
     "empId" : "R81",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -69976,6 +70133,8 @@
   "R84" : {
     "name" : "Milan Verma",
     "empId" : "R84",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -70180,13 +70339,8 @@
       "checkIn" : null,
       "checkOut" : null,
       "overTime" : null,
-      "workTimeForDay" : {
-        "hour" : 8,
-        "minute" : 0,
-        "second" : 0,
-        "nano" : 0
-      },
-      "attendanceStatusType" : "PRESENT",
+      "workTimeForDay": null,
+      "attendanceStatusType": "WEEKEND_HOLIDAY",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -70222,7 +70376,7 @@
         "second" : 0,
         "nano" : 0
       },
-      "attendanceStatusType" : "HALF_DAY",
+      "attendanceStatusType": "PRESENT",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -70386,13 +70540,8 @@
       "checkIn" : null,
       "checkOut" : null,
       "overTime" : null,
-      "workTimeForDay" : {
-        "hour" : 8,
-        "minute" : 0,
-        "second" : 0,
-        "nano" : 0
-      },
-      "attendanceStatusType" : "PRESENT",
+      "workTimeForDay": null,
+      "attendanceStatusType": "WEEKEND_HOLIDAY",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -70866,11 +71015,13 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves" : 3
+    "numberOfLeaves": 0
   },
   "R85" : {
     "name" : "Mohit Manocha",
     "empId" : "R85",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -71014,7 +71165,7 @@
         "nano": 0
       },
       "attendanceStatusType" : "PRESENT",
-      "attendanceOfLeave" : null
+      "attendanceOfLeave": null
     },
       {
         "currentDate": {
@@ -71051,7 +71202,7 @@
           "nano": 0
         },
         "attendanceStatusType": "PRESENT",
-        "attendanceOfLeave": null
+      "attendanceOfLeave" : null
     }, {
       "currentDate" : {
         "year" : 2016,
@@ -71757,6 +71908,8 @@
   "R86" : {
     "name" : "Amandeep Singh",
     "empId" : "R86",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -72537,6 +72690,8 @@
   "R89" : {
     "name" : "Vineeta Nanda",
     "empId" : "R89",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -73423,6 +73578,8 @@
   "R91" : {
     "name" : "Shruti Gupta",
     "empId" : "R91",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -74308,6 +74465,8 @@
   "R92" : {
     "name" : "Neha Gupta",
     "empId" : "R92",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -75088,6 +75247,8 @@
   "R93" : {
     "name" : "Gurpreet Kaur",
     "empId" : "R93",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -75733,6 +75894,8 @@
   "R94" : {
     "name" : "Karan Kapoor",
     "empId" : "R94",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -76378,6 +76541,8 @@
   "R95" : {
     "name" : "Amey Kulkarni",
     "empId" : "R95",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -77278,6 +77443,8 @@
   "R96" : {
     "name" : "Ashwini Lakshminarayan",
     "empId" : "R96",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -78163,6 +78330,8 @@
   "R97" : {
     "name" : "Ankush Garg",
     "empId" : "R97",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -78778,6 +78947,8 @@
   "R98" : {
     "name" : "Amarjeet Singh Dahiya",
     "empId" : "R98",
+    "salesForceId": null,
+    "emailId": null,
     "attendanceOfDate" : [ {
       "currentDate" : {
         "year" : 2016,
@@ -79372,7 +79543,7 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": null,
         "checkOut": null,
         "overTime": null,
@@ -79394,7 +79565,7 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": null,
         "checkOut": null,
         "overTime": null,
@@ -79411,4 +79582,167 @@
           "dayOfWeek": "MONDAY",
           "dayOfYear": 53,
         "leapYear" : true,
-          "monthValue"
+          "monthValue": 2,
+          "chronology": {
+            "id": "ISO",
+            "calendarType": "iso8601"
+          }
+        },
+        "checkIn": null,
+        "checkOut": null,
+        "overTime": null,
+        "workTimeForDay": null,
+        "attendanceStatusType": "ABSENT",
+        "attendanceOfLeave": null
+      },
+      {
+        "currentDate": {
+          "year": 2016,
+          "month": "FEBRUARY",
+          "era": "CE",
+          "dayOfMonth": 23,
+          "dayOfWeek": "TUESDAY",
+          "dayOfYear": 54,
+          "leapYear": true,
+          "monthValue": 2,
+          "chronology": {
+            "id": "ISO",
+            "calendarType": "iso8601"
+          }
+        },
+        "checkIn": {
+          "hour": 8,
+          "minute": 43,
+          "second": 0,
+          "nano": 0
+        },
+        "checkOut": {
+          "hour": 17,
+          "minute": 28,
+          "second": 0,
+          "nano": 0
+        },
+        "overTime": null,
+        "workTimeForDay": {
+          "hour": 8,
+          "minute": 45,
+          "second": 0,
+          "nano": 0
+        },
+        "attendanceStatusType": "PRESENT",
+        "attendanceOfLeave": null
+      },
+      {
+        "currentDate": {
+          "year": 2016,
+          "month": "FEBRUARY",
+          "era": "CE",
+          "dayOfMonth": 24,
+          "dayOfWeek": "WEDNESDAY",
+          "dayOfYear": 55,
+          "leapYear": true,
+          "monthValue": 2,
+          "chronology": {
+            "id": "ISO",
+            "calendarType": "iso8601"
+          }
+        },
+        "checkIn": {
+          "hour": 8,
+          "minute": 43,
+          "second": 0,
+          "nano": 0
+        },
+        "checkOut": {
+          "hour": 17,
+          "minute": 35,
+          "second": 0,
+          "nano": 0
+        },
+        "overTime": null,
+        "workTimeForDay": {
+          "hour": 8,
+          "minute": 52,
+          "second": 0,
+          "nano": 0
+        },
+        "attendanceStatusType": "PRESENT",
+        "attendanceOfLeave": null
+      },
+      {
+        "currentDate": {
+          "year": 2016,
+          "month": "FEBRUARY",
+          "era": "CE",
+          "dayOfMonth": 25,
+          "dayOfWeek": "THURSDAY",
+          "dayOfYear": 56,
+          "leapYear": true,
+          "monthValue": 2,
+          "chronology": {
+            "id": "ISO",
+            "calendarType": "iso8601"
+          }
+        },
+        "checkIn": {
+          "hour": 8,
+          "minute": 33,
+          "second": 0,
+          "nano": 0
+        },
+        "checkOut": {
+          "hour": 17,
+          "minute": 28,
+          "second": 0,
+          "nano": 0
+        },
+        "overTime": null,
+        "workTimeForDay": {
+          "hour": 8,
+          "minute": 55,
+          "second": 0,
+          "nano": 0
+        },
+        "attendanceStatusType": "PRESENT",
+        "attendanceOfLeave": null
+      },
+      {
+        "currentDate": {
+          "year": 2016,
+          "month": "FEBRUARY",
+          "era": "CE",
+          "dayOfMonth": 26,
+          "dayOfWeek": "FRIDAY",
+          "dayOfYear": 57,
+          "leapYear": true,
+          "monthValue": 2,
+          "chronology": {
+            "id": "ISO",
+            "calendarType": "iso8601"
+          }
+        },
+        "checkIn": {
+          "hour": 10,
+          "minute": 29,
+          "second": 0,
+          "nano": 0
+        },
+        "checkOut": {
+          "hour": 17,
+          "minute": 6,
+          "second": 0,
+          "nano": 0
+        },
+        "overTime": null,
+        "workTimeForDay": {
+          "hour": 6,
+          "minute": 37,
+          "second": 0,
+          "nano": 0
+        },
+        "attendanceStatusType": "PRESENT",
+        "attendanceOfLeave": null
+      },
+      {
+        "currentDate": {
+          "year": 2
