@@ -4,7 +4,7 @@ package jxcel.model;
  * Created by Saurabh on 2/12/2016.
  */
 public enum HrnetColumns {
-    EMP_ID,
+    WORKER_ID,
     NAME,
     REQUEST_ID,
     ABSENT_REQUEST_TYPE,

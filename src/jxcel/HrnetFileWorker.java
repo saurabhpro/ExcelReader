@@ -67,7 +67,7 @@ public class HrnetFileWorker implements IHrnetFile {
         AttendanceOfLeave attendanceOfLeave;
 
         String empName = null;
-        String empID = null;
+        String salesForceID = null;
         String empRequest = null;
         LocalDate tempDate;
         HrnetColumns hre = null;
@@ -88,8 +88,8 @@ public class HrnetFileWorker implements IHrnetFile {
 
                 switch (j) {
                     case 0:
-                        hre = HrnetColumns.EMP_ID;
-                        empID = getID(cell);
+                        hre = HrnetColumns.WORKER_ID;
+                        salesForceID = getID(cell);
                         break;
 
                     case 1:
@@ -129,15 +129,15 @@ public class HrnetFileWorker implements IHrnetFile {
 
             if (attendanceOfLeave.getStartDate().getMonth() == JxcelBiometricFileWorker.month
                     && attendanceOfLeave.getEndDate().getMonth() == JxcelBiometricFileWorker.month) {
-                if (hrnetDetails.containsKey(empID)) {
-                    tempArrLst = hrnetDetails.get(empID);
-                    tempArrLst.add(new HrnetDetails(empID, empName, empRequest, attendanceOfLeave));
-                    hrnetDetails.put(empID, tempArrLst);
+                if (hrnetDetails.containsKey(salesForceID)) {
+                    tempArrLst = hrnetDetails.get(salesForceID);
+                    tempArrLst.add(new HrnetDetails(salesForceID, empName, empRequest, attendanceOfLeave));
+                    hrnetDetails.put(salesForceID, tempArrLst);
 
                 } else {
                     tempArrLst = new ArrayList<>();
-                    tempArrLst.add(new HrnetDetails(empID, empName, empRequest, attendanceOfLeave));
-                    hrnetDetails.put(empID, tempArrLst);
+                    tempArrLst.add(new HrnetDetails(salesForceID, empName, empRequest, attendanceOfLeave));
+                    hrnetDetails.put(salesForceID, tempArrLst);
                 }
             }
         }

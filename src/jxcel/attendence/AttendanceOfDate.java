@@ -31,7 +31,7 @@ public class AttendanceOfDate {
     }
 
     public LocalTime getWorkTimeForDay() {
-        if (getCheckIn() != null && getCheckOut() != null && getCurrentDate() != null)
+        if (workTimeForDay == null && getCheckIn() != null && getCheckOut() != null && getCurrentDate() != null)
             workTimeForDay = calculateTimeDifference(getCheckIn(), getCheckOut(), getCurrentDate());
 
         return workTimeForDay;

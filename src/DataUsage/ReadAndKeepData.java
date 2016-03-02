@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Map;
+import java.util.Objects;
 import java.util.TreeMap;
 
 /**
@@ -18,12 +19,12 @@ import java.util.TreeMap;
  */
 public class ReadAndKeepData {
 
+    public static Map<String, BasicEmployeeDetails> employeeDetailsMap;
     int numberOfRowsInBio;
     FileInputStream inputWorkbook = null;
     Workbook workbook = null;
     Sheet sheet = null;
     Cell cell = null;
-    Map<String, BasicEmployeeDetails> basicMap;
 
     public ReadAndKeepData(String empListID) {
         try {
@@ -38,27 +39,27 @@ public class ReadAndKeepData {
     }
 
     public void readFile() {
-        basicMap = new TreeMap<>();
+        employeeDetailsMap = new TreeMap<>();
 
         for (int row = 0; row < numberOfRowsInBio; row++) {
             BasicEmployeeDetails b = new BasicEmployeeDetails();
             b.setName(sheet.getRow(row).getCell(0).getStringCellValue());
             b.setEmailId(sheet.getRow(row).getCell(1).getStringCellValue());
             b.setEmpId(sheet.getRow(row).getCell(2).getStringCellValue());
-            b.setSalesForceId((int) sheet.getRow(row).getCell(3).getNumericCellValue());
+            b.setSalesForceId(Objects.toString(sheet.getRow(row).getCell(3).getNumericCellValue()));
 
-            basicMap.put(b.getEmpId(), b);
+            employeeDetailsMap.put(b.getEmpId(), b);
         }
     }
 
     public void displayFile() {
-        basicMap.values().forEach(BasicEmployeeDetails::displayBasicInfo);
+        employeeDetailsMap.values().forEach(BasicEmployeeDetails::displayBasicInfo);
     }
 
     public void toJsonFile() {
         ObjectMapper mapper = new ObjectMapper();
         //For testing
-        Map<String, BasicEmployeeDetails> user = basicMap;
+        Map<String, BasicEmployeeDetails> user = employeeDetailsMap;
 
         try {
             File jfile = new File(".\\JSON files\\Emails.json");

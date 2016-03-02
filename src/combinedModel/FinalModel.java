@@ -100,6 +100,7 @@ public class FinalModel extends BasicEmployeeDetails {
             System.out.print("\tIn Time: " + this.attendanceOfDate[j].getCheckIn());
             System.out.print("\tOut Time: " + this.attendanceOfDate[j].getCheckOut());
             System.out.print("\tStatus: " + this.attendanceOfDate[j].getAttendanceStatusType() + "\n");
+            System.out.print("\tWorkhours: " + this.attendanceOfDate[j].getWorkTimeForDay() + "\n");
 
         }
 

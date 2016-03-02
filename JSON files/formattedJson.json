@@ -1605,8 +1605,13 @@
       "checkIn" : null,
       "checkOut" : null,
       "overTime" : null,
-      "workTimeForDay" : null,
-      "attendanceStatusType" : "ABSENT",
+      "workTimeForDay": {
+        "hour": 8,
+        "minute": 0,
+        "second": 0,
+        "nano": 0
+      },
+      "attendanceStatusType": "PRESENT",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -1831,7 +1836,7 @@
       "attendanceStatusType": "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves": 0
+    "numberOfLeaves": 2
   },
   "R102" : {
     "name" : "Megha Sindhwani",
@@ -2688,7 +2693,7 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves": 0
+    "numberOfLeaves": 3
   },
   "R103" : {
     "name" : "Kunal Motwani",
@@ -4074,8 +4079,13 @@
       "checkIn" : null,
       "checkOut" : null,
       "overTime" : null,
-      "workTimeForDay" : null,
-      "attendanceStatusType" : "ABSENT",
+      "workTimeForDay": {
+        "hour": 8,
+        "minute": 0,
+        "second": 0,
+        "nano": 0
+      },
+      "attendanceStatusType": "PRESENT",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -4281,8 +4291,13 @@
       "checkIn" : null,
       "checkOut" : null,
       "overTime" : null,
-      "workTimeForDay" : null,
-      "attendanceStatusType" : "ABSENT",
+      "workTimeForDay": {
+        "hour": 8,
+        "minute": 0,
+        "second": 0,
+        "nano": 0
+      },
+      "attendanceStatusType": "PRESENT",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -4492,7 +4507,7 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves": 0
+    "numberOfLeaves": 2
   },
   "R105" : {
     "name" : "Amanpreet Kaur",
@@ -5323,7 +5338,7 @@
       },
       "overTime" : null,
       "workTimeForDay": {
-        "hour": 4,
+        "hour": 8,
         "minute": 6,
         "second": 0,
         "nano": 0
@@ -6266,7 +6281,7 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves": 0
+    "numberOfLeaves": 3
   },
   "R107" : {
     "name" : "Anand Pratap Singh",
@@ -6530,12 +6545,12 @@
       },
       "overTime" : null,
       "workTimeForDay": {
-        "hour": 13,
+        "hour": 17,
         "minute": 47,
         "second": 0,
         "nano": 0
       },
-      "attendanceStatusType": "ABSENT",
+      "attendanceStatusType": "HALF_DAY",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -6927,8 +6942,13 @@
       "checkIn" : null,
       "checkOut" : null,
       "overTime" : null,
-      "workTimeForDay" : null,
-      "attendanceStatusType" : "ABSENT",
+      "workTimeForDay": {
+        "hour": 8,
+        "minute": 0,
+        "second": 0,
+        "nano": 0
+      },
+      "attendanceStatusType": "PRESENT",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -7153,7 +7173,7 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves" : 0
+    "numberOfLeaves": 4
   },
   "R108" : {
     "name" : "Gagan Shah",
@@ -8413,7 +8433,7 @@
       },
       "overTime" : null,
       "workTimeForDay" : {
-        "hour": 4,
+        "hour": 8,
         "minute": 29,
         "second" : 0,
         "nano" : 0
@@ -11925,7 +11945,7 @@
       },
       "overTime" : null,
       "workTimeForDay" : {
-        "hour": 4,
+        "hour": 8,
         "minute": 32,
         "second" : 0,
         "nano" : 0
@@ -13582,7 +13602,7 @@
       },
       "overTime" : null,
       "workTimeForDay": {
-        "hour": 5,
+        "hour": 9,
         "minute": 47,
         "second": 0,
         "nano": 0
@@ -14491,8 +14511,13 @@
       "checkIn" : null,
       "checkOut" : null,
       "overTime" : null,
-      "workTimeForDay" : null,
-      "attendanceStatusType" : "ABSENT",
+      "workTimeForDay": {
+        "hour": 8,
+        "minute": 0,
+        "second": 0,
+        "nano": 0
+      },
+      "attendanceStatusType": "PRESENT",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -14717,7 +14742,7 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves" : 0
+    "numberOfLeaves": 1
   },
   "R118" : {
     "name" : "Nikhil Sharma",
@@ -15473,7 +15498,7 @@
       },
       "overTime" : null,
       "workTimeForDay": {
-        "hour": 5,
+        "hour": 9,
         "minute": 19,
         "second": 0,
         "nano": 0
@@ -16461,7 +16486,7 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves" : 0
+    "numberOfLeaves": 1
   },
   "R120" : {
     "name" : "Purwaaj Ahuja",
@@ -19866,7 +19891,7 @@
       },
       "overTime" : null,
       "workTimeForDay": {
-        "hour": 5,
+        "hour": 9,
         "minute": 58,
         "second": 0,
         "nano": 0
@@ -20085,8 +20110,13 @@
       "checkIn" : null,
       "checkOut" : null,
       "overTime" : null,
-      "workTimeForDay" : null,
-      "attendanceStatusType": "ABSENT",
+      "workTimeForDay": {
+        "hour": 8,
+        "minute": 0,
+        "second": 0,
+        "nano": 0
+      },
+      "attendanceStatusType": "PRESENT",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -20882,7 +20912,7 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves": 0
+    "numberOfLeaves": 2
   },
   "R126" : {
     "name" : "Shivam Batra",
@@ -21499,7 +21529,7 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves" : 0
+    "numberOfLeaves": 2
   },
   "R127" : {
     "name" : "Narender Jangra",
@@ -25182,7 +25212,7 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves" : 0
+    "numberOfLeaves": 1
   },
   "R131" : {
     "name" : "Anamika Das",
@@ -27575,7 +27605,7 @@
       },
       "overTime" : null,
       "workTimeForDay": {
-        "hour": 4,
+        "hour": 8,
         "minute": 25,
         "second": 0,
         "nano": 0
@@ -28611,7 +28641,7 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves" : 0
+    "numberOfLeaves": 1
   },
   "R135" : {
     "name" : "Ankita Chand",
@@ -29513,7 +29543,7 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves" : 0
+    "numberOfLeaves": 1
   },
   "R136" : {
     "name" : "Amrita Arora",
@@ -38370,7 +38400,7 @@
           "minute": 2,
           "second": 0,
           "nano": 0
-        },
+      },
         "attendanceStatusType": "PRESENT",
         "attendanceOfLeave": null
       },
@@ -38388,13 +38418,13 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": {
           "hour": 8,
           "minute": 27,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 17,
           "minute": 29,
@@ -38574,14 +38604,14 @@
           "minute": 23,
           "second": 0,
           "nano": 0
-        },
+      },
         "overTime": null,
         "workTimeForDay": {
           "hour": 8,
           "minute": 53,
           "second": 0,
           "nano": 0
-        },
+      },
         "attendanceStatusType": "PRESENT",
         "attendanceOfLeave": null
       },
@@ -38599,19 +38629,19 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": {
           "hour": 8,
           "minute": 23,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 17,
           "minute": 28,
           "second": 0,
           "nano": 0
-        },
+      },
         "overTime": null,
         "workTimeForDay": {
           "hour": 9,
@@ -38765,14 +38795,14 @@
           "minute": 32,
           "second": 0,
           "nano": 0
-        },
+      },
         "overTime": null,
         "workTimeForDay": {
           "hour": 9,
           "minute": 0,
           "second": 0,
           "nano": 0
-        },
+      },
         "attendanceStatusType": "PRESENT",
         "attendanceOfLeave": null
       },
@@ -38848,19 +38878,19 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": {
           "hour": 8,
           "minute": 37,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 17,
           "minute": 37,
           "second": 0,
           "nano": 0
-        },
+      },
         "overTime": null,
         "workTimeForDay": {
           "hour": 9,
@@ -39028,20 +39058,20 @@
           "minute": 32,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 17,
           "minute": 26,
           "second": 0,
           "nano": 0
-        },
+      },
         "overTime": null,
         "workTimeForDay": {
           "hour": 8,
           "minute": 54,
           "second": 0,
           "nano": 0
-        },
+      },
         "attendanceStatusType": "PRESENT",
         "attendanceOfLeave": null
       },
@@ -39059,7 +39089,7 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": {
           "hour": 8,
           "minute": 33,
@@ -39303,7 +39333,7 @@
           "minute": 34,
           "second": 0,
           "nano": 0
-        },
+      },
         "attendanceStatusType": "ABSENT",
         "attendanceOfLeave": null
       },
@@ -39321,7 +39351,7 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": {
           "hour": 7,
           "minute": 57,
@@ -39444,20 +39474,20 @@
           "minute": 59,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 17,
           "minute": 24,
           "second": 0,
           "nano": 0
-        },
+      },
         "overTime": null,
         "workTimeForDay": {
           "hour": 9,
           "minute": 25,
           "second": 0,
           "nano": 0
-        },
+      },
         "attendanceStatusType": "PRESENT",
         "attendanceOfLeave": null
       },
@@ -39475,13 +39505,13 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": {
           "hour": 7,
           "minute": 57,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 17,
           "minute": 25,
@@ -39561,7 +39591,7 @@
           "minute": 35,
           "second": 0,
           "nano": 0
-        },
+      },
         "overTime": null,
         "workTimeForDay": {
           "hour": 9,
@@ -39641,14 +39671,14 @@
           "minute": 28,
           "second": 0,
           "nano": 0
-        },
+      },
         "overTime": null,
         "workTimeForDay": {
           "hour": 9,
           "minute": 37,
           "second": 0,
           "nano": 0
-        },
+      },
         "attendanceStatusType": "PRESENT",
         "attendanceOfLeave": null
       },
@@ -39703,26 +39733,26 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": {
           "hour": 7,
           "minute": 51,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 17,
           "minute": 32,
           "second": 0,
           "nano": 0
-        },
+      },
         "overTime": null,
         "workTimeForDay": {
           "hour": 9,
           "minute": 41,
           "second": 0,
           "nano": 0
-        },
+      },
         "attendanceStatusType": "PRESENT",
         "attendanceOfLeave": null
       },
@@ -39920,20 +39950,20 @@
           "minute": 51,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 17,
           "minute": 30,
           "second": 0,
           "nano": 0
-        },
+      },
         "overTime": null,
         "workTimeForDay": {
           "hour": 9,
           "minute": 39,
           "second": 0,
           "nano": 0
-        },
+      },
         "attendanceStatusType": "PRESENT",
         "attendanceOfLeave": null
       },
@@ -39951,7 +39981,7 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": {
           "hour": 7,
           "minute": 55,
@@ -40075,13 +40105,13 @@
           "minute": 56,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 0,
           "minute": 0,
           "second": 0,
           "nano": 0
-        },
+      },
         "overTime": null,
         "workTimeForDay": {
           "hour": 16,
@@ -40441,22 +40471,23 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-      "attendanceStatusType" : "ABSENT",
-      "attendanceOfLeave" : null
-    }, {
-      "currentDate" : {
-        "year" : 2016,
-        "month": "FEBRUARY",
-        "era" : "CE",
-        "dayOfMonth": 17,
-        "dayOfWeek": "WEDNESDAY",
-        "dayOfYear": 48,
-        "leapYear": true,
-        "monthValue": 2,
-        "chronology": {
-          "id": "ISO",
-          "calendarType": "iso8601"
-        }
+        "attendanceStatusType": "ABSENT",
+        "attendanceOfLeave": null
+      },
+      {
+        "currentDate": {
+          "year": 2016,
+          "month": "FEBRUARY",
+          "era": "CE",
+          "dayOfMonth": 17,
+          "dayOfWeek": "WEDNESDAY",
+          "dayOfYear": 48,
+          "leapYear": true,
+          "monthValue": 2,
+          "chronology": {
+            "id": "ISO",
+            "calendarType": "iso8601"
+          }
       },
         "checkIn": null,
         "checkOut": null,
@@ -40491,30 +40522,29 @@
           "minute": 0,
           "second": 0,
           "nano": 0
-        },
+      },
         "overTime": null,
         "workTimeForDay": {
           "hour": 2,
           "minute": 37,
           "second": 0,
           "nano": 0
-        },
-        "attendanceStatusType": "ABSENT",
-        "attendanceOfLeave": null
       },
-      {
-        "currentDate": {
-          "year": 2016,
-          "month": "FEBRUARY",
-          "era": "CE",
-          "dayOfMonth": 19,
-        "dayOfWeek" : "FRIDAY",
-          "dayOfYear": 50,
-        "leapYear" : true,
-          "monthValue": 2,
-        "chronology" : {
-          "id" : "ISO",
-          "calendarType" : "iso8601"
+      "attendanceStatusType" : "ABSENT",
+      "attendanceOfLeave" : null
+    }, {
+      "currentDate" : {
+        "year" : 2016,
+        "month": "FEBRUARY",
+        "era" : "CE",
+        "dayOfMonth": 19,
+        "dayOfWeek": "FRIDAY",
+        "dayOfYear": 50,
+        "leapYear": true,
+        "monthValue": 2,
+        "chronology": {
+          "id": "ISO",
+          "calendarType": "iso8601"
         }
       },
         "checkIn": {
@@ -40528,14 +40558,14 @@
           "minute": 23,
           "second": 0,
           "nano": 0
-        },
+      },
         "overTime": null,
         "workTimeForDay": {
           "hour": 9,
           "minute": 43,
           "second": 0,
           "nano": 0
-        },
+      },
         "attendanceStatusType": "PRESENT",
         "attendanceOfLeave": null
       },
@@ -40553,11 +40583,11 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
-      "checkIn" : null,
-      "checkOut" : null,
-      "overTime" : null,
-      "workTimeForDay" : null,
+      },
+        "checkIn": null,
+        "checkOut": null,
+        "overTime": null,
+        "workTimeForDay": null,
         "attendanceStatusType": "WEEKEND_HOLIDAY",
         "attendanceOfLeave": null
       },
@@ -40569,17 +40599,17 @@
           "dayOfMonth": 21,
           "dayOfWeek": "SUNDAY",
           "dayOfYear": 52,
-          "leapYear": true,
+        "leapYear" : true,
           "monthValue": 2,
-          "chronology": {
-            "id": "ISO",
-            "calendarType": "iso8601"
-          }
+        "chronology" : {
+          "id" : "ISO",
+          "calendarType" : "iso8601"
+        }
       },
-        "checkIn": null,
-        "checkOut": null,
-        "overTime": null,
-        "workTimeForDay": null,
+      "checkIn" : null,
+      "checkOut" : null,
+      "overTime" : null,
+      "workTimeForDay" : null,
         "attendanceStatusType": "WEEKEND_HOLIDAY",
         "attendanceOfLeave": null
       },
@@ -40603,20 +40633,20 @@
           "minute": 59,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 0,
           "minute": 0,
           "second": 0,
           "nano": 0
-        },
+      },
         "overTime": null,
         "workTimeForDay": {
           "hour": 12,
           "minute": 1,
           "second": 0,
           "nano": 0
-        },
+      },
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     }, {
@@ -40676,20 +40706,20 @@
           "minute": 39,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 21,
           "minute": 33,
           "second": 0,
           "nano": 0
-        },
+      },
         "overTime": null,
         "workTimeForDay": {
           "hour": 9,
           "minute": 54,
           "second": 0,
           "nano": 0
-        },
+      },
         "attendanceStatusType": "PRESENT",
         "attendanceOfLeave": null
       },
@@ -40707,7 +40737,7 @@
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": {
           "hour": 12,
           "minute": 13,
@@ -40830,7 +40860,7 @@
           "minute": 16,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 0,
           "minute": 0,
@@ -44366,7 +44396,7 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves" : 0
+    "numberOfLeaves": 1
   },
   "R33" : {
     "name" : "Neha Malik",
@@ -49939,7 +49969,7 @@
       },
       "overTime" : null,
       "workTimeForDay": {
-        "hour": 4,
+        "hour": 8,
         "minute": 15,
         "second": 0,
         "nano": 0
@@ -50047,7 +50077,7 @@
       },
       "overTime" : null,
       "workTimeForDay" : {
-        "hour": 5,
+        "hour": 9,
         "minute" : 24,
         "second" : 0,
         "nano" : 0
@@ -50198,7 +50228,7 @@
         },
       "overTime" : null,
         "workTimeForDay": {
-          "hour": 4,
+          "hour": 8,
           "minute": 29,
           "second": 0,
           "nano": 0
@@ -51335,7 +51365,7 @@
         },
       "overTime" : null,
         "workTimeForDay": {
-          "hour": 4,
+          "hour": 8,
           "minute": 47,
           "second": 0,
           "nano": 0
@@ -52753,8 +52783,13 @@
       "checkIn" : null,
       "checkOut" : null,
       "overTime" : null,
-      "workTimeForDay" : null,
-      "attendanceStatusType": "ABSENT",
+      "workTimeForDay": {
+        "hour": 8,
+        "minute": 0,
+        "second": 0,
+        "nano": 0
+      },
+      "attendanceStatusType": "PRESENT",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -53120,7 +53155,7 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves": 0
+    "numberOfLeaves": 2
   },
   "R51" : {
     "name" : "Ankush Jindal",
@@ -57606,8 +57641,13 @@
       "checkIn" : null,
       "checkOut" : null,
       "overTime" : null,
-      "workTimeForDay" : null,
-      "attendanceStatusType": "ABSENT",
+      "workTimeForDay": {
+        "hour": 8,
+        "minute": 0,
+        "second": 0,
+        "nano": 0
+      },
+      "attendanceStatusType": "PRESENT",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -57777,8 +57817,13 @@
       "checkIn" : null,
       "checkOut" : null,
       "overTime" : null,
-      "workTimeForDay" : null,
-      "attendanceStatusType": "ABSENT",
+      "workTimeForDay": {
+        "hour": 8,
+        "minute": 0,
+        "second": 0,
+        "nano": 0
+      },
+      "attendanceStatusType": "PRESENT",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -58159,7 +58204,7 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves" : 0
+    "numberOfLeaves": 2
   },
   "R57" : {
     "name" : "Namrata Oberoi",
@@ -59520,7 +59565,7 @@
       },
       "overTime" : null,
       "workTimeForDay": {
-        "hour": 5,
+        "hour": 9,
         "minute": 24,
         "second": 0,
         "nano": 0
@@ -60707,8 +60752,13 @@
       "checkIn" : null,
       "checkOut" : null,
       "overTime" : null,
-      "workTimeForDay" : null,
-      "attendanceStatusType": "ABSENT",
+      "workTimeForDay": {
+        "hour": 8,
+        "minute": 0,
+        "second": 0,
+        "nano": 0
+      },
+      "attendanceStatusType": "PRESENT",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -61286,8 +61336,13 @@
       "checkIn" : null,
       "checkOut" : null,
       "overTime" : null,
-      "workTimeForDay" : null,
-      "attendanceStatusType" : "ABSENT",
+      "workTimeForDay": {
+        "hour": 8,
+        "minute": 0,
+        "second": 0,
+        "nano": 0
+      },
+      "attendanceStatusType": "PRESENT",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -61497,7 +61552,7 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves" : 0
+    "numberOfLeaves": 3
   },
   "R67" : {
     "name" : "Shubhangi Singhal",
@@ -62399,7 +62454,7 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves" : 0
+    "numberOfLeaves": 2
   },
   "R69" : {
     "name" : "Ashish Kataria",
@@ -65587,7 +65642,7 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves" : 0
+    "numberOfLeaves": 3
   },
   "R75" : {
     "name" : "Projnabrata Seth",
@@ -67361,7 +67416,7 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves": 3
+    "numberOfLeaves": 0
   },
   "R79" : {
     "name" : "Yogesh Pant",
@@ -67763,7 +67818,7 @@
       },
       "overTime" : null,
       "workTimeForDay" : {
-        "hour": 4,
+        "hour": 8,
         "minute": 39,
         "second" : 0,
         "nano" : 0
@@ -68408,7 +68463,7 @@
       },
       "overTime" : null,
       "workTimeForDay": {
-        "hour": 4,
+        "hour": 8,
         "minute": 33,
         "second": 0,
         "nano": 0
@@ -72393,8 +72448,13 @@
       "checkIn" : null,
       "checkOut" : null,
       "overTime" : null,
-      "workTimeForDay" : null,
-      "attendanceStatusType": "ABSENT",
+      "workTimeForDay": {
+        "hour": 4,
+        "minute": 0,
+        "second": 0,
+        "nano": 0
+      },
+      "attendanceStatusType": "HALF_DAY",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -72411,11 +72471,26 @@
           "calendarType" : "iso8601"
         }
       },
-      "checkIn" : null,
-      "checkOut" : null,
+      "checkIn": {
+        "hour": 9,
+        "minute": 28,
+        "second": 0,
+        "nano": 0
+      },
+      "checkOut": {
+        "hour": 12,
+        "minute": 59,
+        "second": 0,
+        "nano": 0
+      },
       "overTime" : null,
-      "workTimeForDay" : null,
-      "attendanceStatusType": "ABSENT",
+      "workTimeForDay": {
+        "hour": 7,
+        "minute": 31,
+        "second": 0,
+        "nano": 0
+      },
+      "attendanceStatusType": "HALF_DAY",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -72435,8 +72510,13 @@
       "checkIn": null,
       "checkOut": null,
       "overTime" : null,
-      "workTimeForDay": null,
-      "attendanceStatusType" : "ABSENT",
+      "workTimeForDay": {
+        "hour": 8,
+        "minute": 0,
+        "second": 0,
+        "nano": 0
+      },
+      "attendanceStatusType": "PRESENT",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -72456,8 +72536,13 @@
       "checkIn" : null,
       "checkOut" : null,
       "overTime" : null,
-      "workTimeForDay" : null,
-      "attendanceStatusType" : "ABSENT",
+      "workTimeForDay": {
+        "hour": 8,
+        "minute": 0,
+        "second": 0,
+        "nano": 0
+      },
+      "attendanceStatusType": "PRESENT",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -72519,8 +72604,13 @@
       "checkIn" : null,
       "checkOut" : null,
       "overTime" : null,
-      "workTimeForDay" : null,
-      "attendanceStatusType" : "ABSENT",
+      "workTimeForDay": {
+        "hour": 8,
+        "minute": 0,
+        "second": 0,
+        "nano": 0
+      },
+      "attendanceStatusType": "PRESENT",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -72582,8 +72672,13 @@
       "checkIn" : null,
       "checkOut" : null,
       "overTime" : null,
-      "workTimeForDay" : null,
-      "attendanceStatusType" : "ABSENT",
+      "workTimeForDay": {
+        "hour": 8,
+        "minute": 0,
+        "second": 0,
+        "nano": 0
+      },
+      "attendanceStatusType": "PRESENT",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -72603,8 +72698,13 @@
       "checkIn" : null,
       "checkOut" : null,
       "overTime" : null,
-      "workTimeForDay" : null,
-      "attendanceStatusType": "ABSENT",
+      "workTimeForDay": {
+        "hour": 8,
+        "minute": 0,
+        "second": 0,
+        "nano": 0
+      },
+      "attendanceStatusType": "PRESENT",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -72685,7 +72785,7 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves" : 0
+    "numberOfLeaves": 11
   },
   "R89" : {
     "name" : "Vineeta Nanda",
@@ -73377,8 +73477,13 @@
       "checkIn" : null,
       "checkOut" : null,
       "overTime" : null,
-      "workTimeForDay" : null,
-      "attendanceStatusType" : "ABSENT",
+        "workTimeForDay": {
+          "hour": 8,
+          "minute": 0,
+          "second": 0,
+          "nano": 0
+        },
+        "attendanceStatusType": "PRESENT",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -73398,8 +73503,13 @@
       "checkIn" : null,
       "checkOut" : null,
       "overTime" : null,
-      "workTimeForDay" : null,
-        "attendanceStatusType": "ABSENT",
+        "workTimeForDay": {
+          "hour": 8,
+          "minute": 0,
+          "second": 0,
+          "nano": 0
+        },
+        "attendanceStatusType": "PRESENT",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -73573,7 +73683,7 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves" : 0
+    "numberOfLeaves": 2
   },
   "R91" : {
     "name" : "Shruti Gupta",
@@ -74249,8 +74359,13 @@
       "checkIn" : null,
       "checkOut" : null,
       "overTime" : null,
-      "workTimeForDay" : null,
-      "attendanceStatusType" : "ABSENT",
+      "workTimeForDay": {
+        "hour": 8,
+        "minute": 0,
+        "second": 0,
+        "nano": 0
+      },
+      "attendanceStatusType": "PRESENT",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -74460,7 +74575,7 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves" : 0
+    "numberOfLeaves": 3
   },
   "R92" : {
     "name" : "Neha Gupta",
@@ -75171,7 +75286,7 @@
       },
       "overTime" : null,
       "workTimeForDay": {
-        "hour": 5,
+        "hour": 9,
         "minute": 49,
         "second": 0,
         "nano": 0
@@ -75950,8 +76065,13 @@
       "checkIn" : null,
       "checkOut" : null,
       "overTime" : null,
-      "workTimeForDay" : null,
-      "attendanceStatusType": "ABSENT",
+      "workTimeForDay": {
+        "hour": 8,
+        "minute": 0,
+        "second": 0,
+        "nano": 0
+      },
+      "attendanceStatusType": "PRESENT",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -75971,8 +76091,13 @@
       "checkIn" : null,
       "checkOut" : null,
       "overTime" : null,
-      "workTimeForDay" : null,
-      "attendanceStatusType": "ABSENT",
+      "workTimeForDay": {
+        "hour": 8,
+        "minute": 0,
+        "second": 0,
+        "nano": 0
+      },
+      "attendanceStatusType": "PRESENT",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -75992,8 +76117,13 @@
       "checkIn": null,
       "checkOut": null,
       "overTime" : null,
-      "workTimeForDay": null,
-      "attendanceStatusType": "ABSENT",
+      "workTimeForDay": {
+        "hour": 8,
+        "minute": 0,
+        "second": 0,
+        "nano": 0
+      },
+      "attendanceStatusType": "PRESENT",
       "attendanceOfLeave" : null
     }, {
       "currentDate" : {
@@ -76536,7 +76666,7 @@
       "attendanceStatusType" : "ABSENT",
       "attendanceOfLeave" : null
     } ],
-    "numberOfLeaves" : 0
+    "numberOfLeaves": 1
   },
   "R95" : {
     "name" : "Amey Kulkarni",
@@ -79581,13 +79711,13 @@
           "dayOfMonth": 22,
           "dayOfWeek": "MONDAY",
           "dayOfYear": 53,
-        "leapYear" : true,
+          "leapYear": true,
           "monthValue": 2,
           "chronology": {
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": null,
         "checkOut": null,
         "overTime": null,
@@ -79603,32 +79733,32 @@
           "dayOfMonth": 23,
           "dayOfWeek": "TUESDAY",
           "dayOfYear": 54,
-          "leapYear": true,
+        "leapYear" : true,
           "monthValue": 2,
           "chronology": {
             "id": "ISO",
             "calendarType": "iso8601"
           }
-        },
+      },
         "checkIn": {
           "hour": 8,
           "minute": 43,
           "second": 0,
           "nano": 0
-        },
+      },
         "checkOut": {
           "hour": 17,
           "minute": 28,
           "second": 0,
           "nano": 0
-        },
+      },
         "overTime": null,
         "workTimeForDay": {
           "hour": 8,
           "minute": 45,
           "second": 0,
           "nano": 0
-        },
+      },
         "attendanceStatusType": "PRESENT",
         "attendanceOfLeave": null
       },
@@ -79637,112 +79767,3 @@
           "year": 2016,
           "month": "FEBRUARY",
           "era": "CE",
-          "dayOfMonth": 24,
-          "dayOfWeek": "WEDNESDAY",
-          "dayOfYear": 55,
-          "leapYear": true,
-          "monthValue": 2,
-          "chronology": {
-            "id": "ISO",
-            "calendarType": "iso8601"
-          }
-        },
-        "checkIn": {
-          "hour": 8,
-          "minute": 43,
-          "second": 0,
-          "nano": 0
-        },
-        "checkOut": {
-          "hour": 17,
-          "minute": 35,
-          "second": 0,
-          "nano": 0
-        },
-        "overTime": null,
-        "workTimeForDay": {
-          "hour": 8,
-          "minute": 52,
-          "second": 0,
-          "nano": 0
-        },
-        "attendanceStatusType": "PRESENT",
-        "attendanceOfLeave": null
-      },
-      {
-        "currentDate": {
-          "year": 2016,
-          "month": "FEBRUARY",
-          "era": "CE",
-          "dayOfMonth": 25,
-          "dayOfWeek": "THURSDAY",
-          "dayOfYear": 56,
-          "leapYear": true,
-          "monthValue": 2,
-          "chronology": {
-            "id": "ISO",
-            "calendarType": "iso8601"
-          }
-        },
-        "checkIn": {
-          "hour": 8,
-          "minute": 33,
-          "second": 0,
-          "nano": 0
-        },
-        "checkOut": {
-          "hour": 17,
-          "minute": 28,
-          "second": 0,
-          "nano": 0
-        },
-        "overTime": null,
-        "workTimeForDay": {
-          "hour": 8,
-          "minute": 55,
-          "second": 0,
-          "nano": 0
-        },
-        "attendanceStatusType": "PRESENT",
-        "attendanceOfLeave": null
-      },
-      {
-        "currentDate": {
-          "year": 2016,
-          "month": "FEBRUARY",
-          "era": "CE",
-          "dayOfMonth": 26,
-          "dayOfWeek": "FRIDAY",
-          "dayOfYear": 57,
-          "leapYear": true,
-          "monthValue": 2,
-          "chronology": {
-            "id": "ISO",
-            "calendarType": "iso8601"
-          }
-        },
-        "checkIn": {
-          "hour": 10,
-          "minute": 29,
-          "second": 0,
-          "nano": 0
-        },
-        "checkOut": {
-          "hour": 17,
-          "minute": 6,
-          "second": 0,
-          "nano": 0
-        },
-        "overTime": null,
-        "workTimeForDay": {
-          "hour": 6,
-          "minute": 37,
-          "second": 0,
-          "nano": 0
-        },
-        "attendanceStatusType": "PRESENT",
-        "attendanceOfLeave": null
-      },
-      {
-        "currentDate": {
-          "year": 2

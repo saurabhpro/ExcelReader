@@ -1,7 +1,5 @@
 package jxcel.model;
 
-import java.util.Objects;
-
 /**
  * Created by kumars on 2/29/2016.
  */
@@ -15,8 +13,8 @@ public class BasicEmployeeDetails {
         return salesForceId;
     }
 
-    public void setSalesForceId(int salesForceId) {
-        this.salesForceId = Objects.toString(salesForceId);
+    public void setSalesForceId(String salesForceId) {
+        this.salesForceId = salesForceId;
     }
 
     public String getEmailId() {
