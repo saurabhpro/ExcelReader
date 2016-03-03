@@ -9,7 +9,6 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -43,7 +42,7 @@ public class HrnetFileWorker implements IHrnetFile {
         }
     }
 
-    @NotNull
+
     private String getID(Cell cell) {
         if (cell.getCellType() == Cell.CELL_TYPE_STRING)
             return cell.getStringCellValue();
@@ -52,7 +51,6 @@ public class HrnetFileWorker implements IHrnetFile {
     }
 
 
-    @NotNull
     private LocalDate getLocalDate(Cell cell) {
         if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC)
             return TimeManager.convertToLocalDate(new SimpleDateFormat("dd/MM/yyyy").format(cell.getDateCellValue()));

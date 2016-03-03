@@ -1,5 +1,7 @@
 package jxcel.model;
 
+import DataUsage.EmployeeMasterData;
+
 /**
  * Created by kumars on 2/29/2016.
  */
@@ -15,6 +17,14 @@ public class BasicEmployeeDetails {
 
     public void setSalesForceId(String salesForceId) {
         this.salesForceId = salesForceId;
+    }
+
+    public String getSalesForceId(String empId) {
+        BasicEmployeeDetails tempSalesForceId = EmployeeMasterData.allEmployeeRecordMap.get(empId);
+        if (tempSalesForceId != null && tempSalesForceId.getSalesForceId() != null)
+            return tempSalesForceId.getSalesForceId();
+        else
+            return null;
     }
 
     public String getEmailId() {

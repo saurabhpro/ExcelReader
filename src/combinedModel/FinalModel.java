@@ -4,7 +4,6 @@ import jxcel.JxcelBiometricFileWorker;
 import jxcel.attendence.AttendanceOfDate;
 import jxcel.model.BasicEmployeeDetails;
 import jxcel.model.HrnetDetails;
-import org.jetbrains.annotations.NotNull;
 
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -37,12 +36,10 @@ public class FinalModel extends BasicEmployeeDetails {
 
     }
 
-    @NotNull
     public LocalTime getAvgInTime() {
         return avgInTime;
     }
 
-    @NotNull
     private LocalTime setAvgInTime() {
         return calculate("AverageCheckInTime", attendanceOfDate);
     }
@@ -51,7 +48,7 @@ public class FinalModel extends BasicEmployeeDetails {
         return avgOutTime;
     }
 
-    @NotNull
+
     private LocalTime setAvgOutTime() {
         return calculate("AverageCheckOutTime", attendanceOfDate);
     }

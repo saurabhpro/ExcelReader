@@ -16,12 +16,13 @@ import static jxcel.model.LeaveType.WORK_FROM_HOME_IND;
 public class Discrepancy {
 
     public void findDiscrepancy() {
-        Map<String, FinalModel> newEmpMap = Combined2.newEmpMap;
-        for (FinalModel finalModel : newEmpMap.values()) {
+        Map<String, FinalModel> EmpCombinedMap = Combined2.EmpCombinedMap;
+        for (FinalModel finalModel : EmpCombinedMap.values()) {
             //Discrepancy if an employee is absent and there is no entry in Hrnet file.
             if (finalModel.hrnetDetails == null) {
                 for (int j = 0; j < JxcelBiometricFileWorker.month.maxLength(); j++) {
-                    if ((finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(ABSENT)) || (finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(HALF_DAY))) {
+                    if ((finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(ABSENT))
+                            || (finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(HALF_DAY))) {
                         System.out.println("Null List- Discrepancy Set for " + finalModel.getName() + " Date: " + (j + 1));
                         finalModel.setIfClarificationFromEmployee(true);
                     }
@@ -35,7 +36,7 @@ public class Discrepancy {
                     //his status is still absent after merging
                     if (finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(ABSENT)) {
 
-                        int[] temp = new int[2];
+                        int[] temp;
                         for (HrnetDetails hrnetDetail : finalModel.hrnetDetails) {
                             temp = setClarificationStatus(j, finalModel, hrnetDetail, "AbsentInOneNotInOther", 0);
                             j = temp[0];
@@ -67,7 +68,6 @@ public class Discrepancy {
                                 }
                             }
                         }
-
                     }
                 }
             }

@@ -31,7 +31,7 @@ public class JsonMapper {
             mapper.writeValue(jfile, user);
 
             //Convert object to JSON string
-            String jsonInString = mapper.writeValueAsString(user);
+            mapper.writeValueAsString(user);
             //System.out.println(jsonInString);
 
         } catch (IOException e) {
@@ -65,7 +65,7 @@ public class JsonMapper {
 
         // read JSON from a file
         try {
-            Map<String, Object> map = mapper.readValue(
+            mapper.readValue(
                     new File("c:\\user.json"),
                     new TypeReference<Map<String, Object>>() {
                     });

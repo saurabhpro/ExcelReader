@@ -1,6 +1,7 @@
 package jxcel;
 
 import jxcel.attendence.AttendanceOfDate;
+import jxcel.factory.XLSXSheetAndCell;
 import jxcel.model.AttendanceStatusType;
 import jxcel.model.EmpBiometricDetails;
 import jxcel.model.IBiometricFile;
@@ -40,15 +41,8 @@ public class ApacheBiometricFileWorker implements IBiometricFile {
     private int ADD_ROW_STEPS = 0;
 
     public ApacheBiometricFileWorker(String biometricFile) {
-        try {
-            inputWorkbook = new FileInputStream(biometricFile);
-
-            workbook = new XSSFWorkbook(inputWorkbook);
-            sheet = workbook.getSheetAt(0);          // Get the first sheet
-            numberOfRowsInBio = (sheet.getPhysicalNumberOfRows() - 11) / 18;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        sheet = new XLSXSheetAndCell().ApacheXLSXSheet(biometricFile);
+        numberOfRowsInBio = (sheet.getPhysicalNumberOfRows() - 11) / 18;
     }
 
     /**

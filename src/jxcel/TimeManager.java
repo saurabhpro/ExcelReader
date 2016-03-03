@@ -2,7 +2,6 @@ package jxcel;
 
 import jxcel.attendence.AttendanceOfDate;
 import jxcel.model.AttendanceStatusType;
-import org.jetbrains.annotations.NotNull;
 
 import java.time.Duration;
 import java.time.LocalDate;
@@ -50,7 +49,7 @@ public class TimeManager {
 
     }
 
-    @NotNull
+
     public static LocalDate convertToLocalDate(String date) {
         int year;
         int month;
@@ -71,7 +70,6 @@ public class TimeManager {
     }
 
 
-    @NotNull
     public static LocalTime calculate(String type, AttendanceOfDate[] attendanceOfDate) {
         List<AttendanceOfDate> ofDates = Arrays.asList(attendanceOfDate);
         int hoursTotal = 0, minsTotal = 0, presentDays = 0;

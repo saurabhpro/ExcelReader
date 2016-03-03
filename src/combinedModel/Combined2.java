@@ -1,6 +1,6 @@
 package combinedModel;
 
-import DataUsage.ReadAndKeepData;
+import DataUsage.EmployeeMasterData;
 import jxcel.HrnetFileWorker;
 import jxcel.JxcelBiometricFileWorker;
 import jxcel.model.*;
@@ -20,22 +20,29 @@ import static jxcel.model.AttendanceStatusType.*;
 public class Combined2 {
 
     //Comparator needs string as Type
-    public static Map<String, FinalModel> newEmpMap = new TreeMap<>(String::compareTo);
-    private final Map<String, ArrayList<HrnetDetails>> hrnetDetails = HrnetFileWorker.hrnetDetails;
-    private final Map<String, EmpBiometricDetails> empBiometricDetails = JxcelBiometricFileWorker.empList;
+    public static Map<String, FinalModel> EmpCombinedMap;
+    private final Map<String, ArrayList<HrnetDetails>> empHrnetDetails;
+    private final Map<String, EmpBiometricDetails> empBiometricDetails;
 
+    public Combined2() {
+        EmpCombinedMap = new TreeMap<>(String::compareTo);
+        empHrnetDetails = HrnetFileWorker.hrnetDetails;
+        empBiometricDetails = JxcelBiometricFileWorker.empList;
+    }
+
+    @SuppressWarnings({"incomplete-switch"})
     public void combineFiles() {
         String salesForce = null;
         //Set the number of leaves applied
         for (String bEmpID : empBiometricDetails.keySet()) {
-            if (ReadAndKeepData.employeeDetailsMap.containsKey(bEmpID)) {
-                salesForce = ReadAndKeepData.employeeDetailsMap.get(bEmpID).getSalesForceId();
+            if (EmployeeMasterData.allEmployeeRecordMap.containsKey(bEmpID)) {
+                salesForce = new BasicEmployeeDetails().getSalesForceId(bEmpID);
             }
 
             //setting the number of leaves after counting the list
             final String finalSalesForce = salesForce;
-            hrnetDetails.keySet().stream().filter(hr -> hr.equals(finalSalesForce)).forEach
-                    (hr -> empBiometricDetails.get(bEmpID).setNumberOfLeaves(hrnetDetails.get(hr).size()));
+            empHrnetDetails.keySet().stream().filter(hr -> hr.equals(finalSalesForce)).forEach
+                    (hr -> empBiometricDetails.get(bEmpID).setNumberOfLeaves(empHrnetDetails.get(hr).size()));
         }
 
         //this worked just fine for January
@@ -50,39 +57,31 @@ public class Combined2 {
                 switch (empObj.attendanceOfDate[i].getAttendanceStatusType()) {
                     case ABSENT:
                         //check for Work from home and half day
-                        Set<Map.Entry<String, ArrayList<HrnetDetails>>> hrDataSet = hrnetDetails.entrySet();
+                        Set<Map.Entry<String, ArrayList<HrnetDetails>>> hrDataSet = empHrnetDetails.entrySet();
                         for (Map.Entry<String, ArrayList<HrnetDetails>> hrEntry : hrDataSet) {
-                            BasicEmployeeDetails tempSalesForceId = ReadAndKeepData.employeeDetailsMap.get(empObj.getEmpId());
+                            String tempSalesForceId = new BasicEmployeeDetails().getSalesForceId(empObj.getEmpId());
 
-                            if (tempSalesForceId != null && tempSalesForceId.getSalesForceId() != null)
-                                if (tempSalesForceId.getSalesForceId().equals(hrEntry.getKey())) {
+                            if (tempSalesForceId != null && tempSalesForceId.equals(hrEntry.getKey())) {
 
-                                    ArrayList<HrnetDetails> ar = hrEntry.getValue();
+                                for (HrnetDetails hr : hrEntry.getValue()) {
+                                    LocalDate startDate = hr.attendanceOfLeave.getStartDate();
+                                    double leaveTime = hr.attendanceOfLeave.getAbsenceTime();
 
-                                    for (HrnetDetails hr : ar) {
-                                        LocalDate startDate = hr.attendanceOfLeave.getStartDate();
-                                        // LocalDate endDate = hr.leaveDetails.getEndDate();
-                                        double leaveTime = hr.attendanceOfLeave.getAbsenceTime();
+                                    int changeDatesRange = startDate.getDayOfMonth() - 1;
 
-                                        int changeDatesRange = startDate.getDayOfMonth() - 1;
+                                    while (leaveTime > 0) {
+                                        if (leaveTime == 0.5) {
+                                            empObj.attendanceOfDate[changeDatesRange].setAttendanceStatusType(HALF_DAY);
 
-
-                                        while (leaveTime > 0) {
-
-
-                                            if (leaveTime == 0.5) {
-                                                empObj.attendanceOfDate[changeDatesRange].setAttendanceStatusType(HALF_DAY);
-
-                                            } else if (hr.attendanceOfLeave.getLeaveType() == LeaveType.WORK_FROM_HOME_IND) {
-                                                empObj.attendanceOfDate[changeDatesRange].setWorkTimeForDay(LocalTime.of(8, 0));
-                                                empObj.attendanceOfDate[changeDatesRange].setAttendanceStatusType(PRESENT);
-                                            }
-                                            changeDatesRange++;
-                                            leaveTime--;
+                                        } else if (hr.attendanceOfLeave.getLeaveType() == LeaveType.WORK_FROM_HOME_IND) {
+                                            empObj.attendanceOfDate[changeDatesRange].setWorkTimeForDay(LocalTime.of(8, 0));
+                                            empObj.attendanceOfDate[changeDatesRange].setAttendanceStatusType(PRESENT);
                                         }
+                                        changeDatesRange++;
+                                        leaveTime--;
                                     }
-
                                 }
+                            }
                         }
                 }
             }
@@ -99,28 +98,27 @@ public class Combined2 {
             }
         }
 
-        //Combine Hrnet and Biometric Files
+        //update the basic employee biometric file
         JxcelBiometricFileWorker.empList = empBiometricDetails;
 
+        //Combine Hrnet and Biometric Files
         for (EmpBiometricDetails empObj : empBiometricDetails.values()) {
             if (empObj.getNumberOfLeaves() == 0) {
-                newEmpMap.put(empObj.getName(), new FinalModel(empObj.getEmpId(), empObj.getName(), empObj.numberOfLeaves, empObj.attendanceOfDate, null));
+                EmpCombinedMap.put(empObj.getName(), new FinalModel(empObj.getEmpId(), empObj.getName(), empObj.numberOfLeaves, empObj.attendanceOfDate, null));
             } else {
-                Set<String> hrKeySet = hrnetDetails.keySet();
+                Set<String> hrKeySet = empHrnetDetails.keySet();
                 for (String hrKey : hrKeySet) {
-                    BasicEmployeeDetails tempSalesForceId = ReadAndKeepData.employeeDetailsMap.get(empObj.getEmpId());
-                    if (tempSalesForceId != null && tempSalesForceId.getSalesForceId() != null)
-                        if (hrKey.equals(tempSalesForceId.getSalesForceId())) {
-                            ArrayList<HrnetDetails> hrnet;
-                            hrnet = hrnetDetails.get(hrKey);
-                            newEmpMap.put(empObj.getName(), new FinalModel(empObj.getEmpId(), empObj.getName(), empObj.numberOfLeaves, empObj.attendanceOfDate, hrnet));
-                        }
+                    String tempSalesForceId = new BasicEmployeeDetails().getSalesForceId(empObj.getEmpId());
+                    if (tempSalesForceId != null && hrKey.equals(tempSalesForceId)) {
+                        ArrayList<HrnetDetails> hrnet = empHrnetDetails.get(hrKey);
+                        EmpCombinedMap.put(empObj.getName(), new FinalModel(empObj.getEmpId(), empObj.getName(), empObj.numberOfLeaves, empObj.attendanceOfDate, hrnet));
+                    }
                 }
             }
         }
 
         //to be removed  today
-        for (FinalModel emp : newEmpMap.values()) {
+        for (FinalModel emp : EmpCombinedMap.values()) {
             for (int j = 0; j < JxcelBiometricFileWorker.month.maxLength(); j++) {
 
                 //AMRITA
@@ -142,6 +140,6 @@ public class Combined2 {
 
     public void displayCombineFiles() {
         System.out.println(JxcelBiometricFileWorker.month);
-        newEmpMap.values().forEach(FinalModel::displayFinalList);
+        EmpCombinedMap.values().forEach(FinalModel::displayFinalList);
     }
 }

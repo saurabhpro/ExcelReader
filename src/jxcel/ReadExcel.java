@@ -1,8 +1,9 @@
 package jxcel;
 
-import DataUsage.ReadAndKeepData;
+import DataUsage.EmployeeMasterData;
 import combinedModel.Combined2;
 import combinedModel.Discrepancy;
+import jxcel.factory.ExcelFileType;
 import jxcel.view.JsonMapper;
 
 import java.io.IOException;
@@ -18,20 +19,21 @@ public class ReadExcel {
 
     public static void main(String[] args) throws IOException, ParseException {
         ReadExcel test = new ReadExcel();
-
         test.setEmpListID(".\\ExcelFiles\\Emails.xlsx");
-        ReadAndKeepData readAndKeepData = new ReadAndKeepData(empListID);
-        readAndKeepData.readFile();
-        // readAndKeepData.displayFile();
-        readAndKeepData.toJsonFile();
+        test.setBiometricFile(".\\ExcelFiles\\feb leaves.xls");
+        test.setHrNetFile(".\\ExcelFiles\\Jan-Feb FF Report.xlsx");
+
+        EmployeeMasterData employeeMasterData = new EmployeeMasterData(empListID);
+        employeeMasterData.readFile();
+        // employeeMasterData.displayFile();
+        employeeMasterData.toJsonFile();
+
 
         //read Biometric Excel File
-        test.setBiometricFile(".\\ExcelFiles\\feb leaves.xls");
         JxcelBiometricFileWorker jxcelFileWorker = new JxcelBiometricFileWorker(biometricFile);
         jxcelFileWorker.readBiometricFile();
 
         //read HRNet Excel File
-        test.setHrNetFile(".\\ExcelFiles\\Jan-Feb FF Report.xlsx");
         HrnetFileWorker hrnetFileWorker = new HrnetFileWorker(hrNetFile);
         hrnetFileWorker.readHRNetFile();
 

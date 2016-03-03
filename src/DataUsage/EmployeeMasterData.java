@@ -17,16 +17,16 @@ import java.util.TreeMap;
 /**
  * Created by kumars on 3/1/2016.
  */
-public class ReadAndKeepData {
+public class EmployeeMasterData {
 
-    public static Map<String, BasicEmployeeDetails> employeeDetailsMap;
+    public static Map<String, BasicEmployeeDetails> allEmployeeRecordMap;
     int numberOfRowsInBio;
     FileInputStream inputWorkbook = null;
     Workbook workbook = null;
     Sheet sheet = null;
     Cell cell = null;
 
-    public ReadAndKeepData(String empListID) {
+    public EmployeeMasterData(String empListID) {
         try {
             inputWorkbook = new FileInputStream(empListID);
 
@@ -39,7 +39,7 @@ public class ReadAndKeepData {
     }
 
     public void readFile() {
-        employeeDetailsMap = new TreeMap<>();
+        allEmployeeRecordMap = new TreeMap<>();
 
         for (int row = 0; row < numberOfRowsInBio; row++) {
             BasicEmployeeDetails b = new BasicEmployeeDetails();
@@ -48,18 +48,18 @@ public class ReadAndKeepData {
             b.setEmpId(sheet.getRow(row).getCell(2).getStringCellValue());
             b.setSalesForceId(Objects.toString(sheet.getRow(row).getCell(3).getNumericCellValue()));
 
-            employeeDetailsMap.put(b.getEmpId(), b);
+            allEmployeeRecordMap.put(b.getEmpId(), b);
         }
     }
 
     public void displayFile() {
-        employeeDetailsMap.values().forEach(BasicEmployeeDetails::displayBasicInfo);
+        allEmployeeRecordMap.values().forEach(BasicEmployeeDetails::displayBasicInfo);
     }
 
     public void toJsonFile() {
         ObjectMapper mapper = new ObjectMapper();
         //For testing
-        Map<String, BasicEmployeeDetails> user = employeeDetailsMap;
+        Map<String, BasicEmployeeDetails> user = allEmployeeRecordMap;
 
         try {
             File jfile = new File(".\\JSON files\\Emails.json");
