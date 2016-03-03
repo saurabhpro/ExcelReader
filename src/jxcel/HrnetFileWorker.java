@@ -1,17 +1,14 @@
 package jxcel;
 
 import jxcel.attendence.AttendanceOfLeave;
+import jxcel.factory.XLSXSheetAndCell;
 import jxcel.model.HrnetColumns;
 import jxcel.model.HrnetDetails;
 import jxcel.model.IHrnetFile;
 import jxcel.model.LeaveType;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -24,22 +21,10 @@ public class HrnetFileWorker implements IHrnetFile {
 
     public static Map<String, ArrayList<HrnetDetails>> hrnetDetails;
     int numberOfRowsInHr;
-    Iterator<HrnetDetails> iterator = null;
-    FileInputStream file;
-    Workbook workbook;
     Sheet sheet;
 
     public HrnetFileWorker(String hrNetFile) {
-        try {
-            file = new FileInputStream(new File(hrNetFile));
-            //Create Workbook instance holding reference to .xlsx file
-            workbook = new XSSFWorkbook(file);
-            //Get first/desired sheet from the workbook
-            sheet = workbook.getSheetAt(0);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        sheet = new XLSXSheetAndCell().ApacheXLSXSheet(hrNetFile);
     }
 
 
@@ -139,7 +124,7 @@ public class HrnetFileWorker implements IHrnetFile {
                 }
             }
         }
-        file.close();
+
     }
 
     @Override

@@ -5,6 +5,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
@@ -13,7 +14,7 @@ import java.io.IOException;
  */
 public class XLSXSheetAndCell {
 
-    FileInputStream inputWorkbook = null;
+    FileInputStream file = null;
     Workbook workbook = null;
     Sheet sheet = null;
     Cell cell = null;
@@ -21,10 +22,10 @@ public class XLSXSheetAndCell {
     public Sheet ApacheXLSXSheet(String empListID) {
 
         try {
-            inputWorkbook = new FileInputStream(empListID);
-
-            workbook = new XSSFWorkbook(inputWorkbook);
+            file = new FileInputStream(new File(empListID));
+            workbook = new XSSFWorkbook(file);
             sheet = workbook.getSheetAt(0);          // Get the first sheet
+            file.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

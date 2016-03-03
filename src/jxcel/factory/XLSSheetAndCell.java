@@ -21,12 +21,13 @@ public class XLSSheetAndCell {
 
     public Sheet ApacheXLSSheet(String fileName) {
         try {
-            FileInputStream file = new FileInputStream(new File(".\\ExcelFiles\\test report.xls"));
+            FileInputStream file = new FileInputStream(new File(fileName));
             //Create Workbook instance holding reference to .xlsx file
             workbook = new HSSFWorkbook(file);
 
             //Get first/desired sheet from the workbook
             sheet = workbook.getSheetAt(0);
+            file.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

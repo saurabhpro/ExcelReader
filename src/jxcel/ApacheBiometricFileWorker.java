@@ -1,14 +1,13 @@
 package jxcel;
 
 import jxcel.attendence.AttendanceOfDate;
-import jxcel.factory.XLSXSheetAndCell;
+import jxcel.factory.XLSSheetAndCell;
 import jxcel.model.AttendanceStatusType;
 import jxcel.model.EmpBiometricDetails;
 import jxcel.model.IBiometricFile;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -41,7 +40,7 @@ public class ApacheBiometricFileWorker implements IBiometricFile {
     private int ADD_ROW_STEPS = 0;
 
     public ApacheBiometricFileWorker(String biometricFile) {
-        sheet = new XLSXSheetAndCell().ApacheXLSXSheet(biometricFile);
+        sheet = new XLSSheetAndCell().ApacheXLSSheet(biometricFile);
         numberOfRowsInBio = (sheet.getPhysicalNumberOfRows() - 11) / 18;
     }
 

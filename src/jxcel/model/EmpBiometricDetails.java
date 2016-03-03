@@ -20,11 +20,6 @@ public class EmpBiometricDetails extends BasicEmployeeDetails {
         this.attendanceOfDate = attendanceOfDate;
     }
 
-
-    /* public void setNumberOfLeaves() {
-         numberOfLeaves = numberOfLeaves + 1;
-     } //Value is set in Combined2.java file
- */
     public int getNumberOfLeaves() {
         return numberOfLeaves;
     }

@@ -1,15 +1,12 @@
 package jxcel;
 
 import jxcel.attendence.AttendanceOfDate;
+import jxcel.factory.JXLSSheetAndCell;
 import jxcel.model.AttendanceStatusType;
 import jxcel.model.EmpBiometricDetails;
 import jxcel.model.IBiometricFile;
-import jxl.Cell;
 import jxl.Sheet;
-import jxl.Workbook;
-import jxl.read.biff.BiffException;
 
-import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
 import java.time.LocalDate;
@@ -31,21 +28,12 @@ public class JxcelBiometricFileWorker implements IBiometricFile {
     static public Year year;
 
     int numberOfRowsInBio;
-    File inputWorkbook = null;
-    Workbook w = null;
     Sheet sheet = null;
-    Cell cell = null;
     private int ADD_ROW_STEPS = 0;
 
     public JxcelBiometricFileWorker(String biometricFile) {
-        inputWorkbook = new File(biometricFile);
-        try {
-            w = Workbook.getWorkbook(inputWorkbook);
-            sheet = w.getSheet(0);          // Get the first sheet
-            numberOfRowsInBio = (sheet.getRows() - 11) / 18;
-        } catch (BiffException | IOException e) {
-            e.printStackTrace();
-        }
+        sheet = new JXLSSheetAndCell().JXLSSheet(biometricFile);
+        numberOfRowsInBio = (sheet.getRows() - 11) / 18;
     }
 
     /**
@@ -62,7 +50,6 @@ public class JxcelBiometricFileWorker implements IBiometricFile {
      */
     private void getMonthlyAttendanceOfEmployee(AttendanceOfDate[] attendanceOfDate) {
         StringTokenizer st;
-        // AttendanceOfDate[] attendanceOfDate;
         AttendanceStatusType attendanceStatus;
 
         int noOfDaysInThatMonth = month.maxLength();

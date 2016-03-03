@@ -3,7 +3,6 @@ package jxcel;
 import DataUsage.EmployeeMasterData;
 import combinedModel.Combined2;
 import combinedModel.Discrepancy;
-import jxcel.factory.ExcelFileType;
 import jxcel.view.JsonMapper;
 
 import java.io.IOException;
@@ -33,6 +32,10 @@ public class ReadExcel {
         JxcelBiometricFileWorker jxcelFileWorker = new JxcelBiometricFileWorker(biometricFile);
         jxcelFileWorker.readBiometricFile();
 
+/*
+        ApacheBiometricFileWorker jxcelFileWorker = new ApacheBiometricFileWorker(biometricFile);
+        jxcelFileWorker.readBiometricFile();
+*/
         //read HRNet Excel File
         HrnetFileWorker hrnetFileWorker = new HrnetFileWorker(hrNetFile);
         hrnetFileWorker.readHRNetFile();
