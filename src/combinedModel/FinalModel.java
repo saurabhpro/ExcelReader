@@ -15,13 +15,13 @@ import static jxcel.TimeManager.calculate;
  */
 public class FinalModel extends BasicEmployeeDetails {
     public final AttendanceOfDate[] attendanceOfDate;
+    public final ArrayList<HrnetDetails> hrnetDetails;
     private final LocalTime avgInTime;
     private final LocalTime avgOutTime;
     private final int numberOfLeaves;
-    public boolean setIfClarificationFromEmployee;
-    public ArrayList<HrnetDetails> hrnetDetails;
     //AMRITA
-    private int[] count = new int[5];//Absent, Present, Public_Holiday, Weekend_Holiday, Half_Day
+    private final int[] count = new int[5];//Absent, Present, Public_Holiday, Weekend_Holiday, Half_Day
+    private boolean setIfClarificationFromEmployee;
 
     public FinalModel(String EmployeeID, String name, int numberOfLeaves, AttendanceOfDate[] a, ArrayList<HrnetDetails> hr1) {
         this.setEmpId(EmployeeID);
@@ -36,7 +36,7 @@ public class FinalModel extends BasicEmployeeDetails {
 
     }
 
-    public LocalTime getAvgInTime() {
+    private LocalTime getAvgInTime() {
         return avgInTime;
     }
 
@@ -44,7 +44,7 @@ public class FinalModel extends BasicEmployeeDetails {
         return calculate("AverageCheckInTime", attendanceOfDate);
     }
 
-    public LocalTime getAvgOutTime() {
+    private LocalTime getAvgOutTime() {
         return avgOutTime;
     }
 
@@ -54,7 +54,7 @@ public class FinalModel extends BasicEmployeeDetails {
     }
 
     //only for debugging
-    public int getCount(int i) {
+    private int getCount(int i) {
         return count[i];
     }
 
@@ -62,7 +62,7 @@ public class FinalModel extends BasicEmployeeDetails {
         count[i] = count[i] + 1;
     }
 
-    public void displayArrayList() {
+    private void displayArrayList() {
         hrnetDetails.forEach(HrnetDetails::printHrNetDetail);
     }
 

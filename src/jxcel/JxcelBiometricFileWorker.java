@@ -27,8 +27,8 @@ public class JxcelBiometricFileWorker implements IBiometricFile {
     static public Month month;
     static public Year year;
 
-    int numberOfRowsInBio;
     Sheet sheet = null;
+    int numberOfRowsInBio;
     private int ADD_ROW_STEPS = 0;
 
     public JxcelBiometricFileWorker(String biometricFile) {

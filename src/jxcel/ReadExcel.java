@@ -3,6 +3,7 @@ package jxcel;
 import DataUsage.EmployeeMasterData;
 import combinedModel.Combined2;
 import combinedModel.Discrepancy;
+import jxcel.factory.SheetFactory;
 import jxcel.view.JsonMapper;
 
 import java.io.IOException;
@@ -25,20 +26,24 @@ public class ReadExcel {
         EmployeeMasterData employeeMasterData = new EmployeeMasterData(empListID);
         employeeMasterData.readFile();
         // employeeMasterData.displayFile();
-        employeeMasterData.toJsonFile();
+        //employeeMasterData.toJsonFile();
 
+        SheetFactory sheetFactory = new SheetFactory();
+        sheetFactory.dispatch("Jxcel", biometricFile);
 
         //read Biometric Excel File
-        JxcelBiometricFileWorker jxcelFileWorker = new JxcelBiometricFileWorker(biometricFile);
-        jxcelFileWorker.readBiometricFile();
+        Object fileWorker = sheetFactory.dispatch("Jxcel", biometricFile);
+        if (fileWorker instanceof JxcelBiometricFileWorker) {
+            ((JxcelBiometricFileWorker) fileWorker).readBiometricFile();
+            //  ((JxcelBiometricFileWorker) fileWorker).displayBiometricFile();
+        }
 
-/*
-        ApacheBiometricFileWorker jxcelFileWorker = new ApacheBiometricFileWorker(biometricFile);
-        jxcelFileWorker.readBiometricFile();
-*/
         //read HRNet Excel File
-        HrnetFileWorker hrnetFileWorker = new HrnetFileWorker(hrNetFile);
-        hrnetFileWorker.readHRNetFile();
+        fileWorker = sheetFactory.dispatch("XLSX", hrNetFile);
+        if (fileWorker instanceof HrnetFileWorker) {
+            ((HrnetFileWorker) fileWorker).readHRNetFile();
+            //   ((HrnetFileWorker) fileWorker).displayHRNetFile();
+        }
 
         Combined2 combined2 = new Combined2();
         combined2.combineFiles();
@@ -50,12 +55,6 @@ public class ReadExcel {
         // remove discrepancies
         Discrepancy discrepancy = new Discrepancy();
         discrepancy.findDiscrepancy();
-
-
-        //display Biometric and HRNet Excel Files
-        //hrnetFileWorker.displayHRNetFile();
-        //jxcelFileWorker.displayBiometricFile();
-
     }
 
     public void setEmpListID(String empListID) {

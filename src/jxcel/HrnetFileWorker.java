@@ -110,6 +110,9 @@ public class HrnetFileWorker implements IHrnetFile {
                 }
             }
 
+            /**
+             * only consider the salesforce data for those months which is on biometric excel
+             */
             if (attendanceOfLeave.getStartDate().getMonth() == JxcelBiometricFileWorker.month
                     && attendanceOfLeave.getEndDate().getMonth() == JxcelBiometricFileWorker.month) {
                 if (hrnetDetails.containsKey(salesForceID)) {

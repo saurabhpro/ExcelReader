@@ -7,9 +7,7 @@ import jxcel.model.EmpBiometricDetails;
 import jxcel.model.IBiometricFile;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.text.ParseException;
 import java.time.LocalDate;
@@ -33,8 +31,6 @@ public class ApacheBiometricFileWorker implements IBiometricFile {
     static public Year year;
 
     int numberOfRowsInBio;
-    FileInputStream inputWorkbook = null;
-    Workbook workbook = null;
     Sheet sheet = null;
     Cell cell = null;
     private int ADD_ROW_STEPS = 0;

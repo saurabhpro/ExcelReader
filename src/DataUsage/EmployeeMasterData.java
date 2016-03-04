@@ -2,7 +2,6 @@ package DataUsage;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jxcel.model.BasicEmployeeDetails;
-import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -16,21 +15,19 @@ import java.util.TreeMap;
 
 /**
  * Created by kumars on 3/1/2016.
+ * this contains all employees basic records
  */
 public class EmployeeMasterData {
 
     public static Map<String, BasicEmployeeDetails> allEmployeeRecordMap;
-    int numberOfRowsInBio;
-    FileInputStream inputWorkbook = null;
-    Workbook workbook = null;
-    Sheet sheet = null;
-    Cell cell = null;
+    private int numberOfRowsInBio;
+    private Sheet sheet = null;
 
     public EmployeeMasterData(String empListID) {
         try {
-            inputWorkbook = new FileInputStream(empListID);
+            FileInputStream inputWorkbook = new FileInputStream(empListID);
 
-            workbook = new XSSFWorkbook(inputWorkbook);
+            Workbook workbook = new XSSFWorkbook(inputWorkbook);
             sheet = workbook.getSheetAt(0);          // Get the first sheet
             numberOfRowsInBio = sheet.getPhysicalNumberOfRows();
         } catch (IOException e) {

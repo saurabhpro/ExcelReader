@@ -38741,27 +38741,6 @@
             "calendarType": "iso8601"
           }
       },
-      "checkIn" : null,
-      "checkOut" : null,
-      "overTime" : null,
-      "workTimeForDay" : null,
-        "attendanceStatusType": "WEEKEND_HOLIDAY",
-      "attendanceOfLeave" : null
-    }, {
-      "currentDate" : {
-        "year" : 2016,
-        "month": "FEBRUARY",
-        "era" : "CE",
-        "dayOfMonth": 14,
-        "dayOfWeek": "SUNDAY",
-        "dayOfYear": 45,
-        "leapYear": true,
-        "monthValue": 2,
-        "chronology": {
-          "id": "ISO",
-          "calendarType": "iso8601"
-        }
-      },
         "checkIn": null,
         "checkOut": null,
         "overTime": null,
@@ -38774,15 +38753,36 @@
           "year": 2016,
           "month": "FEBRUARY",
           "era": "CE",
-          "dayOfMonth": 15,
-          "dayOfWeek": "MONDAY",
-          "dayOfYear": 46,
+          "dayOfMonth": 14,
+          "dayOfWeek": "SUNDAY",
+          "dayOfYear": 45,
           "leapYear": true,
           "monthValue": 2,
           "chronology": {
             "id": "ISO",
             "calendarType": "iso8601"
           }
+      },
+      "checkIn" : null,
+      "checkOut" : null,
+      "overTime" : null,
+      "workTimeForDay" : null,
+        "attendanceStatusType": "WEEKEND_HOLIDAY",
+      "attendanceOfLeave" : null
+    }, {
+      "currentDate" : {
+        "year" : 2016,
+        "month": "FEBRUARY",
+        "era" : "CE",
+        "dayOfMonth": 15,
+        "dayOfWeek": "MONDAY",
+        "dayOfYear": 46,
+        "leapYear": true,
+        "monthValue": 2,
+        "chronology": {
+          "id": "ISO",
+          "calendarType": "iso8601"
+        }
       },
         "checkIn": {
           "hour": 8,
@@ -39389,27 +39389,6 @@
             "calendarType": "iso8601"
           }
       },
-      "checkIn" : null,
-      "checkOut" : null,
-      "overTime" : null,
-      "workTimeForDay" : null,
-        "attendanceStatusType": "WEEKEND_HOLIDAY",
-      "attendanceOfLeave" : null
-    }, {
-      "currentDate" : {
-        "year" : 2016,
-        "month": "FEBRUARY",
-        "era" : "CE",
-        "dayOfMonth": 7,
-        "dayOfWeek": "SUNDAY",
-        "dayOfYear": 38,
-        "leapYear": true,
-        "monthValue": 2,
-        "chronology": {
-          "id": "ISO",
-          "calendarType": "iso8601"
-        }
-      },
         "checkIn": null,
         "checkOut": null,
         "overTime": null,
@@ -39422,15 +39401,36 @@
           "year": 2016,
           "month": "FEBRUARY",
           "era": "CE",
-          "dayOfMonth": 8,
-          "dayOfWeek": "MONDAY",
-          "dayOfYear": 39,
+          "dayOfMonth": 7,
+          "dayOfWeek": "SUNDAY",
+          "dayOfYear": 38,
           "leapYear": true,
           "monthValue": 2,
           "chronology": {
             "id": "ISO",
             "calendarType": "iso8601"
           }
+      },
+      "checkIn" : null,
+      "checkOut" : null,
+      "overTime" : null,
+      "workTimeForDay" : null,
+        "attendanceStatusType": "WEEKEND_HOLIDAY",
+      "attendanceOfLeave" : null
+    }, {
+      "currentDate" : {
+        "year" : 2016,
+        "month": "FEBRUARY",
+        "era" : "CE",
+        "dayOfMonth": 8,
+        "dayOfWeek": "MONDAY",
+        "dayOfYear": 39,
+        "leapYear": true,
+        "monthValue": 2,
+        "chronology": {
+          "id": "ISO",
+          "calendarType": "iso8601"
+        }
       },
         "checkIn": {
           "hour": 8,
@@ -39617,27 +39617,6 @@
             "calendarType": "iso8601"
           }
       },
-      "checkIn" : null,
-      "checkOut" : null,
-      "overTime" : null,
-      "workTimeForDay" : null,
-        "attendanceStatusType": "WEEKEND_HOLIDAY",
-      "attendanceOfLeave" : null
-    }, {
-      "currentDate" : {
-        "year" : 2016,
-        "month": "FEBRUARY",
-        "era" : "CE",
-        "dayOfMonth": 14,
-        "dayOfWeek": "SUNDAY",
-        "dayOfYear": 45,
-        "leapYear": true,
-        "monthValue": 2,
-        "chronology": {
-          "id": "ISO",
-          "calendarType": "iso8601"
-        }
-      },
         "checkIn": null,
         "checkOut": null,
         "overTime": null,
@@ -39650,15 +39629,36 @@
           "year": 2016,
           "month": "FEBRUARY",
           "era": "CE",
-          "dayOfMonth": 15,
-          "dayOfWeek": "MONDAY",
-          "dayOfYear": 46,
+          "dayOfMonth": 14,
+          "dayOfWeek": "SUNDAY",
+          "dayOfYear": 45,
           "leapYear": true,
           "monthValue": 2,
           "chronology": {
             "id": "ISO",
             "calendarType": "iso8601"
           }
+      },
+      "checkIn" : null,
+      "checkOut" : null,
+      "overTime" : null,
+      "workTimeForDay" : null,
+        "attendanceStatusType": "WEEKEND_HOLIDAY",
+      "attendanceOfLeave" : null
+    }, {
+      "currentDate" : {
+        "year" : 2016,
+        "month": "FEBRUARY",
+        "era" : "CE",
+        "dayOfMonth": 15,
+        "dayOfWeek": "MONDAY",
+        "dayOfYear": 46,
+        "leapYear": true,
+        "monthValue": 2,
+        "chronology": {
+          "id": "ISO",
+          "calendarType": "iso8601"
+        }
       },
         "checkIn": {
           "hour": 7,
@@ -40056,10 +40056,10 @@
             "calendarType": "iso8601"
           }
       },
-      "checkIn" : null,
-      "checkOut" : null,
-      "overTime" : null,
-      "workTimeForDay" : null,
+        "checkIn": null,
+        "checkOut": null,
+        "overTime": null,
+        "workTimeForDay": null,
         "attendanceStatusType": "WEEKEND_HOLIDAY",
         "attendanceOfLeave": null
       },
@@ -40078,10 +40078,10 @@
             "calendarType": "iso8601"
           }
       },
-        "checkIn": null,
-        "checkOut": null,
-        "overTime": null,
-        "workTimeForDay": null,
+      "checkIn" : null,
+      "checkOut" : null,
+      "overTime" : null,
+      "workTimeForDay" : null,
         "attendanceStatusType": "WEEKEND_HOLIDAY",
         "attendanceOfLeave": null
       },

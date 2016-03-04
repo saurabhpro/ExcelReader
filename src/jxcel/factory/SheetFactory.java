@@ -1,22 +1,24 @@
 package jxcel.factory;
 
+import jxcel.ApacheBiometricFileWorker;
+import jxcel.HrnetFileWorker;
+import jxcel.JxcelBiometricFileWorker;
+
 /**
  * Created by Saurabh on 3/3/2016.
  */
 public class SheetFactory {
-    public void dispatch(String type, String file) {
+    public Object dispatch(String type, String file) {
 
         switch (type) {
             case "Jxcel":
-                new JXLSSheetAndCell().JXLSSheet(file);
-                break;
+                return new JxcelBiometricFileWorker(file);
             case "XLS":
-                new XLSSheetAndCell().ApacheXLSSheet(file);
-                break;
+                return new ApacheBiometricFileWorker(file);
             case "XLSX":
-                new XLSXSheetAndCell().ApacheXLSXSheet(file);
-                break;
+                return new HrnetFileWorker(file);
         }
+        return null;
     }
 
 }
