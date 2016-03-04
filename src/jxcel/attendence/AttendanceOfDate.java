@@ -75,8 +75,6 @@ public class AttendanceOfDate {
                 statusType = AttendanceStatusType.ABSENT;
             else if (getWorkTimeForDay().compareTo(LocalTime.of(6, 0)) < 0)
                 statusType = AttendanceStatusType.HALF_DAY;
-            else
-                statusType = AttendanceStatusType.PRESENT;
         }
 
 

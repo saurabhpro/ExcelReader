@@ -10,6 +10,7 @@ import java.time.LocalTime;
 import java.util.Arrays;
 import java.util.List;
 
+import static jxcel.model.AttendanceStatusType.*;
 /**
  * Created by SaurabhK on 09-02-2016.
  */
@@ -75,7 +76,11 @@ public class TimeManager {
         int hoursTotal = 0, minsTotal = 0, presentDays = 0;
 
         for (AttendanceOfDate inTime : ofDates) {
-            if (inTime.getAttendanceStatusType() == AttendanceStatusType.PRESENT) {
+            AttendanceStatusType attendanceStatusType = inTime.getAttendanceStatusType();
+            if ((attendanceStatusType.equals(ABSENT)) ||
+                    ((attendanceStatusType.equals(PUBLIC_HOLIDAY) ||
+                            attendanceStatusType.equals(WEEKEND_HOLIDAY))
+                            && (inTime.getCheckIn() != null))) {
                 switch (type) {
                     case "AverageCheckOutTime":
                         if (inTime.getCheckOut() != null) {

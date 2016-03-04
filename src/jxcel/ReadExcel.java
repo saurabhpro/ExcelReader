@@ -3,6 +3,7 @@ package jxcel;
 import DataUsage.EmployeeMasterData;
 import combinedModel.Combined2;
 import combinedModel.Discrepancy;
+import combinedModel.PublicHolidayList;
 import jxcel.factory.SheetFactory;
 import jxcel.view.JsonMapper;
 
@@ -20,7 +21,7 @@ public class ReadExcel {
     public static void main(String[] args) throws IOException, ParseException {
         ReadExcel test = new ReadExcel();
         test.setEmpListID(".\\ExcelFiles\\Emails.xlsx");
-        test.setBiometricFile(".\\ExcelFiles\\feb leaves.xls");
+        test.setBiometricFile(".\\ExcelFiles\\jan leaves.xls");
         test.setHrNetFile(".\\ExcelFiles\\Jan-Feb FF Report.xlsx");
 
         EmployeeMasterData employeeMasterData = new EmployeeMasterData(empListID);
@@ -29,7 +30,7 @@ public class ReadExcel {
         //employeeMasterData.toJsonFile();
 
         SheetFactory sheetFactory = new SheetFactory();
-        sheetFactory.dispatch("Jxcel", biometricFile);
+
 
         //read Biometric Excel File
         Object fileWorker = sheetFactory.dispatch("Jxcel", biometricFile);
@@ -55,6 +56,8 @@ public class ReadExcel {
         // remove discrepancies
         Discrepancy discrepancy = new Discrepancy();
         discrepancy.findDiscrepancy();
+
+        new PublicHolidayList().presentPublicHolidayList();
     }
 
     public void setEmpListID(String empListID) {

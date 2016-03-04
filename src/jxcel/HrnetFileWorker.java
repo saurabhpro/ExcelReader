@@ -115,6 +115,7 @@ public class HrnetFileWorker implements IHrnetFile {
              */
             if (attendanceOfLeave.getStartDate().getMonth() == JxcelBiometricFileWorker.month
                     && attendanceOfLeave.getEndDate().getMonth() == JxcelBiometricFileWorker.month) {
+
                 if (hrnetDetails.containsKey(salesForceID)) {
                     tempArrLst = hrnetDetails.get(salesForceID);
                     tempArrLst.add(new HrnetDetails(salesForceID, empName, empRequest, attendanceOfLeave));

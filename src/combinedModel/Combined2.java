@@ -67,19 +67,26 @@ public class Combined2 {
                                     LocalDate startDate = hr.attendanceOfLeave.getStartDate();
                                     double leaveTime = hr.attendanceOfLeave.getAbsenceTime();
 
-                                    int changeDatesRange = startDate.getDayOfMonth() - 1;
+                                    int changeDatesRange = 0;
+                                    //bug
+                                    if (startDate.getMonth() == JxcelBiometricFileWorker.month) {
 
-                                    while (leaveTime > 0) {
-                                        if (leaveTime == 0.5) {
-                                            empObj.attendanceOfDate[changeDatesRange].setAttendanceStatusType(HALF_DAY);
+                                        changeDatesRange = startDate.getDayOfMonth() - 1;
+                                        while (leaveTime > 0) {
+                                            if (leaveTime == 0.5) {
+                                                empObj.attendanceOfDate[changeDatesRange].setAttendanceStatusType(HALF_DAY);
 
-                                        } else if (hr.attendanceOfLeave.getLeaveType() == LeaveType.WORK_FROM_HOME_IND) {
-                                            empObj.attendanceOfDate[changeDatesRange].setWorkTimeForDay(LocalTime.of(8, 0));
-                                            empObj.attendanceOfDate[changeDatesRange].setAttendanceStatusType(PRESENT);
+                                            } else if (hr.attendanceOfLeave.getLeaveType() == LeaveType.WORK_FROM_HOME_IND) {
+                                                System.out.println(hr.attendanceOfLeave.getStartDate() + "" + hr.getName());
+                                                empObj.attendanceOfDate[changeDatesRange].setWorkTimeForDay(LocalTime.of(6, 0));        //set work from home as 6 hours
+                                                empObj.attendanceOfDate[changeDatesRange].setAttendanceStatusType(PRESENT);
+                                            }
+                                            changeDatesRange++;
+                                            leaveTime--;
                                         }
-                                        changeDatesRange++;
-                                        leaveTime--;
                                     }
+
+
                                 }
                             }
                         }
