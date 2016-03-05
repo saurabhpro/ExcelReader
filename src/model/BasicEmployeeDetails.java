@@ -32,7 +32,7 @@ public class BasicEmployeeDetails {
     }
 
     public void setEmailId(String emailId) {
-        this.emailId = emailId;
+        this.emailId = emailId.toLowerCase();
     }
 
     public String getName() {

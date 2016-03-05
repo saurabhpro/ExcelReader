@@ -43,7 +43,7 @@ public class EmployeeMasterData {
             b.setName(sheet.getRow(row).getCell(0).getStringCellValue());
             b.setEmailId(sheet.getRow(row).getCell(1).getStringCellValue());
             b.setEmpId(sheet.getRow(row).getCell(2).getStringCellValue());
-            b.setSalesForceId(Objects.toString(sheet.getRow(row).getCell(3).getNumericCellValue()));
+            b.setSalesForceId(Objects.toString((int) sheet.getRow(row).getCell(3).getNumericCellValue()));
 
             allEmployeeRecordMap.put(b.getEmpId(), b);
         }

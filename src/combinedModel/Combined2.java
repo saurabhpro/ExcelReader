@@ -124,7 +124,7 @@ public class Combined2 {
         //Combine Hrnet and Biometric Files
         for (EmpBiometricDetails empObj : empBiometricDetails.values()) {
             if (empObj.getNumberOfLeaves() == 0) {
-                EmpCombinedMap.put(empObj.getName(), new FinalModel(empObj.getEmpId(), empObj.getName(),
+                EmpCombinedMap.put(empObj.getEmpId(), new FinalModel(empObj.getEmpId(),
                         empObj.numberOfLeaves, empObj.attendanceOfDate, null));
             } else {
                 Set<String> hrKeySet = empHrnetDetails.keySet();
@@ -132,7 +132,7 @@ public class Combined2 {
                     String tempSalesForceId = new BasicEmployeeDetails().getSalesForceId(empObj.getEmpId());
                     if (tempSalesForceId != null && hrKey.equals(tempSalesForceId)) {
                         ArrayList<HrnetDetails> hrnet = empHrnetDetails.get(hrKey);
-                        EmpCombinedMap.put(empObj.getName(), new FinalModel(empObj.getEmpId(), empObj.getName(),
+                        EmpCombinedMap.put(empObj.getEmpId(), new FinalModel(empObj.getEmpId(),
                                 empObj.numberOfLeaves, empObj.attendanceOfDate, hrnet));
                     }
                 }
@@ -155,9 +155,7 @@ public class Combined2 {
                 else if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(HALF_DAY))
                     emp.setCount(4);
             }
-
         }
-
     }
 
     public void displayCombineFiles() {

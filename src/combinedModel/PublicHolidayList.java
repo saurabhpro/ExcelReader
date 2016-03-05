@@ -36,6 +36,7 @@ public class PublicHolidayList {
 
     public void showExtraWorkTime(FinalModel finalModel, HolidaysList h) {
         finalModel.displayBasicInfo();
+
         AttendanceOfDate temp = finalModel.attendanceOfDate[h.getDate().getDayOfMonth() - 1];
         System.out.println(temp.getCurrentDate() + " " + temp.getCheckIn() + " " + temp.getCheckOut()
                 + " " + temp.getAttendanceStatusType() + " " + temp.getWorkTimeForDay() + " " + h.name());

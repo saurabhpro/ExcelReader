@@ -32,7 +32,7 @@ public class HrnetFileWorker implements IHrnetFile {
         if (cell.getCellType() == Cell.CELL_TYPE_STRING)
             return cell.getStringCellValue();
         else
-            return Objects.toString(cell.getNumericCellValue());
+            return Objects.toString((int) cell.getNumericCellValue());
     }
 
 
