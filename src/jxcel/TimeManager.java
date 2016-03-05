@@ -1,7 +1,7 @@
 package jxcel;
 
-import jxcel.attendence.AttendanceOfDate;
-import jxcel.model.AttendanceStatusType;
+import model.attendence.AttendanceOfDate;
+import model.attendence.AttendanceStatusType;
 
 import java.time.Duration;
 import java.time.LocalDate;
@@ -10,7 +10,8 @@ import java.time.LocalTime;
 import java.util.Arrays;
 import java.util.List;
 
-import static jxcel.model.AttendanceStatusType.*;
+import static model.attendence.AttendanceStatusType.*;
+
 /**
  * Created by SaurabhK on 09-02-2016.
  */

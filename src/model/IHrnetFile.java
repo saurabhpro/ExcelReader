@@ -1,4 +1,4 @@
-package jxcel.model;
+package model;
 
 import java.io.IOException;
 

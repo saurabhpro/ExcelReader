@@ -2,10 +2,10 @@
  * Created by Saurabhk on 08-02-2016.
  */
 
-package jxcel.model;
+package model;
 
 import jxcel.JxcelBiometricFileWorker;
-import jxcel.attendence.AttendanceOfDate;
+import model.attendence.AttendanceOfDate;
 
 import java.time.LocalTime;
 

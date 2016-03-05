@@ -1,6 +1,4 @@
-package jxcel.attendence;
-
-import jxcel.model.AttendanceStatusType;
+package model.attendence;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
@@ -18,17 +16,6 @@ public class AttendanceOfDate {
     private LocalTime overTime = null;
     private LocalTime workTimeForDay = null;
     private AttendanceStatusType attendanceStatusType = null;
-
-    //new field added to account for combining both models later
-    private AttendanceOfLeave attendanceOfLeave = null;
-
-    public AttendanceOfLeave getAttendanceOfLeave() {
-        return attendanceOfLeave;
-    }
-
-    public void setAttendanceOfLeave(AttendanceOfLeave attendanceOfLeave) {
-        this.attendanceOfLeave = attendanceOfLeave;
-    }
 
     public LocalTime getWorkTimeForDay() {
         if (workTimeForDay == null && getCheckIn() != null && getCheckOut() != null && getCurrentDate() != null)
@@ -77,15 +64,12 @@ public class AttendanceOfDate {
                 statusType = AttendanceStatusType.HALF_DAY;
         }
 
-
         if (statusType.compareTo(AttendanceStatusType.ABSENT) == 0) {
             if (getCurrentDate().getDayOfWeek() == DayOfWeek.SATURDAY ||
                     getCurrentDate().getDayOfWeek() == DayOfWeek.SUNDAY)
 
                 statusType = AttendanceStatusType.WEEKEND_HOLIDAY;
         }
-
-
         this.attendanceStatusType = statusType;
     }
 

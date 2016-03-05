@@ -1,11 +1,11 @@
 package jxcel;
 
-import jxcel.attendence.AttendanceOfLeave;
-import jxcel.factory.XLSXSheetAndCell;
-import jxcel.model.HrnetColumns;
-import jxcel.model.HrnetDetails;
-import jxcel.model.IHrnetFile;
-import jxcel.model.LeaveType;
+import factory.XLSXSheetAndCell;
+import model.HrnetColumns;
+import model.HrnetDetails;
+import model.IHrnetFile;
+import model.attendence.AttendanceOfLeave;
+import model.attendence.LeaveType;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
 
@@ -91,12 +91,14 @@ public class HrnetFileWorker implements IHrnetFile {
                     case 4:
                         hre = HrnetColumns.START_DATE;
                         tempDate = getLocalDate(cell);
-                        attendanceOfLeave.setStartDate(tempDate);
+                        if (tempDate.getMonth().equals(JxcelBiometricFileWorker.month))
+                            attendanceOfLeave.setStartDate(tempDate);
                         break;
                     case 5:
                         hre = HrnetColumns.END_DATE;
                         tempDate = getLocalDate(cell);
-                        attendanceOfLeave.setEndDate(tempDate);
+                        if (attendanceOfLeave.getStartDate() != null)
+                            attendanceOfLeave.setEndDate(tempDate);
                         break;
 
                     case 6:
@@ -113,9 +115,7 @@ public class HrnetFileWorker implements IHrnetFile {
             /**
              * only consider the salesforce data for those months which is on biometric excel
              */
-            if (attendanceOfLeave.getStartDate().getMonth() == JxcelBiometricFileWorker.month
-                    && attendanceOfLeave.getEndDate().getMonth() == JxcelBiometricFileWorker.month) {
-
+            if (attendanceOfLeave.getStartDate() != null) {
                 if (hrnetDetails.containsKey(salesForceID)) {
                     tempArrLst = hrnetDetails.get(salesForceID);
                     tempArrLst.add(new HrnetDetails(salesForceID, empName, empRequest, attendanceOfLeave));

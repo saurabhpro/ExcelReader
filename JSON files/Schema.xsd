@@ -1,44 +1,49 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-    <xs:element name="CompanyInfo" fixed="REVAL INDIA PVT LTD"/>
+	<xs:element name="CompanyInfo" fixed="REVAL INDIA PVT LTD"/>
 
-    <xs:group name="YearMonth">
-            <xs:sequence>
-                <xs:element name="Year" type='xs:integer'/>
-                <xs:element name="Month" type="xs:string"/>
-            </xs:sequence>
-    </xs:group>
+	<xs:group name="YearMonth">
+		<xs:sequence>
+			<xs:element name="Year" type='xs:integer'/>
+			<xs:element name="Month" type="xs:string"/>
+		</xs:sequence>
+	</xs:group>
 
-    <xs:element name="SerialNumber" type="xs:int">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="EmployeeDetails">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="IdOfEmployee" type="xs:string"/>
-                            <xs:element name="nameOfEmployee" type="xs:string"/>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
+	<xs:element name="SerialNumber" type="xs:int">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="EmployeeDetails">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="IdOfEmployee" type="xs:string"/>
+							<xs:element name="nameOfEmployee" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
 
-                <xs:element name="DaysOfMonth">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="Date" type="xs:date" minOccurs='28' maxOccurs='31'>
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element name='CheckInTime' type='xs:time' minOccurs='0' maxOccurs='31'/>
-                                        <xs:element name='CheckOutTime' type='xs:time' minOccurs='0' maxOccurs='31'/>
-                                        <xs:element name='OverTime' type='xs:time' minOccurs='0' maxOccurs='31'/>
-                                        <xs:element name='EmpStatus' type='xs:string' minOccurs='1' maxOccurs='31'/>
-                                    </xs:sequence>
-                                </xs:complexType>
-                            </xs:element>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
+				<xs:element name="DaysOfMonth">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Date" type="xs:date" minOccurs='28'
+										maxOccurs='31'>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name='CheckInTime' type='xs:time'
+													minOccurs='0' maxOccurs='31'/>
+										<xs:element name='CheckOutTime' type='xs:time'
+													minOccurs='0' maxOccurs='31'/>
+										<xs:element name='OverTime' type='xs:time'
+													minOccurs='0' maxOccurs='31'/>
+										<xs:element name='EmpStatus' type='xs:string'
+													minOccurs='1' maxOccurs='31'/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
 </xs:schema>

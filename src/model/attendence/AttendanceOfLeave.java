@@ -1,6 +1,4 @@
-package jxcel.attendence;
-
-import jxcel.model.LeaveType;
+package model.attendence;
 
 import java.time.LocalDate;
 

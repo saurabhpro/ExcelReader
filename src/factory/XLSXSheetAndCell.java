@@ -1,4 +1,4 @@
-package jxcel.factory;
+package factory;
 
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;

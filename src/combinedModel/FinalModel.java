@@ -1,9 +1,9 @@
 package combinedModel;
 
 import jxcel.JxcelBiometricFileWorker;
-import jxcel.attendence.AttendanceOfDate;
-import jxcel.model.BasicEmployeeDetails;
-import jxcel.model.HrnetDetails;
+import model.BasicEmployeeDetails;
+import model.HrnetDetails;
+import model.attendence.AttendanceOfDate;
 
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -104,4 +104,7 @@ public class FinalModel extends BasicEmployeeDetails {
         System.out.println();
     }
 
+    public boolean isSetIfClarificationFromEmployee() {
+        return setIfClarificationFromEmployee;
+    }
 }

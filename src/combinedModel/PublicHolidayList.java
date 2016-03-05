@@ -1,9 +1,9 @@
 package combinedModel;
 
 import jxcel.JxcelBiometricFileWorker;
-import jxcel.attendence.AttendanceOfDate;
-import jxcel.model.AttendanceStatusType;
-import jxcel.model.HolidaysList;
+import model.attendence.AttendanceOfDate;
+import model.attendence.AttendanceStatusType;
+import model.attendence.HolidaysList;
 
 import java.util.Map;
 

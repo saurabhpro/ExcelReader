@@ -1,13 +1,13 @@
 package combinedModel;
 
 import jxcel.JxcelBiometricFileWorker;
-import jxcel.model.HrnetDetails;
+import model.HrnetDetails;
 
 import java.time.LocalDate;
 import java.util.Map;
 
-import static jxcel.model.AttendanceStatusType.*;
-import static jxcel.model.LeaveType.WORK_FROM_HOME_IND;
+import static model.attendence.AttendanceStatusType.*;
+import static model.attendence.LeaveType.WORK_FROM_HOME_IND;
 
 /**
  * Created by AroraA on 17-02-2016.

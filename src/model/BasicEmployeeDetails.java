@@ -1,6 +1,6 @@
-package jxcel.model;
+package model;
 
-import DataUsage.EmployeeMasterData;
+import emplmasterrecord.EmployeeMasterData;
 
 /**
  * Created by kumars on 2/29/2016.

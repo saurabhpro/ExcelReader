@@ -1,4 +1,4 @@
-package jxcel.model;
+package model.attendence;
 
 import java.time.LocalDate;
 import java.time.Month;

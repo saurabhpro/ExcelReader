@@ -1,4 +1,4 @@
-package jxcel.model;
+package model.attendence;
 
 /**
  * Created by AroraA on 09-02-2016.

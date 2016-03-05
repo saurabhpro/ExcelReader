@@ -1,4 +1,4 @@
-package jxcel.factory;
+package factory;
 
 import jxcel.ApacheBiometricFileWorker;
 import jxcel.HrnetFileWorker;

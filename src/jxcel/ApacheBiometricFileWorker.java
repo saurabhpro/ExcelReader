@@ -1,10 +1,10 @@
 package jxcel;
 
-import jxcel.attendence.AttendanceOfDate;
-import jxcel.factory.XLSSheetAndCell;
-import jxcel.model.AttendanceStatusType;
-import jxcel.model.EmpBiometricDetails;
-import jxcel.model.IBiometricFile;
+import factory.XLSSheetAndCell;
+import model.EmpBiometricDetails;
+import model.IBiometricFile;
+import model.attendence.AttendanceOfDate;
+import model.attendence.AttendanceStatusType;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
 

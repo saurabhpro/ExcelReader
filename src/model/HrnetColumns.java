@@ -1,4 +1,4 @@
-package jxcel.model;
+package model;
 
 /**
  * Created by Saurabh on 2/12/2016.

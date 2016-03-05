@@ -1,11 +1,10 @@
 package jxcel;
 
-import DataUsage.EmployeeMasterData;
 import combinedModel.Combined2;
-import combinedModel.Discrepancy;
 import combinedModel.PublicHolidayList;
-import jxcel.factory.SheetFactory;
-import jxcel.view.JsonMapper;
+import emplmasterrecord.EmployeeMasterData;
+import factory.SheetFactory;
+import view.JsonMapper;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -43,7 +42,7 @@ public class ReadExcel {
         fileWorker = sheetFactory.dispatch("XLSX", hrNetFile);
         if (fileWorker instanceof HrnetFileWorker) {
             ((HrnetFileWorker) fileWorker).readHRNetFile();
-            //   ((HrnetFileWorker) fileWorker).displayHRNetFile();
+            ((HrnetFileWorker) fileWorker).displayHRNetFile();
         }
 
         Combined2 combined2 = new Combined2();
@@ -51,11 +50,11 @@ public class ReadExcel {
         new JsonMapper().toJsonFile(null).fromJsonToFormattedJson(null);
 
         //display Combined Files
-        combined2.displayCombineFiles();
+        //combined2.displayCombineFiles();
 
         // remove discrepancies
-        Discrepancy discrepancy = new Discrepancy();
-        discrepancy.findDiscrepancy();
+        //Discrepancy discrepancy = new Discrepancy();
+        // discrepancy.findDiscrepancy();
 
         new PublicHolidayList().presentPublicHolidayList();
     }

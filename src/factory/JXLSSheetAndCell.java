@@ -1,4 +1,4 @@
-package jxcel.factory;
+package factory;
 
 import jxl.Sheet;
 import jxl.Workbook;

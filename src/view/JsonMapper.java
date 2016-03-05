@@ -1,10 +1,10 @@
-package jxcel.view;
+package view;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jxcel.JxcelBiometricFileWorker;
-import jxcel.model.EmpBiometricDetails;
+import model.EmpBiometricDetails;
 
 import java.io.File;
 import java.io.FileWriter;

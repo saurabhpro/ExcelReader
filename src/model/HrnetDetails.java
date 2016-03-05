@@ -1,6 +1,6 @@
-package jxcel.model;
+package model;
 
-import jxcel.attendence.AttendanceOfLeave;
+import model.attendence.AttendanceOfLeave;
 
 /**
  * Created by AroraA on 09-02-2016.

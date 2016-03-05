@@ -1,11 +1,11 @@
 package jxcel;
 
-import jxcel.attendence.AttendanceOfDate;
-import jxcel.factory.JXLSSheetAndCell;
-import jxcel.model.AttendanceStatusType;
-import jxcel.model.EmpBiometricDetails;
-import jxcel.model.IBiometricFile;
+import factory.JXLSSheetAndCell;
 import jxl.Sheet;
+import model.EmpBiometricDetails;
+import model.IBiometricFile;
+import model.attendence.AttendanceOfDate;
+import model.attendence.AttendanceStatusType;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -73,15 +73,15 @@ public class JxcelBiometricFileWorker implements IBiometricFile {
                         case "A":
                         case "A/A":
                         case "P/A":
+                        case "A/P":
                             attendanceStatus = AttendanceStatusType.ABSENT;
                             break lb;
 
                         case "W":
-                            //case when employee checks in on weekend or public holiday
+                            //case when employee checks in on weekend
                             attendanceStatus = AttendanceStatusType.WEEKEND_HOLIDAY;
                             break lb;
 
-                        case "A/P":
                         case "P":
                             attendanceStatus = AttendanceStatusType.PRESENT;
                             break lb;
