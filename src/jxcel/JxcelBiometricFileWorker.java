@@ -3,12 +3,10 @@ package jxcel;
 import factory.JXLSSheetAndCell;
 import jxl.Sheet;
 import model.EmpBiometricDetails;
-import model.IBiometricFile;
+import model.FileOperations;
 import model.attendence.AttendanceOfDate;
 import model.attendence.AttendanceStatusType;
 
-import java.io.IOException;
-import java.text.ParseException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.Month;
@@ -21,7 +19,7 @@ import java.util.TreeMap;
  * Created by Saurabh on 2/10/2016.
  * updated on 2/13/2016
  */
-public class JxcelBiometricFileWorker implements IBiometricFile {
+public class JxcelBiometricFileWorker implements FileOperations {
 
     static public Map<String, EmpBiometricDetails> empList = null;
     static public Month month;
@@ -100,7 +98,7 @@ public class JxcelBiometricFileWorker implements IBiometricFile {
 
 
     @Override
-    public void readBiometricFile() throws IOException, ParseException {
+    public void readFile() {
         //local data
         String empId, empName;
         AttendanceOfDate[] attendanceOfDate;
@@ -128,7 +126,7 @@ public class JxcelBiometricFileWorker implements IBiometricFile {
     }
 
     @Override
-    public void displayBiometricFile() {
+    public void displayFile() {
         System.out.println(month);
         empList.values().forEach(EmpBiometricDetails::printEmpBiometricDetails);
     }

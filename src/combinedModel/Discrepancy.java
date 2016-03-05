@@ -11,6 +11,7 @@ import static model.attendence.LeaveType.WORK_FROM_HOME_IND;
 
 /**
  * Created by AroraA on 17-02-2016.
+ * 6-03-2016 changed the Type from ABSENT to UNACCOUNTED_ABSENCE.
  */
 
 public class Discrepancy {
@@ -21,7 +22,7 @@ public class Discrepancy {
             //Discrepancy if an employee is absent and there is no entry in Hrnet file.
             if (finalModel.hrnetDetails == null) {
                 for (int j = 0; j < JxcelBiometricFileWorker.month.maxLength(); j++) {
-                    if ((finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(ABSENT))
+                    if ((finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(UNACCOUNTED_ABSENCE))
                             || (finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(HALF_DAY))) {
                         System.out.println("Null List- Discrepancy Set for " + finalModel.getName() + " Date: " + (j + 1));
                         finalModel.setIfClarificationFromEmployee(true);
@@ -34,7 +35,7 @@ public class Discrepancy {
                 for (int j = 0; j < JxcelBiometricFileWorker.month.maxLength(); j++) {
                     flag = 0;
                     //his status is still absent after merging
-                    if (finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(ABSENT)) {
+                    if (finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(UNACCOUNTED_ABSENCE)) {
 
                         int[] temp;
                         for (HrnetDetails hrnetDetail : finalModel.hrnetDetails) {

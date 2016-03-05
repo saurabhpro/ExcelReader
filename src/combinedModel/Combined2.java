@@ -20,6 +20,7 @@ import static model.attendence.AttendanceStatusType.*;
 
 /**
  * Created by kumars on 2/16/2016.
+ * * 6-03-2016 changed the Type from ABSENT to UNACCOUNTED_ABSENCE.
  */
 public class Combined2 {
 
@@ -73,13 +74,9 @@ public class Combined2 {
                             if (tempSalesForceId != null && tempSalesForceId.equals(hrEntry.getKey())) {
 
                                 for (HrnetDetails hr : hrEntry.getValue()) {
-                                    LocalDate startDate = hr.attendanceOfLeave.getStartDate();
-                                    LocalDate endDate = hr.attendanceOfLeave.getEndDate();
-
                                     double leaveTime = hr.attendanceOfLeave.getAbsenceTime();
-
-                                    LocalDate tempStart = startDate;
-                                    int changeDatesRange = 0;
+                                    LocalDate tempStart = hr.attendanceOfLeave.getStartDate();
+                                    int changeDatesRange;
                                     do {
                                         changeDatesRange = tempStart.getDayOfMonth() - 1;
 
@@ -95,8 +92,6 @@ public class Combined2 {
                                         tempStart = tempStart.plusDays(1);
                                     }
                                     while (leaveTime > 0 && tempStart.getMonth().equals(JxcelBiometricFileWorker.month));
-
-
                                 }
                             }
                         }
@@ -108,7 +103,11 @@ public class Combined2 {
         //update number of work hours for half day
         for (EmpBiometricDetails empObj : empBiometricDetails.values()) {
             for (int i = 0; i < JxcelBiometricFileWorker.month.maxLength(); i++) {
-                if (empObj.attendanceOfDate[i].getAttendanceStatusType().equals(HALF_DAY)) {
+                //06-03-2016 changed the Type from ABSENT to UNACCOUNTED_ABSENCE.
+                if (empObj.attendanceOfDate[i].getAttendanceStatusType().equals(ABSENT))
+                    empObj.attendanceOfDate[i].setAttendanceStatusType(UNACCOUNTED_ABSENCE);
+
+                else if (empObj.attendanceOfDate[i].getAttendanceStatusType().equals(HALF_DAY)) {
                     LocalTime time = empObj.attendanceOfDate[i].getWorkTimeForDay();
                     if (time == null)
                         empObj.attendanceOfDate[i].setWorkTimeForDay(LocalTime.of(4, 0));
@@ -124,7 +123,7 @@ public class Combined2 {
         //Combine Hrnet and Biometric Files
         for (EmpBiometricDetails empObj : empBiometricDetails.values()) {
             if (empObj.getNumberOfLeaves() == 0) {
-                EmpCombinedMap.put(empObj.getName(), new FinalModel(empObj.getEmpId(), empObj.getName(),
+                EmpCombinedMap.put(empObj.getEmpId(), new FinalModel(empObj.getEmpId(),
                         empObj.numberOfLeaves, empObj.attendanceOfDate, null));
             } else {
                 Set<String> hrKeySet = empHrnetDetails.keySet();
@@ -132,7 +131,7 @@ public class Combined2 {
                     String tempSalesForceId = new BasicEmployeeDetails().getSalesForceId(empObj.getEmpId());
                     if (tempSalesForceId != null && hrKey.equals(tempSalesForceId)) {
                         ArrayList<HrnetDetails> hrnet = empHrnetDetails.get(hrKey);
-                        EmpCombinedMap.put(empObj.getName(), new FinalModel(empObj.getEmpId(), empObj.getName(),
+                        EmpCombinedMap.put(empObj.getEmpId(), new FinalModel(empObj.getEmpId(),
                                 empObj.numberOfLeaves, empObj.attendanceOfDate, hrnet));
                     }
                 }
@@ -144,7 +143,7 @@ public class Combined2 {
             for (int j = 0; j < JxcelBiometricFileWorker.month.maxLength(); j++) {
 
                 //AMRITA
-                if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(ABSENT))
+                if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(UNACCOUNTED_ABSENCE))
                     emp.setCount(0);
                 else if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(PRESENT))
                     emp.setCount(1);
@@ -155,9 +154,7 @@ public class Combined2 {
                 else if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(HALF_DAY))
                     emp.setCount(4);
             }
-
         }
-
     }
 
     public void displayCombineFiles() {

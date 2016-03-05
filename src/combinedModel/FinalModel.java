@@ -1,5 +1,6 @@
 package combinedModel;
 
+import emplmasterrecord.EmployeeMasterData;
 import jxcel.JxcelBiometricFileWorker;
 import model.BasicEmployeeDetails;
 import model.HrnetDetails;
@@ -23,9 +24,16 @@ public class FinalModel extends BasicEmployeeDetails {
     private final int[] count = new int[5];//Absent, Present, Public_Holiday, Weekend_Holiday, Half_Day
     private boolean setIfClarificationFromEmployee;
 
-    public FinalModel(String EmployeeID, String name, int numberOfLeaves, AttendanceOfDate[] a, ArrayList<HrnetDetails> hr1) {
+    public FinalModel(String EmployeeID, int numberOfLeaves, AttendanceOfDate[] a, ArrayList<HrnetDetails> hr1) {
         this.setEmpId(EmployeeID);
-        this.setName(name);
+
+        BasicEmployeeDetails b = EmployeeMasterData.allEmployeeRecordMap.get(EmployeeID);
+
+        if (b != null) {
+            this.setName(b.getName());
+            this.setSalesForceId(b.getSalesForceId());
+            this.setEmailId(b.getEmailId());
+        }
         this.attendanceOfDate = a;
         this.numberOfLeaves = numberOfLeaves;
         //this.needClarificationFromEmployee = needClarificationFromEmployee;
@@ -85,7 +93,7 @@ public class FinalModel extends BasicEmployeeDetails {
 
         //to be removed  today
         //AMRITA
-        System.out.println("\nNumber of Absent Days " + this.getCount(0));
+        System.out.println("\nNumber of Unaccounted Absence Days " + this.getCount(0));
         System.out.println("Number of Present Days " + this.getCount(1));
         System.out.println("Number of Public Holidays " + this.getCount(2));
         System.out.println("Number of Weekend Holidays " + this.getCount(3));

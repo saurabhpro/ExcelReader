@@ -1,7 +1,6 @@
 package jxcel;
 
 import model.attendence.AttendanceOfDate;
-import model.attendence.AttendanceStatusType;
 
 import java.time.Duration;
 import java.time.LocalDate;
@@ -9,8 +8,6 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.Arrays;
 import java.util.List;
-
-import static model.attendence.AttendanceStatusType.*;
 
 /**
  * Created by SaurabhK on 09-02-2016.
@@ -76,25 +73,21 @@ public class TimeManager {
         List<AttendanceOfDate> ofDates = Arrays.asList(attendanceOfDate);
         int hoursTotal = 0, minsTotal = 0, presentDays = 0;
 
-        for (AttendanceOfDate inTime : ofDates) {
-            AttendanceStatusType attendanceStatusType = inTime.getAttendanceStatusType();
-            if ((attendanceStatusType.equals(ABSENT)) ||
-                    ((attendanceStatusType.equals(PUBLIC_HOLIDAY) ||
-                            attendanceStatusType.equals(WEEKEND_HOLIDAY))
-                            && (inTime.getCheckIn() != null))) {
+        for (AttendanceOfDate date : ofDates) {
+            if (date.getCheckIn() != null && !date.getCheckOut().equals(LocalTime.MIDNIGHT)) {
                 switch (type) {
-                    case "AverageCheckOutTime":
-                        if (inTime.getCheckOut() != null) {
-                            minsTotal += inTime.getCheckOut().getHour() * 60;
-                            minsTotal += inTime.getCheckOut().getMinute();
+                    case "AverageCheckInTime":
+                        if (date.getCheckIn() != null) {
+                            minsTotal += date.getCheckIn().getHour() * 60;
+                            minsTotal += date.getCheckIn().getMinute();
                             presentDays++;
                         }
                         break;
 
-                    case "AverageCheckInTime":
-                        if (inTime.getCheckIn() != null) {
-                            minsTotal += inTime.getCheckIn().getHour() * 60;
-                            minsTotal += inTime.getCheckIn().getMinute();
+                    case "AverageCheckOutTime":
+                        if (date.getCheckOut() != null) {
+                            minsTotal += date.getCheckOut().getHour() * 60;
+                            minsTotal += date.getCheckOut().getMinute();
                             presentDays++;
                         }
                         break;

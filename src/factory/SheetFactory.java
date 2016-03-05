@@ -1,6 +1,5 @@
 package factory;
 
-import jxcel.ApacheBiometricFileWorker;
 import jxcel.HrnetFileWorker;
 import jxcel.JxcelBiometricFileWorker;
 
@@ -14,7 +13,9 @@ public class SheetFactory {
             case "Jxcel":
                 return new JxcelBiometricFileWorker(file);
             case "XLS":
-                return new ApacheBiometricFileWorker(file);
+                //return new ApacheBiometricFileWorker(file);
+                System.out.println("Not yet supported XLS by apache");
+                break;
             case "XLSX":
                 return new HrnetFileWorker(file);
         }

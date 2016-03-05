@@ -396,7 +396,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -468,7 +468,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -618,7 +618,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -654,7 +654,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -1032,7 +1032,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -1053,7 +1053,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -1074,7 +1074,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -1110,7 +1110,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -1260,7 +1260,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -2412,7 +2412,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -3150,7 +3150,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -3321,7 +3321,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -3621,7 +3621,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -3642,7 +3642,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -4097,7 +4097,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -4118,7 +4118,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -5017,7 +5017,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -5038,7 +5038,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -5101,7 +5101,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -5437,7 +5437,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -5881,7 +5881,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -7023,7 +7023,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -7818,7 +7818,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -8103,7 +8103,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -8511,7 +8511,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -8661,7 +8661,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -8697,7 +8697,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -9147,7 +9147,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -9627,7 +9627,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -9963,7 +9963,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -10449,7 +10449,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -11394,7 +11394,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -11466,7 +11466,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -11916,7 +11916,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -12210,7 +12210,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -12468,7 +12468,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -12531,7 +12531,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -12552,7 +12552,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -12645,7 +12645,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -12780,7 +12780,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -12987,7 +12987,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -13008,7 +13008,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -13029,7 +13029,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -13050,7 +13050,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -13071,7 +13071,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -13134,7 +13134,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -13155,7 +13155,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -13176,7 +13176,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -13197,7 +13197,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -13218,7 +13218,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -13281,7 +13281,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -13302,7 +13302,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -13323,7 +13323,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -13344,7 +13344,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -13365,7 +13365,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -13428,7 +13428,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -13470,7 +13470,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -13491,7 +13491,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -13512,7 +13512,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -13683,7 +13683,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -13704,7 +13704,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -13761,7 +13761,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -13824,7 +13824,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -13845,7 +13845,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -13881,7 +13881,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -13902,7 +13902,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -13923,7 +13923,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -14022,7 +14022,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -14043,7 +14043,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -14064,7 +14064,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -14085,7 +14085,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -14205,7 +14205,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -14226,7 +14226,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -14247,7 +14247,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -14505,7 +14505,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -14727,7 +14727,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -14985,7 +14985,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -15048,7 +15048,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -15105,7 +15105,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -15782,7 +15782,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -15890,7 +15890,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -16955,7 +16955,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -16976,7 +16976,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -16997,7 +16997,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -17276,7 +17276,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -17576,7 +17576,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -17597,7 +17597,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -17644,7 +17644,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -17738,7 +17738,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -18017,7 +18017,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -18239,7 +18239,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -18260,7 +18260,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -18518,7 +18518,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -18653,7 +18653,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -18761,7 +18761,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -19091,7 +19091,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -19892,7 +19892,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -19913,7 +19913,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -20006,7 +20006,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -20105,7 +20105,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -20291,7 +20291,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -20312,7 +20312,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -20348,7 +20348,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -20405,7 +20405,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -20525,7 +20525,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -20546,7 +20546,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -21011,7 +21011,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -21032,7 +21032,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -21131,7 +21131,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -21653,7 +21653,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -21689,7 +21689,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -21824,7 +21824,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -21896,7 +21896,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -22046,7 +22046,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -22067,7 +22067,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -22088,7 +22088,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -22109,7 +22109,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -22130,7 +22130,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -22193,7 +22193,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -22235,7 +22235,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -22256,7 +22256,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -22277,7 +22277,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -23444,7 +23444,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -23837,7 +23837,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -23858,7 +23858,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -23879,7 +23879,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -24272,7 +24272,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -25868,7 +25868,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -26147,7 +26147,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -26369,7 +26369,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -26477,7 +26477,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -26498,7 +26498,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -26576,7 +26576,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -27284,7 +27284,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -27578,7 +27578,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -28064,7 +28064,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -28235,7 +28235,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -28256,7 +28256,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -28277,7 +28277,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -28298,7 +28298,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -28361,7 +28361,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -28382,7 +28382,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -28403,7 +28403,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -28424,7 +28424,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -28445,7 +28445,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -28508,7 +28508,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -28550,7 +28550,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -28571,7 +28571,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -28592,7 +28592,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -29084,7 +29084,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -29120,7 +29120,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -29198,7 +29198,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -29255,7 +29255,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -29291,7 +29291,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -29462,7 +29462,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -29483,7 +29483,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -29504,7 +29504,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -29525,7 +29525,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -29546,7 +29546,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -29609,7 +29609,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -29630,7 +29630,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -29651,7 +29651,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -29672,7 +29672,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -29693,7 +29693,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -29756,7 +29756,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -29777,7 +29777,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -29798,7 +29798,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -29819,7 +29819,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -29855,7 +29855,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -30554,7 +30554,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -31289,7 +31289,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -32039,7 +32039,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -32789,7 +32789,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -33182,7 +33182,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -33203,7 +33203,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -33224,7 +33224,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -33245,7 +33245,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -33266,7 +33266,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -33329,7 +33329,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -33350,7 +33350,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -33371,7 +33371,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -33392,7 +33392,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -33413,7 +33413,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -33476,7 +33476,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -33497,7 +33497,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -33518,7 +33518,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -33539,7 +33539,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -33560,7 +33560,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -33623,7 +33623,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -33665,7 +33665,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -33686,7 +33686,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -33707,7 +33707,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -34199,7 +34199,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -34934,7 +34934,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -35690,7 +35690,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -35825,7 +35825,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -36032,7 +36032,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -36053,7 +36053,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -36074,7 +36074,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -36095,7 +36095,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -36116,7 +36116,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -36179,7 +36179,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -36200,7 +36200,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -36221,7 +36221,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -36242,7 +36242,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -36263,7 +36263,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -36326,7 +36326,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -36347,7 +36347,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -36368,7 +36368,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -36389,7 +36389,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -36425,7 +36425,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -37124,7 +37124,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -37238,7 +37238,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -37295,7 +37295,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -37502,7 +37502,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -37523,7 +37523,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -37544,7 +37544,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -37565,7 +37565,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -37586,7 +37586,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -37649,7 +37649,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -37670,7 +37670,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -37691,7 +37691,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -37712,7 +37712,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -37733,7 +37733,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -37796,7 +37796,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -37817,7 +37817,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -37838,7 +37838,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -37859,7 +37859,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -37895,7 +37895,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -38237,7 +38237,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -38258,7 +38258,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -38279,7 +38279,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -38300,7 +38300,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -38321,7 +38321,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -38384,7 +38384,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -38405,7 +38405,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -38426,7 +38426,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -38447,7 +38447,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -38468,7 +38468,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -38531,7 +38531,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -38552,7 +38552,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -38573,7 +38573,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -38594,7 +38594,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -38615,7 +38615,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -38678,7 +38678,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -38720,7 +38720,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -38741,7 +38741,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -38762,7 +38762,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -40172,7 +40172,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -40271,7 +40271,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -40829,7 +40829,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -40850,7 +40850,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -40871,7 +40871,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -41816,7 +41816,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -41951,7 +41951,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -41972,7 +41972,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -41993,7 +41993,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -42293,7 +42293,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -42557,7 +42557,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -42614,7 +42614,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -42893,7 +42893,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -43007,7 +43007,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -43064,7 +43064,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -43163,7 +43163,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -44237,7 +44237,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -44372,7 +44372,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -44393,7 +44393,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -44465,7 +44465,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -44579,7 +44579,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -44822,7 +44822,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -44843,7 +44843,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -44864,7 +44864,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -44885,7 +44885,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -44948,7 +44948,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -45212,7 +45212,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -45233,7 +45233,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -45254,7 +45254,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -45275,7 +45275,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -45461,7 +45461,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -45518,7 +45518,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -46427,7 +46427,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -46649,7 +46649,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -47408,7 +47408,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -47630,7 +47630,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -47786,7 +47786,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -47807,7 +47807,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -48386,7 +48386,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -48407,7 +48407,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -48857,7 +48857,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -48878,7 +48878,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -49322,7 +49322,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -49394,7 +49394,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -49430,7 +49430,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -49601,7 +49601,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -49772,7 +49772,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -50123,7 +50123,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -50408,7 +50408,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -51617,7 +51617,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -51638,7 +51638,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -51659,7 +51659,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -51680,7 +51680,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -51701,7 +51701,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -51764,7 +51764,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -51785,7 +51785,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -51806,7 +51806,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -51827,7 +51827,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -51848,7 +51848,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -51911,7 +51911,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -51932,7 +51932,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -51953,7 +51953,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -51974,7 +51974,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -51995,7 +51995,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -52058,7 +52058,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -52100,7 +52100,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -52121,7 +52121,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -52142,7 +52142,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -52607,7 +52607,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -52628,7 +52628,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -52691,7 +52691,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -53224,7 +53224,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -53596,7 +53596,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -53632,7 +53632,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -53803,7 +53803,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -54433,7 +54433,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -54496,7 +54496,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -54517,7 +54517,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -54574,7 +54574,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -54688,7 +54688,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -54817,7 +54817,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -55386,7 +55386,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -55872,7 +55872,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -55893,7 +55893,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -55914,7 +55914,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -55935,7 +55935,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -55956,7 +55956,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -56019,7 +56019,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -56040,7 +56040,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -56061,7 +56061,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -56082,7 +56082,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -56103,7 +56103,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -56166,7 +56166,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -56187,7 +56187,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -56208,7 +56208,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -56229,7 +56229,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -56250,7 +56250,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -56313,7 +56313,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -56355,7 +56355,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -56376,7 +56376,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -56397,7 +56397,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -56532,7 +56532,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -56553,7 +56553,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -56574,7 +56574,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -56595,7 +56595,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -56616,7 +56616,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -57180,7 +57180,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -57387,7 +57387,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -57408,7 +57408,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -57429,7 +57429,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -57450,7 +57450,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -57471,7 +57471,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -58835,7 +58835,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -59027,7 +59027,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -59693,7 +59693,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -60401,7 +60401,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -61037,7 +61037,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -61058,7 +61058,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -61079,7 +61079,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -61100,7 +61100,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -61121,7 +61121,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -61184,7 +61184,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -61205,7 +61205,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -61226,7 +61226,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -61247,7 +61247,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -61268,7 +61268,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -61331,7 +61331,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -61352,7 +61352,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -61373,7 +61373,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -61394,7 +61394,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -61415,7 +61415,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -61478,7 +61478,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -61520,7 +61520,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -61541,7 +61541,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -61562,7 +61562,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -61697,7 +61697,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -61841,7 +61841,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -61904,7 +61904,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -61925,7 +61925,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -62033,7 +62033,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -62627,7 +62627,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -62720,7 +62720,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -63371,7 +63371,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -63764,7 +63764,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -64337,7 +64337,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -64916,7 +64916,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -65624,7 +65624,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -65753,7 +65753,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -66038,7 +66038,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -66302,7 +66302,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -66323,7 +66323,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -66344,7 +66344,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -66365,7 +66365,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -66386,7 +66386,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -66722,7 +66722,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -67223,7 +67223,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -67760,7 +67760,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -67823,7 +67823,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -67865,7 +67865,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -67937,7 +67937,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -69012,7 +69012,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -69807,7 +69807,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -70401,7 +70401,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -70458,7 +70458,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -70707,7 +70707,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -71136,7 +71136,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -71157,7 +71157,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -71178,7 +71178,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -71463,7 +71463,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -72330,7 +72330,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -72662,7 +72662,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -72905,7 +72905,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -72962,7 +72962,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -72983,7 +72983,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -73061,7 +73061,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -73097,7 +73097,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -73268,7 +73268,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -73325,7 +73325,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -73346,7 +73346,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -73367,7 +73367,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -73538,7 +73538,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -73631,7 +73631,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -73694,7 +73694,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -73766,7 +73766,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -73787,7 +73787,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -73958,7 +73958,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -73979,7 +73979,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -74078,7 +74078,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -74120,7 +74120,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -74539,7 +74539,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -74611,7 +74611,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -74938,7 +74938,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -75264,7 +75264,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -75414,7 +75414,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -75486,7 +75486,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -75657,7 +75657,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -75678,7 +75678,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -75699,7 +75699,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -76092,7 +76092,7 @@
           "second": 0,
           "nano": 0
         },
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -76443,7 +76443,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -77007,7 +77007,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -77028,7 +77028,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -77049,7 +77049,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -77070,7 +77070,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -77091,7 +77091,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -77154,7 +77154,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -77175,7 +77175,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -77196,7 +77196,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -77217,7 +77217,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -77238,7 +77238,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -77301,7 +77301,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -77322,7 +77322,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -77343,7 +77343,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -77364,7 +77364,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -77385,7 +77385,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -77448,7 +77448,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -77490,7 +77490,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -77511,7 +77511,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -77532,7 +77532,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -77925,7 +77925,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -78132,7 +78132,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
@@ -78225,7 +78225,7 @@
         "checkOut": null,
         "overTime": null,
         "workTimeForDay": null,
-        "attendanceStatusType": "ABSENT"
+        "attendanceStatusType": "UNACCOUNTED_ABSENCE"
       },
       {
         "currentDate": {
