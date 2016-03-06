@@ -1,8 +1,9 @@
 package combinedModel;
 
 import emplmasterrecord.EmployeeMasterData;
+import jxcel.BiometricFileWorker;
 import jxcel.HrnetFileWorker;
-import jxcel.JxcelBiometricFileWorker;
+import jxcel.TimeManager;
 import model.BasicEmployeeDetails;
 import model.EmpBiometricDetails;
 import model.HrnetDetails;
@@ -32,7 +33,7 @@ public class Combined2 {
     public Combined2() {
         EmpCombinedMap = new TreeMap<>(String::compareTo);
         empHrnetDetails = HrnetFileWorker.hrnetDetails;
-        empBiometricDetails = JxcelBiometricFileWorker.empList;
+        empBiometricDetails = BiometricFileWorker.empList;
     }
 
     @SuppressWarnings({"incomplete-switch"})
@@ -42,7 +43,6 @@ public class Combined2 {
         for (String bEmpID : empBiometricDetails.keySet()) {
             if (EmployeeMasterData.allEmployeeRecordMap.containsKey(bEmpID)) {
                 salesForce = new BasicEmployeeDetails().getSalesForceId(bEmpID);
-                ;
             }
 
             //setting the number of leaves after counting the list
@@ -54,7 +54,7 @@ public class Combined2 {
         //set public holiday status
         for (EmpBiometricDetails empObj : empBiometricDetails.values()) {
             for (HolidaysList h : HolidaysList.values()) {
-                if (h.getDate().getMonth() == JxcelBiometricFileWorker.month) {
+                if (h.getDate().getMonth() == TimeManager.getMonth()) {
                     empObj.attendanceOfDate[h.getDate().getDayOfMonth() - 1].setAttendanceStatusType(PUBLIC_HOLIDAY);
                 }
             }
@@ -62,7 +62,7 @@ public class Combined2 {
         //this worked just fine for January
         for (EmpBiometricDetails empObj : empBiometricDetails.values()) {
 
-            for (int i = 0; i < JxcelBiometricFileWorker.month.maxLength(); i++) {
+            for (int i = 0; i < TimeManager.getMonth().maxLength(); i++) {
                 switch (empObj.attendanceOfDate[i].getAttendanceStatusType()) {
                     case ABSENT:
                         //check for Work from home and half day
@@ -76,6 +76,7 @@ public class Combined2 {
                                 for (HrnetDetails hr : hrEntry.getValue()) {
                                     double leaveTime = hr.attendanceOfLeave.getAbsenceTime();
                                     LocalDate tempStart = hr.attendanceOfLeave.getStartDate();
+                                    LocalDate tempEnd = hr.attendanceOfLeave.getEndDate();
                                     int changeDatesRange;
                                     do {
                                         changeDatesRange = tempStart.getDayOfMonth() - 1;
@@ -90,8 +91,10 @@ public class Combined2 {
                                         }
                                         leaveTime--;
                                         tempStart = tempStart.plusDays(1);
+
+                                        if (tempStart.equals(tempEnd)) break;
                                     }
-                                    while (leaveTime > 0 && tempStart.getMonth().equals(JxcelBiometricFileWorker.month));
+                                    while (leaveTime > 0 && tempStart.getMonth().equals(TimeManager.getMonth()));
                                 }
                             }
                         }
@@ -102,7 +105,7 @@ public class Combined2 {
 
         //update number of work hours for half day
         for (EmpBiometricDetails empObj : empBiometricDetails.values()) {
-            for (int i = 0; i < JxcelBiometricFileWorker.month.maxLength(); i++) {
+            for (int i = 0; i < TimeManager.getMonth().maxLength(); i++) {
                 //06-03-2016 changed the Type from ABSENT to UNACCOUNTED_ABSENCE.
                 if (empObj.attendanceOfDate[i].getAttendanceStatusType().equals(ABSENT))
                     empObj.attendanceOfDate[i].setAttendanceStatusType(UNACCOUNTED_ABSENCE);
@@ -118,7 +121,7 @@ public class Combined2 {
         }
 
         //update the basic employee biometric file
-        JxcelBiometricFileWorker.empList = empBiometricDetails;
+        BiometricFileWorker.empList = empBiometricDetails;
 
         //Combine Hrnet and Biometric Files
         for (EmpBiometricDetails empObj : empBiometricDetails.values()) {
@@ -140,7 +143,7 @@ public class Combined2 {
 
         //to be removed  today
         for (FinalModel emp : EmpCombinedMap.values()) {
-            for (int j = 0; j < JxcelBiometricFileWorker.month.maxLength(); j++) {
+            for (int j = 0; j < TimeManager.getMonth().maxLength(); j++) {
 
                 //AMRITA
                 if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(UNACCOUNTED_ABSENCE))
@@ -158,7 +161,7 @@ public class Combined2 {
     }
 
     public void displayCombineFiles() {
-        System.out.println(JxcelBiometricFileWorker.month);
+        System.out.println(TimeManager.getMonth());
         EmpCombinedMap.values().forEach(FinalModel::displayFinalList);
     }
 }

@@ -6,8 +6,8 @@ import model.attendence.AttendanceOfLeave;
  * Created by AroraA on 09-02-2016.
  */
 public class HrnetDetails extends BasicEmployeeDetails {
-    public final String requestID;
     public final AttendanceOfLeave attendanceOfLeave;
+    private final String requestID;
 
 
     public HrnetDetails(String empId, String name, String requestID, AttendanceOfLeave attendanceOfLeave) {

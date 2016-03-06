@@ -3,7 +3,7 @@ package view;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jxcel.JxcelBiometricFileWorker;
+import jxcel.BiometricFileWorker;
 import model.EmpBiometricDetails;
 
 import java.io.File;
@@ -16,14 +16,14 @@ import java.util.Map;
  * Created by Saurabh on 2/14/2016.
  */
 public class JsonMapper {
-    ObjectMapper mapper = new ObjectMapper();
+    private ObjectMapper mapper = new ObjectMapper();
     //For testing
-    Map<String, EmpBiometricDetails> user;
+    private Map<String, EmpBiometricDetails> user;
 
     public JsonMapper toJsonFile(String fileName) {
 
         //For testing
-        user = JxcelBiometricFileWorker.empList;
+        user = BiometricFileWorker.empList;
 
         try {
             File jfile = new File(".\\JSON files\\unformattedJson.json");
@@ -48,7 +48,7 @@ public class JsonMapper {
             e.printStackTrace();
         }
 
-        FileWriter file = null;
+        FileWriter file;
         try {
             file = new FileWriter(new File(".\\JSON files\\formattedJson.json"));
             file.write(jsonInString);

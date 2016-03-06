@@ -1,7 +1,7 @@
 package combinedModel;
 
 import emplmasterrecord.EmployeeMasterData;
-import jxcel.JxcelBiometricFileWorker;
+import jxcel.TimeManager;
 import model.BasicEmployeeDetails;
 import model.HrnetDetails;
 import model.attendence.AttendanceOfDate;
@@ -100,7 +100,7 @@ public class FinalModel extends BasicEmployeeDetails {
         System.out.println("Number of Half Days " + this.getCount(4));
 
         System.out.println("\nBiometric Data for Each Day: ");
-        for (int j = 0; j < JxcelBiometricFileWorker.month.maxLength(); j++) {
+        for (int j = 0; j < TimeManager.getMonth().maxLength(); j++) {
             System.out.print(this.attendanceOfDate[j].getCurrentDate());
             System.out.print("\tIn Time: " + this.attendanceOfDate[j].getCheckIn());
             System.out.print("\tOut Time: " + this.attendanceOfDate[j].getCheckOut());

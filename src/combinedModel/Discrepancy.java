@@ -1,6 +1,6 @@
 package combinedModel;
 
-import jxcel.JxcelBiometricFileWorker;
+import jxcel.TimeManager;
 import model.HrnetDetails;
 
 import java.time.LocalDate;
@@ -21,7 +21,7 @@ public class Discrepancy {
         for (FinalModel finalModel : EmpCombinedMap.values()) {
             //Discrepancy if an employee is absent and there is no entry in Hrnet file.
             if (finalModel.hrnetDetails == null) {
-                for (int j = 0; j < JxcelBiometricFileWorker.month.maxLength(); j++) {
+                for (int j = 0; j < TimeManager.getMonth().maxLength(); j++) {
                     if ((finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(UNACCOUNTED_ABSENCE))
                             || (finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(HALF_DAY))) {
                         System.out.println("Null List- Discrepancy Set for " + finalModel.getName() + " Date: " + (j + 1));
@@ -32,7 +32,7 @@ public class Discrepancy {
             } else {
                 //case where there is an entry
                 int flag;
-                for (int j = 0; j < JxcelBiometricFileWorker.month.maxLength(); j++) {
+                for (int j = 0; j < TimeManager.getMonth().maxLength(); j++) {
                     flag = 0;
                     //his status is still absent after merging
                     if (finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(UNACCOUNTED_ABSENCE)) {

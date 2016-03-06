@@ -20,7 +20,7 @@ import java.util.TreeMap;
 public class EmployeeMasterData implements FileOperations {
 
     public static Map<String, BasicEmployeeDetails> allEmployeeRecordMap;
-    private int numberOfRowsInBio;
+    private final int numberOfRowsInBio;
     private Sheet sheet = null;
 
     public EmployeeMasterData(String empListID) {

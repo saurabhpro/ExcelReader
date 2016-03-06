@@ -1,6 +1,6 @@
 package combinedModel;
 
-import jxcel.JxcelBiometricFileWorker;
+import jxcel.TimeManager;
 import model.attendence.AttendanceOfDate;
 import model.attendence.AttendanceStatusType;
 import model.attendence.HolidaysList;
@@ -13,7 +13,7 @@ import java.util.Map;
 public class PublicHolidayList {
 
 
-    public static Map<String, FinalModel> EmpCombinedMap;
+    private static Map<String, FinalModel> EmpCombinedMap;
 
     public PublicHolidayList() {
         EmpCombinedMap = Combined2.EmpCombinedMap;
@@ -23,7 +23,7 @@ public class PublicHolidayList {
         System.out.println("HOLIDAY LIST HIGHLIGHTED");
         for (FinalModel finalModel : EmpCombinedMap.values()) {
             for (HolidaysList h : HolidaysList.values()) {
-                if (h.getDate().getMonth() == JxcelBiometricFileWorker.month) {
+                if (h.getDate().getMonth() == TimeManager.getMonth()) {
                     if (finalModel.attendanceOfDate[h.getDate().getDayOfMonth() - 1].getAttendanceStatusType() == AttendanceStatusType.PUBLIC_HOLIDAY) {
                         if (finalModel.attendanceOfDate[h.getDate().getDayOfMonth() - 1].getCheckIn() != null)
                             //     finalModel.displayFinalList();
@@ -34,7 +34,7 @@ public class PublicHolidayList {
         }
     }
 
-    public void showExtraWorkTime(FinalModel finalModel, HolidaysList h) {
+    private void showExtraWorkTime(FinalModel finalModel, HolidaysList h) {
         finalModel.displayBasicInfo();
 
         AttendanceOfDate temp = finalModel.attendanceOfDate[h.getDate().getDayOfMonth() - 1];

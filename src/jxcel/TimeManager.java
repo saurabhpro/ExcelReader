@@ -2,10 +2,7 @@ package jxcel;
 
 import model.attendence.AttendanceOfDate;
 
-import java.time.Duration;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
+import java.time.*;
 import java.util.Arrays;
 import java.util.List;
 
@@ -14,14 +11,32 @@ import java.util.List;
  */
 public class TimeManager {
 
-    static final int MINUTES_PER_HOUR = 60;
-    static final int SECONDS_PER_MINUTE = 60;
-    static final int SECONDS_PER_HOUR = SECONDS_PER_MINUTE * MINUTES_PER_HOUR;
+    private static final int MINUTES_PER_HOUR = 60;
+    private static final int SECONDS_PER_MINUTE = 60;
+    private static final int SECONDS_PER_HOUR = SECONDS_PER_MINUTE * MINUTES_PER_HOUR;
+    private static Year year;
+    private static Month month;
+
+    public static Year getYear() {
+        return year;
+    }
+
+    public static void setYear(Year year) {
+        TimeManager.year = year;
+    }
+
+    public static Month getMonth() {
+        return month;
+    }
+
+    public static void setMonth(Month month) {
+        TimeManager.month = month;
+    }
 
     public static LocalTime calculateTimeDifference(LocalTime checkInTime, LocalTime checkOutTime, LocalDate date) {
         LocalDate froDate, toDate;
         froDate = toDate = date;
-        LocalTime time = null;
+        LocalTime time;
 
         if (checkOutTime.compareTo(checkInTime) < 0)
             toDate = froDate.plusDays(1);
@@ -71,7 +86,7 @@ public class TimeManager {
 
     public static LocalTime calculate(String type, AttendanceOfDate[] attendanceOfDate) {
         List<AttendanceOfDate> ofDates = Arrays.asList(attendanceOfDate);
-        int hoursTotal = 0, minsTotal = 0, presentDays = 0;
+        int hoursTotal, minsTotal = 0, presentDays = 0;
 
         for (AttendanceOfDate date : ofDates) {
             if (date.getCheckIn() != null && !date.getCheckOut().equals(LocalTime.MIDNIGHT)) {

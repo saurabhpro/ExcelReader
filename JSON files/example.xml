@@ -8,412 +8,410 @@
 	3. if user has not checked-in or checked out, then status=A -->
 
 <Biometric>
-	<CompanyInfo>REVAL INDIA PVT LTD</CompanyInfo>
-	<YearMonth>
-		<Year>2016</Year>
-		<Month>January</Month>
-	</YearMonth>
+    <CompanyInfo>REVAL INDIA PVT LTD</CompanyInfo>
+    <YearMonth>
+        <Year>2016</Year>
+        <Month>January</Month>
+    </YearMonth>
 
-	<SerialNumber SNo="1">
-		<EmployeeDetails>
-			<IdOfEmployee>R14</IdOfEmployee>
-			<nameOfEmployee>Saurabh Kumar</nameOfEmployee>
-		</EmployeeDetails>
-		<DaysOfMonth>
-			<!--The date is specified in the following form "YYYY-MM-DD" -->
-			<Date date="2016-01-01">
-				<CheckInTime>10:00</CheckInTime>
-				<CheckOutTime>17:00</CheckOutTime>
-				<OverTime>00:00</OverTime>
-				<EmpStatus>P</EmpStatus>
-			</Date>
-			<Date date="2016-01-02">
-				<CheckInTime>9:30</CheckInTime>
-				<CheckOutTime>17:00</CheckOutTime>
-				<OverTime>00:00</OverTime>
-				<EmpStatus>P</EmpStatus>
-			</Date>
-			<Date date="2016-01-03">
-				<CheckInTime>10:00</CheckInTime>
-				<!--If user forgets to check out and his -->
-				<CheckOutTime>00:00</CheckOutTime>
-				<OverTime>00:00</OverTime>
-				<EmpStatus>P/A</EmpStatus>
-			</Date>
-			<Date date="2016-01-04">
-				<CheckInTime>10:00</CheckInTime>
-				<CheckOutTime>17:00</CheckOutTime>
-				<OverTime>00:00</OverTime>
-				<EmpStatus>P</EmpStatus>
-			</Date>
-			<Date date="2016-01-05">
-				<CheckInTime>10:00</CheckInTime>
-				<CheckOutTime>17:00</CheckOutTime>
-				<OverTime>00:00</OverTime>
-				<EmpStatus>P</EmpStatus>
-			</Date>
-			<Date date="2016-01-06">
-				<CheckInTime>20:00</CheckInTime>
-				<CheckOutTime>9:00</CheckOutTime>
-				:00
-			</CheckOutTime>
-			<OverTime>00:00</OverTime>
-			<EmpStatus>P</EmpStatus>
-		</Date>
-		<Date date="2016-01-07">
-			<CheckInTime>10:00</CheckInTime>
-			<CheckOutTime>17:00</CheckOutTime>
-			<OverTime>00:00</OverTime>
-			<EmpStatus>P</EmpStatus>
-		</Date>
-		<Date date="2016-01-08">
-			<CheckInTime>10:00</CheckInTime>
-			<CheckOutTime>17:00</CheckOutTime>
-			<OverTime>00:00</OverTime>
-			<EmpStatus>P</EmpStatus>
-		</Date>
-		<Date date="2016-01-09">
-			<CheckInTime>10:00</CheckInTime>
-			<CheckOutTime>17:00</CheckOutTime>
-			<OverTime>00:00</OverTime>
-			<EmpStatus>P</EmpStatus>
-		</Date>
-		<Date date="2016-01-10">
-			<CheckInTime>10:00</CheckInTime>
-			<CheckOutTime>17:00</CheckOutTime>
-			<OverTime>00:00</OverTime>
-			<EmpStatus>P</EmpStatus>
-		</Date>
-		<Date date="2016-01-11">
-			<CheckInTime>10:00</CheckInTime>
-			<CheckOutTime>17:00</CheckOutTime>
-			<OverTime>00:00</OverTime>
-			<EmpStatus>P</EmpStatus>
-		</Date>
-		<Date date="2016-01-12">
-			<CheckInTime>10:00</CheckInTime>
-			<CheckOutTime>17:00</CheckOutTime>
-			<OverTime>00:00</OverTime>
-			<EmpStatus>P</EmpStatus>
-		</Date>
-		<Date date="2016-01-13">
-			<CheckInTime>10:00</CheckInTime>
-			<CheckOutTime>17:00</CheckOutTime>
-			<OverTime>00:00</OverTime>
-			<EmpStatus>P</EmpStatus>
-		</Date>
-		<Date date="2016-01-14">
-			<CheckInTime>10:00</CheckInTime>
-			<CheckOutTime>17:00</CheckOutTime>
-			<OverTime>00:00</OverTime>
-			<EmpStatus>P</EmpStatus>
-		</Date>
-		<Date date="2016-01-15">
-			<CheckInTime>10:00</CheckInTime>
-			<CheckOutTime>17:00</CheckOutTime>
-			<OverTime>00:00</OverTime>
-			<EmpStatus>P</EmpStatus>
-		</Date>
-		<Date date="2016-01-16">
-			<CheckInTime>10:00</CheckInTime>
-			<CheckOutTime>17:00</CheckOutTime>
-			<OverTime>00:00</OverTime>
-			<EmpStatus>P</EmpStatus>
-		</Date>
-		<Date date="2016-01-17">
-			<CheckInTime>10:00</CheckInTime>
-			<CheckOutTime>17:00</CheckOutTime>
-			<OverTime>00:00</OverTime>
-			<EmpStatus>P</EmpStatus>
-		</Date>
-		<Date date="2016-01-18">
-			<CheckInTime>10:00</CheckInTime>
-			<CheckOutTime>17:00</CheckOutTime>
-			<OverTime>00:00</OverTime>
-			<EmpStatus>P</EmpStatus>
-		</Date>
-		<Date date="2016-01-19">
-			<CheckInTime>10:00</CheckInTime>
-			<CheckOutTime>17:00</CheckOutTime>
-			<OverTime>00:00</OverTime>
-			<EmpStatus>P</EmpStatus>
-		</Date>
-		<Date date="2016-01-20">
-			<CheckInTime>10:00</CheckInTime>
-			<CheckOutTime>17:00</CheckOutTime>
-			<OverTime>00:00</OverTime>
-			<EmpStatus>P</EmpStatus>
-		</Date>
-		<Date date="2016-01-21">
-			<CheckInTime>10:00</CheckInTime>
-			<CheckOutTime>17:00</CheckOutTime>
-			<OverTime>00:00</OverTime>
-			<EmpStatus>P</EmpStatus>
-		</Date>
-		<Date date="2016-01-22">
-			<CheckInTime>10:00</CheckInTime>
-			<CheckOutTime>17:00</CheckOutTime>
-			<OverTime>00:00</OverTime>
-			<EmpStatus>P</EmpStatus>
-		</Date>
-		<Date date="2016-01-23">
-			<CheckInTime>10:00</CheckInTime>
-			<CheckOutTime>17:00</CheckOutTime>
-			<OverTime>00:00</OverTime>
-			<EmpStatus>P</EmpStatus>
-		</Date>
-		<Date date="2016-01-24">
-			<CheckInTime>10:00</CheckInTime>
-			<CheckOutTime>17:00</CheckOutTime>
-			<OverTime>00:00</OverTime>
-			<EmpStatus>P</EmpStatus>
-		</Date>
-		<Date date="2016-01-25">
-			<CheckInTime>10:00</CheckInTime>
-			<CheckOutTime>17:00</CheckOutTime>
-			<OverTime>00:00</OverTime>
-			<EmpStatus>P</EmpStatus>
-		</Date>
-		<Date date="2016-01-26">
-			<CheckInTime>10:00</CheckInTime>
-			<CheckOutTime>17:00</CheckOutTime>
-			<OverTime>00:00</OverTime>
-			<EmpStatus>P</EmpStatus>
-		</Date>
-		<Date date="2016-01-27">
-			<CheckInTime>10:00</CheckInTime>
-			<CheckOutTime>17:00</CheckOutTime>
-			<OverTime>00:00</OverTime>
-			<EmpStatus>P</EmpStatus>
-		</Date>
-		<Date date="2016-01-28">
-			<CheckInTime>10:00</CheckInTime>
-			<CheckOutTime>17:00</CheckOutTime>
-			<OverTime>00:00</OverTime>
-			<EmpStatus>P</EmpStatus>
-		</Date>
-		<Date date="2016-01-29">
-			<CheckInTime>10:00</CheckInTime>
-			<CheckOutTime>17:00</CheckOutTime>
-			<OverTime>00:00</OverTime>
-			<EmpStatus>P</EmpStatus>
-		</Date>
-		<Date date="2016-01-30">
-			<CheckInTime>10:00</CheckInTime>
-			<CheckOutTime>17:00</CheckOutTime>
-			<OverTime>00:00</OverTime>
-			<EmpStatus>P</EmpStatus>
-		</Date>
-		<Date date="2016-01-31">
-			<CheckInTime>10:00</CheckInTime>
-			<CheckOutTime>17:00</CheckOutTime>
-			<OverTime>00:00</OverTime>
-			<EmpStatus>P</EmpStatus>
-		</Date>
+    <SerialNumber SNo="1">
+        <EmployeeDetails>
+            <IdOfEmployee>R14</IdOfEmployee>
+            <nameOfEmployee>Saurabh Kumar</nameOfEmployee>
+        </EmployeeDetails>
+        <DaysOfMonth>
+            <!--The date is specified in the following form "YYYY-MM-DD" -->
+            <Date date="2016-01-01">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-02">
+                <CheckInTime>9:30</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-03">
+                <CheckInTime>10:00</CheckInTime>
+                <!--If user forgets to check out and his -->
+                <CheckOutTime>00:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P/A</EmpStatus>
+            </Date>
+            <Date date="2016-01-04">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-05">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-06">
+                <CheckInTime>20:00</CheckInTime>
+                <CheckOutTime>9:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-07">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-08">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-09">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-10">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-11">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-12">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-13">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-14">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-15">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-16">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-17">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-18">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-19">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-20">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-21">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-22">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-23">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-24">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-25">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-26">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-27">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-28">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-29">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-30">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-31">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
 
 
-	</DaysOfMonth>
-</SerialNumber>
+        </DaysOfMonth>
+    </SerialNumber>
 
-<SerialNumber SNo="2">
-<EmployeeDetails>
-	<IdOfEmployee>R25</IdOfEmployee>
-	<nameOfEmployee>Amrita Arora</nameOfEmployee>
-</EmployeeDetails>
-<DayOfMonth>
-	<!--The date is specified in the following form "YYYY-MM-DD" -->
-	<Date date="2016-01-01">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-02">
-		<CheckInTime>9:30</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-03">
-		<CheckInTime>10:00</CheckInTime>
-		<!--If user forgets to check out and his -->
-		<CheckOutTime>00:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P/A</EmpStatus>
-	</Date>
-	<Date date="2016-01-04">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-05">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-06">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-07">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-08">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-09">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-10">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-11">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-12">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-13">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-14">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-15">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-16">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-17">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-18">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-19">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-20">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-21">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-22">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-23">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-24">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-25">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-26">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-27">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-28">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-29">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-30">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
-	<Date date="2016-01-31">
-		<CheckInTime>10:00</CheckInTime>
-		<CheckOutTime>17:00</CheckOutTime>
-		<OverTime>00:00</OverTime>
-		<EmpStatus>P</EmpStatus>
-	</Date>
+    <SerialNumber SNo="2">
+        <EmployeeDetails>
+            <IdOfEmployee>R25</IdOfEmployee>
+            <nameOfEmployee>Amrita Arora</nameOfEmployee>
+        </EmployeeDetails>
+        <DayOfMonth>
+            <!--The date is specified in the following form "YYYY-MM-DD" -->
+            <Date date="2016-01-01">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-02">
+                <CheckInTime>9:30</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-03">
+                <CheckInTime>10:00</CheckInTime>
+                <!--If user forgets to check out and his -->
+                <CheckOutTime>00:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P/A</EmpStatus>
+            </Date>
+            <Date date="2016-01-04">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-05">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-06">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-07">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-08">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-09">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-10">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-11">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-12">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-13">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-14">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-15">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-16">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-17">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-18">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-19">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-20">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-21">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-22">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-23">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-24">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-25">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-26">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-27">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-28">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-29">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-30">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
+            <Date date="2016-01-31">
+                <CheckInTime>10:00</CheckInTime>
+                <CheckOutTime>17:00</CheckOutTime>
+                <OverTime>00:00</OverTime>
+                <EmpStatus>P</EmpStatus>
+            </Date>
 
 
-</DayOfMonth>
-</SerialNumber>
-		<!-- similarly details for all employees is needed -->
+        </DayOfMonth>
+    </SerialNumber>
+    <!-- similarly details for all employees is needed -->
 </Biometric>
 
 

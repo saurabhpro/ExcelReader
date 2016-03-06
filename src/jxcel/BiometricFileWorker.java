@@ -19,17 +19,14 @@ import java.util.TreeMap;
  * Created by Saurabh on 2/10/2016.
  * updated on 2/13/2016
  */
-public class JxcelBiometricFileWorker implements FileOperations {
+public class BiometricFileWorker implements FileOperations {
 
     static public Map<String, EmpBiometricDetails> empList = null;
-    static public Month month;
-    static public Year year;
-
-    Sheet sheet = null;
-    int numberOfRowsInBio;
+    private final int numberOfRowsInBio;
+    private Sheet sheet = null;
     private int ADD_ROW_STEPS = 0;
 
-    public JxcelBiometricFileWorker(String biometricFile) {
+    public BiometricFileWorker(String biometricFile) {
         sheet = new JXLSSheetAndCell().JXLSSheet(biometricFile);
         numberOfRowsInBio = (sheet.getRows() - 11) / 18;
     }
@@ -43,17 +40,15 @@ public class JxcelBiometricFileWorker implements FileOperations {
 
     /**
      * method to return the attendance for an employee for that month
-     *
-     * @param attendanceOfDate
      */
     private void getMonthlyAttendanceOfEmployee(AttendanceOfDate[] attendanceOfDate) {
         StringTokenizer st;
         AttendanceStatusType attendanceStatus;
 
-        int noOfDaysInThatMonth = month.maxLength();
+        int noOfDaysInThatMonth = TimeManager.getMonth().maxLength();
 
         for (int k = 0; k < noOfDaysInThatMonth; k++) {
-            LocalDate tempDate = LocalDate.of(year.getValue(), month, (k + 1));
+            LocalDate tempDate = LocalDate.of(TimeManager.getYear().getValue(), TimeManager.getMonth(), (k + 1));
             attendanceOfDate[k] = new AttendanceOfDate();
             attendanceOfDate[k].setCurrentDate(tempDate);
             attendanceStatus = AttendanceStatusType.NOT_AN_EMPLOYEE;      //default status for an employee
@@ -107,12 +102,12 @@ public class JxcelBiometricFileWorker implements FileOperations {
         String monthYear = getCustomCellContent(13, 7);
         String[] st = monthYear.split("   ");
 
-        month = Month.valueOf(st[0].toUpperCase());
-        year = Year.parse(st[1]);
+        TimeManager.setMonth(Month.valueOf(st[0].toUpperCase()));
+        TimeManager.setYear(Year.parse(st[1]));
 
 
         for (int i = 0; i < numberOfRowsInBio; i++) {
-            attendanceOfDate = new AttendanceOfDate[month.maxLength()];
+            attendanceOfDate = new AttendanceOfDate[TimeManager.getMonth().maxLength()];
             getMonthlyAttendanceOfEmployee(attendanceOfDate);       //referenced
 
             empName = getCustomCellContent(3, 13 + (18 * ADD_ROW_STEPS));
@@ -127,7 +122,7 @@ public class JxcelBiometricFileWorker implements FileOperations {
 
     @Override
     public void displayFile() {
-        System.out.println(month);
+        System.out.println(TimeManager.getMonth());
         empList.values().forEach(EmpBiometricDetails::printEmpBiometricDetails);
     }
 }

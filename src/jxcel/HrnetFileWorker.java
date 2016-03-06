@@ -18,8 +18,7 @@ import java.util.*;
 public class HrnetFileWorker implements FileOperations {
 
     public static Map<String, ArrayList<HrnetDetails>> hrnetDetails;
-    int numberOfRowsInHr;
-    Sheet sheet;
+    private final Sheet sheet;
 
     public HrnetFileWorker(String hrNetFile) {
         sheet = new XLSXSheetAndCell().ApacheXLSXSheet(hrNetFile);
@@ -52,11 +51,11 @@ public class HrnetFileWorker implements FileOperations {
         String empRequest = null;
         LocalDate tempDate;
 
-        numberOfRowsInHr = sheet.getPhysicalNumberOfRows();
+        int numberOfRowsInHr = sheet.getPhysicalNumberOfRows();
         hrnetDetails = new TreeMap<>();
 
         for (int i = 1; i < numberOfRowsInHr; i++) {
-            ArrayList<HrnetDetails> tempArrLst = null;
+            ArrayList<HrnetDetails> tempArrLst;
             attendanceOfLeave = new AttendanceOfLeave();
 
             for (int j = 0; j < 7; j++) {
@@ -78,15 +77,13 @@ public class HrnetFileWorker implements FileOperations {
                         String tmp = cell.getStringCellValue().replace(" ", "_").toUpperCase();
                         attendanceOfLeave.setLeaveType(LeaveType.valueOf(tmp));
                         break;
-                    case 4:
+                    case 4://startdate column
                         tempDate = getLocalDate(cell);
-                        if (tempDate.getMonth().equals(JxcelBiometricFileWorker.month))
-                            attendanceOfLeave.setStartDate(tempDate);
+                        attendanceOfLeave.setStartDate(tempDate);
                         break;
-                    case 5:
+                    case 5://end date column
                         tempDate = getLocalDate(cell);
-                        if (attendanceOfLeave.getStartDate() != null)
-                            attendanceOfLeave.setEndDate(tempDate);
+                        attendanceOfLeave.setEndDate(tempDate);
                         break;
 
                     case 6:
@@ -95,6 +92,27 @@ public class HrnetFileWorker implements FileOperations {
 
                 }
             }
+
+            /**
+             * case where leave applied from 29th jan to 5th feb, and we are calculating for Feb
+             */
+            if (attendanceOfLeave.getEndDate().getMonth().equals(TimeManager.getMonth())
+                    && !attendanceOfLeave.getStartDate().getMonth().equals(TimeManager.getMonth()))
+                attendanceOfLeave.setStartDate(LocalDate.of(TimeManager.getYear().getValue(), TimeManager.getMonth(), 1));
+
+            /**
+             * case where leave applied from 29th jan to 5th feb, and we are calculating for Jan
+             */
+            else if (attendanceOfLeave.getStartDate().getMonth().equals(TimeManager.getMonth())
+                    && !attendanceOfLeave.getEndDate().getMonth().equals(TimeManager.getMonth()))
+                attendanceOfLeave.setEndDate(LocalDate.of(TimeManager.getYear().getValue(), TimeManager.getMonth(), TimeManager.getMonth().maxLength()));
+
+            /**
+             * case where leave applied from 8th jan to 14th jan, and we are calculating for feb
+             */
+            else if (!attendanceOfLeave.getStartDate().getMonth().equals(TimeManager.getMonth())
+                    && !attendanceOfLeave.getEndDate().getMonth().equals(TimeManager.getMonth()))
+                attendanceOfLeave.setStartDate(null);
 
             /**
              * only consider the salesforce data for those months which is on biometric excel

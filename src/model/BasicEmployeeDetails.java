@@ -11,7 +11,7 @@ public class BasicEmployeeDetails {
     private String salesForceId;
     private String emailId;
 
-    public String getSalesForceId() {
+    protected String getSalesForceId() {
         return salesForceId;
     }
 
@@ -27,7 +27,7 @@ public class BasicEmployeeDetails {
             return null;
     }
 
-    public String getEmailId() {
+    protected String getEmailId() {
         return emailId;
     }
 

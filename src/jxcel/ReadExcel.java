@@ -34,8 +34,8 @@ public class ReadExcel {
 
         //read Biometric Excel File
         fileWorker = sheetFactory.dispatch("Jxcel", biometricFile);
-        if (fileWorker instanceof JxcelBiometricFileWorker) {
-            ((JxcelBiometricFileWorker) fileWorker).readFile();
+        if (fileWorker instanceof BiometricFileWorker) {
+            ((BiometricFileWorker) fileWorker).readFile();
         }
 
         //read HRNet Excel File
@@ -59,7 +59,7 @@ public class ReadExcel {
     }
 
     private static void setEmpListID(String empListID) {
-        ReadExcel.empListID = empListID;
+        ReadExcel.empListID = ".\\ExcelFiles\\Emails.xlsx";
     }
 
     private static void setBiometricFile(String biometricFile) {

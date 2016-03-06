@@ -4,7 +4,7 @@
 
 package model;
 
-import jxcel.JxcelBiometricFileWorker;
+import jxcel.TimeManager;
 import model.attendence.AttendanceOfDate;
 
 import java.time.LocalTime;
@@ -35,7 +35,7 @@ public class EmpBiometricDetails extends BasicEmployeeDetails {
 
         LocalTime workTime;
 
-        for (int j = 0; j < JxcelBiometricFileWorker.month.maxLength(); j++) {
+        for (int j = 0; j < TimeManager.getMonth().maxLength(); j++) {
             System.out.print(this.attendanceOfDate[j].getCurrentDate());
             System.out.print("\tIn Time: " + this.attendanceOfDate[j].getCheckIn());
             System.out.print("\tOut Time: " + this.attendanceOfDate[j].getCheckOut());
