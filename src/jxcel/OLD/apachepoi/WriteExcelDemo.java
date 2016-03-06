@@ -19,6 +19,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class WriteExcelDemo {
 	public static void main(String... args) {
 		// Blank workbook
+		@SuppressWarnings("resource")
 		XSSFWorkbook workbook = new XSSFWorkbook();
 
 		// Create a blank sheet

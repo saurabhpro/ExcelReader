@@ -1,15 +1,13 @@
 package combinedModel;
 
-import static jxcel.TimeManager.calculate;
-
-import java.time.LocalTime;
-import java.util.ArrayList;
-
 import emplmasterrecord.EmployeeMasterData;
 import jxcel.TimeManager;
 import model.BasicEmployeeDetails;
 import model.HrnetDetails;
 import model.attendence.AttendanceOfDate;
+
+import java.time.LocalTime;
+import java.util.ArrayList;
 
 /**
  * Created by kumars on 2/19/2016.
@@ -100,11 +98,11 @@ public class FinalModel extends BasicEmployeeDetails {
 	}
 
 	private LocalTime setAvgInTime() {
-		return calculate("AverageCheckInTime", attendanceOfDate);
+		return TimeManager.calculateAverageOfTime("AverageCheckInTime", attendanceOfDate);
 	}
 
 	private LocalTime setAvgOutTime() {
-		return calculate("AverageCheckOutTime", attendanceOfDate);
+		return TimeManager.calculateAverageOfTime("AverageCheckOutTime", attendanceOfDate);
 	}
 
 	public void setCount(int i) {

@@ -22,6 +22,7 @@ public class ReadExcelDemo {
 			FileInputStream file = new FileInputStream(new File(".\\ExcelFiles\\test report.xls"));
 
 			// Create Workbook instance holding reference to .xlsx file
+			@SuppressWarnings("resource")
 			Workbook workbook = new HSSFWorkbook(file);
 
 			// Get first/desired sheet from the workbook

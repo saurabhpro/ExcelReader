@@ -1,15 +1,10 @@
 package jxcel;
 
-import java.time.Duration;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.Month;
-import java.time.Year;
+import model.attendence.AttendanceOfDate;
+
+import java.time.*;
 import java.util.Arrays;
 import java.util.List;
-
-import model.attendence.AttendanceOfDate;
 
 /**
  * Created by SaurabhK on 09-02-2016.
@@ -22,7 +17,7 @@ public class TimeManager {
 	private static Year year;
 	private static Month month;
 
-	public static LocalTime calculate(String type, AttendanceOfDate[] attendanceOfDate) {
+	public static LocalTime calculateAverageOfTime(String type, AttendanceOfDate[] attendanceOfDate) {
 		List<AttendanceOfDate> ofDates = Arrays.asList(attendanceOfDate);
 		int hoursTotal, minsTotal = 0, presentDays = 0;
 
@@ -94,6 +89,10 @@ public class TimeManager {
 		return month;
 	}
 
+	public static void setMonth(Month month) {
+		TimeManager.month = month;
+	}
+
 	private static LocalTime getTime(LocalDateTime fromDateTime, LocalDateTime toDateTime) {
 		Duration duration = Duration.between(fromDateTime, toDateTime);
 
@@ -109,10 +108,6 @@ public class TimeManager {
 
 	public static Year getYear() {
 		return year;
-	}
-
-	public static void setMonth(Month month) {
-		TimeManager.month = month;
 	}
 
 	public static void setYear(Year year) {
