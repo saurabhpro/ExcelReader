@@ -8,16 +8,16 @@ import java.util.regex.Pattern;
  */
 public class ExcelFileType {
 
-    public String excelVersion(String fileName) {
-        Pattern xls = Pattern.compile("[a-zA-Z]+(\\.(xls))");
-        Matcher matcher = xls.matcher(fileName);
-        if (matcher.matches())
-            return "XLS";
+	public String excelVersion(String fileName) {
+		Pattern xls = Pattern.compile("[a-zA-Z]+(\\.(xls))");
+		Matcher matcher = xls.matcher(fileName);
+		if (matcher.matches())
+			return "XLS";
 
-        xls = Pattern.compile("[a-zA-Z]+(\\.(xlsx))");
-        matcher = xls.matcher(fileName);
-        if (matcher.matches())
-            return "XLSX";
-        return null;
-    }
+		xls = Pattern.compile("[a-zA-Z]+(\\.(xlsx))");
+		matcher = xls.matcher(fileName);
+		if (matcher.matches())
+			return "XLSX";
+		return null;
+	}
 }

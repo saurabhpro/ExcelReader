@@ -4,50 +4,47 @@
 
 package model;
 
+import java.time.LocalTime;
+
 import jxcel.TimeManager;
 import model.attendence.AttendanceOfDate;
 
-import java.time.LocalTime;
-
 public class EmpBiometricDetails extends BasicEmployeeDetails {
-    public final AttendanceOfDate[] attendanceOfDate;
-    public int numberOfLeaves = 0; //To check how many leaves have been applied
+	public final AttendanceOfDate[] attendanceOfDate;
+	public int numberOfLeaves = 0; // To check how many leaves have been applied
 
+	public EmpBiometricDetails(String eID, String eName, AttendanceOfDate[] attendanceOfDate) {
+		setName(eName);
+		setEmpId(eID);
+		this.attendanceOfDate = attendanceOfDate;
+	}
 
-    public EmpBiometricDetails(String eID, String eName, AttendanceOfDate[] attendanceOfDate) {
-        setName(eName);
-        setEmpId(eID);
-        this.attendanceOfDate = attendanceOfDate;
-    }
+	public int getNumberOfLeaves() {
+		return numberOfLeaves;
+	}
 
-    public int getNumberOfLeaves() {
-        return numberOfLeaves;
-    }
+	public void printEmpBiometricDetails() {
+		System.out.println("Name: " + this.getName());
+		System.out.println("Employee ID: " + this.getEmpId());
 
-    public void setNumberOfLeaves(int numberOfLeaves) {
-        this.numberOfLeaves = numberOfLeaves;
-    }
+		LocalTime workTime;
 
+		for (int j = 0; j < TimeManager.getMonth().maxLength(); j++) {
+			System.out.print(this.attendanceOfDate[j].getCurrentDate());
+			System.out.print("\tIn Time: " + this.attendanceOfDate[j].getCheckIn());
+			System.out.print("\tOut Time: " + this.attendanceOfDate[j].getCheckOut());
+			System.out.print("\tStatus: " + this.attendanceOfDate[j].getAttendanceStatusType() + "\n");
 
-    public void printEmpBiometricDetails() {
-        System.out.println("Name: " + this.getName());
-        System.out.println("Employee ID: " + this.getEmpId());
+			workTime = this.attendanceOfDate[j].getWorkTimeForDay();
+			if (workTime != null)
+				System.out.println(workTime);
 
-        LocalTime workTime;
+		}
 
-        for (int j = 0; j < TimeManager.getMonth().maxLength(); j++) {
-            System.out.print(this.attendanceOfDate[j].getCurrentDate());
-            System.out.print("\tIn Time: " + this.attendanceOfDate[j].getCheckIn());
-            System.out.print("\tOut Time: " + this.attendanceOfDate[j].getCheckOut());
-            System.out.print("\tStatus: " + this.attendanceOfDate[j].getAttendanceStatusType() + "\n");
+		System.out.println();
+	}
 
-            workTime = this.attendanceOfDate[j].getWorkTimeForDay();
-            if (workTime != null)
-                System.out.println(workTime);
-
-
-        }
-
-        System.out.println();
-    }
+	public void setNumberOfLeaves(int numberOfLeaves) {
+		this.numberOfLeaves = numberOfLeaves;
+	}
 }

@@ -7,42 +7,41 @@ import java.time.LocalDate;
  */
 //
 public class AttendanceOfLeave {
-    private LeaveType leaveType = null;
-    private LocalDate startDate = null;
-    private LocalDate endDate = null;
-    private double absenceTime;
+	private LeaveType leaveType = null;
+	private LocalDate startDate = null;
+	private LocalDate endDate = null;
+	private double absenceTime;
 
-    public LeaveType getLeaveType() {
-        return leaveType;
-    }
+	public double getAbsenceTime() {
+		return absenceTime;
+	}
 
-    public void setLeaveType(LeaveType leaveType) {
-        this.leaveType = leaveType;
-    }
+	public LocalDate getEndDate() {
+		return endDate;
+	}
 
-    public LocalDate getStartDate() {
-        return startDate;
-    }
+	public LeaveType getLeaveType() {
+		return leaveType;
+	}
 
-    public void setStartDate(LocalDate startDate) {
-        this.startDate = startDate;
-    }
+	public LocalDate getStartDate() {
+		return startDate;
+	}
 
-    public LocalDate getEndDate() {
-        return endDate;
-    }
+	public void setAbsenceTime(double absenceTime) {
+		this.absenceTime = absenceTime;
+	}
 
-    public void setEndDate(LocalDate endDate) {
-        this.endDate = endDate;
-    }
+	public void setEndDate(LocalDate endDate) {
+		this.endDate = endDate;
+	}
 
-    public double getAbsenceTime() {
-        return absenceTime;
-    }
+	public void setLeaveType(LeaveType leaveType) {
+		this.leaveType = leaveType;
+	}
 
-    public void setAbsenceTime(double absenceTime) {
-        this.absenceTime = absenceTime;
-    }
-
+	public void setStartDate(LocalDate startDate) {
+		this.startDate = startDate;
+	}
 
 }
