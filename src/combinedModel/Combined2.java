@@ -37,17 +37,13 @@ public class Combined2 {
     }
 
     public void combineFiles() {
-        setNumberOfLeavesForEachEmployee();
-        holidayStatusUpdater();
-
+        empBiometricDetails.keySet().forEach(this::setNumberOfLeavesForEachEmployee);
+        //set holidays for that month for each employee
+        empBiometricDetails.values().forEach(this::holidayStatusUpdater);
         // this worked just fine for January
-        for (EmpBiometricDetails empObj : empBiometricDetails.values())
-            absentStatusUpdater(empObj);
-
+        empBiometricDetails.values().forEach(this::absentStatusUpdater);
         // update number of work hours for half day
-        for (EmpBiometricDetails empObj : empBiometricDetails.values())
-            halfDayWorkHoursUpdater(empObj);
-
+        empBiometricDetails.values().forEach(this::halfDayWorkHoursUpdater);
 
         // update the basic employee biometric file
         BiometricFileWorker.empList = empBiometricDetails;
@@ -70,33 +66,32 @@ public class Combined2 {
             }
         }
 
-        countAttendanceStatusType();
+        EmpCombinedMap.values().forEach(this::countAttendanceStatusType);
     }
 
 
-    private void setNumberOfLeavesForEachEmployee() {
+    private void setNumberOfLeavesForEachEmployee(String bEmpID) {
         String salesForce = null;
         // Set the number of leaves applied
-        for (String bEmpID : empBiometricDetails.keySet()) {
-            if (EmployeeMasterData.allEmployeeRecordMap.containsKey(bEmpID)) {
-                salesForce = new BasicEmployeeDetails().getSalesForceId(bEmpID);
-            }
 
-            // setting the number of leaves after counting the list
-            final String finalSalesForce = salesForce;
-            empHrnetDetails.keySet().stream().filter(hr -> hr.equals(finalSalesForce))
-                    .forEach(hr -> empBiometricDetails.get(bEmpID).setNumberOfLeaves(empHrnetDetails.get(hr).size()));
+        if (EmployeeMasterData.allEmployeeRecordMap.containsKey(bEmpID)) {
+            salesForce = new BasicEmployeeDetails().getSalesForceId(bEmpID);
         }
+
+        // setting the number of leaves after counting the list
+        final String finalSalesForce = salesForce;
+        empHrnetDetails.keySet().stream().filter(hr -> hr.equals(finalSalesForce))
+                .forEach(hr -> empBiometricDetails.get(bEmpID).setNumberOfLeaves(empHrnetDetails.get(hr).size()));
+
     }
 
-    private void holidayStatusUpdater() {
+    private void holidayStatusUpdater(EmpBiometricDetails empObj) {
         // set public holiday status
-        for (EmpBiometricDetails empObj : empBiometricDetails.values()) {
-            for (HolidaysList h : HolidaysList.values()) {
-                if (h.getDate().getMonth() == TimeManager.getMonth()) {
-                    empObj.attendanceOfDate[h.getDate().getDayOfMonth() - 1].setAttendanceStatusType(PUBLIC_HOLIDAY);
-                }
+        for (HolidaysList h : HolidaysList.values()) {
+            if (h.getDate().getMonth() == TimeManager.getMonth()) {
+                empObj.attendanceOfDate[h.getDate().getDayOfMonth() - 1].setAttendanceStatusType(PUBLIC_HOLIDAY);
             }
+
         }
     }
 
@@ -112,35 +107,38 @@ public class Combined2 {
 
                         if (tempSalesForceId != null && tempSalesForceId.equals(hrEntry.getKey())) {
 
-                            for (HrnetDetails hr : hrEntry.getValue()) {
-                                double leaveTime = hr.attendanceOfLeave.getAbsenceTime();
-                                LocalDate tempStart = hr.attendanceOfLeave.getStartDate();
-                                LocalDate tempEnd = hr.attendanceOfLeave.getEndDate();
-                                int changeDatesRange;
-                                do {
-                                    changeDatesRange = tempStart.getDayOfMonth() - 1;
-
-                                    if (leaveTime == 0.5) {
-                                        empObj.attendanceOfDate[changeDatesRange].setAttendanceStatusType(HALF_DAY);
-
-                                    } else if (hr.attendanceOfLeave.getLeaveType() == LeaveType.WORK_FROM_HOME_IND) {
-                                        empObj.attendanceOfDate[changeDatesRange].setWorkTimeForDay(LocalTime.of(6, 0));
-                                        // set work from home as 6 hours
-                                        empObj.attendanceOfDate[changeDatesRange].setAttendanceStatusType(PRESENT);
-                                    }
-                                    leaveTime--;
-                                    tempStart = tempStart.plusDays(1);
-
-                                    if (tempStart.equals(tempEnd))
-                                        break;
-                                } while (leaveTime > 0 && tempStart.getMonth().equals(TimeManager.getMonth()));
-                            }
+                            for (HrnetDetails hr : hrEntry.getValue())
+                                updateFromAbsentToPresentOrHalfDay(hr, empObj);
                         }
                     }
                     break;
             }//end of switch
         }//end of for loop
     }//end of function
+
+    private void updateFromAbsentToPresentOrHalfDay(HrnetDetails hr, EmpBiometricDetails empObj) {
+        double leaveTime = hr.attendanceOfLeave.getAbsenceTime();
+        LocalDate tempStart = hr.attendanceOfLeave.getStartDate();
+        LocalDate tempEnd = hr.attendanceOfLeave.getEndDate();
+        int changeDatesRange;
+        do {
+            changeDatesRange = tempStart.getDayOfMonth() - 1;
+
+            if (leaveTime == 0.5) {
+                empObj.attendanceOfDate[changeDatesRange].setAttendanceStatusType(HALF_DAY);
+
+            } else if (hr.attendanceOfLeave.getLeaveType() == LeaveType.WORK_FROM_HOME_IND) {
+                empObj.attendanceOfDate[changeDatesRange].setWorkTimeForDay(LocalTime.of(6, 0));
+                // set work from home as 6 hours
+                empObj.attendanceOfDate[changeDatesRange].setAttendanceStatusType(PRESENT);
+            }
+            leaveTime--;
+            tempStart = tempStart.plusDays(1);
+
+            if (tempStart.equals(tempEnd))
+                break;
+        } while (leaveTime > 0 && tempStart.getMonth().equals(TimeManager.getMonth()));
+    }
 
     private void halfDayWorkHoursUpdater(EmpBiometricDetails empObj) {
         for (int i = 0; i < TimeManager.getMonth().maxLength(); i++) {
@@ -159,30 +157,28 @@ public class Combined2 {
         }
     }
 
-    private void countAttendanceStatusType() {
+    private void countAttendanceStatusType(FinalModel emp) {
         // to be removed today
-        for (FinalModel emp : EmpCombinedMap.values()) {
-            for (int j = 0; j < TimeManager.getMonth().maxLength(); j++) {
+        for (int j = 0; j < TimeManager.getMonth().maxLength(); j++) {
 
-                // AMRITA
-                if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(UNACCOUNTED_ABSENCE))
-                    emp.setCount(0);
-                else if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(PRESENT))
-                    emp.setCount(1);
-                else if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(PUBLIC_HOLIDAY))
-                    emp.setCount(2);
-                else if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(WEEKEND_HOLIDAY))
-                    emp.setCount(3);
-                else if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(HALF_DAY))
-                    emp.setCount(4);
-            }
+            // AMRITA
+            if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(UNACCOUNTED_ABSENCE))
+                emp.setCount(0);
+            else if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(PRESENT))
+                emp.setCount(1);
+            else if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(PUBLIC_HOLIDAY))
+                emp.setCount(2);
+            else if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(WEEKEND_HOLIDAY))
+                emp.setCount(3);
+            else if (emp.attendanceOfDate[j].getAttendanceStatusType().equals(HALF_DAY))
+                emp.setCount(4);
         }
+
     }
 
     public void displayCombineFiles() {
         System.out.println(TimeManager.getMonth());
         EmpCombinedMap.values().forEach(FinalModel::displayFinalList);
     }
-
 
 }

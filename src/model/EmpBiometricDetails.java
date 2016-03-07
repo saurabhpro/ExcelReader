@@ -4,10 +4,10 @@
 
 package model;
 
-import java.time.LocalTime;
-
 import jxcel.TimeManager;
 import model.attendence.AttendanceOfDate;
+
+import java.time.LocalTime;
 
 public class EmpBiometricDetails extends BasicEmployeeDetails {
 	public final AttendanceOfDate[] attendanceOfDate;
@@ -21,6 +21,10 @@ public class EmpBiometricDetails extends BasicEmployeeDetails {
 
 	public int getNumberOfLeaves() {
 		return numberOfLeaves;
+	}
+
+	public void setNumberOfLeaves(int numberOfLeaves) {
+		this.numberOfLeaves = numberOfLeaves;
 	}
 
 	public void printEmpBiometricDetails() {
@@ -42,9 +46,5 @@ public class EmpBiometricDetails extends BasicEmployeeDetails {
 		}
 
 		System.out.println();
-	}
-
-	public void setNumberOfLeaves(int numberOfLeaves) {
-		this.numberOfLeaves = numberOfLeaves;
 	}
 }

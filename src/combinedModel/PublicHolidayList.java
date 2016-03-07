@@ -1,7 +1,5 @@
 package combinedModel;
 
-import java.util.Map;
-
 import jxcel.TimeManager;
 import model.attendence.AttendanceOfDate;
 import model.attendence.AttendanceStatusType;
@@ -11,16 +9,9 @@ import model.attendence.HolidaysList;
  * Created by kumars on 3/4/2016.
  */
 public class PublicHolidayList {
-
-	private static Map<String, FinalModel> EmpCombinedMap;
-
-	public PublicHolidayList() {
-		EmpCombinedMap = Combined2.EmpCombinedMap;
-	}
-
 	public void presentPublicHolidayList() {
 		System.out.println("HOLIDAY LIST HIGHLIGHTED");
-		for (FinalModel finalModel : EmpCombinedMap.values()) {
+		for (FinalModel finalModel : Combined2.EmpCombinedMap.values()) {
 			for (HolidaysList h : HolidaysList.values()) {
 				if (h.getDate().getMonth() == TimeManager.getMonth()) {
 					if (finalModel.attendanceOfDate[h.getDate().getDayOfMonth() - 1]

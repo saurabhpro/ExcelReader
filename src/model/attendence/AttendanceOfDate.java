@@ -1,10 +1,10 @@
 package model.attendence;
 
-import static jxcel.TimeManager.calculateTimeDifference;
-
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalTime;
+
+import static jxcel.TimeManager.calculateTimeDifference;
 
 /**
  * Created by kumars on 2/12/2016.
@@ -19,29 +19,6 @@ public class AttendanceOfDate {
 
 	public AttendanceStatusType getAttendanceStatusType() {
 		return attendanceStatusType;
-	}
-
-	public LocalTime getCheckIn() {
-		return checkIn;
-	}
-
-	public LocalTime getCheckOut() {
-		return checkOut;
-	}
-
-	public LocalDate getCurrentDate() {
-		return currentDate;
-	}
-
-	public LocalTime getOverTime() {
-		return overTime;
-	}
-
-	public LocalTime getWorkTimeForDay() {
-		if (workTimeForDay == null && getCheckIn() != null && getCheckOut() != null && getCurrentDate() != null)
-			workTimeForDay = calculateTimeDifference(getCheckIn(), getCheckOut(), getCurrentDate());
-
-		return workTimeForDay;
 	}
 
 	public void setAttendanceStatusType(AttendanceStatusType statusType) {
@@ -61,20 +38,43 @@ public class AttendanceOfDate {
 		this.attendanceStatusType = statusType;
 	}
 
+	public LocalTime getCheckIn() {
+		return checkIn;
+	}
+
 	public void setCheckIn(LocalTime checkIn) {
 		this.checkIn = checkIn;
+	}
+
+	public LocalTime getCheckOut() {
+		return checkOut;
 	}
 
 	public void setCheckOut(LocalTime checkOut) {
 		this.checkOut = checkOut;
 	}
 
+	public LocalDate getCurrentDate() {
+		return currentDate;
+	}
+
 	public void setCurrentDate(LocalDate date) {
 		this.currentDate = date;
 	}
 
+	public LocalTime getOverTime() {
+		return overTime;
+	}
+
 	public void setOverTime(LocalTime overTime) {
 		this.overTime = overTime;
+	}
+
+	public LocalTime getWorkTimeForDay() {
+		if (workTimeForDay == null && getCheckIn() != null && getCheckOut() != null && getCurrentDate() != null)
+			workTimeForDay = calculateTimeDifference(getCheckIn(), getCheckOut(), getCurrentDate());
+
+		return workTimeForDay;
 	}
 
 	public void setWorkTimeForDay(LocalTime workTimeForDay) {

@@ -83,7 +83,12 @@ public class HrnetFileWorker implements FileOperations {
                         break;
                     case 3:
                         String tmp = cell.getStringCellValue().replace(" ", "_").toUpperCase();
-                        attendanceOfLeave.setLeaveType(LeaveType.valueOf(tmp));
+                        for (LeaveType leaveType : LeaveType.values()) {
+                            if (Objects.equals(leaveType.toString(), tmp)) {
+                                attendanceOfLeave.setLeaveType(LeaveType.valueOf(tmp));
+                                break;
+                            }
+                        }
                         break;
                     case 4:// startdate column
                         tempDate = getLocalDate(cell);
@@ -106,7 +111,7 @@ public class HrnetFileWorker implements FileOperations {
              * only consider the salesforce data for those months which is on
              * biometric excel
              */
-            if (attendanceOfLeave.getStartDate() != null) {
+            if (attendanceOfLeave.getStartDate() != null && attendanceOfLeave.getLeaveType() != null) {
                 if (hrnetDetails.containsKey(salesForceID)) {
                     tempArrLst = hrnetDetails.get(salesForceID);
                     tempArrLst.add(new HrnetDetails(salesForceID, empName, empRequest, attendanceOfLeave));

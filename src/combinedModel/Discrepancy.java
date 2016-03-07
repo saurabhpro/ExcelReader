@@ -1,15 +1,13 @@
 package combinedModel;
 
-import static model.attendence.AttendanceStatusType.HALF_DAY;
-import static model.attendence.AttendanceStatusType.PRESENT;
-import static model.attendence.AttendanceStatusType.UNACCOUNTED_ABSENCE;
-import static model.attendence.LeaveType.WORK_FROM_HOME_IND;
+import jxcel.TimeManager;
+import model.HrnetDetails;
 
 import java.time.LocalDate;
 import java.util.Map;
 
-import jxcel.TimeManager;
-import model.HrnetDetails;
+import static model.attendence.AttendanceStatusType.*;
+import static model.attendence.LeaveType.WORK_FROM_HOME_IND;
 
 /**
  * Created by AroraA on 17-02-2016. 6-03-2016 changed the Type from ABSENT to
