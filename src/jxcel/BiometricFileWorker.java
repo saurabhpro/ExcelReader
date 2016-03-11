@@ -20,7 +20,7 @@ import java.util.TreeMap;
  */
 public class BiometricFileWorker implements FileOperations {
 
-	static public Map<String, EmpBiometricDetails> empList = null;
+	public static Map<String, EmpBiometricDetails> empList = null;
 	private final int numberOfRowsInBio;
 	private Sheet sheet = null;
 	private int ADD_ROW_STEPS = 0;

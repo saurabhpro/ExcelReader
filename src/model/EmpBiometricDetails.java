@@ -11,7 +11,7 @@ import java.time.LocalTime;
 
 public class EmpBiometricDetails extends BasicEmployeeDetails {
 	public final AttendanceOfDate[] attendanceOfDate;
-	public int numberOfLeaves = 0; // To check how many leaves have been applied
+	public int numberOfEntriesInHrNet = 0; // To check how many leaves have been applied
 
 	public EmpBiometricDetails(String eID, String eName, AttendanceOfDate[] attendanceOfDate) {
 		setName(eName);
@@ -19,12 +19,12 @@ public class EmpBiometricDetails extends BasicEmployeeDetails {
 		this.attendanceOfDate = attendanceOfDate;
 	}
 
-	public int getNumberOfLeaves() {
-		return numberOfLeaves;
+	public int getNumberOfEntriesInHrNet() {
+		return numberOfEntriesInHrNet;
 	}
 
-	public void setNumberOfLeaves(int numberOfLeaves) {
-		this.numberOfLeaves = numberOfLeaves;
+	public void setNumberOfEntriesInHrNet(int numberOfEntriesInHrNet) {
+		this.numberOfEntriesInHrNet = numberOfEntriesInHrNet;
 	}
 
 	public void printEmpBiometricDetails() {

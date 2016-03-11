@@ -16,6 +16,15 @@ public class AttendanceOfDate {
 	private LocalTime overTime = null;
 	private LocalTime workTimeForDay = null;
 	private AttendanceStatusType attendanceStatusType = null;
+	private LeaveType leaveTypeForThisDate = LeaveType.NO_LEAVE;
+
+	public LeaveType getLeaveTypeForThisDate() {
+		return leaveTypeForThisDate;
+	}
+
+	public void setLeaveTypeForThisDate(LeaveType leaveTypeForThisDate) {
+		this.leaveTypeForThisDate = leaveTypeForThisDate;
+	}
 
 	public AttendanceStatusType getAttendanceStatusType() {
 		return attendanceStatusType;

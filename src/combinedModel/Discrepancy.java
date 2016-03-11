@@ -15,9 +15,10 @@ import static model.attendence.LeaveType.WORK_FROM_HOME_IND;
  */
 
 public class Discrepancy {
+	public static Map<String, FinalModel> EmpCombinedMap;
 
 	public void findDiscrepancy() {
-		Map<String, FinalModel> EmpCombinedMap = Combined2.EmpCombinedMap;
+		EmpCombinedMap = Combined2.EmpCombinedMap;
 		for (FinalModel finalModel : EmpCombinedMap.values()) {
 			// Discrepancy if an employee is absent and there is no entry in
 			// Hrnet file.
@@ -27,7 +28,7 @@ public class Discrepancy {
 							|| (finalModel.attendanceOfDate[j].getAttendanceStatusType().equals(HALF_DAY))) {
 						System.out.println(
 								"Null List- Discrepancy Set for " + finalModel.getName() + " Date: " + (j + 1));
-						finalModel.setIfClarificationFromEmployee(true);
+						finalModel.setIfClarificationNeeded(true);
 					}
 				}
 
@@ -49,7 +50,7 @@ public class Discrepancy {
 						}
 						if (flag == 0) {
 							System.out.println("Discrepancy Set for " + finalModel.getName() + " Date: " + (j + 1));
-							finalModel.setIfClarificationFromEmployee(true);
+							finalModel.setIfClarificationNeeded(true);
 						}
 					}
 
@@ -71,7 +72,7 @@ public class Discrepancy {
 										|| (finalModel.attendanceOfDate[j].getWorkTimeForDay().getHour() < 4)) {
 									System.out.println("Discrepancy set for half day less than 4: "
 											+ finalModel.getName() + " Date: " + (j + 1));
-									finalModel.setIfClarificationFromEmployee(true);
+									finalModel.setIfClarificationNeeded(true);
 								}
 							}
 						}
@@ -82,8 +83,7 @@ public class Discrepancy {
 		}
 	}
 
-	private int[] setClarificationStatus(int j, FinalModel finalModel, HrnetDetails hrnetDetail, String type,
-			int flag) {
+	private int[] setClarificationStatus(int j, FinalModel finalModel, HrnetDetails hrnetDetail, String type, int flag) {
 		LocalDate startDate = hrnetDetail.attendanceOfLeave.getStartDate();
 		LocalDate endDate = hrnetDetail.attendanceOfLeave.getEndDate();
 
@@ -102,7 +102,7 @@ public class Discrepancy {
 				case "PresentInBoth":
 					if (!hrnetDetail.attendanceOfLeave.getLeaveType().equals(WORK_FROM_HOME_IND)) {
 						System.out.println("Discrepancy set for present: " + finalModel.getName() + " Date:" + (j + 1));
-						finalModel.setIfClarificationFromEmployee(true);
+						finalModel.setIfClarificationNeeded(true);
 					}
 					break;
 				}

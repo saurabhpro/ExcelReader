@@ -1,6 +1,7 @@
 package jxcel;
 
 import combinedModel.Combined2;
+import combinedModel.CreateJSONLikeClass;
 import combinedModel.Discrepancy;
 import combinedModel.PublicHolidayList;
 import emplmasterrecord.EmployeeMasterData;
@@ -49,13 +50,18 @@ public class ReadExcel {
 		new JsonMapper().toJsonFile(null).fromJsonToFormattedJson(null);
 
 		// display Combined Files
-		combined2.displayCombineFiles();
+		//	combined2.displayCombineFiles();
 
 		// remove discrepancies
 		Discrepancy discrepancy = new Discrepancy();
 		discrepancy.findDiscrepancy();
 
 		new PublicHolidayList().presentPublicHolidayList();
+
+		CreateJSONLikeClass c = new CreateJSONLikeClass();
+		c.generate();
+		c.displayJSONFiles();
+		c.toJsonFile();
 	}
 
 	private static void setBiometricFile(String biometricFile) {

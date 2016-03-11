@@ -36,6 +36,21 @@ public class Combined2 {
         empBiometricDetails = BiometricFileWorker.empList;
     }
 
+    public void updateLeaveTypes(HrnetDetails hr, EmpBiometricDetails empObj) {
+        LocalDate tempStart = hr.attendanceOfLeave.getStartDate();
+        LocalDate tempEnd = hr.attendanceOfLeave.getEndDate();
+        int changeDatesRange;
+        do {
+            changeDatesRange = tempStart.getDayOfMonth() - 1;
+            empObj.attendanceOfDate[changeDatesRange].setLeaveTypeForThisDate(hr.attendanceOfLeave.getLeaveType());
+
+            if (tempStart.equals(tempEnd))
+                break;
+
+            tempStart = tempStart.plusDays(1);
+        } while (tempStart.getMonth().equals(TimeManager.getMonth()));
+    }
+
     public void combineFiles() {
         empBiometricDetails.keySet().forEach(this::setNumberOfLeavesForEachEmployee);
         //set holidays for that month for each employee
@@ -50,16 +65,19 @@ public class Combined2 {
 
         // Combine Hrnet and Biometric Files
         for (EmpBiometricDetails empObj : empBiometricDetails.values()) {
-            if (empObj.getNumberOfLeaves() == 0) {
+            if (empObj.getNumberOfEntriesInHrNet() == 0) {
                 EmpCombinedMap.put(empObj.getEmpId(),
-                        new FinalModel(empObj.getEmpId(), empObj.numberOfLeaves, empObj.attendanceOfDate, null));
+                        new FinalModel(empObj.getEmpId(), empObj.numberOfEntriesInHrNet, empObj.attendanceOfDate, null));
             } else {
                 Set<String> hrKeySet = empHrnetDetails.keySet();
+
                 for (String hrKey : hrKeySet) {
                     String tempSalesForceId = new BasicEmployeeDetails().getSalesForceId(empObj.getEmpId());
+
                     if (tempSalesForceId != null && hrKey.equals(tempSalesForceId)) {
+
                         ArrayList<HrnetDetails> hrnet = empHrnetDetails.get(hrKey);
-                        EmpCombinedMap.put(empObj.getEmpId(), new FinalModel(empObj.getEmpId(), empObj.numberOfLeaves,
+                        EmpCombinedMap.put(empObj.getEmpId(), new FinalModel(empObj.getEmpId(), empObj.numberOfEntriesInHrNet,
                                 empObj.attendanceOfDate, hrnet));
                     }
                 }
@@ -81,7 +99,7 @@ public class Combined2 {
         // setting the number of leaves after counting the list
         final String finalSalesForce = salesForce;
         empHrnetDetails.keySet().stream().filter(hr -> hr.equals(finalSalesForce))
-                .forEach(hr -> empBiometricDetails.get(bEmpID).setNumberOfLeaves(empHrnetDetails.get(hr).size()));
+                .forEach(hr -> empBiometricDetails.get(bEmpID).setNumberOfEntriesInHrNet(empHrnetDetails.get(hr).size()));
 
     }
 
@@ -107,8 +125,11 @@ public class Combined2 {
 
                         if (tempSalesForceId != null && tempSalesForceId.equals(hrEntry.getKey())) {
 
-                            for (HrnetDetails hr : hrEntry.getValue())
-                                updateFromAbsentToPresentOrHalfDay(hr, empObj);
+                            for (HrnetDetails hr : hrEntry.getValue()) {
+                                updateFromAbsentToPresentOrHalfDay(hr, empObj); //update emoObj using the details from hr
+                                updateLeaveTypes(hr, empObj);
+                            }
+
                         }
                     }
                     break;
@@ -132,11 +153,10 @@ public class Combined2 {
                 // set work from home as 6 hours
                 empObj.attendanceOfDate[changeDatesRange].setAttendanceStatusType(PRESENT);
             }
-            leaveTime--;
-            tempStart = tempStart.plusDays(1);
-
             if (tempStart.equals(tempEnd))
                 break;
+            leaveTime--;
+            tempStart = tempStart.plusDays(1);
         } while (leaveTime > 0 && tempStart.getMonth().equals(TimeManager.getMonth()));
     }
 

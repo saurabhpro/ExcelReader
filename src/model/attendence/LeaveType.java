@@ -10,5 +10,6 @@ public enum LeaveType {
     SICK_IND,
     BEREAVEMENT_IND,
     COMP_TIME_IND,
-    LEAVE_WITHOUT_PAY_IND
+    LEAVE_WITHOUT_PAY_IND,
+    NO_LEAVE
 }

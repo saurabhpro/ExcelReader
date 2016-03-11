@@ -17,13 +17,14 @@ public class FinalModel extends BasicEmployeeDetails {
 	public final ArrayList<HrnetDetails> hrnetDetails;
 	private final LocalTime avgInTime;
 	private final LocalTime avgOutTime;
-	private final int numberOfLeaves;
+	private final int numberOfEntriesinHrNet;
+	private final LocalTime averageNumberOfHoursMonthly;
 	// AMRITA
 	private final int[] count = new int[5];// Absent, Present, Public_Holiday,
 											// Weekend_Holiday, Half_Day
-	private boolean setIfClarificationFromEmployee;
+											private boolean ifClarificationNeeded = false;
 
-	public FinalModel(String EmployeeID, int numberOfLeaves, AttendanceOfDate[] a, ArrayList<HrnetDetails> hr1) {
+	public FinalModel(String EmployeeID, int numberOfEntriesinHrNet, AttendanceOfDate[] a, ArrayList<HrnetDetails> hr1) {
 		this.setEmpId(EmployeeID);
 
 		BasicEmployeeDetails b = EmployeeMasterData.allEmployeeRecordMap.get(EmployeeID);
@@ -34,13 +35,13 @@ public class FinalModel extends BasicEmployeeDetails {
 			this.setEmailId(b.getEmailId());
 		}
 		this.attendanceOfDate = a;
-		this.numberOfLeaves = numberOfLeaves;
+		this.numberOfEntriesinHrNet = numberOfEntriesinHrNet;
 		// this.needClarificationFromEmployee = needClarificationFromEmployee;
 		this.hrnetDetails = hr1;
 
 		avgInTime = setAvgInTime();
 		avgOutTime = setAvgOutTime();
-
+		averageNumberOfHoursMonthly = setAverageNumberOfHoursMonthly();
 	}
 
 	private void displayArrayList() {
@@ -52,9 +53,10 @@ public class FinalModel extends BasicEmployeeDetails {
 		System.out.println("Employee ID: " + this.getEmpId());
 		System.out.println("Avg In Time " + this.getAvgInTime());
 		System.out.println("Avg Out Time " + this.getAvgOutTime());
+		System.out.println("Work Hours for day: " + this.getAverageNumberOfHoursMonthly());
 		System.out.println();
 
-		System.out.println("Number Of Leaves Applied: " + this.numberOfLeaves);
+		System.out.println("Number Of Leaves Applied: " + this.numberOfEntriesinHrNet);
 		if (this.hrnetDetails != null) {
 			this.displayArrayList();
 		}
@@ -75,16 +77,17 @@ public class FinalModel extends BasicEmployeeDetails {
 			System.out.print("\tStatus: " + this.attendanceOfDate[j].getAttendanceStatusType() + "\n");
 			System.out.print("\tWorkhours: " + this.attendanceOfDate[j].getWorkTimeForDay() + "\n");
 
+
 		}
 
 		System.out.println();
 	}
 
-	private LocalTime getAvgInTime() {
+	public LocalTime getAvgInTime() {
 		return avgInTime;
 	}
 
-	private LocalTime getAvgOutTime() {
+	public LocalTime getAvgOutTime() {
 		return avgOutTime;
 	}
 
@@ -93,8 +96,12 @@ public class FinalModel extends BasicEmployeeDetails {
 		return count[i];
 	}
 
-	public boolean isSetIfClarificationFromEmployee() {
-		return setIfClarificationFromEmployee;
+	public boolean getIfClarificationNeeded() {
+		return ifClarificationNeeded;
+	}
+
+	public void setIfClarificationNeeded(boolean needClarificationFromEmployee) {
+		this.ifClarificationNeeded = needClarificationFromEmployee;
 	}
 
 	private LocalTime setAvgInTime() {
@@ -105,11 +112,15 @@ public class FinalModel extends BasicEmployeeDetails {
 		return TimeManager.calculateAverageOfTime("AverageCheckOutTime", attendanceOfDate);
 	}
 
-	public void setCount(int i) {
-		count[i] = count[i] + 1;
+	public LocalTime setAverageNumberOfHoursMonthly() {
+		return TimeManager.calculateAverageTimeOfMonth(this.attendanceOfDate);
 	}
 
-	public void setIfClarificationFromEmployee(boolean needClarificationFromEmployee) {
-		this.setIfClarificationFromEmployee = needClarificationFromEmployee;
+	public LocalTime getAverageNumberOfHoursMonthly() {
+		return averageNumberOfHoursMonthly;
+	}
+
+	public void setCount(int i) {
+		count[i] = count[i] + 1;
 	}
 }
