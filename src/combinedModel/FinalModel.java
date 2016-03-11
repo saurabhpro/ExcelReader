@@ -18,6 +18,8 @@ public class FinalModel extends BasicEmployeeDetails {
 	private final LocalTime avgInTime;
 	private final LocalTime avgOutTime;
 	private final int numberOfLeaves;
+
+	private final LocalTime averageNumberOfHoursMonthly=null;
 	// AMRITA
 	private final int[] count = new int[5];// Absent, Present, Public_Holiday,
 											// Weekend_Holiday, Half_Day
@@ -54,6 +56,7 @@ public class FinalModel extends BasicEmployeeDetails {
 		System.out.println("Avg Out Time " + this.getAvgOutTime());
 		System.out.println();
 
+		System.out.println("Avg Work Hours Monthly: " + this.getAverageNumberOfHoursMonthly());
 		System.out.println("Number Of Leaves Applied: " + this.numberOfLeaves);
 		if (this.hrnetDetails != null) {
 			this.displayArrayList();
@@ -104,6 +107,10 @@ public class FinalModel extends BasicEmployeeDetails {
 	private LocalTime setAvgOutTime() {
 		return TimeManager.calculateAverageOfTime("AverageCheckOutTime", attendanceOfDate);
 	}
+	public LocalTime getAverageNumberOfHoursMonthly() {
+		return TimeManager.calculateAverageTimeOfMonth(this.attendanceOfDate);
+	}
+
 
 	public void setCount(int i) {
 		count[i] = count[i] + 1;

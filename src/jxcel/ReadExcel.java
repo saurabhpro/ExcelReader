@@ -54,6 +54,7 @@ public class ReadExcel {
 		// remove discrepancies
 		Discrepancy discrepancy = new Discrepancy();
 		discrepancy.findDiscrepancy();
+		discrepancy.toJsonFile();
 
 		new PublicHolidayList().presentPublicHolidayList();
 	}

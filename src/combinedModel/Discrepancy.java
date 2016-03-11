@@ -1,13 +1,18 @@
 package combinedModel;
 
-import jxcel.TimeManager;
-import model.HrnetDetails;
+import static model.attendence.AttendanceStatusType.HALF_DAY;
+import static model.attendence.AttendanceStatusType.PRESENT;
+import static model.attendence.AttendanceStatusType.UNACCOUNTED_ABSENCE;
+import static model.attendence.LeaveType.WORK_FROM_HOME_IND;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.Map;
 
-import static model.attendence.AttendanceStatusType.*;
-import static model.attendence.LeaveType.WORK_FROM_HOME_IND;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import jxcel.TimeManager;
+import model.HrnetDetails;
 
 /**
  * Created by AroraA on 17-02-2016. 6-03-2016 changed the Type from ABSENT to
@@ -15,9 +20,9 @@ import static model.attendence.LeaveType.WORK_FROM_HOME_IND;
  */
 
 public class Discrepancy {
-
+public  static Map<String, FinalModel> EmpCombinedMap;
 	public void findDiscrepancy() {
-		Map<String, FinalModel> EmpCombinedMap = Combined2.EmpCombinedMap;
+		EmpCombinedMap = Combined2.EmpCombinedMap;
 		for (FinalModel finalModel : EmpCombinedMap.values()) {
 			// Discrepancy if an employee is absent and there is no entry in
 			// Hrnet file.
@@ -110,6 +115,22 @@ public class Discrepancy {
 			}
 		}
 		return new int[] { j, flag };
+	}
+
+	public void toJsonFile() {
+		ObjectMapper mapper = new ObjectMapper();
+		// For testing
+		Map<String, FinalModel> user = EmpCombinedMap;
+
+		try {
+			File jfile = new File(".\\JSON files\\Discrepancies.json");
+			// Convert object to JSON string and save into file directly
+			mapper.writeValue(jfile, user);
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
 	}
 
 }

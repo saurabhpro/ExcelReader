@@ -51,6 +51,29 @@ public class TimeManager {
 		return LocalTime.of(hoursTotal, minsTotal);
 	}
 
+	public static LocalTime calculateAverageTimeOfMonth(AttendanceOfDate[] attendanceOfDate) {
+		List<AttendanceOfDate> ofDates = Arrays.asList(attendanceOfDate);
+		int hoursTotal, minsTotal = 0, presentDays = 0;
+
+		for (AttendanceOfDate date : ofDates) {
+			if (date.getCheckIn() != null && !date.getCheckOut().equals(LocalTime.MIDNIGHT)) {
+
+					minsTotal += date.getWorkTimeForDay().getHour() * 60;
+					minsTotal += date.getWorkTimeForDay().getMinute();
+				presentDays++;
+
+
+
+			}
+		}
+		int t = presentDays > 0 ? presentDays : 1;
+		minsTotal = minsTotal / t;
+
+		hoursTotal = minsTotal / 60;
+		minsTotal = minsTotal % 60;
+		return LocalTime.of(hoursTotal, minsTotal);
+	}
+
 	public static LocalTime calculateTimeDifference(LocalTime checkInTime, LocalTime checkOutTime, LocalDate date) {
 		LocalDate froDate, toDate;
 		froDate = toDate = date;

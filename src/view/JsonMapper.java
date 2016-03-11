@@ -3,6 +3,12 @@ package view;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+<<<<<<< Updated upstream
+=======
+
+import combinedModel.Combined2;
+import combinedModel.FinalModel;
+>>>>>>> Stashed changes
 import jxcel.BiometricFileWorker;
 import model.EmpBiometricDetails;
 
@@ -17,7 +23,7 @@ import java.util.Map;
 public class JsonMapper {
 	private ObjectMapper mapper = new ObjectMapper();
 	// For testing
-	private Map<String, EmpBiometricDetails> user;
+	private Map<String, FinalModel> user;
 
 	public void fromJsonToFormattedJson(String jsonInString) {
 		// Convert object to JSON string and pretty print
@@ -54,7 +60,7 @@ public class JsonMapper {
 	public JsonMapper toJsonFile(String fileName) {
 
 		// For testing
-		user = BiometricFileWorker.empList;
+		user = Combined2.EmpCombinedMap;
 
 		try {
 			File jfile = new File(".\\JSON files\\unformattedJson.json");
