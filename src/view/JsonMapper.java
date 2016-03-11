@@ -3,12 +3,11 @@ package view;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-<<<<<<< Updated upstream
-=======
+
 
 import combinedModel.Combined2;
 import combinedModel.FinalModel;
->>>>>>> Stashed changes
+
 import jxcel.BiometricFileWorker;
 import model.EmpBiometricDetails;
 
