@@ -39,6 +39,22 @@ public class JSONModelForWeb {
         setEmpIfClarificationNeeded(f.getIfClarificationNeeded());
     }
 
+    public JSONModelForWeb(FinalModel f, String discrepancy) {
+        setEmpRevalId(f.getEmpId());
+        setEmpSalesforceId(f.getSalesForceId());
+        setEmpName(f.getName());
+        setEmpEmailId(f.getEmailId());
+
+        setEmpAvgCheckInTimeForMonth(f.getAvgInTime());
+        setEmpAvgCheckOutTimeForMonth(f.getAvgOutTime());
+        setEmpAvgWorkHoursForMonth(f.getAverageNumberOfHoursMonthly());
+
+        setAttendanceOfDates(f.attendanceOfDate);
+        setAllDateDetailsList(discrepancy);
+
+        setEmpIfClarificationNeeded(f.getIfClarificationNeeded());
+    }
+
     public void setAttendanceOfDates(AttendanceOfDate[] attendanceOfDates) {
         this.attendanceOfDates = attendanceOfDates;
     }
@@ -108,6 +124,14 @@ public class JSONModelForWeb {
 
     public ArrayList<SubMenu> getAllDateDetailsList() {
         return allDateDetailsList;
+    }
+
+    public void setAllDateDetailsList(String Type) {
+        allDateDetailsList = new ArrayList<>();
+        for (AttendanceOfDate attendanceOfDate : attendanceOfDates) {
+            if (attendanceOfDate.getAttendanceStatusType().equals(AttendanceStatusType.UNACCOUNTED_ABSENCE))
+                this.allDateDetailsList.add(new SubMenu(attendanceOfDate));
+        }
     }
 
     public Boolean getEmpIfClarificationNeeded() {
