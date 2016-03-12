@@ -13,22 +13,22 @@ import java.io.IOException;
  */
 public class XLSSheetAndCell {
 
-	private Sheet sheet = null;
+    private Sheet sheet = null;
 
-	public Sheet ApacheXLSSheet(String fileName) {
-		try {
-			FileInputStream file = new FileInputStream(new File(fileName));
-			// Create Workbook instance holding reference to .xlsx file
-			@SuppressWarnings("resource")
-			Workbook workbook = new HSSFWorkbook(file);
+    public Sheet ApacheXLSSheet(String fileName) {
+        try {
+            FileInputStream file = new FileInputStream(new File(fileName));
+            // Create Workbook instance holding reference to .xlsx file
+            @SuppressWarnings("resource")
+            Workbook workbook = new HSSFWorkbook(file);
 
-			// Get first/desired sheet from the workbook
-			sheet = workbook.getSheetAt(0);
-			file.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+            // Get first/desired sheet from the workbook
+            sheet = workbook.getSheetAt(0);
+            file.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-		return sheet;
-	}
+        return sheet;
+    }
 }

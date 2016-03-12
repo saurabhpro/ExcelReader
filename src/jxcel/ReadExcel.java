@@ -3,6 +3,7 @@ package jxcel;
 import combinedModel.*;
 import emplmasterrecord.EmployeeMasterData;
 import factory.SheetFactory;
+import model.ListGenerator;
 import model.Version;
 import view.JsonMapper;
 
@@ -15,67 +16,69 @@ import java.text.ParseException;
 
 @Version(MaxVersion = 1, MinVersion = 0)
 public class ReadExcel {
-	private static String biometricFile;
-	private static String hrNetFile;
-	private static String empListID;
+    private static String biometricFile;
+    private static String hrNetFile;
+    private static String empListID;
 
-	public static void main(String[] args) throws IOException, ParseException {
-		Object fileWorker;
-		SheetFactory sheetFactory = new SheetFactory();
+    public static void main(String[] args) throws IOException, ParseException {
+        Object fileWorker;
+        SheetFactory sheetFactory = new SheetFactory();
 
-		setEmpListID(".\\ExcelFiles\\Emails.xlsx");
-		setBiometricFile(".\\ExcelFiles\\jan leaves.xls");
-		setHrNetFile(".\\ExcelFiles\\Jan-Feb FF Report.xlsx");
+        setEmpListID(".\\ExcelFiles\\Emails.xlsx");
+        setBiometricFile(".\\ExcelFiles\\jan leaves.xls");
+        setHrNetFile(".\\ExcelFiles\\Jan-Feb FF Report.xlsx");
 
-		EmployeeMasterData employeeMasterData = new EmployeeMasterData(empListID);
-		employeeMasterData.readFile();
+        EmployeeMasterData employeeMasterData = new EmployeeMasterData(empListID);
+        employeeMasterData.readFile();
 
-		// read Biometric Excel File
-		fileWorker = sheetFactory.dispatch("Jxcel", biometricFile);
-		if (fileWorker instanceof BiometricFileWorker) {
-			((BiometricFileWorker) fileWorker).readFile();
-		}
+        // read Biometric Excel File
+        fileWorker = sheetFactory.dispatch("Jxcel", biometricFile);
+        if (fileWorker instanceof BiometricFileWorker) {
+            ((BiometricFileWorker) fileWorker).readFile();
+        }
 
-		// read HRNet Excel File
-		fileWorker = sheetFactory.dispatch("XLSX", hrNetFile);
-		if (fileWorker instanceof HrnetFileWorker) {
-			((HrnetFileWorker) fileWorker).readFile();
-		}
+        // read HRNet Excel File
+        fileWorker = sheetFactory.dispatch("XLSX", hrNetFile);
+        if (fileWorker instanceof HrnetFileWorker) {
+            ((HrnetFileWorker) fileWorker).readFile();
+        }
 
-		Combined2 combined2 = new Combined2();
-		combined2.combineFiles();
-		new JsonMapper().toJsonFile(null).fromJsonToFormattedJson(null);
+        Combined2 combined2 = new Combined2();
+        combined2.combineFiles();
+        new JsonMapper().toJsonFile(null).fromJsonToFormattedJson(null);
 
-		// display Combined Files
-		//	combined2.displayCombineFiles();
+        // displayAllDates Combined Files
+        //	combined2.displayCombineFiles();
 
-		// remove discrepancies
-		Discrepancy discrepancy = new Discrepancy();
-		discrepancy.findDiscrepancy();
+        // remove discrepancies
+        Discrepancy discrepancy = new Discrepancy();
+        discrepancy.findDiscrepancy();
 
-		new PublicHolidayList().presentPublicHolidayList();
+        ListGenerator ph = new PublicHolidayWorkerJson();
+        ph.generate();
+        ph.displayOnConsole();
+        ph.createJSONList("PublicHoliday");
 
-		CreateJSONLikeClass c = new CreateJSONLikeClass();
-		c.generate();
-		//c.displayJSONFiles();
-		c.toJsonFile();
+        ListGenerator c = new AllEmployeeDetailsJson();
+        c.generate();
+        c.createJSONList("WebDetails");
 
-		OnlyDiscrepancyData od = new OnlyDiscrepancyData();
-		od.generate();
-		od.displayJSONFiles();
-		od.toJsonFile();
-	}
+        ListGenerator od = new OnlyDiscrepancyDetailsJson();
+        od.generate();
+        //od.displayOnConsole();
+        od.createJSONList("Discrepancy");
+    }
 
-	private static void setBiometricFile(String biometricFile) {
-		ReadExcel.biometricFile = biometricFile;
-	}
+    private static void setBiometricFile(String biometricFile) {
+        ReadExcel.biometricFile = biometricFile;
+    }
 
-	private static void setEmpListID(String empListID) {
-		ReadExcel.empListID = ".\\ExcelFiles\\Emails.xlsx";
-	}
+    private static void setEmpListID(String empListID) {
+        ReadExcel.empListID = ".\\ExcelFiles\\Emails.xlsx";
+    }
 
-	private static void setHrNetFile(String hrNetFile) {
-		ReadExcel.hrNetFile = hrNetFile;
-	}
+    private static void setHrNetFile(String hrNetFile) {
+        ReadExcel.hrNetFile = hrNetFile;
+    }
 
 }

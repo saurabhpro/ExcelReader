@@ -19,13 +19,13 @@ public enum HolidaysList {
     GURU_NANAK_JAYANTI(LocalDate.of(2016, Month.NOVEMBER, 14)),
     DAY_AFTER_CHRISTMAS(LocalDate.of(2016, Month.DECEMBER, 26));
 
-	private LocalDate date;
+    private LocalDate date;
 
-	HolidaysList(LocalDate of) {
-		this.date = of;
-	}
+    HolidaysList(LocalDate of) {
+        this.date = of;
+    }
 
-	public LocalDate getDate() {
-		return date;
-	}
+    public LocalDate getDate() {
+        return date;
+    }
 }

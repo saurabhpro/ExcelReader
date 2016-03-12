@@ -57,41 +57,42 @@ public class BiometricFileWorker implements FileOperations {
 			attendanceOfDate[k] = new AttendanceOfDate();
 			attendanceOfDate[k].setCurrentDate(tempDate);
 			attendanceStatus = AttendanceStatusType.NOT_AN_EMPLOYEE; // default
-																		// status
-																		// for
-																		// an
-																		// employee
+			// status
+			// for
+			// an
+			// employee
 
 			st = new StringTokenizer(getCustomCellContent(k, 20 + (18 * ADD_ROW_STEPS)), "   ");
 
-			lb: for (int j = 2; j < 6; j++) {
+			lb:
+			for (int j = 2; j < 6; j++) {
 				String tempString;
 				if (st.hasMoreElements()) {
 					tempString = (String) st.nextElement();
 					// A
 					// 11:00 12:00 00;00 P
 					switch (tempString) {
-					case "A":
-					case "A/A":
-					case "P/A":
-					case "A/P":
-						attendanceStatus = AttendanceStatusType.ABSENT;
-						break lb;
+						case "A":
+						case "A/A":
+						case "P/A":
+						case "A/P":
+							attendanceStatus = AttendanceStatusType.ABSENT;
+							break lb;
 
-					case "W":
-						// case when employee checks in on weekend
-						attendanceStatus = AttendanceStatusType.WEEKEND_HOLIDAY;
-						break lb;
+						case "W":
+							// case when employee checks in on weekend
+							attendanceStatus = AttendanceStatusType.WEEKEND_HOLIDAY;
+							break lb;
 
-					case "P":
-						attendanceStatus = AttendanceStatusType.PRESENT;
-						break lb;
+						case "P":
+							attendanceStatus = AttendanceStatusType.PRESENT;
+							break lb;
 
-					default:
-						if (j == 2)
-							attendanceOfDate[k].setCheckIn(LocalTime.parse(tempString));
-						else if (j == 3)
-							attendanceOfDate[k].setCheckOut(LocalTime.parse(tempString));
+						default:
+							if (j == 2)
+								attendanceOfDate[k].setCheckIn(LocalTime.parse(tempString));
+							else if (j == 3)
+								attendanceOfDate[k].setCheckOut(LocalTime.parse(tempString));
 					}
 				}
 			}

@@ -3,13 +3,8 @@ package view;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-
 import combinedModel.Combined2;
-import combinedModel.FinalModel;
-
-import jxcel.BiometricFileWorker;
-import model.EmpBiometricDetails;
+import model.FinalModel;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -20,59 +15,59 @@ import java.util.Map;
  * Created by Saurabh on 2/14/2016.
  */
 public class JsonMapper {
-	private ObjectMapper mapper = new ObjectMapper();
-	// For testing
-	private Map<String, FinalModel> user;
+    private ObjectMapper mapper = new ObjectMapper();
+    // For testing
+    private Map<String, FinalModel> user;
 
-	public void fromJsonToFormattedJson(String jsonInString) {
-		// Convert object to JSON string and pretty print
-		try {
-			jsonInString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(user);
-		} catch (JsonProcessingException e) {
-			e.printStackTrace();
-		}
+    public void fromJsonToFormattedJson(String jsonInString) {
+        // Convert object to JSON string and pretty print
+        try {
+            jsonInString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(user);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
 
-		FileWriter file;
-		try {
-			file = new FileWriter(new File(".\\JSON files\\formattedJson.json"));
-			file.write(jsonInString);
-			// System.out.println(jsonInString);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+        FileWriter file;
+        try {
+            file = new FileWriter(new File(".\\JSON files\\formattedJson.json"));
+            file.write(jsonInString);
+            // System.out.println(jsonInString);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-	}
+    }
 
-	public void fromJsonToObject(Object objectName) {
-		mapper = new ObjectMapper();
+    public void fromJsonToObject(Object objectName) {
+        mapper = new ObjectMapper();
 
-		// read JSON from a file
-		try {
-			mapper.readValue(new File("c:\\user.json"), new TypeReference<Map<String, Object>>() {
-			});
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+        // read JSON from a file
+        try {
+            mapper.readValue(new File("c:\\user.json"), new TypeReference<Map<String, Object>>() {
+            });
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-	}
+    }
 
-	public JsonMapper toJsonFile(String fileName) {
+    public JsonMapper toJsonFile(String fileName) {
 
-		// For testing
-		user = Combined2.EmpCombinedMap;
+        // For testing
+        user = Combined2.EmpCombinedMap;
 
-		try {
-			File jfile = new File(".\\JSON files\\unformattedJson.json");
-			// Convert object to JSON string and save into file directly
-			mapper.writeValue(jfile, user);
+        try {
+            File jfile = new File(".\\JSON files\\unformattedJson.json");
+            // Convert object to JSON string and save into file directly
+            mapper.writeValue(jfile, user);
 
-			// Convert object to JSON string
-			mapper.writeValueAsString(user);
-			// System.out.println(jsonInString);
+            // Convert object to JSON string
+            mapper.writeValueAsString(user);
+            // System.out.println(jsonInString);
 
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return this;
-	}
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return this;
+    }
 }
