@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="ExcelFiles"/>
+	<classpathentry kind="src" path="lib"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jackson-annotations-2.7.1"/>
+	<classpathentry kind="lib" path="C:/Users/Saurabh/Documents/GitHub/ExcelReader/lib/jackson-annotations-2.7.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Saurabh/Documents/GitHub/ExcelReader/lib/jackson-core-2.7.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Saurabh/Documents/GitHub/ExcelReader/lib/jackson-databind-2.7.1-1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Saurabh/Documents/GitHub/ExcelReader/lib/jxl.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Saurabh/Documents/GitHub/ExcelReader/lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Saurabh/Documents/GitHub/ExcelReader/lib/poi-3.13-20150929.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Saurabh/Documents/GitHub/ExcelReader/lib/poi-ooxml-3.13-20150929.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Saurabh/Documents/GitHub/ExcelReader/lib/poi-ooxml-schemas-3.13-20150929.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Saurabh/Documents/GitHub/ExcelReader/lib/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="output" path="out/production/ExcelReader"/>
+</classpath>

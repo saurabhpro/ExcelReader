@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="jackson-annotations-2.7.1">
+    <archive path="C:/Users/Saurabh/Documents/GitHub/ExcelReader/lib/jackson-annotations-2.7.1.jar" />
+    <archive path="C:/Users/Saurabh/Documents/GitHub/ExcelReader/lib/jackson-core-2.7.1.jar" />
+    <archive path="C:/Users/Saurabh/Documents/GitHub/ExcelReader/lib/jackson-databind-2.7.1-1.jar" />
+    <archive path="C:/Users/Saurabh/Documents/GitHub/ExcelReader/lib/jxl.jar" />
+    <archive path="C:/Users/Saurabh/Documents/GitHub/ExcelReader/lib/log4j-1.2.17.jar" />
+    <archive path="C:/Users/Saurabh/Documents/GitHub/ExcelReader/lib/poi-3.13-20150929.jar" />
+    <archive path="C:/Users/Saurabh/Documents/GitHub/ExcelReader/lib/poi-ooxml-3.13-20150929.jar" />
+    <archive path="C:/Users/Saurabh/Documents/GitHub/ExcelReader/lib/xmlbeans-2.6.0.jar" />
+    <archive path="C:/Users/Saurabh/Documents/GitHub/ExcelReader/lib/poi-ooxml-schemas-3.13-20150929.jar" />
+  </library>
+</eclipse-userlibraries>
+
