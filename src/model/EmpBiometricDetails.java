@@ -27,6 +27,7 @@ public class EmpBiometricDetails extends BasicEmployeeDetails {
         this.numberOfEntriesInHrNet = numberOfEntriesInHrNet;
     }
 
+
     public void printEmpBiometricDetails() {
         System.out.println("Name: " + this.getName());
         System.out.println("Employee ID: " + this.getEmpId());

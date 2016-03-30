@@ -54,10 +54,7 @@ public class ReadExcel {
         Discrepancy discrepancy = new Discrepancy();
         discrepancy.findDiscrepancy();
 
-        ListGenerator ph = new PublicHolidayWorkerJson();
-        ph.generate();
-        ph.displayOnConsole();
-        ph.createJSONList("PublicHoliday");
+
 
         ListGenerator c = new AllEmployeeDetailsJson();
         c.generate();
@@ -67,6 +64,11 @@ public class ReadExcel {
         od.generate();
         //od.displayOnConsole();
         od.createJSONList("Discrepancy");
+
+        ListGenerator ph = new PublicHolidayWorkerJson();
+        ph.generate();
+        ph.displayOnConsole();
+        ph.createJSONList("PublicHoliday");
     }
 
     private static void setBiometricFile(String biometricFile) {

@@ -155,12 +155,12 @@ public class JSONModelForWeb {
     }
 
     public static class SubMenuAttendanceOfDate {
-        final String currentDate;
-        final AttendanceStatusType attendanceStatusType;
-        final LeaveType leaveTypeForThisDate;
-        String checkIn;
-        String checkOut;
-        String workTimeForDay;
+        private final String currentDate;
+        private final AttendanceStatusType attendanceStatusType;
+        private final LeaveType leaveTypeForThisDate;
+        private String checkIn;
+        private String checkOut;
+        private String workTimeForDay;
 
         public SubMenuAttendanceOfDate(AttendanceOfDate attendance) {
             currentDate = attendance.getCurrentDate().toString();
@@ -196,12 +196,12 @@ public class JSONModelForWeb {
         }
 
         public void displaySub() {
-            System.out.println("Date: " + currentDate);
-            System.out.println("Check in: " + checkIn);
-            System.out.println("Check out: " + checkOut);
-            System.out.println("Work Time: " + workTimeForDay);
-            System.out.println("Attendance Status: " + attendanceStatusType);
-            System.out.println("Leave Type: " + leaveTypeForThisDate);
+            System.out.println("Date: " + getCurrentDate());
+            System.out.println("Check in: " + getCheckIn());
+            System.out.println("Check out: " + getCheckOut());
+            System.out.println("Work Time: " + getWorkTimeForDay());
+            System.out.println("Attendance Status: " + getAttendanceStatusType());
+            System.out.println("Leave Type: " + getLeaveTypeForThisDate());
         }
     }
 }

@@ -6,9 +6,9 @@ import model.attendence.HolidaysList;
  * Created by Saurabh on 3/12/2016.
  */
 public class HolidayWorkerModel {
-    HolidaysList holiday;
-    BasicEmployeeDetails basicEmployeeDetails;
-    JSONModelForWeb.SubMenuAttendanceOfDate subMenuAttendanceOfDate;
+    private final BasicEmployeeDetails basicEmployeeDetails;
+    private final JSONModelForWeb.SubMenuAttendanceOfDate subMenuAttendanceOfDate;
+    private HolidaysList holiday;
 
     public HolidayWorkerModel(BasicEmployeeDetails b, JSONModelForWeb.SubMenuAttendanceOfDate s) {
         this.basicEmployeeDetails = b;
@@ -33,9 +33,9 @@ public class HolidayWorkerModel {
 
     public void display() {
         System.out.println();
-        basicEmployeeDetails.displayBasicInfo();
-        subMenuAttendanceOfDate.displaySub();
+        getBasicEmployeeDetails().displayBasicInfo();
+        getSubMenuAttendanceOfDate().displaySub();
         if (holiday != null)
-            System.out.println("Holiday is " + holiday.name());
+            System.out.println("Holiday is " + getHoliday().name());
     }
 }
